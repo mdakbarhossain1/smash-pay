@@ -2,8 +2,12 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const MultiCurrency = () => {
-  const features = ['One account, multiple currencies', 'Regulated & secure', 'Trade on your own terms'];
+const SmashPayApp = () => {
+  const features = [
+    'Streamlined digital transfers on the go.',
+    'Check live exchange rates.',
+    'Faster repeat transfers with just a few taps.'
+  ];
 
   return (
     <section className='bg-clr-14 relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch overflow-hidden px-4 pt-32 pb-32 md:px-8'>
@@ -18,15 +22,16 @@ const MultiCurrency = () => {
           <div className='flex w-full flex-col items-start justify-start gap-6'>
             <div className='flex w-full flex-col items-start justify-start gap-6'>
               <div className='flex flex-col items-center justify-center gap-0'>
-                <h3 className='text-lg font-medium tracking-tight text-white'>Multi-currency account</h3>
+                <h3 className='text-lg font-medium tracking-tight text-white'>SmashPay App</h3>
                 <div className='border-gradient h-0 w-full border-t-[3px] border-r-0 border-b-0 border-l-0 border-solid' />
               </div>
               <h2 className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-4xl leading-tight font-medium tracking-tight text-transparent md:text-5xl lg:text-6xl'>
-                One account for 35+ currencies around the world
+                One app for all your overseas transfers
               </h2>
             </div>
             <p className='text-lg leading-relaxed tracking-tight text-gray-300'>
-              Hold over 35 currencies and exchange to the currency you need, when you need it.
+              Send money on the go with the SmashPay app. We believe in keeping things simple, fast, and
+              low-cost. Just a few taps and your money can be on its way.
             </p>
             <div className='flex w-full flex-col items-start justify-start gap-5'>
               {features.map((feature, index) => (
@@ -39,18 +44,10 @@ const MultiCurrency = () => {
               ))}
             </div>
           </div>
-          <motion.button
-            className='flex flex-row items-center justify-center gap-2.5 rounded-[64px] border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <span className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-lg font-semibold tracking-tight text-transparent'>
-              Learn More
-            </span>
-            <div className='relative h-[22px] w-[22px]'>
-              <img className='relative h-6 w-6 shrink-0 overflow-visible' src='/home/arrow-right0.svg' />
-            </div>
-          </motion.button>
+          <div className='flex items-center gap-2'>
+            <Image src={`/home/Mobile-app-store-badge.png`} alt='Checkmark' width={158} height={48} />
+            <Image src={`/home/Mobile-google-play badge.png`} alt='Checkmark' width={158} height={48} />
+          </div>
         </motion.div>
 
         <motion.div
@@ -61,7 +58,7 @@ const MultiCurrency = () => {
           viewport={{ once: true }}
         >
           <div className='flex h-full w-full items-center justify-center text-gray-400'>
-            <img src='/home/multi-currency-img.svg' alt='' />
+            <img src='/home/Smashpay-Content.png' alt='' />
           </div>
         </motion.div>
       </div>
@@ -82,4 +79,4 @@ const MultiCurrency = () => {
   );
 };
 
-export default MultiCurrency;
+export default SmashPayApp;

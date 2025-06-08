@@ -1,7 +1,16 @@
+'use client';
+import CTASections from './components/CTASections';
+import CustomerStories from './components/CustomerStories';
 import Featured from './components/Featured';
 import Hero from './components/Hero';
+import HowToGetStarted from './components/HowToGetStarted';
+import MultiCurrency from './components/MultiCurrency';
+import SmashPayApp from './components/SmashPayApp';
+import SmashPayCard from './components/SmashPayCard';
 import WeOffer from './components/WeOffer';
-import WhyPaymint from './components/WhyPaymint';
+import WhySmashPay from './components/WhySmashPay';
+import FAQSection from './FAQSection';
+import PromotionSection from './PromotionSection';
 
 const Home = () => {
   return (
@@ -9,13 +18,15 @@ const Home = () => {
       <Hero />
       <Featured />
       <WeOffer />
-      <WhyPaymint />
-      {/* 
-      
+      <WhySmashPay />
       <MultiCurrency />
-      <PaymintCard />
-      <PaymintApp />
-      <CustomerStories /> */}
+      <SmashPayCard />
+      <SmashPayApp />
+      <CustomerStories />
+      <HowToGetStarted />
+      <PromotionSection />
+      <FAQSection />
+      <CTASections />
     </>
   );
 };

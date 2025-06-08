@@ -62,7 +62,7 @@ const Header = () => {
 
   return (
     <div
-      className='flex w-full flex-col items-center justify-start overflow-hidden'
+      className='flex w-full flex-col items-center justify-start'
       style={{
         background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
       }}
@@ -79,7 +79,7 @@ const Header = () => {
           <div className='flex w-full max-w-[1280px] items-center justify-between px-4 md:px-8'>
             <div className='flex items-center gap-4 md:gap-16'>
               {/* Logo */}
-              <div className='relative h-7 w-[120px] md:w-[146px]'>
+              <div className='relative h-7 w-[146px]'>
                 <Image
                   src='/home/smash-pay-logo-1-10.png'
                   alt='Smash Pay Logo'
