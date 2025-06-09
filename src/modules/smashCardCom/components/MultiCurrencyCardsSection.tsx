@@ -106,81 +106,8 @@ const MultiCurrencyCardsSection = () => {
           </div>
           <div className='relative h-[420px] w-full lg:w-1/2'>
             {/* Card Images with Avatars */}
-            <div className='static h-20 w-[79.31px]'>
-              <Image
-                src='/round-avatar-60.svg'
-                alt='Avatar'
-                width={74}
-                height={74}
-                className='absolute top-[-33px] left-[280px] h-[74px] w-[74px]'
-              />
-              <div className='absolute top-[19.29px] left-[331.6px] h-[27.71px] w-[27.71px] overflow-hidden rounded-[16.62px] border border-[1.39px] border-white'>
-                <Image
-                  src='/clip-path-group0.svg'
-                  alt='Checkmark'
-                  width={27}
-                  height={27}
-                  className='absolute top-0 left-0 h-auto'
-                />
-              </div>
-            </div>
-            <div className='static h-[571.94px] w-[515.49px]'>
-              <Image
-                src='/card3.png'
-                alt='Credit Card'
-                width={364}
-                height={376}
-                className='absolute top-[-13px] left-[7px] h-[376px] w-[364px] object-cover'
-              />
-              <div className='bg-opacity-20 absolute top-[212px] left-[217px] h-[157px] w-[181px] rounded-full bg-black blur-[18px]'></div>
-              <Image
-                src='/card4.png'
-                alt='Credit Card'
-                width={363}
-                height={337}
-                className='absolute top-[390.45px] right-[115.68px] h-[336.98px] w-[363.32px] object-cover'
-                style={{
-                  transform: 'rotate(-60deg) scale(1, 1)',
-                  transformOrigin: '0 0'
-                }}
-              />
-            </div>
-            {/* Additional avatars */}
-            <div className='static h-20 w-20'>
-              <Image
-                src='/round-avatar-61.svg'
-                alt='Avatar'
-                width={74}
-                height={74}
-                className='absolute top-[289px] left-[81px] h-[74px] w-[74px]'
-              />
-              <div className='absolute top-[341px] left-[133px] h-7 w-7 overflow-hidden rounded-[32px] border border-2 border-white'>
-                <Image
-                  src='/clip-path-group1.svg'
-                  alt='Checkmark'
-                  width={28}
-                  height={28}
-                  className='absolute top-0 left-0 h-auto'
-                />
-              </div>
-            </div>
-            <div className='static h-20 w-20'>
-              <Image
-                src='/round-avatar-62.svg'
-                alt='Avatar'
-                width={74}
-                height={74}
-                className='absolute top-[60px] left-[444px] h-[74px] w-[74px]'
-              />
-              <div className='absolute top-28 left-[496px] h-7 w-7 overflow-hidden rounded-[28px] border border-2 border-white'>
-                <Image
-                  src='/clip-path-group2.svg'
-                  alt='Checkmark'
-                  width={28}
-                  height={28}
-                  className='absolute top-0 left-0 h-auto'
-                />
-              </div>
+            <div className=''>
+              <Image src='/card-images.svg' alt='Avatar' width={517} height={591} className='absolute' />
             </div>
           </div>
         </motion.div>
@@ -232,7 +159,7 @@ const MultiCurrencyCardsSection = () => {
                 Optimise company costs and manage spending
               </h4>
             </div>
-            <div className='relative h-[165px] w-full overflow-hidden'>
+            <div className='relative h-[200px] w-[330px] overflow-hidden'>
               {/* Budget Item 1 */}
               <div className='absolute top-0 left-[26px] flex flex-col items-start justify-start gap-[17.89px] overflow-hidden rounded-[11.93px] bg-white p-[14.91px]'>
                 <div className='flex w-full flex-row items-start justify-between'>
@@ -251,7 +178,7 @@ const MultiCurrencyCardsSection = () => {
                 </div>
               </div>
               {/* Budget Item 2 */}
-              <div className='absolute top-[90.68px] left-0 flex flex-col items-start justify-start gap-[17.89px] overflow-hidden rounded-[11.93px] bg-white p-[14.91px]'>
+              <div className='absolute top-[100.68px] left-10 flex flex-col items-start justify-start gap-[17.89px] overflow-hidden rounded-[11.93px] bg-white p-[14.91px]'>
                 <div className='flex w-full flex-row items-start justify-between'>
                   <span className='text-left text-sm leading-5 font-semibold tracking-[-0.19px] text-green-900'>
                     Advertising
@@ -279,33 +206,19 @@ const MultiCurrencyCardsSection = () => {
             variants={cardVariants}
           >
             <div className='absolute top-0 left-0 h-full w-full overflow-hidden rounded-[32px]'>
-              {/* Country Flags - Simplified for brevity */}
               <Image
-                src='/it0.svg'
+                src='/image-background-flag.png'
                 alt='Italy flag'
-                width={56}
-                height={56}
+                fill
+                style={{ objectFit: 'cover' }}
                 className='absolute top-8 left-[72px] h-14 w-14'
               />
-              <Image
-                src='/jp0.svg'
-                alt='Japan flag'
-                width={48}
-                height={48}
-                className='absolute top-0.5 left-[190px] h-12 w-12'
-              />
-              <Image
-                src='/pl0.svg'
-                alt='Poland flag'
-                width={48}
-                height={48}
-                className='absolute top-[-3px] left-[452px] h-12 w-12'
-              />
+
               {/* Add more flags as needed */}
             </div>
             <div className='absolute top-[206px] left-8 flex w-full flex-col items-start justify-start gap-3 pt-1.5 lg:w-[528px]'>
               <h4 className='w-full bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-left text-2xl leading-tight font-medium tracking-[-1.5px] text-transparent md:text-3xl lg:w-[460px]'>
-                Spend like a local on cards with great exchange rates
+                Spend like a local on cards with <br /> great exchange rates
               </h4>
               <p className='w-full text-left text-lg leading-relaxed font-normal tracking-[-0.25px] text-gray-300'>
                 Our business debit cards can go the distance abroad. Spend like a local worldwide in 150+
