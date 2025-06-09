@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import "tw-animate-css";
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -15,6 +15,8 @@
   --color-clr-01: #010101;
   --color-clr-1b: #0e131b;
   --color-clr-14: #0a0d14;
+  --hero: linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%);
+  --card: linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%);
 }
 
 @layer components {
@@ -30,6 +32,10 @@
 
   .bg-gradient-2 {
     background: var(--Card, linear-gradient(90deg, #1d1f2d 0%, #1d1f2e 100%));
+  }
+
+  .bg-gradient-3 {
+    background: var(--hero, linear-gradient(180deg, #0c1118 0%, #1d1e2d 100%));
   }
 
   .button-gradient-bg {
