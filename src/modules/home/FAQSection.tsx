@@ -53,11 +53,11 @@ export default function FAQSection() {
   };
 
   return (
-    <section className='bg-clr-14 relative flex w-full flex-col items-center justify-start gap-16 overflow-hidden px-4 pt-16 pb-16 md:px-8'>
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex flex-col gap-8 lg:flex-row lg:gap-24'>
-          {/* Left Content */}
-          <div className='flex w-full flex-col gap-10 lg:w-1/2'>
+    <>
+      <section className='bg-clr-14 relative w-full px-4 pt-16 pb-16 md:px-8'>
+        <div className='mx-auto grid max-w-[1280px] grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3'>
+          {/* Left Content - spans 1 column */}
+          <div className='col-span-1 flex flex-col gap-10'>
             <div className='flex flex-col gap-6'>
               <div className='flex w-[110px] flex-col items-start'>
                 <span className='text-lg font-medium tracking-tight text-white'>Here to help</span>
@@ -107,15 +107,15 @@ export default function FAQSection() {
             </motion.div>
           </div>
 
-          {/* FAQ Items */}
-          <div className='flex w-full flex-col gap-6 lg:w-1/2'>
+          {/* Right Content - spans 2 columns */}
+          <div className='col-span-1 grid gap-6 sm:col-span-1 lg:col-span-2'>
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`rounded-xl border ${faq.isOpen ? 'border-gray-400' : 'border-[#3c414c]'} p-8`}
+                className={`rounded-xl border ${faq.isOpen ? 'border-gray-400' : 'border-[#3c414c]'} p-6`}
               >
                 <div
                   className='flex cursor-pointer items-start justify-between gap-6'
@@ -147,7 +147,7 @@ export default function FAQSection() {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

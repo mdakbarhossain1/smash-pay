@@ -137,11 +137,11 @@ const ReusableInfoSection: React.FC<Props> = ({
         className={`relative overflow-hidden rounded-[32px] ${
           hasBackground
             ? `aspect-[640/720] w-full max-w-[640px] ${imageBackgroundColor}`
-            : 'h-auto min-h-[400px] w-full'
+            : 'h-[592px] w-[640px]'
         }`}
       >
         <div
-          className={`absolute left-1/2 w-full max-w-[384px] -translate-x-1/2 ${hasBackground ? 'top-20' : 'top-0'}`}
+          className={`absolute inset-0 left-1/2 w-full max-w-[384px] -translate-x-1/2 ${hasBackground ? 'top-20' : 'top-0 h-[592px] w-[640px]'}`}
         >
           <Image
             src={imageSrc}
@@ -149,7 +149,7 @@ const ReusableInfoSection: React.FC<Props> = ({
             width={hasBackground ? 345.94 : undefined}
             height={hasBackground ? 746.5 : undefined}
             fill={!hasBackground}
-            className='object-cover'
+            className='object-contain'
           />
         </div>
       </div>
