@@ -2,38 +2,27 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
+type Step = {
+  id: number;
+  title: string;
+  content: string;
+  icon: string;
+};
 
-const HowToGetStarted = () => {
+interface HowToGetStartedProps {
+  steps: Step[];
+  title: string;
+}
+
+const HowToGetStarted = ({ steps, title }: HowToGetStartedProps) => {
   const [activeStep, setActiveStep] = useState(0);
-
-  const steps = [
-    {
-      id: 0,
-      title: 'Create your SmashPay account',
-      content:
-        "Start your registration online or via the SmashPay app. We'll ask for some personal information including your contact details, nationality and driver's license number (optional).",
-      icon: '/chevron-up0.svg'
-    },
-    {
-      id: 1,
-      title: 'Enter your transfer details',
-      content: 'Provide the details of your transfer including amount, currency, and recipient information.',
-      icon: '/chevron-down3.svg'
-    },
-    {
-      id: 2,
-      title: 'Send funds for your transfer',
-      content: 'Complete your transfer by sending the funds through your preferred payment method.',
-      icon: '/chevron-down4.svg'
-    }
-  ];
 
   const toggleStep = (id: number) => {
     setActiveStep(activeStep === id ? -1 : id);
   };
 
   return (
-    <section className='bg-clr-14 relative flex w-full flex-col items-center justify-start gap-16 overflow-hidden px-4 pt-16 pb-16 md:px-8'>
+    <section className='bg-clr-14 relative flex w-full flex-col items-center justify-start gap-16 overflow-hidden px-4 pt-20 pb-20 md:px-8'>
       <div className='flex w-full max-w-7xl flex-col items-center justify-start gap-12 lg:flex-row lg:gap-24'>
         {/* Left Image Section */}
         <div className='flex w-full flex-col items-center justify-start gap-12 lg:w-1/2'>
@@ -77,7 +66,7 @@ const HowToGetStarted = () => {
                 <div className='border-gradient mt-[-3px] h-0 w-full border-t-[3px] border-r-0 border-b-0 border-l-0 border-solid' />
               </div>
               <h2 className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-4xl leading-tight font-medium tracking-tighter text-transparent md:text-5xl lg:text-6xl'>
-                It's simple to start using SmashPay
+                {title}
               </h2>
             </div>
 
