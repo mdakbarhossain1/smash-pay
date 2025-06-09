@@ -79,7 +79,7 @@ const PaymentOptionsSection = () => {
             ]}
             buttonText='Get started'
             imageSrc='/business/accept-payment.png'
-            imageBackgroundColor='bg-gradient-2'
+            imageBackgroundColor=''
             imageSide='left'
           />
         </div>
