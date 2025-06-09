@@ -1,0 +1,747 @@
+/* Figma Styles of your File */
+:root {
+  /* Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --white-transparent-gd: linear-gradient(
+      106.41deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.5) 51.5625%,
+      rgba(255, 255, 255, 0.3) 100%
+    ),
+    linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  --lime-green-gradient: linear-gradient(
+    111.92deg,
+    rgba(168, 210, 70, 1) 0%,
+    rgba(150, 209, 65, 1) 34.65692102909088%,
+    rgba(55, 183, 51, 1) 100%
+  );
+  --bg: #0a0d14;
+  --linear: linear-gradient(
+    112.59deg,
+    rgba(55, 66, 93, 1) 0%,
+    rgba(29, 33, 41, 1) 50.059449672698975%,
+    rgba(41, 40, 60, 1) 100%
+  );
+  --stroke: linear-gradient(
+    90deg,
+    rgba(158, 168, 171, 1) 0%,
+    rgba(129, 112, 168, 1) 48.527792096138%,
+    rgba(79, 173, 162, 1) 100%
+  );
+  --text: linear-gradient(
+    180deg,
+    rgba(123, 125, 129, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  --hero: linear-gradient(
+    180deg,
+    rgba(12, 17, 24, 1) 0%,
+    rgba(29, 30, 45, 1) 100%
+  );
+  --button: linear-gradient(
+    180deg,
+    rgba(21, 24, 32, 1) 0%,
+    rgba(1, 1, 1, 1) 100%
+  );
+  --card: linear-gradient(
+    90deg,
+    rgba(29, 31, 45, 1) 0%,
+    rgba(29, 31, 46, 1) 100%
+  );
+  --card-2: linear-gradient(
+    135deg,
+    rgba(63, 66, 77, 1) 0%,
+    rgba(18, 20, 28, 1) 100%
+  );
+  --stroke-2: #3c414c;
+  --gray-25: #fbfcfd;
+  --gray-50: #f2f5f7;
+  --gray-100: #edefeb;
+  --gray-200: #e5ebe5;
+  --gray-300: #c9cbce;
+  --gray-400: #a7a9ab;
+  --gray-500: #6a6c6a;
+  --gray-600: #454745;
+  --gray-700: #21231d;
+  --gray-800: #121511;
+  --gray-900: #0e0f0c;
+  --lime-25: #faffeb;
+  --lime-50: #f4ffd6;
+  --lime-100: #e7fbb0;
+  --lime-200: #d5f876;
+  --lime-300: #c3f53c;
+  --lime-400: #b6f310;
+  --lime-500: #97cb0a;
+  --lime-600: #769f08;
+  --lime-700: #567306;
+  --lime-800: #354804;
+  --lime-900: #151c01;
+  --green-25: #f2fee2;
+  --green-50: #e2ffe2;
+  --green-100: #c8ffc9;
+  --green-200: #95ff98;
+  --green-300: #62ff66;
+  --green-400: #2fff34;
+  --green-500: #00fb06;
+  --green-600: #00c805;
+  --green-700: #009004;
+  --green-800: #005802;
+  --green-900: #002c15;
+  --khaki-25: #fffcf5;
+  --khaki-50: #fcf5eb;
+  --khaki-100: #ffe9bd;
+  --khaki-200: #ffd88a;
+  --khaki-300: #ffc757;
+  --khaki-400: #ffb624;
+  --khaki-500: #f0a000;
+  --khaki-600: #bd7e00;
+  --khaki-700: #8a5c00;
+  --khaki-800: #573a00;
+  --khaki-900: #241800;
+  --scarlett-25: #fef6fb;
+  --scarlett-50: #fdeef6;
+  --scarlett-100: #fbdceb;
+  --scarlett-200: #f8b7d7;
+  --scarlett-300: #f492c2;
+  --scarlett-400: #f06dae;
+  --scarlett-500: #ec4899;
+  --scarlett-600: #e4187d;
+  --scarlett-700: #b11261;
+  --scarlett-800: #7f0d45;
+  --scarlett-900: #4c0829;
+  --blue-25: #f5faff;
+  --blue-50: #eff8ff;
+  --blue-100: #d1e9ff;
+  --blue-200: #b2ddff;
+  --blue-300: #84caff;
+  --blue-400: #53b1fd;
+  --blue-500: #2e90fa;
+  --blue-600: #1570ef;
+  --blue-700: #175cd3;
+  --blue-800: #003caa;
+  --blue-900: #002872;
+  --blue-light-25: #f5fbff;
+  --blue-light-50: #f0f9ff;
+  --blue-light-100: #e0f2fe;
+  --blue-light-200: #b9e6fe;
+  --blue-light-300: #7cd4fd;
+  --blue-light-400: #36bffa;
+  --blue-light-500: #0ba5ec;
+  --blue-light-600: #0086c9;
+  --blue-light-700: #026aa2;
+  --blue-light-800: #065986;
+  --blue-light-900: #0b4a6f;
+  --indigo-25: #f5f8ff;
+  --indigo-50: #eef4ff;
+  --indigo-100: #e0eaff;
+  --indigo-200: #c7d7fe;
+  --indigo-300: #a4bcfd;
+  --indigo-400: #8098f9;
+  --indigo-500: #6172f3;
+  --indigo-600: #444ce7;
+  --indigo-700: #3538cd;
+  --indigo-800: #2d31a6;
+  --indigo-900: #2d3282;
+  --purple-25: #fafaff;
+  --purple-50: #f4f3ff;
+  --purple-100: #ebe9fe;
+  --purple-200: #d9d6fe;
+  --purple-300: #bdb4fe;
+  --purple-400: #9b8afb;
+  --purple-500: #7a5af8;
+  --purple-600: #6938ef;
+  --purple-700: #5925dc;
+  --purple-800: #4a1fb8;
+  --purple-900: #3e1c96;
+  --rose-25: #fff5f6;
+  --rose-50: #fff1f3;
+  --rose-100: #ffe4e8;
+  --rose-200: #fecdd6;
+  --rose-300: #fea3b4;
+  --rose-400: #fd6f8e;
+  --rose-500: #f63d68;
+  --rose-600: #e31b54;
+  --rose-700: #c01048;
+  --rose-800: #a11043;
+  --rose-900: #89123e;
+  --orange-25: #fffaf5;
+  --orange-50: #fff6ed;
+  --orange-100: #ffead5;
+  --orange-200: #fddcab;
+  --orange-300: #feb273;
+  --orange-400: #fd853a;
+  --orange-500: #fb6514;
+  --orange-600: #ec4a0a;
+  --orange-700: #c4320a;
+  --orange-800: #9c2a10;
+  --orange-900: #7e2410;
+  --gradient-gray-600-greater-500-90deg: linear-gradient(
+    90deg,
+    rgba(71, 84, 103, 1) 0%,
+    rgba(102, 112, 133, 1) 100%
+  );
+  --gradient-gray-700-greater-600-45deg: linear-gradient(
+    45deg,
+    rgba(52, 64, 84, 1) 0%,
+    rgba(71, 84, 103, 1) 100%
+  );
+  --gradient-gray-800-greater-600-45deg: linear-gradient(
+    45deg,
+    rgba(29, 41, 57, 1) 0%,
+    rgba(71, 84, 103, 1) 100%
+  );
+  --gradient-gray-800-greater-600-90deg: linear-gradient(
+    63.44deg,
+    rgba(29, 41, 57, 1) 0%,
+    rgba(71, 84, 103, 1) 100%
+  );
+  --gradient-gray-800-greater-700-265deg: linear-gradient(
+    26.57deg,
+    rgba(29, 41, 57, 1) 0%,
+    rgba(52, 64, 84, 1) 100%
+  );
+  --gradient-gray-900-greater-600-45deg: linear-gradient(
+    45deg,
+    rgba(16, 24, 40, 1) 0%,
+    rgba(71, 84, 103, 1) 100%
+  );
+  --gradient-primary-600-greater-500-90deg: linear-gradient(
+    90deg,
+    rgba(127, 86, 217, 1) 0%,
+    rgba(158, 119, 237, 1) 100%
+  );
+  --gradient-primary-700-greater-600-45deg: linear-gradient(
+    45deg,
+    rgba(105, 65, 198, 1) 0%,
+    rgba(127, 86, 217, 1) 100%
+  );
+  --gradient-primary-800-greater-600-45deg: linear-gradient(
+    45deg,
+    rgba(83, 56, 158, 1) 0%,
+    rgba(127, 86, 217, 1) 100%
+  );
+  --gradient-primary-800-greater-600-90deg: linear-gradient(
+    63.44deg,
+    rgba(83, 56, 158, 1) 0%,
+    rgba(127, 86, 217, 1) 100%
+  );
+  --gradient-primary-800-greater-700-265deg: linear-gradient(
+    26.57deg,
+    rgba(83, 56, 158, 1) 0%,
+    rgba(105, 65, 198, 1) 100%
+  );
+  --gradient-primary-900-greater-600-45deg: linear-gradient(
+    45deg,
+    rgba(66, 48, 125, 1) 0%,
+    rgba(127, 86, 217, 1) 100%
+  );
+  --avatar-user-square-olivia-rhye: undefined;
+  --avatar-user-square-olivia-rhye-color-background: linear-gradient(
+    to left,
+    #c7b9da,
+    #c7b9da
+  );
+  --avatar-user-square-phoenix-baker: undefined;
+  --avatar-user-square-phoenix-baker-color-background: linear-gradient(
+    to left,
+    #aa9c75,
+    #aa9c75
+  );
+  --avatar-user-square-lana-steiner: undefined;
+  --avatar-user-square-lana-steiner-color-background: linear-gradient(
+    to left,
+    #d4b5ad,
+    #d4b5ad
+  );
+  --avatar-user-square-demi-wilkinson: undefined;
+  --avatar-user-square-demi-wilkinson-color-background: linear-gradient(
+    to left,
+    #bea887,
+    #bea887
+  );
+  --avatar-user-square-candice-wu: undefined;
+  --avatar-user-square-candice-wu-color-background: linear-gradient(
+    to left,
+    #a2a8cd,
+    #a2a8cd
+  );
+  --avatar-user-square-natali-craig: undefined;
+  --avatar-user-square-natali-craig-color-background: linear-gradient(
+    to left,
+    #d1baa9,
+    #d1baa9
+  );
+  --avatar-user-square-drew-cano: undefined;
+  --avatar-user-square-drew-cano-color-background: linear-gradient(
+    to left,
+    #d1dfc3,
+    #d1dfc3
+  );
+  --avatar-user-square-orlando-diggs: undefined;
+  --avatar-user-square-orlando-diggs-color-background: linear-gradient(
+    to left,
+    #cfc3a7,
+    #cfc3a7
+  );
+  --avatar-user-square-andi-lane: undefined;
+  --avatar-user-square-andi-lane-color-background: linear-gradient(
+    to left,
+    #d2c7ac,
+    #d2c7ac
+  );
+  --avatar-user-square-kate-morrison: undefined;
+  --avatar-user-square-kate-morrison-color-background: linear-gradient(
+    to left,
+    #dbc0dd,
+    #dbc0dd
+  );
+  --avatar-user-square-koray-okumus: undefined;
+  --avatar-user-square-koray-okumus-color-background: linear-gradient(
+    to left,
+    #d4b2af,
+    #d4b2af
+  );
+  --avatar-user-square-ava-wright: undefined;
+  --avatar-user-square-ava-wright-color-background: linear-gradient(
+    to left,
+    #c9ba9c,
+    #c9ba9c
+  );
+  --avatar-user-square-eve-leroy: undefined;
+  --avatar-user-square-eve-leroy-color-background: linear-gradient(
+    to left,
+    #dab9bb,
+    #dab9bb
+  );
+  --avatar-user-square-zahir-mays: undefined;
+  --avatar-user-square-zahir-mays-color-background: linear-gradient(
+    to left,
+    #c3c7df,
+    #c3c7df
+  );
+  --avatar-user-square-joshua-wilson: undefined;
+  --avatar-user-square-joshua-wilson-color-background: linear-gradient(
+    to left,
+    #d2dbbd,
+    #d2dbbd
+  );
+  --avatar-user-square-rene-wells: undefined;
+  --avatar-user-square-rene-wells-color-background: linear-gradient(
+    to left,
+    #dfcc9f,
+    #dfcc9f
+  );
+  --avatar-user-square-lori-bryson: undefined;
+  --avatar-user-square-lori-bryson-color-background: linear-gradient(
+    to left,
+    #d9b9bb,
+    #d9b9bb
+  );
+  --avatar-user-square-anaiah-whitten: undefined;
+  --avatar-user-square-anaiah-whitten-color-background: linear-gradient(
+    to left,
+    #ccc0dd,
+    #ccc0dd
+  );
+  --avatar-user-square-noah-pierre: undefined;
+  --avatar-user-square-noah-pierre-color-background: linear-gradient(
+    to left,
+    #d4afbd,
+    #d4afbd
+  );
+  --avatar-user-square-katherine-moss: undefined;
+  --avatar-user-square-katherine-moss-color-background: linear-gradient(
+    to left,
+    #a2a8cd,
+    #a2a8cd
+  );
+  --avatar-user-square-mollie-hall: undefined;
+  --avatar-user-square-mollie-hall-color-background: linear-gradient(
+    to left,
+    #cb9fa2,
+    #cb9fa2
+  );
+  --avatar-user-square-eduard-franz: undefined;
+  --avatar-user-square-eduard-franze-color-background: linear-gradient(
+    to left,
+    #dbd0bd,
+    #dbd0bd
+  );
+  --avatar-user-square-alec-whitten: undefined;
+  --avatar-user-square-alec-whitten-color-background: linear-gradient(
+    to left,
+    #abb677,
+    #abb677
+  );
+  --avatar-user-square-eva-bond: undefined;
+  --avatar-user-square-eva-bond-color-background: linear-gradient(
+    to left,
+    #dbc0dd,
+    #dbc0dd
+  );
+  --avatar-user-square-sophia-perez: undefined;
+  --avatar-user-square-sophia-perez-color-background: linear-gradient(
+    to left,
+    #b6cdd8,
+    #b6cdd8
+  );
+  --avatar-user-square-lyle-kauffman: undefined;
+  --avatar-user-square-lyle-kauffman-color-background: linear-gradient(
+    to left,
+    #d2b1ac,
+    #d2b1ac
+  );
+  --avatar-user-square-kelly-williams: undefined;
+  --avatar-user-square-kelly-williams-color-background: linear-gradient(
+    to left,
+    #d8c7b6,
+    #d8c7b6
+  );
+  --avatar-user-square-lucy-bond: undefined;
+  --avatar-user-square-lucy-bond-color-background: linear-gradient(
+    to left,
+    #dbc0dd,
+    #dbc0dd
+  );
+  --avatar-user-square-alisa-hester: undefined;
+  --avatar-user-square-alisa-hester-color-background: linear-gradient(
+    to left,
+    #d4afbd,
+    #d4afbd
+  );
+  --avatar-user-square-rosalee-melvin: undefined;
+  --avatar-user-square-rosalee-melvin-color-background: linear-gradient(
+    to left,
+    #dbcabd,
+    #dbcabd
+  );
+  --avatar-user-square-loki-bright: undefined;
+  --avatar-user-square-loki-bright-color-background: linear-gradient(
+    to left,
+    #b9cfd0,
+    #b9cfd0
+  );
+  --avatar-user-square-aliah-lane: undefined;
+  --avatar-user-square-aliah-lane-color-background: linear-gradient(
+    to left,
+    #d7c0dd,
+    #d7c0dd
+  );
+  --avatar-user-square-anita-cruz: undefined;
+  --avatar-user-square-anita-cruz-color-background: linear-gradient(
+    to left,
+    #c2c7b8,
+    #c2c7b8
+  );
+  --avatar-user-square-kari-rasmussen: undefined;
+  --avatar-user-square-kari-rasmussen-color-background: linear-gradient(
+    to left,
+    #a9b58d,
+    #a9b58d
+  );
+  --avatar-user-square-nala-goins: undefined;
+  --avatar-user-square-nala-goins-color-background: linear-gradient(
+    to left,
+    #c0c6dd,
+    #c0c6dd
+  );
+  --avatar-user-portrait-alisa-hester: undefined;
+  --avatar-user-portrait-rich-wilson: undefined;
+  --avatar-user-portrait-annie-stanley: undefined;
+  --avatar-user-portrait-johnny-bell: undefined;
+  --avatar-user-portrait-mia-ward: undefined;
+  --avatar-user-portrait-archie-young: undefined;
+  --avatar-user-portrait-amanda-carr: undefined;
+  --avatar-user-portrait-megan-sims: undefined;
+  --avatar-user-portrait-ryan-fox: undefined;
+  --avatar-user-portrait-mason-phillips: undefined;
+  --avatar-user-portrait-zoe-silva: undefined;
+  --avatar-user-portrait-amanda-carr: undefined;
+  --avatar-user-portrait-harley-white: undefined;
+  --avatar-user-portrait-amelie-cooper: undefined;
+  --avatar-user-portrait-evelyn-harrison: undefined;
+  --avatar-user-portrait-abby-smith: undefined;
+  --avatar-user-portrait-isla-anderson: undefined;
+  --avatar-user-portrait-alex-holland: undefined;
+  --avatar-user-portrait-zachary-collins: undefined;
+  --avatar-user-portrait-nic-davidson: undefined;
+  --avatar-user-portrait-josh-knight: undefined;
+  --avatar-user-portrait-kelly-myer: undefined;
+  --avatar-user-portrait-laura-palmer: undefined;
+  --avatar-user-portrait-mollie-morgan: undefined;
+  --avatar-user-portrait-heather-kelly: undefined;
+  --avatar-user-portrait-james-dunn: undefined;
+  --avatar-user-portrait-elijah-johnson: undefined;
+  --avatar-user-portrait-sara-woodman: undefined;
+  --avatar-company-logo-layers: undefined;
+  --avatar-company-logo-sisyphus: undefined;
+  --avatar-company-logo-circooles: undefined;
+  --avatar-company-logo-catalog: undefined;
+  --avatar-company-logo-quotient: undefined;
+  --avatar-company-logo-hourglass: undefined;
+  --avatar-company-logo-commandr: undefined;
+  --avatar-company-logo-untitled-ui: undefined;
+
+  /* Fonts */
+  --display-2xl-regular-font-family: Manrope-Regular, sans-serif;
+  --display-2xl-regular-font-size: 72px;
+  --display-2xl-regular-line-height: 80px;
+  --display-2xl-regular-font-weight: 400;
+  --display-2xl-regular-font-style: normal;
+  --display-2xl-medium-font-family: Manrope-Medium, sans-serif;
+  --display-2xl-medium-font-size: 72px;
+  --display-2xl-medium-line-height: 80px;
+  --display-2xl-medium-font-weight: 500;
+  --display-2xl-medium-font-style: normal;
+  --display-2xl-semi-bold-font-family: Manrope-SemiBold, sans-serif;
+  --display-2xl-semi-bold-font-size: 72px;
+  --display-2xl-semi-bold-line-height: 80px;
+  --display-2xl-semi-bold-font-weight: 600;
+  --display-2xl-semi-bold-font-style: normal;
+  --display-xl-regular-font-family: Manrope-Regular, sans-serif;
+  --display-xl-regular-font-size: 58px;
+  --display-xl-regular-line-height: 64px;
+  --display-xl-regular-font-weight: 400;
+  --display-xl-regular-font-style: normal;
+  --display-xl-medium-font-family: Manrope-Medium, sans-serif;
+  --display-xl-medium-font-size: 58px;
+  --display-xl-medium-line-height: 64px;
+  --display-xl-medium-font-weight: 500;
+  --display-xl-medium-font-style: normal;
+  --display-xl-semi-bold-font-family: Manrope-SemiBold, sans-serif;
+  --display-xl-semi-bold-font-size: 58px;
+  --display-xl-semi-bold-line-height: 64px;
+  --display-xl-semi-bold-font-weight: 600;
+  --display-xl-semi-bold-font-style: normal;
+  --display-lg-regular-font-family: Manrope-Regular, sans-serif;
+  --display-lg-regular-font-size: 52px;
+  --display-lg-regular-line-height: 58px;
+  --display-lg-regular-font-weight: 400;
+  --display-lg-regular-font-style: normal;
+  --display-lg-medium-font-family: Manrope-Medium, sans-serif;
+  --display-lg-medium-font-size: 52px;
+  --display-lg-medium-line-height: 58px;
+  --display-lg-medium-font-weight: 500;
+  --display-lg-medium-font-style: normal;
+  --display-lg-semi-bold-font-family: Manrope-SemiBold, sans-serif;
+  --display-lg-semi-bold-font-size: 52px;
+  --display-lg-semi-bold-line-height: 58px;
+  --display-lg-semi-bold-font-weight: 600;
+  --display-lg-semi-bold-font-style: normal;
+  --display-md-regular-font-family: Manrope-Regular, sans-serif;
+  --display-md-regular-font-size: 44px;
+  --display-md-regular-line-height: 50px;
+  --display-md-regular-font-weight: 400;
+  --display-md-regular-font-style: normal;
+  --display-md-medium-font-family: Manrope-Medium, sans-serif;
+  --display-md-medium-font-size: 44px;
+  --display-md-medium-line-height: 50px;
+  --display-md-medium-font-weight: 500;
+  --display-md-medium-font-style: normal;
+  --display-md-semi-bold-font-family: Manrope-SemiBold, sans-serif;
+  --display-md-semi-bold-font-size: 44px;
+  --display-md-semi-bold-line-height: 50px;
+  --display-md-semi-bold-font-weight: 600;
+  --display-md-semi-bold-font-style: normal;
+  --display-sm-regular-font-family: Manrope-Regular, sans-serif;
+  --display-sm-regular-font-size: 36px;
+  --display-sm-regular-line-height: 44px;
+  --display-sm-regular-font-weight: 400;
+  --display-sm-regular-font-style: normal;
+  --display-sm-medium-font-family: Manrope-Medium, sans-serif;
+  --display-sm-medium-font-size: 36px;
+  --display-sm-medium-line-height: 44px;
+  --display-sm-medium-font-weight: 500;
+  --display-sm-medium-font-style: normal;
+  --display-sm-semi-bold-font-family: Manrope-SemiBold, sans-serif;
+  --display-sm-semi-bold-font-size: 36px;
+  --display-sm-semi-bold-line-height: 44px;
+  --display-sm-semi-bold-font-weight: 600;
+  --display-sm-semi-bold-font-style: normal;
+  --display-xs-regular-font-family: Manrope-Regular, sans-serif;
+  --display-xs-regular-font-size: 24px;
+  --display-xs-regular-line-height: 32px;
+  --display-xs-regular-font-weight: 400;
+  --display-xs-regular-font-style: normal;
+  --display-xs-medium-font-family: Manrope-Medium, sans-serif;
+  --display-xs-medium-font-size: 24px;
+  --display-xs-medium-line-height: 32px;
+  --display-xs-medium-font-weight: 500;
+  --display-xs-medium-font-style: normal;
+  --display-xs-semi-bold-font-family: Manrope-SemiBold, sans-serif;
+  --display-xs-semi-bold-font-size: 24px;
+  --display-xs-semi-bold-line-height: 32px;
+  --display-xs-semi-bold-font-weight: 600;
+  --display-xs-semi-bold-font-style: normal;
+  --text-xl-regular-font-family: Manrope-Regular, sans-serif;
+  --text-xl-regular-font-size: 20px;
+  --text-xl-regular-line-height: 28px;
+  --text-xl-regular-font-weight: 400;
+  --text-xl-regular-font-style: normal;
+  --text-xl-medium-font-family: Manrope-Medium, sans-serif;
+  --text-xl-medium-font-size: 20px;
+  --text-xl-medium-line-height: 28px;
+  --text-xl-medium-font-weight: 500;
+  --text-xl-medium-font-style: normal;
+  --text-xl-semi-bold-font-family: Manrope-SemiBold, sans-serif;
+  --text-xl-semi-bold-font-size: 20px;
+  --text-xl-semi-bold-line-height: 28px;
+  --text-xl-semi-bold-font-weight: 600;
+  --text-xl-semi-bold-font-style: normal;
+  --text-xl-regular-underlined-font-family: Manrope-Regular, sans-serif;
+  --text-xl-regular-underlined-font-size: 20px;
+  --text-xl-regular-underlined-line-height: 28px;
+  --text-xl-regular-underlined-font-weight: 400;
+  --text-xl-regular-underlined-font-style: normal;
+  --text-xl-semi-bold-underlined-font-family: Manrope-SemiBold, sans-serif;
+  --text-xl-semi-bold-underlined-font-size: 20px;
+  --text-xl-semi-bold-underlined-line-height: 28px;
+  --text-xl-semi-bold-underlined-font-weight: 600;
+  --text-xl-semi-bold-underlined-font-style: normal;
+  --text-lg-regular-font-family: Manrope-Regular, sans-serif;
+  --text-lg-regular-font-size: 18px;
+  --text-lg-regular-line-height: 28px;
+  --text-lg-regular-font-weight: 400;
+  --text-lg-regular-font-style: normal;
+  --text-lg-medium-font-family: Manrope-Medium, sans-serif;
+  --text-lg-medium-font-size: 18px;
+  --text-lg-medium-line-height: 28px;
+  --text-lg-medium-font-weight: 500;
+  --text-lg-medium-font-style: normal;
+  --text-lg-semi-bold-font-family: Manrope-SemiBold, sans-serif;
+  --text-lg-semi-bold-font-size: 18px;
+  --text-lg-semi-bold-line-height: 28px;
+  --text-lg-semi-bold-font-weight: 600;
+  --text-lg-semi-bold-font-style: normal;
+  --text-lg-regular-underlined-font-family: Manrope-Regular, sans-serif;
+  --text-lg-regular-underlined-font-size: 18px;
+  --text-lg-regular-underlined-line-height: 28px;
+  --text-lg-regular-underlined-font-weight: 400;
+  --text-lg-regular-underlined-font-style: normal;
+  --text-lg-semi-bold-underlined-font-family: Manrope-SemiBold, sans-serif;
+  --text-lg-semi-bold-underlined-font-size: 18px;
+  --text-lg-semi-bold-underlined-line-height: 28px;
+  --text-lg-semi-bold-underlined-font-weight: 600;
+  --text-lg-semi-bold-underlined-font-style: normal;
+  --text-md-regular-font-family: Manrope-Regular, sans-serif;
+  --text-md-regular-font-size: 16px;
+  --text-md-regular-line-height: 24px;
+  --text-md-regular-font-weight: 400;
+  --text-md-regular-font-style: normal;
+  --text-md-medium-font-family: Manrope-Medium, sans-serif;
+  --text-md-medium-font-size: 16px;
+  --text-md-medium-line-height: 24px;
+  --text-md-medium-font-weight: 500;
+  --text-md-medium-font-style: normal;
+  --text-md-semi-bold-font-family: Manrope-SemiBold, sans-serif;
+  --text-md-semi-bold-font-size: 16px;
+  --text-md-semi-bold-line-height: 24px;
+  --text-md-semi-bold-font-weight: 600;
+  --text-md-semi-bold-font-style: normal;
+  --text-md-regular-underlined-font-family: Manrope-Regular, sans-serif;
+  --text-md-regular-underlined-font-size: 16px;
+  --text-md-regular-underlined-line-height: 24px;
+  --text-md-regular-underlined-font-weight: 400;
+  --text-md-regular-underlined-font-style: normal;
+  --text-base-regular-font-family: Manrope-Regular, sans-serif;
+  --text-base-regular-font-size: 15px;
+  --text-base-regular-line-height: 24px;
+  --text-base-regular-font-weight: 400;
+  --text-base-regular-font-style: normal;
+  --text-base-medium-font-family: Manrope-Medium, sans-serif;
+  --text-base-medium-font-size: 15px;
+  --text-base-medium-line-height: 24px;
+  --text-base-medium-font-weight: 500;
+  --text-base-medium-font-style: normal;
+  --text-base-semi-bold-font-family: Manrope-SemiBold, sans-serif;
+  --text-base-semi-bold-font-size: 15px;
+  --text-base-semi-bold-line-height: 24px;
+  --text-base-semi-bold-font-weight: 600;
+  --text-base-semi-bold-font-style: normal;
+  --text-sm-regular-font-family: Manrope-Regular, sans-serif;
+  --text-sm-regular-font-size: 14px;
+  --text-sm-regular-line-height: 20px;
+  --text-sm-regular-font-weight: 400;
+  --text-sm-regular-font-style: normal;
+  --text-sm-medium-font-family: Manrope-Medium, sans-serif;
+  --text-sm-medium-font-size: 14px;
+  --text-sm-medium-line-height: 20px;
+  --text-sm-medium-font-weight: 500;
+  --text-sm-medium-font-style: normal;
+  --text-sm-semi-bold-font-family: Manrope-SemiBold, sans-serif;
+  --text-sm-semi-bold-font-size: 14px;
+  --text-sm-semi-bold-line-height: 20px;
+  --text-sm-semi-bold-font-weight: 600;
+  --text-sm-semi-bold-font-style: normal;
+  --text-xs-regular-font-family: Manrope-Regular, sans-serif;
+  --text-xs-regular-font-size: 12px;
+  --text-xs-regular-line-height: 18px;
+  --text-xs-regular-font-weight: 400;
+  --text-xs-regular-font-style: normal;
+  --text-xs-medium-font-family: Manrope-Medium, sans-serif;
+  --text-xs-medium-font-size: 12px;
+  --text-xs-medium-line-height: 18px;
+  --text-xs-medium-font-weight: 500;
+  --text-xs-medium-font-style: normal;
+  --text-xs-semi-bold-font-family: Manrope-SemiBold, sans-serif;
+  --text-xs-semi-bold-font-size: 12px;
+  --text-xs-semi-bold-line-height: 18px;
+  --text-xs-semi-bold-font-weight: 600;
+  --text-xs-semi-bold-font-style: normal;
+
+  /* Effects */
+  --iphone-inner-box-shadow: inset -7px -10px 34px 0px rgba(246, 249, 252, 1),
+    inset 0px -4px 5px 0px rgba(246, 249, 252, 1),
+    inset 15px 0px 12px 3px rgba(255, 255, 255, 1),
+    inset -6px -4px 16px 0px rgba(234, 234, 234, 1);
+  --focus-ring-4px-primary-100-box-shadow: 0px 0px 0px 4px
+    rgba(231, 251, 176, 1);
+  --focus-ring-4px-gray-100-box-shadow: 0px 0px 0px 4px rgba(242, 244, 247, 1);
+  --focus-ring-4px-error-100-box-shadow: 0px 0px 0px 4px rgba(254, 228, 226, 1);
+  --focus-ring-4px-gray-600-box-shadow: 0px 0px 0px 4px rgba(71, 84, 103, 1);
+  --focus-ring-4px-primary-600-box-shadow: 0px 0px 0px 4px rgba(127, 86, 217, 1);
+  --shadow-xs-box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --shadow-xs-focused-4px-primary-100-box-shadow: 0px 0px 0px 4px
+      rgba(231, 251, 176, 1),
+    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --shadow-xs-focused-4px-gray-100-box-shadow: 0px 0px 0px 4px
+      rgba(242, 244, 247, 1),
+    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --shadow-xs-focused-4px-error-100-box-shadow: 0px 0px 0px 4px
+      rgba(254, 228, 226, 1),
+    0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  --shadow-sm-box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+  --shadow-sm-focused-4px-primary-100-box-shadow: 0px 0px 0px 4px
+      rgba(231, 251, 176, 1),
+    0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+  --shadow-sm-focused-4px-gray-100-box-shadow: 0px 0px 0px 4px
+      rgba(242, 244, 247, 1),
+    0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+  --shadow-md-box-shadow: 0px 2px 4px -2px rgba(16, 24, 40, 0.06),
+    0px 4px 8px -2px rgba(16, 24, 40, 0.1);
+  --shadow-lg-box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03),
+    0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+  --shadow-xl-box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03),
+    0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+  --shadow-2xl-box-shadow: 0px 24px 48px -12px rgba(16, 24, 40, 0.18);
+  --shadow-3xl-box-shadow: 0px 32px 64px -12px rgba(23, 43, 77, 0.14);
+  --shadow-portfolio-mockup-main-centre-md-box-shadow: 0px 75px 150px 0px
+    rgba(52, 64, 84, 0.14);
+  --shadow-portfolio-mockup-main-centre-lg-box-shadow: 0px 100px 200px 0px
+    rgba(52, 64, 84, 0.18);
+  --shadow-portfolio-mockup-overlay-right-lg-box-shadow: -100px 100px 150px 0px
+    rgba(52, 64, 84, 0.12);
+  --shadow-portfolio-mockup-overlay-left-lg-box-shadow: 100px 100px 150px 0px
+    rgba(52, 64, 84, 0.12);
+  --shadow-portfolio-mockup-grid-shadow-md-box-shadow: 32px 32px 64px 0px
+    rgba(52, 64, 84, 0.08);
+  --background-blur-sm-backdrop-filter: blur(4px);
+  --background-blur-md-backdrop-filter: blur(8px);
+  --background-blur-lg-backdrop-filter: blur(12px);
+  --background-blur-xl-backdrop-filter: blur(20px);
+}
+/* Figma Color Variables of your File */

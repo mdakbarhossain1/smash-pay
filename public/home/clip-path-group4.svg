@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_6552_181323" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+<path d="M16 32C24.8365 32 32 24.8365 32 16C32 7.16345 24.8365 0 16 0C7.16345 0 0 7.16345 0 16C0 24.8365 7.16345 32 16 32Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_6552_181323)">
+<path d="M32 0H0V32H32V0Z" fill="#231D9A"/>
+<path d="M13.5 13.5V-0.5H12V10.25L1.25 3L-2 7.25L5.25 12H-1.25V13.5H13.5Z" fill="white"/>
+<path d="M13.5 18.5V32.5H12V21.75L1.25 29L-2 24.75L5.25 20H-1.25V18.5H13.5Z" fill="white"/>
+<path d="M18.5 13.5V-0.5H20V10.25L30.75 3L34 7.25L26.75 12H33.25V13.5H18.5Z" fill="white"/>
+<path d="M18.5 18.5V32.5H20V21.75L30.75 29L34 24.75L26.75 20H33.25V18.5H18.5Z" fill="white"/>
+<path d="M12 12V11.75L1.5 4.75L-0.25 6.75L7.5 12H12Z" fill="#F0263C"/>
+<path d="M12 20V20.25L1.5 27.25L-0.25 25.25L7.5 20H12Z" fill="#F0263C"/>
+<path d="M20 12V11.75L30.5 4.75L32.25 6.75L24.5 12H20Z" fill="#F0263C"/>
+<path d="M20 20V20.25L30.5 27.25L32.25 25.25L24.5 20H20Z" fill="#F0263C"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 13.5V-1H13.5V13.5H-1V18.5H13.5V33H18.5V18.5H33V13.5H18.5Z" fill="#F0263C"/>
+</g>
+</svg>
