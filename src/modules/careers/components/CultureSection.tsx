@@ -5,7 +5,7 @@ import Image from 'next/image';
 const CultureSection = () => {
   return (
     <section
-      className='relative flex w-full shrink-0 flex-col items-start justify-start overflow-hidden px-5 py-12 sm:px-10 md:px-20 lg:pb-32'
+      className='relative flex w-full shrink-0 flex-col items-center justify-start overflow-hidden px-5 py-12 sm:px-10 md:px-20 lg:pb-32'
       style={{
         background: 'linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%)'
       }}
