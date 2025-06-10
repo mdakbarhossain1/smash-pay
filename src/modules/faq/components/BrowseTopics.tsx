@@ -2,39 +2,48 @@
 import { fadeIn, staggerContainer } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const BrowseTopics = () => {
+  const navigate = useRouter();
+  const { push } = navigate;
   const topics = [
     {
       icon: 'contact-us/icons/sending-money.svg',
       title: 'Sending money',
+      slug: 'sending-money',
       description:
         'Sending a bank transfer Transfers between SmashPay users Transfers in Other Countries and Currencies'
     },
     {
       icon: 'contact-us/icons/profile-account.svg',
       title: 'Manage your account',
+      slug: 'manage-your-account',
       description: 'Update Personal Details Currency account details Getting your account verified'
     },
     {
       icon: 'contact-us/icons/recive-money.svg',
       title: 'Receiving money',
+      slug: 'receiving-money',
       description:
         'Request money from other users Receiving a money transfer with your account. Getting Paid by Card'
     },
     {
       icon: 'contact-us/icons/pay-card.svg',
       title: 'SmashPay card',
+      slug: 'smashPay-card',
       description: 'Getting started with SmashPay card Spending fees Problem using cards'
     },
     {
       icon: 'contact-us/icons/conversion.svg',
       title: 'Conversion',
+      slug: 'conversion',
       description: 'Creating conversion Foreign exchange rate calculation Minimum and maximum limit'
     },
     {
       icon: 'contact-us/icons/guides.svg',
       title: 'How to guides',
+      slug: 'how-to-guides',
       description: 'Set up rate alerts Multi-currencies accounts Low balance alerts'
     }
   ];
@@ -59,13 +68,16 @@ const BrowseTopics = () => {
 
         <motion.div
           variants={fadeIn('up', 'tween', 0.4, 1)}
-          className='grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'
+          className='grid w-full cursor-pointer grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'
         >
           {topics.map((topic, index) => (
             <motion.div
               key={index}
               variants={fadeIn('up', 'tween', 0.2 + index * 0.1, 1)}
               whileHover={{ y: -5 }}
+              onClick={() => {
+                navigate.push(`/faq/${topic.slug}`);
+              }}
               className='flex flex-col items-start justify-start gap-6 rounded-xl bg-gray-900/50 p-8 transition-all hover:bg-gray-900/70'
             >
               <div className='relative h-12 w-12 shrink-0'>
