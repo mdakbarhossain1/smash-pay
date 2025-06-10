@@ -6,21 +6,20 @@ export default function CTASections() {
   return (
     <div className='w-full bg-gradient-to-b from-[#0c1118] to-[#1d1e2d] px-5 pt-24 pb-24 md:px-20'>
       {/* cta section */}
-      <div className='bg-clr-14 mx-auto max-w-7xl rounded-2xl px-6 py-10 md:mb-30 md:px-12 md:py-14'>
+      {/* <div className='bg-clr-14 mx-auto max-w-7xl rounded-2xl px-6 py-10 md:mb-30 md:px-12 md:py-14'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className='flex flex-col justify-between gap-6 md:flex-row md:items-center'
         >
-          {/* Text Section */}
+
           <div className='flex flex-col gap-3 text-left'>
             <h3 className='text-2xl font-semibold tracking-tight text-white md:text-3xl'>
               Is your country not listed here?
             </h3>
           </div>
 
-          {/* Button */}
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +36,7 @@ export default function CTASections() {
             />
           </motion.button>
         </motion.div>
-      </div>
+      </div> */}
       {/* cta section */}
       <div className='mx-auto max-w-7xl'>
         <motion.div
