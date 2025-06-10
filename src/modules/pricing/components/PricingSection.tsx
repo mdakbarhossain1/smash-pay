@@ -54,45 +54,25 @@ const PricingSection = () => {
   ];
 
   const CheckIcon = () => (
-    <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <svg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'>
+      <rect x='0.798828' y='0.505615' width='24' height='24' rx='12' fill='#0A0D14' />
       <path
-        d='M20 6L9 17L4 12'
-        stroke='currentColor'
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        fill-rule='evenodd'
+        clip-rule='evenodd'
+        d='M17.8948 7.89553L10.7348 14.8055L8.83484 12.7755C8.48484 12.4455 7.93484 12.4255 7.53484 12.7055C7.14484 12.9955 7.03484 13.5055 7.27484 13.9155L9.52484 17.5755C9.74484 17.9155 10.1248 18.1255 10.5548 18.1255C10.9648 18.1255 11.3548 17.9155 11.5748 17.5755C11.9348 17.1055 18.8048 8.91553 18.8048 8.91553C19.7048 7.99553 18.6148 7.18553 17.8948 7.88553V7.89553Z'
+        fill='white'
       />
     </svg>
   );
 
   const MinusIcon = () => (
-    <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-      <path d='M5 12H19' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
-    </svg>
-  );
-
-  const InfoIcon = () => (
-    <svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <svg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <path
-        d='M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      />
-      <path
-        d='M9 12V9'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      />
-      <path
-        d='M9 6H9.0075'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        d='M5.79883 12.5056H19.7988'
+        stroke='#C9CBCE'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
       />
     </svg>
   );
@@ -333,8 +313,8 @@ const PricingSection = () => {
         <div className='relative flex w-full flex-col items-start justify-start gap-0 self-stretch'>
           {/*  */}
           <div className='wrap bg-gradient-to-r from-[#1D1F2D] to-[#1D1F2E]'>
-            <div className='grid grid-cols-5 items-start justify-start gap-0 self-stretch lg:flex-row'>
-              <div></div>
+            <div className='grid grid-cols-1 items-start justify-start gap-0 self-stretch md:grid-cols-5 lg:flex-row'>
+              <div className='hidden md:block'></div>
               {plans.map((plan, index) => (
                 <PlanCard key={plan.name} plan={plan} index={index} />
               ))}

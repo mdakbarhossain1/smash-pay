@@ -1,7 +1,10 @@
 'use client';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const PricingHeroSection = () => {
+  const [selectedPlan, setSelectedPlan] = useState('personal'); // 'personal' or 'business'
+
   return (
     <section className='relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch bg-gradient-to-b from-[#0c1118] to-[#1d1e2d] pt-24 pb-16'>
       <div className='relative flex w-full max-w-[1280px] shrink-0 flex-col items-center justify-start gap-8 px-8'>
@@ -19,15 +22,25 @@ const PricingHeroSection = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <button className='relative flex shrink-0 flex-row items-center justify-center gap-2 overflow-hidden rounded-[42px] bg-gradient-to-b from-[#151820] to-[#010101] px-4 py-2.5 shadow-sm'>
-                  <span className='relative text-left text-base leading-snug font-semibold tracking-tight text-white'>
-                    Personal
-                  </span>
+                <button
+                  onClick={() => setSelectedPlan('personal')}
+                  className={`relative flex shrink-0 cursor-pointer flex-row items-center justify-center gap-2 overflow-hidden rounded-[42px] px-4 py-2.5 shadow-sm ${
+                    selectedPlan === 'personal'
+                      ? 'bg-gradient-to-b from-[#151820] to-[#010101] font-semibold text-white'
+                      : 'bg-transparent text-gray-400'
+                  }`}
+                >
+                  <span className='relative text-left text-base leading-snug tracking-tight'>Personal</span>
                 </button>
-                <button className='relative flex shrink-0 flex-row items-center justify-center gap-2 overflow-hidden rounded-[42px] px-4 py-2.5'>
-                  <span className='relative text-left text-base leading-snug font-semibold tracking-tight text-gray-400'>
-                    Business
-                  </span>
+                <button
+                  onClick={() => setSelectedPlan('business')}
+                  className={`relative flex shrink-0 cursor-pointer flex-row items-center justify-center gap-2 overflow-hidden rounded-[42px] px-4 py-2.5 ${
+                    selectedPlan === 'business'
+                      ? 'bg-gradient-to-b from-[#151820] to-[#010101] font-semibold text-white shadow-sm'
+                      : 'bg-transparent text-gray-400'
+                  }`}
+                >
+                  <span className='relative text-left text-base leading-snug tracking-tight'>Business</span>
                 </button>
               </motion.div>
 

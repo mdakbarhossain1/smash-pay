@@ -1,5 +1,5 @@
-import CTASections from '../home/components/CTASections';
 import CoverageHero from './components/CoverageHero';
+import CtASectionCoverage from './components/CtASectionCoverage';
 import EuropeCountries from './components/EuropeCountries';
 
 const CountryCoverage = () => {
@@ -7,7 +7,7 @@ const CountryCoverage = () => {
     <>
       <CoverageHero />
       <EuropeCountries />
-      <CTASections />
+      <CtASectionCoverage />
     </>
   );
 };
