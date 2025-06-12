@@ -50,7 +50,7 @@ const AppRatingsSection = () => {
       }}
     >
       <div
-        className='relative mx-auto flex w-full max-w-[1280px] flex-col items-start justify-start gap-24 rounded-[20px] px-8'
+        className='relative mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-24 rounded-[20px] px-8'
         style={{
           // transform: 'rotate(180deg) scale(1, 1)',
           transform: 'scale(1, 1)',

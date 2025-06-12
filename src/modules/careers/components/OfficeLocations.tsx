@@ -86,7 +86,7 @@ const OfficeLocations = () => {
 
   return (
     <section className='bg-bg bg-clr-14 relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch overflow-hidden pt-32 pb-32'>
-      <div className='relative flex w-full max-w-[1280px] flex-col items-start justify-start gap-24 rounded-[20px] px-8'>
+      <div className='relative flex w-full max-w-7xl flex-col items-start justify-start gap-24 rounded-[20px] px-8'>
         {/* Header Section */}
         <motion.div
           initial='hidden'

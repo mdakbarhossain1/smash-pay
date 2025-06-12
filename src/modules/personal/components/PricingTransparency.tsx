@@ -49,7 +49,7 @@ const PricingTransparency = () => {
     >
       {/* First Row - Pricing Transparency */}
       <motion.div
-        className='relative flex w-full max-w-[1280px] flex-col items-center justify-start gap-12 px-8 lg:flex-row lg:gap-24'
+        className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-12 px-8 lg:flex-row lg:gap-24'
         initial='hidden'
         animate='visible'
         variants={containerVariants}
@@ -108,7 +108,7 @@ const PricingTransparency = () => {
 
       {/* Second Row - Transfer Tracking */}
       <motion.div
-        className='relative flex w-full max-w-[1280px] flex-col items-center justify-start gap-12 px-8 lg:flex-row lg:gap-24'
+        className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-12 px-8 lg:flex-row lg:gap-24'
         initial='hidden'
         animate='visible'
         variants={containerVariants}

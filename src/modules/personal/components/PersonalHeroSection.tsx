@@ -10,7 +10,7 @@ const PersonalHeroSection = () => {
         background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
       }}
     >
-      <div className='relative flex w-full max-w-[1280px] flex-col items-start justify-start gap-8 px-8 lg:flex-row'>
+      <div className='relative flex w-full max-w-7xl flex-col items-start justify-start gap-8 px-8 lg:flex-row'>
         <motion.div
           className='relative flex flex-1 flex-col items-start justify-start gap-10'
           initial={{ opacity: 0, y: 20 }}

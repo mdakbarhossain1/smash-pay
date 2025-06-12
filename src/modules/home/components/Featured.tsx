@@ -70,7 +70,7 @@ const FeaturedSection = () => {
           'linear-gradient(90deg, rgba(158, 168, 171, 1) 0%, rgba(129, 112, 168, 1) 48.527792096138%, rgba(79, 173, 162, 1) 100%) 1'
       }}
     >
-      <div className='relative flex w-full max-w-[1280px] flex-col items-start justify-start gap-8 px-8'>
+      <div className='relative flex w-full max-w-7xl flex-col items-start justify-start gap-8 px-8'>
         <div className='relative flex w-full flex-col items-center justify-start gap-8 md:flex-row md:gap-[120px]'>
           <div className='text-md text-center font-medium whitespace-nowrap text-white md:text-left'>
             As featured on:

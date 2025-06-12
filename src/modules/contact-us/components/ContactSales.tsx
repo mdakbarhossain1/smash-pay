@@ -70,7 +70,7 @@ const ContactSales = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className='relative flex w-full max-w-[1280px] shrink-0 flex-col items-center justify-start gap-3'
+        className='relative flex w-full max-w-7xl shrink-0 flex-col items-center justify-start gap-3'
       >
         <div className='relative flex shrink-0 flex-col items-center justify-start gap-10 self-stretch'>
           <div className='relative flex w-full max-w-[800px] shrink-0 flex-col items-center justify-start gap-6'>
@@ -85,7 +85,7 @@ const ContactSales = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className='relative flex w-full max-w-[1280px] shrink-0 flex-col items-start justify-start gap-8'
+        className='relative flex w-full max-w-7xl shrink-0 flex-col items-start justify-start gap-8'
       >
         {countries.map((row, rowIndex) => (
           <div

@@ -141,7 +141,7 @@ const PricingComparison = () => {
   return (
     <section className='bg-clr-14 relative flex w-full flex-col items-center justify-start gap-16 self-stretch overflow-hidden pt-32 pb-32'>
       <motion.div
-        className='relative flex w-full max-w-[1280px] flex-col items-start justify-start gap-24 px-8'
+        className='relative flex w-full max-w-7xl flex-col items-start justify-start gap-24 px-8'
         initial='hidden'
         animate='visible'
         variants={containerVariants}

@@ -7,7 +7,7 @@ const PricingHeroSection = () => {
 
   return (
     <section className='relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch bg-gradient-to-b from-[#0c1118] to-[#1d1e2d] pt-24 pb-16'>
-      <div className='relative flex w-full max-w-[1280px] shrink-0 flex-col items-center justify-start gap-8 px-8'>
+      <div className='relative flex w-full max-w-7xl shrink-0 flex-col items-center justify-start gap-8 px-8'>
         <motion.div
           className='relative flex w-full max-w-[800px] shrink-0 flex-col items-center justify-start gap-10'
           initial={{ opacity: 0, y: 20 }}

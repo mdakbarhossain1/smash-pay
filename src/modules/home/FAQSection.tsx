@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 interface FAQItem {
@@ -55,7 +56,7 @@ export default function FAQSection() {
   return (
     <>
       <section className='bg-clr-14 relative w-full px-4 pt-16 pb-16 md:px-8'>
-        <div className='mx-auto grid max-w-[1280px] grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3'>
+        <div className='mx-auto grid max-w-7xl grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3'>
           {/* Left Content - spans 1 column */}
           <div className='col-span-1 flex flex-col gap-10'>
             <div className='flex flex-col gap-6'>
@@ -79,7 +80,7 @@ export default function FAQSection() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className='text-lg tracking-tight text-gray-300'
               >
-                Find the answers to frequently asked questions here.
+                Find the answers to frequently asked <br /> questions here.
               </motion.p>
             </div>
 
@@ -94,7 +95,10 @@ export default function FAQSection() {
                 <span className='text-md font-medium tracking-tight text-white'>Need further support?</span>
               </div>
 
-              <button className='group flex w-fit items-center gap-2.5 rounded-full border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'>
+              <Link
+                href={'/contact-us'}
+                className='group flex w-fit items-center gap-2.5 rounded-full border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'
+              >
                 <span className='text-lg font-semibold tracking-tight text-white'>Contact us</span>
                 <Image
                   src='/home/arrow-right0.svg'
@@ -103,7 +107,7 @@ export default function FAQSection() {
                   height={22}
                   className='transition-transform group-hover:translate-x-1'
                 />
-              </button>
+              </Link>
             </motion.div>
           </div>
 

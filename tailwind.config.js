@@ -115,7 +115,6 @@ module.exports = {
         'text-md-regular-underlined-line-height': '24px',
         'text-xl-medium-line-height': '28px'
       }
-      // ... include all other theme extensions from your old config
     }
   },
   plugins: [

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const SmashPayCard = () => {
   const features = [
@@ -62,7 +63,7 @@ const SmashPayCard = () => {
                 <div className='border-gradient h-0 w-full border-t-[3px] border-r-0 border-b-0 border-l-0 border-solid' />
               </div>
               <h2 className='w-full bg-gradient-to-b from-gray-500 to-white bg-clip-text text-4xl leading-tight font-medium tracking-tighter text-transparent md:text-5xl lg:text-6xl'>
-                The Ultimate Card Experience Across Borders
+                The Ultimate Card Experience <br /> Across Borders
               </h2>
             </div>
             <p className='text-lg leading-relaxed tracking-tight text-gray-300'>
@@ -87,16 +88,18 @@ const SmashPayCard = () => {
             </div>
           </div>
 
-          <motion.button
-            className='flex flex-row items-center justify-center gap-2.5 rounded-[64px] border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <span className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-lg font-semibold tracking-tight text-transparent'>
-              Learn More
-            </span>
-            <img className='relative h-5 w-5 shrink-0 overflow-visible' src='/home/arrow-right0.svg' />
-          </motion.button>
+          <Link href={'/card'} passHref>
+            <motion.a
+              className='flex flex-row items-center justify-center gap-2.5 rounded-[64px] border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <span className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-lg font-semibold tracking-tight text-transparent'>
+                Learn More
+              </span>
+              <img className='relative h-5 w-5 shrink-0 overflow-visible' src='/home/arrow-right0.svg' />
+            </motion.a>
+          </Link>
         </motion.div>
       </div>
 

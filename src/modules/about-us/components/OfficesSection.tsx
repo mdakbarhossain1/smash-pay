@@ -41,7 +41,7 @@ export default function OfficesSection() {
 
   return (
     <section className='flex w-full flex-col items-center overflow-hidden bg-[#0f0f0f] pt-32 pb-32'>
-      <div className='flex w-full max-w-[1280px] flex-col gap-16 px-4 md:px-8 lg:flex-row'>
+      <div className='flex w-full max-w-7xl flex-col gap-16 px-4 md:px-8 lg:flex-row'>
         {/* Images Section */}
         <div className='relative h-[720px] w-full flex-shrink-0 lg:w-[640px]'>
           {offices.map((office, index) => (

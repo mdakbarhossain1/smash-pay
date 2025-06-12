@@ -25,13 +25,13 @@ const SmashPayApp = () => {
                 <h3 className='text-lg font-medium tracking-tight text-white'>SmashPay App</h3>
                 <div className='border-gradient h-0 w-full border-t-[3px] border-r-0 border-b-0 border-l-0 border-solid' />
               </div>
-              <h2 className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-4xl leading-tight font-medium tracking-tight text-transparent md:text-5xl lg:text-6xl'>
-                One app for all your overseas transfers
+              <h2 className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-4xl leading-[1.1] font-medium tracking-tight text-transparent md:text-5xl lg:text-6xl'>
+                One app for all <br /> your overseas transfers
               </h2>
             </div>
             <p className='text-lg leading-relaxed tracking-tight text-gray-300'>
-              Send money on the go with the SmashPay app. We believe in keeping things simple, fast, and
-              low-cost. Just a few taps and your money can be on its way.
+              Send money on the go with the SmashPay app. We believe <br /> in keeping things simple, fast,
+              and low-cost. Just a few taps <br /> and your money can be on its way.
             </p>
             <div className='flex w-full flex-col items-start justify-start gap-5'>
               {features.map((feature, index) => (

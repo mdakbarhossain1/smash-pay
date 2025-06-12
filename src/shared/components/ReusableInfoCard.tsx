@@ -140,7 +140,7 @@ const ReusableInfoCard = ({
 
   return (
     <div
-      className={`relative mx-auto flex w-full max-w-[1280px] flex-col items-center justify-start gap-12 px-8 py-16 lg:flex-row lg:gap-24 ${
+      className={`relative mx-auto flex w-full max-w-7xl flex-col items-center justify-start gap-12 px-8 py-16 lg:flex-row lg:gap-24 ${
         imageLeft ? 'lg:flex-row-reverse' : ''
       }`}
     >

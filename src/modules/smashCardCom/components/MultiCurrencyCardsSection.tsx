@@ -44,7 +44,7 @@ const MultiCurrencyCardsSection = () => {
       }}
     >
       {/* Header Section */}
-      <div className='relative mx-auto flex w-full max-w-[1280px] flex-col items-center justify-start gap-3 px-2 md:px-8'>
+      <div className='relative mx-auto flex w-full max-w-7xl flex-col items-center justify-start gap-3 px-2 md:px-8'>
         <motion.div
           className='flex w-full flex-col items-center justify-start gap-10'
           initial='hidden'
@@ -81,7 +81,7 @@ const MultiCurrencyCardsSection = () => {
       </div>
 
       {/* Cards Section */}
-      <div className='relative mx-auto flex w-full max-w-[1280px] flex-col items-start justify-start gap-8 px-2 md:px-8'>
+      <div className='relative mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-8 px-2 md:px-8'>
         {/* Main Feature Card */}
         <motion.div
           className='relative flex w-full flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] p-8 md:p-12 lg:flex-row'

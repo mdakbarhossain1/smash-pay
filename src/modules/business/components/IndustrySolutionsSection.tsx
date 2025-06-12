@@ -58,7 +58,7 @@ const IndustrySolutionsSection = () => {
 
   return (
     <section className='relative flex w-full flex-col items-center justify-start gap-16 bg-gradient-to-b from-[#0c1118] to-[#1d1e2d] py-32'>
-      <div className='mx-auto flex w-full max-w-[1280px] flex-col items-center justify-center gap-3 px-8'>
+      <div className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-3 px-8'>
         <motion.div
           className='flex w-full flex-col items-center justify-center gap-10'
           initial='hidden'
@@ -92,7 +92,7 @@ const IndustrySolutionsSection = () => {
 
       {/* Industry Cards */}
       <motion.div
-        className='mx-auto flex w-full max-w-[1280px] flex-col items-center justify-center gap-12 rounded-[20px] px-8 md:gap-24'
+        className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-12 rounded-[20px] px-8 md:gap-24'
         initial='hidden'
         whileInView='visible'
         viewport={{ once: true, margin: '-100px' }}

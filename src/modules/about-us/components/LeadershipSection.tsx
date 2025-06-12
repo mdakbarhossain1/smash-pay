@@ -74,7 +74,7 @@ const LeadershipSection = () => {
         background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
       }}
     >
-      <div className='w-full max-w-[1280px] px-8'>
+      <div className='w-full max-w-7xl px-8'>
         <div className='flex w-full flex-col items-start justify-between gap-6 md:flex-row md:items-center'>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -115,7 +115,7 @@ const LeadershipSection = () => {
         </div>
       </div>
 
-      <div className='w-full max-w-[1280px] overflow-hidden px-8'>
+      <div className='w-full max-w-7xl overflow-hidden px-8'>
         <motion.div
           className='flex gap-8'
           animate={{

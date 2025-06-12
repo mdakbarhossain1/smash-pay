@@ -1,21 +1,86 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   const footerLinks = [
     {
       title: 'Products',
-      links: ['For Personal', 'For Businesses', 'Multi-currency account', 'SmashPay card', 'Country coverage']
+      links: [
+        {
+          link: '/personal',
+          label: 'For Personal'
+        },
+        {
+          link: '/business',
+          label: 'For Businesses'
+        },
+        {
+          link: '/multicurrency-account',
+          label: 'Multi-currency account'
+        },
+        {
+          link: '/card',
+          label: 'SmashPay card'
+        },
+        {
+          link: '/country-coverage',
+          label: 'Country coverage'
+        }
+      ]
     },
     {
       title: 'Company',
-      links: ['About us', 'Customer stories', 'Press', 'Careers', 'Contact us'],
+      links: [
+        {
+          link: '/about-us',
+          label: 'About us'
+        },
+        {
+          link: '/about-us',
+          label: 'Customer stories'
+        },
+        {
+          link: '/blog',
+          label: 'Press'
+        },
+        {
+          link: '/careers',
+          label: 'Careers'
+        },
+        {
+          link: '/contact-us',
+          label: 'Contact us'
+        }
+      ],
       badge: "We're hiring"
     },
     {
       title: 'Resources',
-      links: ['Blog', 'FAQ', 'Help centre', 'Developers', 'Terms and privacy']
+      // links: ['Blog', 'FAQ', 'Help centre', 'Developers', 'Terms and privacy']
+      links: [
+        {
+          link: '/blog',
+          label: 'Blog'
+        },
+        {
+          link: '/faq',
+          label: 'FAQ'
+        },
+        {
+          link: '/faq',
+          label: 'Help centre'
+        },
+        {
+          link: '/pricing',
+          label: 'Pricing'
+        },
+        {
+          link: '/terms-policies',
+          label: 'Terms and privacy'
+        }
+      ]
     },
     {
       title: 'Download app',
@@ -82,12 +147,12 @@ export default function Footer() {
                         {section.links.map((link, linkIndex) => (
                           <li key={linkIndex}>
                             <div className='flex items-center gap-2'>
-                              <a
-                                href='#'
+                              <Link
+                                href={link.link}
                                 className='text-md font-normal tracking-tight text-gray-300 transition-colors hover:text-white'
                               >
-                                {link}
-                              </a>
+                                {link.label}
+                              </Link>
                               {section.badge && linkIndex === 3 && (
                                 <span className='rounded-2xl border border-[#151820] bg-gradient-to-r from-[#1d1f2d] to-[#1d1f2e] px-2 py-0.5 text-xs font-medium text-white'>
                                   {section.badge}

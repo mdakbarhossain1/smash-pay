@@ -27,12 +27,12 @@ const BusinessPaymentsSection = () => {
 
   return (
     <section
-      className='relative flex w-full flex-col items-center justify-start gap-16 pt-24 -z-10'
+      className='relative -z-10 flex w-full flex-col items-center justify-start gap-16 pt-24'
       style={{
         background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
       }}
     >
-      <div className='mx-auto flex w-full max-w-[1280px] flex-col items-center justify-center gap-8 px-8'>
+      <div className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 px-8'>
         <motion.div
           className='flex w-full max-w-[800px] flex-col items-center justify-center gap-10'
           initial='hidden'
@@ -143,13 +143,12 @@ const BusinessPaymentsSection = () => {
 
       {/* Hero image */}
       <motion.div
-        className='mx-auto flex w-full max-w-[1280px] flex-col items-center justify-center gap-8 px-8'
+        className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 px-8'
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 180 }}
         viewport={{ once: true, margin: '-100px' }}
         transition={{ duration: 0.8 }}
-        style={{marginTop:'-180px'}}
-        
+        style={{ marginTop: '-180px' }}
       >
         <div className='relative h-[400px] w-full overflow-hidden rounded-3xl sm:h-[500px] lg:h-[626px]'>
           <div className='absolute inset-0 bottom-0 left-[-7%] -z-10 h-[43.8%] w-[114%] bg-gray-900' />

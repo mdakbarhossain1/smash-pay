@@ -12,7 +12,7 @@ const AboutUsSection = () => {
         transition={{ duration: 0.5 }}
         className='relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch pt-24'
       >
-        <div className='relative flex w-full max-w-[1280px] flex-col items-center justify-start gap-8 px-8'>
+        <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-8 px-8'>
           <div className='relative flex w-full max-w-[800px] flex-col items-center justify-start gap-10'>
             <motion.div
               initial={{ y: 20, opacity: 0 }}
@@ -72,7 +72,7 @@ const AboutUsSection = () => {
             background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
           }}
         ></div>
-        <div className='relative flex w-full max-w-[1280px] flex-col items-center justify-start gap-8 px-8'>
+        <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-8 px-8'>
           <div className='relative h-[300px] shrink-0 self-stretch sm:h-[400px] md:h-[500px] lg:h-[626px]'>
             <Image src='/about-us/about-header.png' alt='About Header' layout='fill' objectFit='contain' />
           </div>

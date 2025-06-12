@@ -33,7 +33,7 @@ const CurrencyHeader = () => {
         background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
       }}
     >
-      <div className='mx-auto flex w-full max-w-[1280px] flex-col items-center justify-center gap-8 px-8'>
+      <div className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 px-8'>
         <motion.div
           className='flex w-full max-w-[800px] flex-col items-center justify-center gap-10'
           initial='hidden'
@@ -135,7 +135,7 @@ const CurrencyHeader = () => {
 
       {/* Hero image */}
       <motion.div
-        className='mx-auto flex w-full max-w-[1280px] flex-col items-center justify-center gap-8 px-8'
+        className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 px-8'
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-100px' }}

@@ -47,7 +47,7 @@ const StatsSection = () => {
         background: 'linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%)'
       }}
     >
-      <div className='relative flex w-full max-w-[1280px] flex-col items-start justify-start gap-8 px-8'>
+      <div className='relative flex w-full max-w-7xl flex-col items-start justify-start gap-8 px-8'>
         <motion.div
           className='relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch'
           variants={containerVariants}

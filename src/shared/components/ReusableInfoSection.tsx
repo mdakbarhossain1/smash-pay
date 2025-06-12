@@ -157,7 +157,7 @@ const ReusableInfoSection: React.FC<Props> = ({
   );
 
   return (
-    <div className='mx-auto flex w-full max-w-[1280px] flex-col items-center justify-center gap-12 px-8 lg:flex-row lg:gap-24'>
+    <div className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-12 px-8 lg:flex-row lg:gap-24'>
       {imageSide === 'left' ? (
         <>
           {ImageSection}

@@ -26,7 +26,7 @@ const BankBeatingRates = () => {
 
   return (
     <section className='relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch overflow-hidden bg-gradient-to-r from-[#1D1F2D] to-[#1D1F2E] pt-32 pb-32'>
-      <div className='relative flex w-full max-w-[1280px] shrink-0 flex-col items-center justify-start gap-3 px-8'>
+      <div className='relative flex w-full max-w-7xl shrink-0 flex-col items-center justify-start gap-3 px-8'>
         <motion.div
           className='relative flex shrink-0 flex-col items-center justify-start gap-10 self-stretch'
           initial='hidden'
@@ -48,7 +48,7 @@ const BankBeatingRates = () => {
         </motion.div>
       </div>
 
-      <div className='relative flex w-full max-w-[1280px] flex-col items-center justify-start gap-12 px-8 lg:flex-row lg:gap-24'>
+      <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-12 px-8 lg:flex-row lg:gap-24'>
         <motion.div
           className='relative flex w-full flex-col items-center justify-start gap-12 lg:w-auto'
           initial={{ opacity: 0, x: -50 }}

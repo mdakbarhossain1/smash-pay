@@ -72,7 +72,7 @@ const ThreeEasySteps = () => {
   return (
     <section className='bg-clr-14 relative flex w-full flex-col items-center justify-start gap-16 self-stretch pt-32 pb-8'>
       {/* Header Section */}
-      <div className='relative flex w-full max-w-[1280px] flex-col items-start justify-start gap-24 px-8'>
+      <div className='relative flex w-full max-w-7xl flex-col items-start justify-start gap-24 px-8'>
         <motion.div
           className='flex flex-col items-center justify-start gap-12 self-stretch'
           initial='hidden'
@@ -112,7 +112,7 @@ const ThreeEasySteps = () => {
       </div>
 
       {/* Steps Cards */}
-      <div className='relative flex w-full max-w-[1280px] flex-col items-start justify-start gap-24 px-8'>
+      <div className='relative flex w-full max-w-7xl flex-col items-start justify-start gap-24 px-8'>
         <motion.div
           className='grid grid-cols-1 items-start justify-start gap-8 self-stretch md:grid-cols-3'
           initial='hidden'

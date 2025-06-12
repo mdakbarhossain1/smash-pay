@@ -309,7 +309,7 @@ const PricingSection = () => {
 
   return (
     <div className='bg-clr-14 relative flex shrink-0 flex-col items-center justify-start gap-32 self-stretch overflow-hidden pt-16 pb-24'>
-      <div className='relative flex w-full max-w-[1280px] flex-col items-center justify-start gap-8 px-8 lg:flex-row lg:gap-24'>
+      <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-8 px-8 lg:flex-row lg:gap-24'>
         <div className='relative flex w-full flex-col items-start justify-start gap-0 self-stretch'>
           {/*  */}
           <div className='wrap bg-gradient-to-r from-[#1D1F2D] to-[#1D1F2E]'>

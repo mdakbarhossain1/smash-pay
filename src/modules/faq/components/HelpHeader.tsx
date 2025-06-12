@@ -19,7 +19,7 @@ const HelpHeader = () => {
         background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
       }}
     >
-      <div className='relative flex w-full max-w-[1280px] flex-col items-center justify-center gap-16'>
+      <div className='relative flex w-full max-w-7xl flex-col items-center justify-center gap-16'>
         <motion.div
           variants={fadeIn('up', 'tween', 0.2, 1)}
           className='flex w-full flex-col items-center justify-start gap-8'

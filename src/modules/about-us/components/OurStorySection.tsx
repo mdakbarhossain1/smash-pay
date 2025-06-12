@@ -11,7 +11,7 @@ const OurStorySection = () => {
       transition={{ duration: 0.8 }}
       className='bg-bg bg-clr-14 relative flex shrink-0 flex-col items-center justify-start gap-32 self-stretch overflow-hidden pt-32 pb-32'
     >
-      <div className='relative flex w-full max-w-[1280px] flex-col items-center justify-start gap-12 px-8 lg:flex-row lg:gap-24'>
+      <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-12 px-8 lg:flex-row lg:gap-24'>
         {/* Text Content */}
         <motion.div
           initial={{ x: -50, opacity: 0 }}

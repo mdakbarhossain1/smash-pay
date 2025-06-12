@@ -47,7 +47,7 @@ const GlobeMultiCurrencyAccounts = () => {
 
   return (
     <section className='relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch overflow-hidden bg-[linear-gradient(90deg,_rgba(29,_31,_45,_1)_0%,_rgba(29,_31,_46,_1)_100%)] py-32'>
-      <div className='relative mx-auto flex w-full max-w-[1280px] flex-col items-center justify-start gap-16 px-8 lg:flex-row lg:gap-24'>
+      <div className='relative mx-auto flex w-full max-w-7xl flex-col items-center justify-start gap-16 px-8 lg:flex-row lg:gap-24'>
         <motion.div
           className='relative flex w-full flex-col items-start justify-start gap-16 lg:flex-1'
           initial='hidden'
