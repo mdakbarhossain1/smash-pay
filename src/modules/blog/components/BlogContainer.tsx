@@ -184,9 +184,7 @@ const BlogContainer = () => {
                     <div className='flex items-center gap-4'>
                       <div className='relative h-12 w-12 overflow-hidden rounded-full'>
                         {post.isCompany ? (
-                          <div className='bg-bg border-stroke-2 flex h-full w-full items-center justify-center border'>
-                            <Image src={post.avatar} alt={post.author} width={24} height={24} />
-                          </div>
+                          <Image src={post.avatar} alt={post.author} fill className='object-center' />
                         ) : (
                           <Image src={post.avatar} alt={post.author} fill className='object-cover' />
                         )}

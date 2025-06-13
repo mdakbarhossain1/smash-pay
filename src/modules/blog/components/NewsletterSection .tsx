@@ -13,7 +13,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className='flex w-full flex-col items-center justify-center gap-2.5 overflow-hidden rounded-t-[32px] bg-gradient-to-b from-[#0C1118] to-[#1D1E2D] px-8 py-24 md:px-20'>
+    <section className='flex w-full flex-col items-center justify-center gap-2.5 overflow-hidden bg-gradient-to-b from-[#0C1118] to-[#1D1E2D] px-8 py-24 md:px-20'>
       <div className='flex w-full max-w-[1280px] flex-col items-start justify-between gap-8 md:flex-row md:gap-16'>
         {/* Newsletter Content */}
         <motion.div
@@ -40,9 +40,39 @@ const NewsletterSection = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className='w-full'>
+          <form onSubmit={handleSubmit} className='mx-auto w-full max-w-3xl'>
+            {/* Mobile version (separate borders) */}
+            <div className='flex flex-col gap-3 md:hidden'>
+              <motion.div
+                className='border-stroke-2 overflow-hidden rounded-[32px] border'
+                whileHover={{ scale: 1.01 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+              >
+                <div className='flex w-full items-center rounded-lg bg-gradient-to-r from-[#1D1F2D] to-[#1D1F2E] px-4 py-3'>
+                  <input
+                    type='email'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder='Email address'
+                    className='w-full bg-transparent text-base text-gray-500 placeholder-gray-500 outline-none'
+                    required
+                  />
+                </div>
+              </motion.div>
+
+              <motion.button
+                type='submit'
+                className='border-stroke-2 bg-bg bg-clr-14 w-full rounded-[32px] border px-6 py-3 text-base font-semibold whitespace-nowrap text-white'
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Subscribe
+              </motion.button>
+            </div>
+
+            {/* Desktop version (original design) */}
             <motion.div
-              className='border-stroke-2 w-full overflow-hidden rounded-[72px] border'
+              className='border-stroke-2 hidden w-full overflow-hidden rounded-[72px] border md:block'
               whileHover={{ scale: 1.01 }}
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             >

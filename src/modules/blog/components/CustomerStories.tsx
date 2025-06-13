@@ -84,7 +84,7 @@ const CustomerStories = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`bg-bg bg-clr-14 border-stroke-2 flex flex-col rounded-3xl border ${isFeatured ? 'flex-row items-center justify-between p-10 md:col-span-2 lg:col-span-2' : 'pb-10'} `}
+                className={`bg-bg bg-clr-14 border-stroke-2 flex flex-col overflow-hidden rounded-3xl border ${isFeatured ? 'flex-row items-center justify-between p-10 md:col-span-2 lg:col-span-2' : 'pb-10'} `}
               >
                 {/* Featured Story Layout */}
                 {isFeatured ? (
