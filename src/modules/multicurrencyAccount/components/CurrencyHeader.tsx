@@ -28,7 +28,7 @@ const CurrencyHeader = () => {
 
   return (
     <section
-      className='relative flex w-full flex-col items-center justify-start gap-16 pt-24 pb-32'
+      className='bg-gradient relative flex w-full flex-col items-center justify-start gap-16 pt-24 pb-32'
       style={{
         background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
       }}
@@ -76,7 +76,7 @@ const CurrencyHeader = () => {
 
               {/* Main title */}
               <motion.h2
-                className='bg-gradient-to-b from-[#7b7d81] to-white bg-clip-text text-center text-4xl leading-tight font-medium tracking-[-2.5px] text-transparent md:text-5xl lg:text-6xl'
+                className='gradient-text text-center text-4xl leading-tight font-medium tracking-[-2.5px] text-transparent md:text-5xl lg:text-6xl'
                 variants={itemVariants}
               >
                 One account for multiple <br /> countries & currencies.

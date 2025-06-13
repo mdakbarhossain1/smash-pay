@@ -1,26 +1,3 @@
-// import Image from 'next/image';
-
-// const Featured = () => {
-//   return (
-//     <div className='bg-clr-14 -mt-9 w-full rounded-t-4xl pt-14 pb-10'>
-//       <div className='container'>
-//         <div className='flex items-center gap-5 lg:gap-28'>
-//           <p className='text-base text-nowrap text-white'>As featured on:</p>
-//           <div className='flex w-full flex-wrap items-center justify-between'>
-//             <Image src={'/images/bloomberg.png'} alt='bloomberg' width={110} height={28} />
-//             <Image src={'/images/forbes.png'} alt='bloomberg' width={110} height={28} />
-//             <Image src={'/images/techcrunch.png'} alt='bloomberg' width={110} height={28} />
-//             <Image src={'/images/techrader.png'} alt='bloomberg' width={110} height={28} />
-//             <Image src={'/images/usa-today.png'} alt='bloomberg' width={110} height={28} />
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Featured;
-
 'use client';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';

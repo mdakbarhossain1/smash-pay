@@ -23,7 +23,7 @@ const PromotionSection = () => {
                   <h3 className='w-[87px] text-lg font-medium tracking-tight text-white'>Promotion</h3>
                   <div className='border-gradient mt-[-3px] h-0 w-full border-t-[3px] border-r-0 border-b-0 border-l-0 border-solid' />
                 </div>
-                <h2 className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-3xl leading-tight font-medium tracking-tighter text-transparent md:text-4xl lg:text-5xl'>
+                <h2 className='gradient-text text-3xl leading-tight font-medium tracking-tighter text-transparent md:text-4xl lg:text-5xl'>
                   Get a Zero-fee on your first transfer
                 </h2>
               </div>

@@ -39,12 +39,7 @@ const Hero = () => {
     }
   };
   return (
-    <div
-      className='flex w-full flex-col items-center justify-start'
-      style={{
-        background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
-      }}
-    >
+    <div className='bg-gradient flex w-full flex-col items-center justify-start'>
       <motion.div
         className='flex w-full flex-col items-center gap-8 pt-12 md:gap-16 md:pt-24'
         initial='hidden'
@@ -104,14 +99,7 @@ const Hero = () => {
               </Link>
 
               <motion.h1
-                className='text-center text-3xl font-medium md:text-5xl lg:text-6xl'
-                style={{
-                  background:
-                    'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-                  backgroundClip: 'text',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent'
-                }}
+                className='gradient-text text-center text-3xl font-medium md:text-5xl lg:text-6xl'
                 variants={itemVariants}
               >
                 Cross-border payment made easy.

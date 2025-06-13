@@ -24,7 +24,7 @@ const CoverageHero = () => {
                 <div className='relative h-10 w-10 shrink-0'>
                   <div className='relative h-full w-full'>
                     <Image
-                      src='/personal/hero-icon.png'
+                      src='/country-coverage/hero-icon.png'
                       alt='Logo'
                       layout='fill'
                       className='object-contain'
@@ -45,7 +45,7 @@ const CoverageHero = () => {
                   ></div>
                 </div>
               </div>
-              <h1 className='relative self-stretch bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-left text-4xl leading-tight font-bold tracking-[-2.5px] text-transparent sm:text-5xl md:text-6xl lg:text-7xl'>
+              <h1 className='gradient-text relative self-stretch text-left text-4xl leading-tight font-bold tracking-[-2.5px] text-transparent sm:text-5xl md:text-6xl lg:text-7xl'>
                 Check out all the <br /> countries we cover.
               </h1>
             </div>
@@ -61,7 +61,7 @@ const CoverageHero = () => {
           alt='Star'
           width={612}
           height={540}
-          className='absolute top-0 right-0 hidden h-full w-[512px] object-contain lg:block'
+          className='absolute top-0 right-0 hidden h-full w-[612px] object-contain lg:block'
         />
       </div>
     </section>

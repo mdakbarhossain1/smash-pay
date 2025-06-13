@@ -4,12 +4,7 @@ import Image from 'next/image';
 
 const PersonalHeroSection = () => {
   return (
-    <section
-      className='relative -z-10 flex w-full shrink-0 flex-col items-center justify-center gap-16 self-stretch pt-24 pb-32'
-      style={{
-        background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
-      }}
-    >
+    <section className='bg-gradient relative -z-10 flex w-full shrink-0 flex-col items-center justify-center gap-16 self-stretch pt-24 pb-32'>
       <div className='relative flex w-full max-w-7xl flex-col items-start justify-start gap-8 px-8 lg:flex-row'>
         <motion.div
           className='relative flex flex-1 flex-col items-start justify-start gap-10'
@@ -24,7 +19,7 @@ const PersonalHeroSection = () => {
                   {/* Replace with your actual logo component */}
                   <div className='relative h-full w-full'>
                     <Image
-                      src='/personal/hero-icon.png'
+                      src='/personal/hero-icon-personal.png'
                       alt='Logo'
                       layout='fill'
                       className='object-contain'
@@ -45,7 +40,7 @@ const PersonalHeroSection = () => {
                   ></div>
                 </div>
               </div>
-              <h1 className='relative self-stretch bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-left text-4xl leading-tight font-bold tracking-[-2.5px] text-transparent sm:text-5xl md:text-6xl lg:text-7xl'>
+              <h1 className='gradient-text relative self-stretch text-left text-4xl leading-tight font-bold tracking-[-2.5px] text-transparent sm:text-5xl md:text-6xl lg:text-7xl'>
                 The fast and secure way to send money.
               </h1>
             </div>

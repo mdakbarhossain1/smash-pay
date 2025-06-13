@@ -25,7 +25,7 @@ const HelpHeader = () => {
           className='flex w-full flex-col items-center justify-start gap-8'
         >
           <div className='flex w-full flex-col items-center justify-start gap-6'>
-            <h2 className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-center text-5xl leading-tight font-medium tracking-tight text-transparent sm:text-6xl md:text-7xl'>
+            <h2 className='gradient-text text-center text-5xl leading-tight font-medium tracking-tight text-transparent sm:text-6xl md:text-7xl'>
               How can we help?
             </h2>
           </div>

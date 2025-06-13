@@ -10,7 +10,7 @@ const SmashPayApp = () => {
   ];
 
   return (
-    <section className='bg-clr-14 relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch overflow-hidden px-4 pt-32 pb-32 md:px-8'>
+    <section className='bg-gradient-2 relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch overflow-hidden px-4 pt-32 pb-32 md:px-8'>
       <div className='flex w-full max-w-7xl flex-col items-center justify-start gap-12 lg:flex-row lg:gap-24'>
         <motion.div
           className='flex w-full flex-col items-start justify-start gap-10 lg:w-1/2'
@@ -25,7 +25,7 @@ const SmashPayApp = () => {
                 <h3 className='text-lg font-medium tracking-tight text-white'>SmashPay App</h3>
                 <div className='border-gradient h-0 w-full border-t-[3px] border-r-0 border-b-0 border-l-0 border-solid' />
               </div>
-              <h2 className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-4xl leading-[1.1] font-medium tracking-tight text-transparent md:text-5xl lg:text-6xl'>
+              <h2 className='gradient-text text-4xl leading-[1.1] font-medium tracking-tight text-transparent md:text-5xl lg:text-6xl'>
                 One app for all <br /> your overseas transfers
               </h2>
             </div>

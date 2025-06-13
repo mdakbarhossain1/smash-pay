@@ -54,7 +54,7 @@ const PaymentOptionsSection = () => {
 
   return (
     <>
-      <div className='bg-gradient w-full pt-32 pb-32'>
+      <div className='bg-gradient-2 w-full pt-32 pb-32'>
         <ReusableInfoSection
           title='Let customers choose how they want to pay.'
           description='Tap to Pay on iPhone uses the built-in features of iPhone to help keep your business and customer data secure.'
@@ -65,7 +65,7 @@ const PaymentOptionsSection = () => {
           ]}
           buttonText='Get started'
           imageSrc='/business/iPhone-14-Pro-Space-Black-Mockup.png'
-          imageBackgroundColor='bg-gradient-2'
+          imageBackgroundColor=''
           imageSide='right'
         />
         <div className='pt-32'>
@@ -93,13 +93,13 @@ const PaymentOptionsSection = () => {
               { icon: '/home/check-icon2.svg', text: 'Access the world of SmashPay.' }
             ]}
             buttonText='Get started'
-            imageSrc='/business/Checkout.png'
-            imageBackgroundColor='bg-gradient-2'
+            imageSrc='/business/Checkout.svg'
+            imageBackgroundColor=''
             imageSide='right'
           />
         </div>
       </div>
-      <div className='bg-clr-14 w-full'>
+      <div className='bg-clr-14 w-full pb-16'>
         <div className='pt-32'>
           <ReusableInfoSection
             title='Empower team with SmashPay Business Cards.'

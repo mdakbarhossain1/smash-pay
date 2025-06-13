@@ -122,7 +122,7 @@ const EuropeCountries = () => {
                   <div
                     className={`text-md flex w-full items-center gap-4 rounded-xl border border-[#3C414C] bg-[#1D1F2E] px-5 py-4 text-white capitalize`}
                   >
-                    <Image src='/AL.png' height={6} width={6} alt='Flag' className='h-6 w-6 rounded-full' />
+                    <Image src='/ALL.png' height={6} width={6} alt='Flag' className='h-6 w-6 rounded-full' />
                     {country}
                   </div>
                 </motion.div>

@@ -38,7 +38,7 @@ const BankBeatingRates = () => {
             className='relative flex shrink-0 flex-col items-center justify-start gap-6 self-stretch'
             variants={itemVariants}
           >
-            <h2 className='relative w-full max-w-[658px] bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-center text-5xl leading-tight font-medium tracking-[-2px] text-transparent md:text-6xl'>
+            <h2 className='gradient-text relative w-full max-w-[658px] text-center text-5xl leading-tight font-medium tracking-[-2px] text-transparent md:text-6xl'>
               Save money with our bank-beating rates
             </h2>
             <p className='relative self-stretch text-center text-xl leading-relaxed font-normal tracking-[-0.5px] text-gray-300'>
@@ -48,7 +48,7 @@ const BankBeatingRates = () => {
         </motion.div>
       </div>
 
-      <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-12 px-8 lg:flex-row lg:gap-24'>
+      <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-12 px-8 pt-8 pb-16 lg:flex-row lg:gap-24'>
         <motion.div
           className='relative flex w-full flex-col items-center justify-start gap-12 lg:w-auto'
           initial={{ opacity: 0, x: -50 }}
@@ -64,9 +64,9 @@ const BankBeatingRates = () => {
             </div>
 
             <p className='mt-6 w-full text-left text-sm leading-5 font-normal tracking-[-0.25px] text-gray-400'>
-              *Disclaimer: The comparison savings are based on a single transfer of 10,000 GBP to USD. Savings
-              are calculated by comparing the exchange rate including margins and fees provided by each bank
-              and SmashPay on the same day (1 August 2023).
+              <span className='text-white'>*Disclaimer:</span> The comparison savings are based on a single
+              transfer of 10,000 GBP to USD. Savings are calculated by comparing the exchange rate including
+              margins and fees provided by each bank and SmashPay on the same day (1 August 2023).
             </p>
           </div>
         </motion.div>

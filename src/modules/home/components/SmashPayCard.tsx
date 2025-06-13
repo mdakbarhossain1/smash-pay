@@ -19,12 +19,7 @@ const SmashPayCard = () => {
   ];
 
   return (
-    <section
-      className='relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch overflow-hidden px-4 pt-32 pb-16 md:px-8'
-      style={{
-        background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
-      }}
-    >
+    <section className='bg-gradient-2 relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch overflow-hidden px-4 pt-32 pb-16 md:px-8'>
       <div className='flex w-full max-w-7xl flex-col items-center justify-start gap-12 lg:flex-row lg:gap-24'>
         {/* Image Section - Order changes on mobile */}
         <motion.div
@@ -62,7 +57,7 @@ const SmashPayCard = () => {
                 <h3 className='w-[150px] text-lg font-medium tracking-tight text-white'>SmashPay card</h3>
                 <div className='border-gradient h-0 w-full border-t-[3px] border-r-0 border-b-0 border-l-0 border-solid' />
               </div>
-              <h2 className='w-full bg-gradient-to-b from-gray-500 to-white bg-clip-text text-4xl leading-tight font-medium tracking-tighter text-transparent md:text-5xl lg:text-6xl'>
+              <h2 className='gradient-text w-full text-4xl leading-tight font-medium tracking-tighter text-transparent md:text-5xl lg:text-6xl'>
                 The Ultimate Card Experience <br /> Across Borders
               </h2>
             </div>
@@ -94,7 +89,7 @@ const SmashPayCard = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <span className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-lg font-semibold tracking-tight text-transparent'>
+              <span className='gradient-text text-lg font-semibold tracking-tight text-transparent'>
                 Learn More
               </span>
               <img className='relative h-5 w-5 shrink-0 overflow-visible' src='/home/arrow-right0.svg' />

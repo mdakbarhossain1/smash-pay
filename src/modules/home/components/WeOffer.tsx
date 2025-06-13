@@ -92,7 +92,7 @@ const WeOffer = () => {
           className='flex w-full max-w-[900px] flex-col items-center justify-start gap-4 md:gap-5'
         >
           <motion.h2
-            className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-center text-3xl font-medium text-transparent md:text-5xl lg:text-6xl'
+            className='gradient-text text-center text-3xl font-medium text-transparent md:text-5xl lg:text-6xl'
             variants={itemVariants}
             style={gradientTextStyle}
           >
@@ -116,15 +116,12 @@ const WeOffer = () => {
             initial='hidden'
             animate={personalControls}
             variants={cardVariants}
-            className='relative z-50 flex flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] p-6 md:gap-12 md:p-12 lg:h-[628px] lg:w-[588px]'
-            style={{
-              background: 'linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%)'
-            }}
+            className='bg-gradient-2 relative z-50 flex flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] p-6 md:gap-12 md:p-12 lg:h-[628px] lg:w-[588px]'
           >
             <div className='flex w-full flex-col items-center justify-start gap-6 md:gap-8'>
               <div className='flex w-full flex-col items-center justify-start gap-4'>
                 <motion.h3
-                  className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-center text-xl font-medium text-transparent md:text-2xl'
+                  className='gradient-text text-center text-xl font-medium text-transparent md:text-2xl'
                   variants={itemVariants}
                 >
                   For Personal
@@ -209,15 +206,12 @@ const WeOffer = () => {
             initial='hidden'
             animate={businessControls}
             variants={cardVariants}
-            className='relative z-50 flex flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] p-6 md:gap-12 md:p-12 lg:h-[628px] lg:w-[588px]'
-            style={{
-              background: 'linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%)'
-            }}
+            className='bg-gradient-2 relative z-50 flex flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] p-6 md:gap-12 md:p-12 lg:h-[628px] lg:w-[588px]'
           >
             <div className='flex w-full flex-col items-center justify-start gap-6 md:gap-8'>
               <div className='flex w-full flex-col items-center justify-start gap-4'>
                 <motion.h3
-                  className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-center text-xl font-medium text-transparent md:text-2xl'
+                  className='gradient-text text-center text-xl font-medium text-transparent md:text-2xl'
                   variants={itemVariants}
                 >
                   For Businesses

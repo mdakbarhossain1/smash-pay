@@ -101,7 +101,7 @@ const ThreeEasySteps = () => {
 
               {/* Main Heading */}
               <motion.h2
-                className='self-stretch bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-center text-4xl leading-tight font-bold tracking-[-2px] text-transparent md:text-5xl lg:text-6xl'
+                className='gradient-text self-stretch text-center text-4xl leading-tight font-bold tracking-[-2px] text-transparent md:text-5xl lg:text-6xl'
                 variants={itemVariants}
               >
                 Send money abroad in 3 simple steps
@@ -122,10 +122,7 @@ const ThreeEasySteps = () => {
           {steps.map((step) => (
             <motion.div
               key={step.id}
-              className='flex flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] px-8 pt-12 pb-16'
-              style={{
-                background: 'linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%)'
-              }}
+              className='bg-gradient-2 flex flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] px-8 pt-12 pb-16'
               variants={itemVariants}
               whileHover='hover'
             >

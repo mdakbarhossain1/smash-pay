@@ -105,15 +105,17 @@ export default function Footer() {
             {/* Footer Links */}
             <div className='flex flex-col gap-12 lg:flex-row lg:gap-16'>
               {/* Logo */}
-              <div className='w-full lg:w-auto'>
-                <Image
-                  src='/home/smash-pay-logo-1-11.png'
-                  alt='SmashPay Logo'
-                  width={146}
-                  height={28}
-                  className='aspect-[146/28] object-cover'
-                />
-              </div>
+              <Link href='/'>
+                <div className='w-full lg:w-auto'>
+                  <Image
+                    src='/home/smash-pay-logo-1-11.png'
+                    alt='SmashPay Logo'
+                    width={146}
+                    height={28}
+                    className='aspect-[146/28] object-cover'
+                  />
+                </div>
+              </Link>
 
               {/* Links Grid */}
               <div className='grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4'>
@@ -185,7 +187,7 @@ export default function Footer() {
                 transition={{ duration: 0.5 }}
                 className='text-sm font-normal tracking-tight text-gray-300'
               >
-                Copyright © SmashPay 2023.
+                Copyright © SmashPay {new Date().getFullYear()}.
               </motion.div>
 
               {/* Social Links */}

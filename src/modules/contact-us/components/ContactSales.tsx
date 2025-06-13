@@ -74,7 +74,7 @@ const ContactSales = () => {
       >
         <div className='relative flex shrink-0 flex-col items-center justify-start gap-10 self-stretch'>
           <div className='relative flex w-full max-w-[800px] shrink-0 flex-col items-center justify-start gap-6'>
-            <h2 className='relative self-stretch bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-center text-4xl leading-tight font-medium tracking-tight text-transparent md:text-5xl'>
+            <h2 className='gradient-text relative self-stretch text-center text-4xl leading-tight font-medium tracking-tight text-transparent md:text-5xl'>
               Contact sales by phone
             </h2>
           </div>

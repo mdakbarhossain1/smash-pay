@@ -46,7 +46,7 @@ const PricingHeroSection = () => {
 
               {/* Main heading */}
               <motion.h1
-                className='relative w-full max-w-[736px] bg-gradient-to-b from-[#7b7d81] to-white bg-clip-text text-center text-5xl leading-tight font-medium tracking-tighter text-transparent md:text-6xl'
+                className='gradient-text relative w-full max-w-[736px] text-center text-5xl leading-tight font-medium tracking-tighter text-transparent md:text-6xl'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.1, duration: 0.5 }}

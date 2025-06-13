@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function CTASections() {
   return (
-    <div className='w-full bg-gradient-to-b from-[#0c1118] to-[#1d1e2d] px-5 pt-24 pb-24 md:px-20'>
+    <div className='bg-gradient w-full px-5 pt-24 pb-24 md:px-20'>
       <div className='mx-auto max-w-7xl'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export default function CTASections() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className='bg-gradient-to-b from-[#7b7d81] to-white bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-5xl lg:text-6xl'
+              className='gradient-text text-center text-4xl font-medium tracking-tight text-transparent md:text-5xl lg:text-6xl'
             >
               Set up and Save money on your transfers with SmashPay
             </motion.h2>

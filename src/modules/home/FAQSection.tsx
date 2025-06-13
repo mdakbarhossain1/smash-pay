@@ -55,7 +55,7 @@ export default function FAQSection() {
 
   return (
     <>
-      <section className='bg-clr-14 relative w-full px-4 pt-16 pb-16 md:px-8'>
+      <section className='bg-clr-14 relative w-full px-4 pt-32 pb-32 md:px-8'>
         <div className='mx-auto grid max-w-7xl grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3'>
           {/* Left Content - spans 1 column */}
           <div className='col-span-1 flex flex-col gap-10'>
@@ -69,7 +69,7 @@ export default function FAQSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className='bg-gradient-to-b from-[#7b7d81] to-white bg-clip-text text-5xl font-medium tracking-tight text-transparent md:text-6xl'
+                className='gradient-text text-5xl font-medium tracking-tight text-transparent md:text-6xl'
               >
                 Common questions
               </motion.h2>

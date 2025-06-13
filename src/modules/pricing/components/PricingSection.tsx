@@ -54,7 +54,7 @@ const PricingSection = () => {
   ];
 
   const CheckIcon = () => (
-    <svg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <svg width='24' height='24' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <rect x='0.798828' y='0.505615' width='24' height='24' rx='12' fill='#0A0D14' />
       <path
         fill-rule='evenodd'
@@ -66,7 +66,7 @@ const PricingSection = () => {
   );
 
   const MinusIcon = () => (
-    <svg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <svg width='14' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <path
         d='M5.79883 12.5056H19.7988'
         stroke='#C9CBCE'

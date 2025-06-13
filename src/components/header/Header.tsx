@@ -84,7 +84,7 @@ const Header = () => {
                 <Link href={'/'}>
                   {' '}
                   <Image
-                    src='/home/smash-pay-logo-1-10.png'
+                    src='/home/smash-pay-logo.png'
                     alt='Smash Pay Logo'
                     layout='fill'
                     objectFit='cover'

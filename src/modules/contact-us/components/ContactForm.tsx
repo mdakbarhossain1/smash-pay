@@ -29,7 +29,7 @@ const ContactForm = () => {
         >
           <div className='flex w-full flex-col items-start justify-start gap-6'>
             <div className='flex w-full flex-col items-start justify-start gap-6'>
-              <h2 className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-left text-5xl leading-tight font-medium tracking-tight text-transparent sm:text-6xl md:text-7xl'>
+              <h2 className='gradient-text text-left text-5xl leading-tight font-medium tracking-tight text-transparent sm:text-6xl md:text-7xl'>
                 Contact us
               </h2>
             </div>
