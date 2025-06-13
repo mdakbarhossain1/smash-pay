@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState, type JSX } from 'react';
+import PricingHeroSection from './PricingHeroSection';
 
 type Plan = {
   name: string;
@@ -19,7 +20,7 @@ type Plan = {
 };
 
 const PricingSection = () => {
-  const [activeTab, setActiveTab] = useState('payment');
+  const [selectedPlan, setSelectedPlan] = useState('personal' as 'personal' | 'business');
 
   const plans = [
     {
@@ -234,6 +235,22 @@ const PricingSection = () => {
     }
   ];
 
+  const displayedPlans =
+    selectedPlan === 'personal'
+      ? plans
+      : [
+          plans[0], // Standard
+          {
+            ...plans[2],
+            name: 'Professional',
+            price: '$19.99/Month',
+            image: '/pricing/plus-card.png',
+            description: 'Tailored for business needs with priority services.',
+            colorOptions: 5
+          },
+          plans[3]
+        ];
+
   const ColorOption = ({ color, border = false }: { color: string; border?: boolean }) => (
     <div
       className={`h-4 w-4 rounded-full ${border ? 'border-2 border-white shadow-sm' : ''}`}
@@ -250,136 +267,153 @@ const PricingSection = () => {
     ];
 
     return (
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3, delay: index * 0.1 }}
-        className={`relative flex-1 p-8 ${plan.popular ? 'border-t border-r border-l border-[#3C414C]' : ''}`}
-        style={{
-          background: plan.popular
-            ? 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
-            : 'linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%)'
-        }}
-      >
-        {plan.popular && (
-          <div className='absolute -top-0 left-1/2 z-50 -translate-x-1/2 -translate-y-1/2 transform'>
-            <div className='rounded-2xl border border-gray-200 bg-gradient-to-r from-[#1D1F2D] to-[#1D1F2E] px-2 py-0.5'>
-              <span className='text-xs font-medium text-lime-300'>Most Popular</span>
+      <>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: index * 0.1 }}
+          className={`relative flex-1 p-8 ${plan.popular ? 'border-t border-r border-l border-[#3C414C]' : ''}`}
+          style={{
+            background: plan.popular
+              ? 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
+              : 'linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%)'
+          }}
+        >
+          {plan.popular && (
+            <div className='absolute -top-0 left-1/2 z-50 -translate-x-1/2 -translate-y-1/2 transform'>
+              <div className='rounded-2xl border border-gray-200 bg-gradient-to-r from-[#1D1F2D] to-[#1D1F2E] px-2 py-0.5'>
+                <span className='text-xs font-medium text-lime-300'>Most Popular</span>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        <div className='relative flex flex-1 flex-col items-center justify-start gap-6'>
-          <div className='flex flex-col items-center justify-start gap-1 self-stretch'>
-            <h3 className='text-center text-lg font-medium text-white'>{plan.name}</h3>
-            <p className='text-center text-sm text-gray-300'>{plan.description}</p>
-          </div>
-
-          <div className='flex flex-col items-center justify-start gap-4 self-stretch'>
-            <div className='relative h-[101.51px] w-40'>
-              <Image
-                src={plan.image}
-                alt={`${plan.name} card`}
-                className='h-full w-full rounded-lg object-cover'
-                width={160}
-                height={101}
-              />
+          <div className='relative flex flex-1 flex-col items-center justify-start gap-6'>
+            <div className='flex flex-col items-center justify-start gap-1 self-stretch'>
+              <h3 className='text-center text-lg font-medium text-white'>{plan.name}</h3>
+              <p className='text-center text-sm text-gray-300'>{plan.description}</p>
             </div>
 
-            <div className='flex items-center gap-2'>
-              {Array.from({ length: plan.colorOptions }).map((_, i) => (
-                <ColorOption
-                  key={i}
-                  color={i === 0 ? '#A8D246' : i === 1 ? '#2E523F' : i === 2 ? '#50ADBB' : '#B49B56'}
-                  border={i === 1 && plan.colorOptions > 1}
+            <div className='flex flex-col items-center justify-start gap-4 self-stretch'>
+              <div className='relative h-[101.51px] w-40'>
+                <Image
+                  src={plan.image}
+                  alt={`${plan.name} card`}
+                  className='h-full w-full rounded-lg object-cover'
+                  width={160}
+                  height={101}
                 />
-              ))}
+              </div>
+
+              <div className='flex items-center gap-2'>
+                {Array.from({ length: plan.colorOptions }).map((_, i) => (
+                  <ColorOption
+                    key={i}
+                    color={i === 0 ? '#A8D246' : i === 1 ? '#2E523F' : i === 2 ? '#50ADBB' : '#B49B56'}
+                    border={i === 1 && plan.colorOptions > 1}
+                  />
+                ))}
+              </div>
             </div>
+
+            <div className='text-center text-xl font-medium text-white'>{plan.price}</div>
+
+            <button className='border-stroke-2 w-full rounded-[40px] border bg-gradient-to-b from-[#151820] to-[#010101] px-[18px] py-2.5'>
+              <span className='text-base font-semibold text-white'>Get started</span>
+            </button>
           </div>
-
-          <div className='text-center text-xl font-medium text-white'>{plan.price}</div>
-
-          <button className='border-stroke-2 w-full rounded-[40px] border bg-gradient-to-b from-[#151820] to-[#010101] px-[18px] py-2.5'>
-            <span className='text-base font-semibold text-white'>Get started</span>
-          </button>
-        </div>
-      </motion.div>
+        </motion.div>
+      </>
     );
   };
 
   return (
-    <div className='bg-clr-14 relative flex shrink-0 flex-col items-center justify-start gap-32 self-stretch overflow-hidden pt-16 pb-24'>
-      <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-8 px-8 lg:flex-row lg:gap-24'>
-        <div className='relative flex w-full flex-col items-start justify-start gap-0 self-stretch'>
-          {/*  */}
-          <div className='wrap bg-gradient-to-r from-[#1D1F2D] to-[#1D1F2E]'>
-            <div className='grid grid-cols-1 items-start justify-start gap-0 self-stretch md:grid-cols-5 lg:flex-row'>
-              <div className='hidden md:block'></div>
-              {plans.map((plan, index) => (
-                <PlanCard key={plan.name} plan={plan} index={index} />
-              ))}
-            </div>
-
-            {/* Features Table */}
-            <div className='w-full overflow-hidden'>
-              <div className='mx-10 overflow-hidden rounded-2xl border border-[#3C414C]'>
-                {features.map((featureGroup, groupIndex) => (
-                  <div key={groupIndex} className='border-b border-[#3C414C]'>
-                    <div className='flex flex-col lg:flex-row'>
-                      {/* Feature Name */}
-                      <div className='flex-1 p-4'>
-                        <h4 className='text-lg font-medium text-white'>{featureGroup.name}</h4>
-                      </div>
-
-                      {/* Empty space for plan columns */}
-                      <div className='hidden flex-1 lg:flex'></div>
-                      <div className='hidden flex-1 lg:flex'></div>
-                      <div className='hidden flex-1 lg:flex'></div>
-                    </div>
-
-                    {/* Feature Rows */}
-                    {featureGroup.features.map((feature, featureIndex) => (
-                      <div
-                        key={featureIndex}
-                        className={`flex flex-col lg:flex-row ${featureIndex % 2 === 0 ? 'bg-stroke-2 bg-[#3C414C]' : ''}`}
-                      >
-                        {/* Feature Name */}
-                        <div className='flex flex-1 items-center gap-2 p-4'>
-                          <span className='text-sm text-gray-300'>{feature.name}</span>
-                          <img src='/pricing/info-circle0.svg' height={18} width={18} alt='info icon' />
-                        </div>
-
-                        {/* Plan Features */}
-                        <div className='flex flex-1 items-center justify-center p-4'>
-                          <span className='text-sm font-medium text-white'>
-                            {typeof feature.standard === 'string' ? feature.standard : feature.standard}
-                          </span>
-                        </div>
-                        <div className='flex flex-1 items-center justify-center p-4'>
-                          <span className='text-sm font-medium text-white'>
-                            {typeof feature.classic === 'string' ? feature.classic : feature.classic}
-                          </span>
-                        </div>
-                        <div className='flex flex-1 items-center justify-center p-4'>
-                          <span className='text-sm font-medium text-white'>
-                            {typeof feature.plus === 'string' ? feature.plus : feature.plus}
-                          </span>
-                        </div>
-                        <div className='flex flex-1 items-center justify-center p-4'>
-                          <span className='text-sm font-medium text-white'>
-                            {typeof feature.premium === 'string' ? feature.premium : feature.premium}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+    <>
+      {' '}
+      <PricingHeroSection selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} />
+      <div className='bg-clr-14 relative flex shrink-0 flex-col items-center justify-start gap-32 self-stretch overflow-hidden pt-16 pb-24'>
+        <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-8 px-8 lg:flex-row lg:gap-24'>
+          <div className='relative flex w-full flex-col items-start justify-start gap-0 self-stretch'>
+            {/*  */}
+            <div className='wrap bg-gradient-to-r from-[#1D1F2D] to-[#1D1F2E]'>
+              <div className='grid grid-cols-1 items-start justify-start gap-0 self-stretch md:grid-cols-5 lg:flex-row'>
+                {selectedPlan === 'personal' ? (
+                  <div className='hidden md:block'></div>
+                ) : (
+                  <>
+                    <div className='hidden md:block'></div>
+                    <div className='hidden md:block'></div>
+                  </>
+                )}
+                {displayedPlans.map((plan, index) => (
+                  <PlanCard key={plan.name} plan={plan} index={index} />
                 ))}
+              </div>
+
+              {/* Features Table */}
+              <div className='w-full overflow-hidden'>
+                <div className='mx-10 overflow-hidden rounded-2xl border border-[#3C414C]'>
+                  {features.map((featureGroup, groupIndex) => (
+                    <div key={groupIndex} className='border-b border-[#3C414C]'>
+                      <div className='flex flex-col lg:flex-row'>
+                        {/* Feature Name */}
+                        <div className='flex-1 p-4'>
+                          <h4 className='text-lg font-medium text-white'>{featureGroup.name}</h4>
+                        </div>
+
+                        {/* Empty space for plan columns */}
+                        <div className='hidden flex-1 lg:flex'></div>
+                        <div className='hidden flex-1 lg:flex'></div>
+                        <div className='hidden flex-1 lg:flex'></div>
+                      </div>
+
+                      {/* Feature Rows */}
+                      {featureGroup.features.map((feature, featureIndex) => (
+                        <div
+                          key={featureIndex}
+                          className={`flex flex-col lg:flex-row ${featureIndex % 2 === 0 ? 'bg-stroke-2 bg-[#3C414C]' : ''}`}
+                        >
+                          {/* Feature Name */}
+                          <div className='flex flex-1 items-center gap-2 p-4'>
+                            <span className='text-sm text-gray-300'>{feature.name}</span>
+                            <img src='/pricing/info-circle0.svg' height={18} width={18} alt='info icon' />
+                          </div>
+
+                          {/* Plan Features */}
+                          <div className='flex flex-1 items-center justify-center p-4'>
+                            <span className='text-sm font-medium text-white'>
+                              {typeof feature.standard === 'string' ? feature.standard : feature.standard}
+                            </span>
+                          </div>
+
+                          <div
+                            className={`flex-1 items-center justify-center p-4 ${selectedPlan === 'personal' ? 'flex' : 'hidden'}`}
+                          >
+                            <span className='text-sm font-medium text-white'>
+                              {typeof feature?.classic === 'string' ? feature?.classic : feature?.classic}
+                            </span>
+                          </div>
+
+                          <div className='flex flex-1 items-center justify-center p-4'>
+                            <span className='text-sm font-medium text-white'>
+                              {typeof feature.plus === 'string' ? feature.plus : feature.plus}
+                            </span>
+                          </div>
+                          <div className='flex flex-1 items-center justify-center p-4'>
+                            <span className='text-sm font-medium text-white'>
+                              {typeof feature.premium === 'string' ? feature.premium : feature.premium}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,10 +1,12 @@
 'use client';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 
-const PricingHeroSection = () => {
-  const [selectedPlan, setSelectedPlan] = useState('personal'); // 'personal' or 'business'
+type PricingHeroSectionProps = {
+  selectedPlan: 'personal' | 'business';
+  setSelectedPlan: (plan: 'personal' | 'business') => void;
+};
 
+const PricingHeroSection = ({ selectedPlan, setSelectedPlan }: PricingHeroSectionProps) => {
   return (
     <section className='relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch bg-gradient-to-b from-[#0c1118] to-[#1d1e2d] pt-24 pb-16'>
       <div className='relative flex w-full max-w-7xl shrink-0 flex-col items-center justify-start gap-8 px-8'>
