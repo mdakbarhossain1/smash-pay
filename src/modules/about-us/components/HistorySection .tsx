@@ -72,7 +72,7 @@ const HistorySection = () => {
       variants={containerVariants}
       className='bg-bg bg-clr-14 relative flex flex-col items-center justify-start gap-16 self-stretch overflow-hidden pt-24 pb-24'
     >
-      <div className='relative flex w-full max-w-[1280px] flex-col items-center justify-start gap-3 px-8'>
+      <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-3 px-8'>
         <motion.div
           className='relative flex flex-col items-center justify-start gap-10 self-stretch'
           variants={containerVariants}
@@ -125,7 +125,7 @@ const HistorySection = () => {
         </motion.div>
       </div>
 
-      <div className='relative flex w-full max-w-[1280px] flex-row items-start justify-start gap-24 px-8'>
+      <div className='relative flex w-full max-w-7xl flex-row items-start justify-start gap-24 px-8'>
         <motion.div
           className='relative flex w-full flex-col items-center justify-start gap-10 self-stretch'
           initial={{ opacity: 0 }}

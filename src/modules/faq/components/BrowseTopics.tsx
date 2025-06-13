@@ -56,7 +56,7 @@ const BrowseTopics = () => {
       viewport={{ once: true, amount: 0.25 }}
       className='bg-clr-14 flex shrink-0 flex-col items-center justify-start gap-16 self-stretch px-4 py-20 sm:px-6 lg:px-8'
     >
-      <div className='relative flex w-full max-w-[1280px] flex-col items-center justify-start gap-16'>
+      <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-16'>
         <motion.div
           variants={fadeIn('up', 'tween', 0.2, 1)}
           className='flex w-full flex-col justify-start gap-4'

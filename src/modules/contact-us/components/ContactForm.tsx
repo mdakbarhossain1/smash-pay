@@ -22,14 +22,14 @@ const ContactForm = () => {
         background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
       }}
     >
-      <div className='relative flex w-full max-w-[1280px] flex-col items-center justify-center gap-16 lg:flex-row lg:gap-24'>
+      <div className='relative flex w-full max-w-7xl flex-col items-center justify-center gap-16 lg:flex-row lg:gap-24'>
         <motion.div
           variants={fadeIn('right', 'tween', 0.2, 1)}
           className='flex w-full flex-1 flex-col items-start justify-start gap-10 lg:max-w-[512px]'
         >
           <div className='flex w-full flex-col items-start justify-start gap-6'>
             <div className='flex w-full flex-col items-start justify-start gap-6'>
-              <h2 className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-left text-5xl leading-tight font-medium tracking-tight text-transparent sm:text-6xl md:text-7xl'>
+              <h2 className='gradient-text text-left text-5xl leading-tight font-medium tracking-tight text-transparent sm:text-6xl md:text-7xl'>
                 Contact us
               </h2>
             </div>
@@ -38,10 +38,10 @@ const ContactForm = () => {
             </p>
           </div>
 
-          <div className='flex w-full flex-col items-start justify-start gap-8 md:flex-row'>
+          <div className='grid w-full grid-cols-1 gap-8 md:grid-cols-2'>
             <motion.div
               whileHover={{ y: -5 }}
-              className='border-stroke-2 flex w-full flex-1 flex-col items-start justify-start gap-6 rounded-2xl border bg-gradient-to-r from-gray-900 to-gray-900/95 p-6'
+              className='border-stroke-2 flex h-full flex-col justify-start gap-6 rounded-2xl border bg-gradient-to-r from-gray-900 to-gray-900/95 p-6'
             >
               <div className='relative h-12 w-12 shrink-0'>
                 <Image
@@ -51,7 +51,7 @@ const ContactForm = () => {
                   objectFit='contain'
                 />
               </div>
-              <div className='flex w-full flex-col items-start justify-start gap-3'>
+              <div className='flex flex-col items-start justify-start gap-3'>
                 <h3 className='text-left text-lg leading-relaxed font-medium tracking-tight text-white'>
                   Have a questions?
                 </h3>
@@ -63,7 +63,7 @@ const ContactForm = () => {
 
             <motion.div
               whileHover={{ y: -5 }}
-              className='border-stroke-2 flex w-full flex-1 flex-col items-start justify-start gap-6 rounded-2xl border bg-gradient-to-r from-gray-900 to-gray-900/95 p-6'
+              className='border-stroke-2 flex h-full flex-col justify-start gap-6 rounded-2xl border bg-gradient-to-r from-gray-900 to-gray-900/95 p-6'
             >
               <div className='relative h-12 w-12 shrink-0'>
                 <Image
@@ -73,7 +73,7 @@ const ContactForm = () => {
                   objectFit='contain'
                 />
               </div>
-              <div className='flex w-full flex-col items-start justify-start gap-3'>
+              <div className='flex flex-col items-start justify-start gap-3'>
                 <h3 className='text-left text-lg leading-relaxed font-medium tracking-tight text-white'>
                   SmashPay Blog
                 </h3>

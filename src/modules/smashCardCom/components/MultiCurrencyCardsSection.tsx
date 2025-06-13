@@ -44,7 +44,7 @@ const MultiCurrencyCardsSection = () => {
       }}
     >
       {/* Header Section */}
-      <div className='relative mx-auto flex w-full max-w-[1280px] flex-col items-center justify-start gap-3 px-2 md:px-8'>
+      <div className='relative mx-auto flex w-full max-w-7xl flex-col items-center justify-start gap-3 px-2 md:px-8'>
         <motion.div
           className='flex w-full flex-col items-center justify-start gap-10'
           initial='hidden'
@@ -71,7 +71,7 @@ const MultiCurrencyCardsSection = () => {
               ></div>
             </div>
             <h2
-              className='w-full bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-center text-4xl leading-tight font-medium tracking-[-2px] text-transparent md:text-5xl lg:text-6xl'
+              className='gradient-text w-full text-center text-4xl leading-tight font-medium tracking-[-2px] text-transparent md:text-5xl lg:text-6xl'
               // variants={itemVariants}
             >
               Multi-currency cards for your global business
@@ -81,7 +81,7 @@ const MultiCurrencyCardsSection = () => {
       </div>
 
       {/* Cards Section */}
-      <div className='relative mx-auto flex w-full max-w-[1280px] flex-col items-start justify-start gap-8 px-2 md:px-8'>
+      <div className='relative mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-8 px-2 md:px-8'>
         {/* Main Feature Card */}
         <motion.div
           className='relative flex w-full flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] p-8 md:p-12 lg:flex-row'
@@ -95,12 +95,12 @@ const MultiCurrencyCardsSection = () => {
         >
           <div className='flex w-full flex-col items-start justify-center gap-10 lg:w-1/2'>
             <div className='flex w-full flex-col items-start justify-start gap-4'>
-              <h3 className='w-full bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-left text-4xl leading-tight font-medium tracking-[-2px] text-transparent md:text-5xl'>
-                Empower your team with business debit cards
+              <h3 className='gradient-text w-full text-left text-4xl leading-tight font-medium tracking-[-2px] text-transparent md:text-5xl'>
+                Empower your team <br /> with business debit <br /> cards
               </h3>
               <p className='w-full text-left text-lg leading-relaxed font-normal tracking-[-0.25px] text-gray-300'>
-                Big or small your team is, SmashPay cards have got you covered. Spend securely with physical
-                and virtual debit cards that you control.
+                Big or small your team is, SmashPay cards have got you <br /> covered. Spend securely with
+                physical and virtual debit cards <br /> that you control.
               </p>
             </div>
           </div>
@@ -129,7 +129,7 @@ const MultiCurrencyCardsSection = () => {
             variants={cardVariants}
           >
             <div className='flex w-full flex-col items-start justify-start gap-3 pt-1.5'>
-              <h4 className='w-[199px] bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-left text-2xl leading-tight font-medium tracking-[-1.5px] text-transparent md:text-3xl'>
+              <h4 className='gradient-text w-[199px] text-left text-2xl leading-tight font-medium tracking-[-1.5px] text-transparent md:text-3xl'>
                 Keep your money safe with our anti-fraud system.
               </h4>
             </div>
@@ -155,7 +155,7 @@ const MultiCurrencyCardsSection = () => {
             variants={cardVariants}
           >
             <div className='flex w-full flex-col items-start justify-start gap-3 pt-1.5'>
-              <h4 className='w-[199px] bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-left text-2xl leading-tight font-medium tracking-[-1.5px] text-transparent md:text-3xl'>
+              <h4 className='gradient-text w-[165px] text-left text-2xl leading-tight font-medium tracking-[-1.5px] text-transparent md:text-3xl'>
                 Optimise company costs and manage spending
               </h4>
             </div>
@@ -217,8 +217,8 @@ const MultiCurrencyCardsSection = () => {
               {/* Add more flags as needed */}
             </div>
             <div className='absolute top-[206px] left-8 flex w-full flex-col items-start justify-start gap-3 pt-1.5 lg:w-[528px]'>
-              <h4 className='w-full bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-left text-2xl leading-tight font-medium tracking-[-1.5px] text-transparent md:text-3xl lg:w-[460px]'>
-                Spend like a local on cards with <br /> great exchange rates
+              <h4 className='gradient-text w-full text-left text-2xl leading-tight font-medium tracking-[-1.5px] text-transparent md:text-3xl lg:w-[460px]'>
+                Spend like a local on cards <br /> with great exchange rates
               </h4>
               <p className='w-full text-left text-lg leading-relaxed font-normal tracking-[-0.25px] text-gray-300'>
                 Our business debit cards can go the distance abroad. Spend like a local worldwide in 150+

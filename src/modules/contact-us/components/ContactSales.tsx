@@ -70,11 +70,11 @@ const ContactSales = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className='relative flex w-full max-w-[1280px] shrink-0 flex-col items-center justify-start gap-3'
+        className='relative flex w-full max-w-7xl shrink-0 flex-col items-center justify-start gap-3'
       >
         <div className='relative flex shrink-0 flex-col items-center justify-start gap-10 self-stretch'>
           <div className='relative flex w-full max-w-[800px] shrink-0 flex-col items-center justify-start gap-6'>
-            <h2 className='relative self-stretch bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-center text-4xl leading-tight font-medium tracking-tight text-transparent md:text-5xl'>
+            <h2 className='gradient-text relative self-stretch text-center text-4xl leading-tight font-medium tracking-tight text-transparent md:text-5xl'>
               Contact sales by phone
             </h2>
           </div>
@@ -85,7 +85,7 @@ const ContactSales = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className='relative flex w-full max-w-[1280px] shrink-0 flex-col items-start justify-start gap-8'
+        className='relative flex w-full max-w-7xl shrink-0 flex-col items-start justify-start gap-8'
       >
         {countries.map((row, rowIndex) => (
           <div

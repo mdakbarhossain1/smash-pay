@@ -76,7 +76,7 @@ const ReusableInfoCard = ({
         className='flex flex-col items-start justify-start gap-8 self-stretch'
         variants={itemVariants}
       >
-        <h2 className='bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-4xl leading-tight font-medium tracking-[-2px] text-transparent md:text-5xl lg:text-6xl'>
+        <h2 className='gradient-text text-4xl leading-tight font-medium tracking-[-2px] text-transparent md:text-5xl lg:text-6xl'>
           {heading}
         </h2>
         <p className='text-lg leading-relaxed tracking-[-0.25px] text-gray-300'>{subheading}</p>
@@ -140,7 +140,7 @@ const ReusableInfoCard = ({
 
   return (
     <div
-      className={`relative mx-auto flex w-full max-w-[1280px] flex-col items-center justify-start gap-12 px-8 py-16 lg:flex-row lg:gap-24 ${
+      className={`relative mx-auto flex w-full max-w-7xl flex-col items-center justify-start gap-12 px-8 py-16 lg:flex-row lg:gap-24 ${
         imageLeft ? 'lg:flex-row-reverse' : ''
       }`}
     >

@@ -18,15 +18,15 @@ const MultiCurrency = () => {
           <div className='flex w-full flex-col items-start justify-start gap-6'>
             <div className='flex w-full flex-col items-start justify-start gap-6'>
               <div className='flex flex-col items-center justify-center gap-0'>
-                <h3 className='text-lg font-medium tracking-tight text-white'>Multi-currency account</h3>
+                <h3 className='text-lg font-medium tracking-tight text-white'>Multi-currency account </h3>
                 <div className='border-gradient h-0 w-full border-t-[3px] border-r-0 border-b-0 border-l-0 border-solid' />
               </div>
-              <h2 className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-4xl leading-tight font-medium tracking-tight text-transparent md:text-5xl lg:text-6xl'>
-                One account for 35+ currencies around the world
+              <h2 className='gradient-text text-4xl leading-tight font-medium tracking-tight text-transparent md:text-6xl'>
+                One account for <br /> 35+ currencies around the world
               </h2>
             </div>
             <p className='text-lg leading-relaxed tracking-tight text-gray-300'>
-              Hold over 35 currencies and exchange to the currency you need, when you need it.
+              Hold over 35 currencies and exchange to the currency you <br /> need, when you need it.
             </p>
             <div className='flex w-full flex-col items-start justify-start gap-5'>
               {features.map((feature, index) => (
@@ -44,7 +44,7 @@ const MultiCurrency = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <span className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-lg font-semibold tracking-tight text-transparent'>
+            <span className='gradient-text text-lg font-semibold tracking-tight text-transparent'>
               Learn More
             </span>
             <div className='relative h-[22px] w-[22px]'>

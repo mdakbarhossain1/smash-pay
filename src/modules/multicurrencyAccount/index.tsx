@@ -30,7 +30,9 @@ const MultiCurrencyAccount = () => {
     <>
       <CurrencyHeader />
       <GlobeMultiCurrencyAccounts />
-      <HowToGetStarted steps={steps} title='Register for a Multi-currency account is easy' />
+      <div className='bg-clr-14 w-full py-10'>
+        <HowToGetStarted steps={steps} title='Register for a Multi-currency account is easy' />
+      </div>
       <FAQSection />
       <CTASections />
     </>

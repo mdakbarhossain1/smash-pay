@@ -10,7 +10,7 @@ const CultureSection = () => {
         background: 'linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%)'
       }}
     >
-      <div className='relative w-full max-w-[1280px] shrink-0 px-8'>
+      <div className='relative w-full max-w-7xl shrink-0 px-8'>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

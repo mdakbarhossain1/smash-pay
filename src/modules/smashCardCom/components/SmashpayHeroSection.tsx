@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const SmashpayHeroSection = () => {
   const containerVariants = {
@@ -27,12 +28,12 @@ const SmashpayHeroSection = () => {
 
   return (
     <section
-      className='relative -z-10 flex w-full flex-col items-center justify-start gap-16 pt-24 pb-32'
+      className='relative flex w-full flex-col items-center justify-start gap-16 pt-24 pb-32'
       style={{
         background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
       }}
     >
-      <div className='mx-auto flex w-full max-w-[1280px] flex-col items-center justify-center gap-8 px-8'>
+      <div className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 px-8'>
         <motion.div
           className='flex w-full max-w-[800px] flex-col items-center justify-center gap-10'
           initial='hidden'
@@ -75,11 +76,10 @@ const SmashpayHeroSection = () => {
 
               {/* Main title */}
               <motion.h2
-                className='bg-gradient-to-b from-[#7b7d81] to-white bg-clip-text text-center text-4xl leading-tight font-medium tracking-[-2.5px] text-transparent md:text-5xl lg:text-6xl'
+                className='gradient-text text-center text-4xl leading-tight font-medium tracking-[-2.5px] text-transparent md:text-5xl lg:text-6xl'
                 variants={itemVariants}
               >
-                The most modern multi-
-                <br /> currency card.
+                The most modern <br /> multi- currency card.
               </motion.h2>
             </motion.div>
 
@@ -117,18 +117,20 @@ const SmashpayHeroSection = () => {
               </button>
 
               {/* Contact Sales Button */}
-              <button className='flex flex-row items-center justify-center gap-2.5 rounded-full border border-[#3c414c] px-8 py-4 transition-colors hover:bg-gray-800'>
-                <span className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
-                  Contact sales
-                </span>
-                <Image
-                  src='/home/arrow-right1.svg'
-                  alt=''
-                  width={22}
-                  height={22}
-                  className='object-contain'
-                />
-              </button>
+              <Link href='/contact-sales'>
+                <button className='flex cursor-pointer flex-row items-center justify-center gap-2.5 rounded-full border border-[#3c414c] px-8 py-4 transition-colors hover:bg-gray-800'>
+                  <span className='cursor-pointer text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
+                    Contact sales
+                  </span>
+                  <Image
+                    src='/home/arrow-right1.svg'
+                    alt=''
+                    width={22}
+                    height={22}
+                    className='object-contain'
+                  />
+                </button>
+              </Link>
             </motion.div>
 
             <motion.p

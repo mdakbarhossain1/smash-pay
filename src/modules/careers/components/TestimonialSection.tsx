@@ -9,7 +9,7 @@ const TestimonialSection = () => {
         background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
       }}
     >
-      <div className='relative flex w-full max-w-[1280px] shrink-0 flex-col items-start justify-start gap-8 px-8'>
+      <div className='relative flex w-full max-w-7xl shrink-0 flex-col items-start justify-start gap-8 px-8'>
         <motion.div
           className='relative flex flex-col items-center justify-start gap-16 self-stretch'
           initial={{ opacity: 0, y: 20 }}

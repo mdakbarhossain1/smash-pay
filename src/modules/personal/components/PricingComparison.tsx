@@ -141,7 +141,7 @@ const PricingComparison = () => {
   return (
     <section className='bg-clr-14 relative flex w-full flex-col items-center justify-start gap-16 self-stretch overflow-hidden pt-32 pb-32'>
       <motion.div
-        className='relative flex w-full max-w-[1280px] flex-col items-start justify-start gap-24 px-8'
+        className='relative flex w-full max-w-7xl flex-col items-start justify-start gap-24 px-8'
         initial='hidden'
         animate='visible'
         variants={containerVariants}
@@ -152,7 +152,7 @@ const PricingComparison = () => {
           variants={itemVariants}
         >
           <div className='relative flex w-full flex-col items-center justify-start gap-6 lg:w-[760px]'>
-            <h2 className='relative self-stretch bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-center text-4xl leading-tight font-bold tracking-[-2px] text-transparent md:text-5xl'>
+            <h2 className='gradient-text relative self-stretch text-center text-4xl leading-tight font-bold tracking-[-2px] text-transparent md:text-5xl'>
               Compare our pricing
             </h2>
             <p className='relative self-stretch text-center text-xl leading-7 font-normal tracking-[-0.5px] text-gray-300'>
@@ -237,7 +237,7 @@ const PricingComparison = () => {
                             className='mr-1.5'
                           />
                         )}
-                        <p className='text-md text-right leading-tight font-normal tracking-[-0.25px]'>
+                        <p className='text-right text-sm leading-tight font-normal tracking-[-0.25px] text-[#E4187D]'>
                           {service.difference}
                         </p>
                       </div>
@@ -288,7 +288,7 @@ const PricingComparison = () => {
                     </p>
                     <div
                       className={`h-2.5 w-2.5 rounded-full ${
-                        service.differenceType === 'positive' ? 'bg-lime-300' : 'bg-scarlett-600'
+                        service.differenceType === 'positive' ? 'bg-[#E4187D]' : 'bg-scarlett-600'
                       }`}
                     ></div>
                   </motion.div>
@@ -305,7 +305,7 @@ const PricingComparison = () => {
         >
           <div className='relative flex w-full flex-col items-center justify-start gap-6 lg:w-[720px]'>
             <p className='text-center text-base leading-6 font-normal tracking-[-0.25px] text-gray-400'>
-              <span className='font-semibold'>*Disclaimer:</span> The above Information is based on competitor
+              <span className='text-white'>*Disclaimer:</span> The above Information is based on competitor
               websites as of 7/24/2023 5 AM. provided for your convenience and information purpose only.
             </p>
           </div>

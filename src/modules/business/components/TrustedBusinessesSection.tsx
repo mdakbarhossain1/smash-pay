@@ -42,8 +42,11 @@ const TrustedBusinessesSection = () => {
   };
 
   return (
-    <section className='bg-clr-14 relative flex w-full flex-col items-center justify-start gap-16 overflow-hidden py-24 -z-20' style={{ paddingTop: '275px'}}>
-      <div className='mx-auto flex w-full max-w-[1280px] flex-col items-center justify-center gap-8 px-8'>
+    <section
+      className='bg-clr-14 relative -z-20 flex w-full flex-col items-center justify-start gap-16 overflow-hidden py-24'
+      style={{ paddingTop: '275px' }}
+    >
+      <div className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 px-8'>
         <motion.div
           className='flex w-full flex-col items-center justify-center gap-16'
           initial='hidden'

@@ -36,7 +36,6 @@ const HowToGetStarted = ({ steps, title }: HowToGetStartedProps) => {
               background: 'linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%)'
             }}
           >
-            {/* Placeholder for your image content */}
             <div className='flex h-full w-full items-center justify-center text-gray-400'>
               <Image
                 src='/home/how-to-get-start.svg'
@@ -65,7 +64,7 @@ const HowToGetStarted = ({ steps, title }: HowToGetStartedProps) => {
                 </h3>
                 <div className='border-gradient mt-[-3px] h-0 w-full border-t-[3px] border-r-0 border-b-0 border-l-0 border-solid' />
               </div>
-              <h2 className='bg-gradient-to-b from-gray-500 to-white bg-clip-text text-4xl leading-tight font-medium tracking-tighter text-transparent md:text-5xl lg:text-6xl'>
+              <h2 className='gradient-text max-w-[480px] text-4xl leading-[1.1] font-medium tracking-tighter text-transparent md:text-5xl lg:text-6xl'>
                 {title}
               </h2>
             </div>

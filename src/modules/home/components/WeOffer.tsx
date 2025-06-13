@@ -2,6 +2,7 @@
 import { gradientTextStyle } from '@/lib/utils';
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -84,14 +85,14 @@ const WeOffer = () => {
         initial='hidden'
         animate={headingControls}
         variants={containerVariants}
-        className='flex w-full max-w-[1280px] flex-col items-center justify-start gap-8 px-4 md:gap-12 md:px-8'
+        className='flex w-full max-w-7xl flex-col items-center justify-start gap-8 px-4 md:gap-12 md:px-8'
       >
         <motion.div
           variants={itemVariants}
-          className='flex w-full max-w-[800px] flex-col items-center justify-start gap-4 md:gap-5'
+          className='flex w-full max-w-[900px] flex-col items-center justify-start gap-4 md:gap-5'
         >
           <motion.h2
-            className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-center text-3xl font-medium text-transparent md:text-5xl lg:text-6xl'
+            className='gradient-text text-center text-3xl font-medium text-transparent md:text-5xl lg:text-6xl'
             variants={itemVariants}
             style={gradientTextStyle}
           >
@@ -101,7 +102,7 @@ const WeOffer = () => {
       </motion.div>
 
       {/* Cards Section */}
-      <div className='flex w-full max-w-[1280px] flex-col items-center justify-start gap-12 px-4 md:gap-24 md:px-8'>
+      <div className='flex w-full max-w-7xl flex-col items-center justify-start gap-12 px-4 md:gap-24 md:px-8'>
         <motion.div
           className='flex w-full flex-col items-center justify-center gap-8 lg:flex-row lg:items-start'
           initial='hidden'
@@ -115,40 +116,42 @@ const WeOffer = () => {
             initial='hidden'
             animate={personalControls}
             variants={cardVariants}
-            className='relative flex flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] p-6 md:gap-12 md:p-12 lg:h-[628px] lg:w-[588px]'
-            style={{
-              background: 'linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%)'
-            }}
+            className='bg-gradient-2 relative z-50 flex flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] p-6 md:gap-12 md:p-12 lg:h-[628px] lg:w-[588px]'
           >
             <div className='flex w-full flex-col items-center justify-start gap-6 md:gap-8'>
               <div className='flex w-full flex-col items-center justify-start gap-4'>
                 <motion.h3
-                  className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-center text-xl font-medium text-transparent md:text-2xl'
+                  className='gradient-text text-center text-xl font-medium text-transparent md:text-2xl'
                   variants={itemVariants}
                 >
                   For Personal
                 </motion.h3>
                 <motion.p
-                  className='max-w-[500px] text-center text-base text-gray-300 md:text-lg'
+                  className='max-w-[470px] text-center text-base text-gray-300 md:text-lg'
                   variants={itemVariants}
                 >
                   Moving overseas? Paying tax, a mortgage or bills in another country? You can send money to
                   150+ countries worldwide.
                 </motion.p>
               </div>
-              <motion.div variants={itemVariants}>
-                <button
-                  className='flex items-center gap-1.5 rounded-[52px] border border-[#3c414c] px-6 py-3'
-                  style={{
-                    background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
-                  }}
-                >
-                  <span className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-sm font-semibold text-transparent md:text-base'>
-                    Personal
-                  </span>
-                  <img className='relative h-4 w-4 shrink-0 overflow-visible' src='/home/arrow-right0.svg' />
-                </button>
-              </motion.div>
+              <Link href={'/personal'} passHref>
+                <motion.a variants={itemVariants}>
+                  <button
+                    className='flex cursor-pointer items-center gap-1.5 rounded-[52px] border border-[#3c414c] px-6 py-3'
+                    style={{
+                      background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
+                    }}
+                  >
+                    <span className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-sm font-semibold text-transparent md:text-base'>
+                      Personal
+                    </span>
+                    <img
+                      className='relative h-4 w-4 shrink-0 overflow-visible'
+                      src='/home/arrow-right0.svg'
+                    />
+                  </button>
+                </motion.a>
+              </Link>
             </div>
 
             {/* Images for Personal Card */}
@@ -203,40 +206,42 @@ const WeOffer = () => {
             initial='hidden'
             animate={businessControls}
             variants={cardVariants}
-            className='relative flex flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] p-6 md:gap-12 md:p-12 lg:h-[628px] lg:w-[588px]'
-            style={{
-              background: 'linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%)'
-            }}
+            className='bg-gradient-2 relative z-50 flex flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] p-6 md:gap-12 md:p-12 lg:h-[628px] lg:w-[588px]'
           >
             <div className='flex w-full flex-col items-center justify-start gap-6 md:gap-8'>
               <div className='flex w-full flex-col items-center justify-start gap-4'>
                 <motion.h3
-                  className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-center text-xl font-medium text-transparent md:text-2xl'
+                  className='gradient-text text-center text-xl font-medium text-transparent md:text-2xl'
                   variants={itemVariants}
                 >
                   For Businesses
                 </motion.h3>
                 <motion.p
-                  className='max-w-[500px] text-center text-base text-gray-300 md:text-lg'
+                  className='max-w-[470px] text-center text-base text-gray-300 md:text-lg'
                   variants={itemVariants}
                 >
                   Receive payments, pay staff, invoices or suppliers. We can seamlessly integrate a solution
                   for your business wherever you want to use it.
                 </motion.p>
               </div>
-              <motion.div variants={itemVariants}>
-                <button
-                  className='flex items-center gap-1.5 rounded-[52px] border border-[#3c414c] px-6 py-3'
-                  style={{
-                    background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
-                  }}
-                >
-                  <span className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-sm font-semibold text-transparent md:text-base'>
-                    Business
-                  </span>
-                  <img className='relative h-4 w-4 shrink-0 overflow-visible' src='/home/arrow-right0.svg' />
-                </button>
-              </motion.div>
+              <Link href={'/business'} passHref>
+                <motion.a variants={itemVariants}>
+                  <button
+                    className='flex cursor-pointer items-center gap-1.5 rounded-[52px] border border-[#3c414c] px-6 py-3'
+                    style={{
+                      background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
+                    }}
+                  >
+                    <span className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-sm font-semibold text-transparent md:text-base'>
+                      Business
+                    </span>
+                    <img
+                      className='relative h-4 w-4 shrink-0 overflow-visible'
+                      src='/home/arrow-right0.svg'
+                    />
+                  </button>
+                </motion.a>
+              </Link>
             </div>
 
             {/* Images for Business Card */}

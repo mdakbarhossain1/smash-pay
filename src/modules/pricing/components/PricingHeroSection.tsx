@@ -7,7 +7,7 @@ const PricingHeroSection = () => {
 
   return (
     <section className='relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch bg-gradient-to-b from-[#0c1118] to-[#1d1e2d] pt-24 pb-16'>
-      <div className='relative flex w-full max-w-[1280px] shrink-0 flex-col items-center justify-start gap-8 px-8'>
+      <div className='relative flex w-full max-w-7xl shrink-0 flex-col items-center justify-start gap-8 px-8'>
         <motion.div
           className='relative flex w-full max-w-[800px] shrink-0 flex-col items-center justify-start gap-10'
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ const PricingHeroSection = () => {
 
               {/* Main heading */}
               <motion.h1
-                className='relative w-full max-w-[736px] bg-gradient-to-b from-[#7b7d81] to-white bg-clip-text text-center text-5xl leading-tight font-medium tracking-tighter text-transparent md:text-6xl'
+                className='gradient-text relative w-full max-w-[736px] text-center text-5xl leading-tight font-medium tracking-tighter text-transparent md:text-6xl'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.1, duration: 0.5 }}

@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const Hero = () => {
@@ -38,12 +39,7 @@ const Hero = () => {
     }
   };
   return (
-    <div
-      className='flex w-full flex-col items-center justify-start'
-      style={{
-        background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
-      }}
-    >
+    <div className='bg-gradient flex w-full flex-col items-center justify-start'>
       <motion.div
         className='flex w-full flex-col items-center gap-8 pt-12 md:gap-16 md:pt-24'
         initial='hidden'
@@ -51,7 +47,7 @@ const Hero = () => {
         variants={containerVariants}
       >
         <motion.div
-          className='flex w-full max-w-[1280px] flex-col items-center gap-6 px-4 md:gap-8 md:px-8'
+          className='flex w-full max-w-7xl flex-col items-center gap-6 px-4 md:gap-8 md:px-8'
           variants={itemVariants}
         >
           <motion.div
@@ -59,53 +55,51 @@ const Hero = () => {
             variants={itemVariants}
           >
             <motion.div className='flex w-full flex-col items-center gap-4 md:gap-6' variants={itemVariants}>
-              <motion.div
-                className='flex items-center gap-3 rounded-2xl border border-[#151820] px-2.5 py-1'
-                style={{
-                  background: 'linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%)'
-                }}
-                variants={itemVariants}
-              >
-                <div className='rounded-2xl bg-[#0e131b] px-2.5 py-0.5'>
-                  <span
-                    className='text-sm font-medium'
-                    style={{
-                      background:
-                        'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-                      backgroundClip: 'text',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent'
-                    }}
-                  >
-                    New
-                  </span>
-                </div>
-                <div className='flex items-center gap-1'>
-                  <span
-                    className='text-sm font-medium'
-                    style={{
-                      background:
-                        'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-                      backgroundClip: 'text',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent'
-                    }}
-                  >
-                    Multi-currency account
-                  </span>
-                  <img className='relative h-4 w-4 shrink-0 overflow-visible' src='/home/arrow-right0.svg' />
-                </div>
-              </motion.div>
+              <Link href={'/card'}>
+                <motion.div
+                  className='flex items-center gap-3 rounded-2xl border border-[#151820] px-2.5 py-1'
+                  style={{
+                    background: 'linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%)'
+                  }}
+                  variants={itemVariants}
+                >
+                  <div className='rounded-2xl bg-[#0e131b] px-2.5 py-0.5'>
+                    <span
+                      className='text-sm font-medium'
+                      style={{
+                        background:
+                          'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
+                        backgroundClip: 'text',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                      }}
+                    >
+                      New
+                    </span>
+                  </div>
+                  <div className='flex items-center gap-1'>
+                    <span
+                      className='text-sm font-medium'
+                      style={{
+                        background:
+                          'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
+                        backgroundClip: 'text',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                      }}
+                    >
+                      Multi-currency account
+                    </span>
+                    <img
+                      className='relative h-4 w-4 shrink-0 overflow-visible'
+                      src='/home/arrow-right0.svg'
+                    />
+                  </div>
+                </motion.div>
+              </Link>
 
               <motion.h1
-                className='text-center text-3xl font-medium md:text-5xl lg:text-6xl'
-                style={{
-                  background:
-                    'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-                  backgroundClip: 'text',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent'
-                }}
+                className='gradient-text text-center text-3xl font-medium md:text-5xl lg:text-6xl'
                 variants={itemVariants}
               >
                 Cross-border payment made easy.
@@ -147,24 +141,27 @@ const Hero = () => {
                 />
               </motion.button>
 
-              <motion.button
-                className='flex items-center gap-2.5 rounded-[64px] border border-[#3c414c] px-6 py-4 text-lg font-semibold text-white md:px-8'
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Contact sales
-                <img
-                  className='relative h-[22px] w-[22px] shrink-0 overflow-visible'
-                  src='/home/arrow-right2.svg'
-                />
-              </motion.button>
+              <Link href='/contact-us' passHref>
+                <motion.a
+                  className='flex items-center gap-2.5 rounded-[64px] border border-[#3c414c] px-6 py-4 text-lg font-semibold text-white md:px-8'
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Contact sales
+                  <img
+                    className='relative h-[22px] w-[22px] shrink-0 overflow-visible'
+                    src='/home/arrow-right2.svg'
+                    alt='Arrow right'
+                  />
+                </motion.a>
+              </Link>
             </motion.div>
           </motion.div>
         </motion.div>
 
         {/* Device Mockups */}
         <motion.div
-          className='relative h-[300px] w-full max-w-[1280px] px-4 md:h-[480px] md:px-8'
+          className='relative h-[300px] w-full max-w-7xl px-4 md:h-[530px] md:px-8'
           variants={itemVariants}
         >
           {isMobile ? (

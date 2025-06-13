@@ -84,7 +84,7 @@ const PaymentOptions = () => {
   return (
     <section className='bg-clr-14 relative flex w-full flex-col items-center justify-start gap-16 self-stretch pt-16 pb-32'>
       {/* Header Section */}
-      <div className='relative flex w-full max-w-[1280px] flex-col items-center justify-start gap-3 px-8'>
+      <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-3 px-8'>
         <motion.div
           className='flex flex-col items-center justify-start gap-10 self-stretch'
           initial='hidden'
@@ -112,7 +112,7 @@ const PaymentOptions = () => {
 
             {/* Main Heading */}
             <motion.h2
-              className='self-stretch bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-center text-4xl leading-tight font-bold tracking-[-2px] text-transparent md:text-5xl'
+              className='gradient-text self-stretch text-center text-4xl leading-tight font-bold tracking-[-2px] text-transparent md:text-5xl'
               variants={itemVariants}
             >
               Best ways to send money abroad
@@ -122,7 +122,7 @@ const PaymentOptions = () => {
       </div>
 
       {/* Payment Options Grid */}
-      <div className='relative flex w-full max-w-[1280px] flex-col items-start justify-start gap-24 px-8'>
+      <div className='relative flex w-full max-w-7xl flex-col items-start justify-start gap-24 px-8'>
         <motion.div
           className='flex flex-col items-start justify-start gap-8 self-stretch'
           initial='hidden'

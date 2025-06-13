@@ -18,7 +18,7 @@ const LogoShowcase = () => {
 
   return (
     <section className='bg-bg bg-clr-14 relative flex w-full shrink-0 flex-col items-center justify-start gap-16 overflow-hidden py-24'>
-      <div className='relative w-full max-w-[1280px] shrink-0 px-8'>
+      <div className='relative w-full max-w-7xl shrink-0 px-8'>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

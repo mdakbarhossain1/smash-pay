@@ -47,7 +47,7 @@ const SecuritySection = () => {
 
   return (
     <section className='flex w-full flex-col items-center justify-start gap-16 overflow-hidden bg-gradient-to-b from-[#0c1118] to-[#1d1e2d] py-32'>
-      <div className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-12 px-8 lg:flex-row lg:gap-24'>
+      <div className='mx-auto flex w-full max-w-7xl flex-col items-end justify-center gap-12 px-8 lg:flex-row lg:gap-24'>
         <motion.div
           className='flex w-full flex-col items-start justify-start gap-16 lg:w-1/2'
           initial='hidden'
@@ -59,8 +59,8 @@ const SecuritySection = () => {
             className='flex w-full flex-col items-start justify-start gap-6'
             variants={itemVariants}
           >
-            <h2 className='bg-gradient-to-b from-[#7b7d81] to-white bg-clip-text text-left text-5xl leading-tight font-medium tracking-[-2px] text-transparent md:text-6xl lg:text-7xl'>
-              Bank-level Security
+            <h2 className='gradient-text text-left text-5xl leading-tight font-medium tracking-[-2px] text-transparent md:text-6xl lg:text-6xl'>
+              Bank-level <br /> Security
             </h2>
           </motion.div>
 

@@ -57,14 +57,11 @@ const WhySmashPay = () => {
       initial='hidden'
       animate={inView ? 'visible' : 'hidden'}
       variants={containerVariants}
-      className='relative w-full overflow-hidden py-16 md:py-32'
-      style={{
-        background: 'linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%)'
-      }}
+      className='bg-gradient-2 relative w-full overflow-hidden py-16 md:py-32'
     >
-      <div className='mx-auto flex max-w-[1280px] flex-col gap-12 px-4 md:gap-24 md:px-8'>
+      <div className='mx-auto flex max-w-7xl flex-col gap-12 px-4 md:gap-24 md:px-8'>
         {/* Header Section */}
-        <motion.div className='flex flex-col items-start gap-6 md:gap-10' variants={itemVariants}>
+        <motion.div className='flex flex-col items-start gap-6 md:gap-5' variants={itemVariants}>
           <div className='flex flex-col items-start gap-0'>
             <motion.h3 className='text-lg font-medium text-white md:text-xl' variants={itemVariants}>
               Why SmashPay?
@@ -80,7 +77,7 @@ const WhySmashPay = () => {
           </div>
 
           <motion.h2
-            className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-left text-3xl leading-tight font-medium text-transparent md:text-5xl lg:text-6xl'
+            className='gradient-text text-left text-3xl leading-tight font-medium text-transparent md:text-5xl lg:text-6xl'
             variants={itemVariants}
           >
             We are the best international <br /> money transfer provider

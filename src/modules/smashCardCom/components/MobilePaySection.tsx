@@ -3,7 +3,7 @@ import ReusableInfoCard from '@/shared/components/ReusableInfoCard';
 
 const MobilePaySection = () => {
   return (
-    <div className='bg-clr-14 w-full'>
+    <div className='bg-clr-14 w-full py-16'>
       <div className=''>
         <ReusableInfoCard
           heading='Spend with Apple or Google Pay'

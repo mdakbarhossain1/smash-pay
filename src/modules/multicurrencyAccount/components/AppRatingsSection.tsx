@@ -43,14 +43,14 @@ const AppRatingsSection = () => {
   return (
     <section
       className='relative flex w-full flex-col items-center justify-start gap-16 overflow-hidden pt-5 pb-4'
-      style={{
-        background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)',
-        transform: 'scale(1, 1)',
-        transformOrigin: '0 0'
-      }}
+      // style={{
+      //   background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)',
+      //   transform: 'scale(1, 1)',
+      //   transformOrigin: '0 0'
+      // }}
     >
       <div
-        className='relative mx-auto flex w-full max-w-[1280px] flex-col items-start justify-start gap-24 rounded-[20px] px-8'
+        className='relative mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-24 rounded-[20px] px-8'
         style={{
           // transform: 'rotate(180deg) scale(1, 1)',
           transform: 'scale(1, 1)',
@@ -68,7 +68,7 @@ const AppRatingsSection = () => {
             className='flex w-full max-w-[760px] flex-col items-start justify-start gap-6'
             variants={itemVariants}
           >
-            <h2 className='w-full bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-center text-3xl leading-tight font-medium tracking-[-1.5px] text-transparent md:text-4xl'>
+            <h2 className='gradient-text w-full text-center text-3xl leading-tight font-medium tracking-[-1.5px] text-transparent md:text-4xl'>
               Loved by more than 5 millions users
             </h2>
             <p className='w-full text-center text-xl leading-relaxed font-normal tracking-[-0.5px] text-gray-300'>

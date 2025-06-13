@@ -1,6 +1,7 @@
 'use client';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { FiChevronDown, FiChevronRight, FiMenu, FiX } from 'react-icons/fi';
 
@@ -76,16 +77,19 @@ const Header = () => {
         }}
       >
         <div className='flex h-[82px] w-full items-center justify-center'>
-          <div className='flex w-full max-w-[1280px] items-center justify-between px-4 md:px-8'>
+          <div className='flex w-full max-w-7xl items-center justify-between px-4 md:px-8'>
             <div className='flex items-center gap-4 md:gap-16'>
               {/* Logo */}
               <div className='relative h-7 w-[146px]'>
-                <Image
-                  src='/home/smash-pay-logo-1-10.png'
-                  alt='Smash Pay Logo'
-                  layout='fill'
-                  objectFit='cover'
-                />
+                <Link href={'/'}>
+                  {' '}
+                  <Image
+                    src='/home/smash-pay-logo.png'
+                    alt='Smash Pay Logo'
+                    layout='fill'
+                    objectFit='cover'
+                  />
+                </Link>
               </div>
 
               {/* Desktop Menu */}
@@ -104,7 +108,7 @@ const Header = () => {
 
                       {/* Desktop Submenu */}
                       {item.submenu && (
-                        <div className='pointer-events-none absolute top-full left-0 z-50 mt-2 w-48 rounded-md bg-[#161922] py-1 opacity-0 shadow-lg transition-opacity duration-200 group-hover:pointer-events-auto group-hover:opacity-100'>
+                        <div className='pointer-events-none absolute top-4 left-0 z-50 mt-2 w-48 rounded-md bg-[#161922] py-1 opacity-0 shadow-lg transition-opacity duration-200 group-hover:pointer-events-auto group-hover:opacity-100'>
                           {item.submenu.map((subItem) => (
                             <a
                               key={subItem.title}

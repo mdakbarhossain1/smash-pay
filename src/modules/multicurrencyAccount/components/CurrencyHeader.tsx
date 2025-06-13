@@ -28,12 +28,12 @@ const CurrencyHeader = () => {
 
   return (
     <section
-      className='relative flex w-full flex-col items-center justify-start gap-16 pt-24 pb-32'
+      className='bg-gradient relative flex w-full flex-col items-center justify-start gap-16 pt-24 pb-32'
       style={{
         background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
       }}
     >
-      <div className='mx-auto flex w-full max-w-[1280px] flex-col items-center justify-center gap-8 px-8'>
+      <div className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 px-8'>
         <motion.div
           className='flex w-full max-w-[800px] flex-col items-center justify-center gap-10'
           initial='hidden'
@@ -76,7 +76,7 @@ const CurrencyHeader = () => {
 
               {/* Main title */}
               <motion.h2
-                className='bg-gradient-to-b from-[#7b7d81] to-white bg-clip-text text-center text-4xl leading-tight font-medium tracking-[-2.5px] text-transparent md:text-5xl lg:text-6xl'
+                className='gradient-text text-center text-4xl leading-tight font-medium tracking-[-2.5px] text-transparent md:text-5xl lg:text-6xl'
                 variants={itemVariants}
               >
                 One account for multiple <br /> countries & currencies.
@@ -135,7 +135,7 @@ const CurrencyHeader = () => {
 
       {/* Hero image */}
       <motion.div
-        className='mx-auto flex w-full max-w-[1280px] flex-col items-center justify-center gap-8 px-8'
+        className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 px-8'
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-100px' }}
