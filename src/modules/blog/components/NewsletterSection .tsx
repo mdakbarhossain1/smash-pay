@@ -13,7 +13,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className='flex w-full flex-col items-center justify-center gap-2.5 overflow-hidden bg-gradient-to-b from-[#0C1118] to-[#1D1E2D] px-8 py-24 md:px-20'>
+    <section className='flex w-full flex-col items-center justify-center gap-2.5 overflow-hidden bg-gradient-to-b from-[#0C1118] to-[#1D1E2D] px-8 py-32 md:px-20'>
       <div className='flex w-full max-w-[1280px] flex-col items-start justify-between gap-8 md:flex-row md:gap-16'>
         {/* Newsletter Content */}
         <motion.div
@@ -112,7 +112,7 @@ const NewsletterSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className='bg-bg bg-clr-14 absolute top-0 right-0 h-[617px] w-full overflow-hidden rounded-2xl border border-gray-800'>
+          <div className='bg-bg bg-clr-14 absolute right-0 -bottom-10 h-[650px] w-full overflow-hidden rounded-2xl border border-gray-800'>
             {/* Email Header */}
             <div className='relative h-[35.58px] w-full rounded-t-2xl bg-gray-800'>
               <div className='absolute top-3 right-4 flex gap-2'>
