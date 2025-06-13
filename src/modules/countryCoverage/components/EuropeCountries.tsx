@@ -109,7 +109,7 @@ const EuropeCountries = () => {
         {countryColumns.map((column, index) => (
           <motion.div key={index} className='country-wrap' variants={itemVariants}>
             <h5 className='mt-8 mb-4 text-xl text-white'>{column.zone}</h5>
-            <div className='grid grid-cols-4 gap-4'>
+            <div className='grid grid-cols-2 gap-4 md:grid-cols-4'>
               {column.countries.map((country, idx) => (
                 <motion.div
                   key={idx}
@@ -120,7 +120,7 @@ const EuropeCountries = () => {
                   whileHover='hover'
                 >
                   <div
-                    className={`text-md flex w-full items-center gap-4 rounded-xl border border-[#3C414C] bg-[#1D1F2E] px-5 py-4 text-white capitalize`}
+                    className={`md:text-md flex w-full items-center gap-4 rounded-xl border border-[#3C414C] bg-[#1D1F2E] px-5 py-4 text-sm text-white capitalize`}
                   >
                     <Image src='/ALL.png' height={6} width={6} alt='Flag' className='h-6 w-6 rounded-full' />
                     {country}
