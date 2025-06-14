@@ -63,7 +63,7 @@ const Header = () => {
 
   return (
     <div
-      className='flex w-full flex-col items-center justify-start'
+      className='z-50 flex w-full flex-col items-center justify-start'
       style={{
         background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
       }}
