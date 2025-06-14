@@ -16,9 +16,9 @@ interface Service {
 const PricingComparison = () => {
   const services: Service[] = [
     {
-      id: 'smashpay1',
+      id: 'smashpay',
       name: 'SmashPay',
-      logo: '/personal/whats-app-image-2025-06-02-at-11-07-15-pm-2-removebg-preview-20.png',
+      logo: '/personal/smashpay.png',
       recipientAmount: '898.20 EUR',
       difference: 'Save up to 28.54 EUR',
       differenceType: 'positive',
@@ -36,84 +36,84 @@ const PricingComparison = () => {
       exchangeRate: '0.89135'
     },
     {
-      id: 'smashpay3',
-      name: 'SmashPay',
-      logo: '/personal/whats-app-image-2025-06-02-at-11-07-15-pm-2-removebg-preview-20.png',
-      recipientAmount: '898.20 EUR',
-      difference: 'Save up to 28.54 EUR',
-      differenceType: 'positive',
-      fee: 'Zero-fee',
-      exchangeRate: '0.89820'
-    },
-    {
-      id: 'western-union4',
-      name: 'Western Union',
-      logo: '/personal/logo1.svg',
-      recipientAmount: '889.36 EUR',
-      difference: '- 8.84 EUR',
+      id: 'Revolut',
+      name: 'Revolut',
+      logo: '/personal/Revolut.png',
+      recipientAmount: '883.22 EUR',
+      difference: '- 14.98 EUR',
       differenceType: 'negative',
-      fee: '1.99 USD',
-      exchangeRate: '0.89135'
+      fee: '2.99 USD',
+      exchangeRate: '0.88621'
     },
     {
-      id: 'smashpay5',
-      name: 'SmashPay',
-      logo: '/personal/whats-app-image-2025-06-02-at-11-07-15-pm-2-removebg-preview-20.png',
-      recipientAmount: '898.20 EUR',
-      difference: 'Save up to 28.54 EUR',
-      differenceType: 'positive',
-      fee: 'Zero-fee',
-      exchangeRate: '0.89820'
-    },
-    {
-      id: 'western-union6',
-      name: 'Western Union',
-      logo: '/personal/logo1.svg',
-      recipientAmount: '889.36 EUR',
-      difference: '- 8.84 EUR',
+      id: 'Wise',
+      name: 'Wise',
+      logo: '/personal/wise.png',
+      recipientAmount: '883.36 EUR',
+      difference: '- 14.84 EUR',
       differenceType: 'negative',
-      fee: '1.99 USD',
-      exchangeRate: '0.89135'
+      fee: '3.25 USD',
+      exchangeRate: '0.88661'
     },
     {
-      id: 'smashpay7',
-      name: 'SmashPay',
-      logo: '/personal/whats-app-image-2025-06-02-at-11-07-15-pm-2-removebg-preview-20.png',
-      recipientAmount: '898.20 EUR',
-      difference: 'Save up to 28.54 EUR',
-      differenceType: 'positive',
-      fee: 'Zero-fee',
-      exchangeRate: '0.89820'
-    },
-    {
-      id: 'western-union8',
-      name: 'Western Union',
-      logo: '/personal/logo1.svg',
-      recipientAmount: '889.36 EUR',
-      difference: '- 8.84 EUR',
+      id: 'MoneyGram',
+      name: 'MoneyGram',
+      logo: '/personal/MoneyGram.png',
+      recipientAmount: '880.89 EUR',
+      difference: '- 17.31 EUR',
       differenceType: 'negative',
-      fee: '1.99 USD',
-      exchangeRate: '0.89135'
+      fee: '3.57 USD',
+      exchangeRate: '0.88446'
     },
     {
-      id: 'smashpay9',
-      name: 'SmashPay',
-      logo: '/personal/whats-app-image-2025-06-02-at-11-07-15-pm-2-removebg-preview-20.png',
-      recipientAmount: '898.20 EUR',
-      difference: 'Save up to 28.54 EUR',
-      differenceType: 'positive',
-      fee: 'Zero-fee',
-      exchangeRate: '0.89820'
-    },
-    {
-      id: 'western-union10',
-      name: 'Western Union',
-      logo: '/personal/logo1.svg',
-      recipientAmount: '889.36 EUR',
-      difference: '- 8.84 EUR',
+      id: 'Remitly',
+      name: 'Remitly',
+      logo: '/personal/Remitly.png',
+      recipientAmount: '880.46 EUR',
+      difference: '- 17.74 EUR',
       differenceType: 'negative',
-      fee: '1.99 USD',
-      exchangeRate: '0.89135'
+      fee: '3.75 USD',
+      exchangeRate: '0.88421'
+    },
+    {
+      id: 'Xe',
+      name: 'Xe',
+      logo: '/personal/Xe.png',
+      recipientAmount: '873.37 EUR',
+      difference: '- 24.83 EUR',
+      differenceType: 'negative',
+      fee: '3.99 USD',
+      exchangeRate: '0.87736'
+    },
+    {
+      id: 'OFX',
+      name: 'OFX',
+      logo: '/personal/OFX.png',
+      recipientAmount: '869.22 EUR',
+      difference: '- 28.98 EUR',
+      differenceType: 'negative',
+      fee: '4.25 USD',
+      exchangeRate: '0.87347'
+    },
+    {
+      id: 'Chase',
+      name: 'Chase',
+      logo: '/personal/Chase.png',
+      recipientAmount: '866.50 EUR',
+      difference: '- 31.70 EUR',
+      differenceType: 'negative',
+      fee: '5.00 USD',
+      exchangeRate: '0.87150'
+    },
+    {
+      id: 'Paypal',
+      name: 'Paypal',
+      logo: '/personal/Paypal.png',
+      recipientAmount: '855.65 EUR',
+      difference: '- 42.55 EUR',
+      differenceType: 'negative',
+      fee: '4.99 USD',
+      exchangeRate: '0.86064'
     }
   ];
 
@@ -178,23 +178,17 @@ const PricingComparison = () => {
                 {services.map((service) => (
                   <motion.div
                     key={service.id}
-                    className={`flex h-20 items-center gap-4 p-5 ${
-                      service.id === 'smashpay' ? 'bg-bg rounded-tl-xl rounded-bl-xl' : ''
-                    }`}
+                    className={`bg-bg flex h-20 items-center gap-4 rounded-tl-xl rounded-bl-xl p-5`}
                     variants={itemVariants}
                     whileHover={{ scale: 1.02 }}
                   >
-                    <div
-                      className={`flex h-10 w-10 items-center justify-center rounded-[40px] ${
-                        service.id === 'smashpay' ? 'bg-lime-300' : 'bg-white'
-                      }`}
-                    >
+                    <div className={`flex items-center justify-center rounded-[40px] bg-white`}>
                       <Image
                         src={service.logo}
                         alt={service.name}
-                        width={24}
-                        height={24}
-                        className='object-contain'
+                        width={40}
+                        height={40}
+                        className='object-cover'
                       />
                     </div>
                     <p className='hidden text-left text-lg leading-tight font-medium tracking-[-0.25px] text-white md:block'>
@@ -225,7 +219,7 @@ const PricingComparison = () => {
                       </p>
                       <div
                         className={`flex items-center ${
-                          service.differenceType === 'positive' ? 'text-lime-300' : 'text-scarlett-600'
+                          service.differenceType === 'positive' ? 'text-lime-300' : 'text-[#E4187D]'
                         }`}
                       >
                         {service.differenceType === 'negative' && (
@@ -237,7 +231,7 @@ const PricingComparison = () => {
                             className='mr-1.5'
                           />
                         )}
-                        <p className='text-right text-sm leading-tight font-normal tracking-[-0.25px] text-[#E4187D]'>
+                        <p className='text-right text-sm leading-tight font-normal tracking-[-0.25px]'>
                           {service.difference}
                         </p>
                       </div>
@@ -288,7 +282,7 @@ const PricingComparison = () => {
                     </p>
                     <div
                       className={`h-2.5 w-2.5 rounded-full ${
-                        service.differenceType === 'positive' ? 'bg-[#E4187D]' : 'bg-scarlett-600'
+                        service.differenceType === 'positive' ? 'bg-lime-300' : 'bg-[#E4187D]'
                       }`}
                     ></div>
                   </motion.div>
