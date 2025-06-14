@@ -58,7 +58,6 @@ export default function Footer() {
     },
     {
       title: 'Resources',
-      // links: ['Blog', 'FAQ', 'Help centre', 'Developers', 'Terms and privacy']
       links: [
         {
           link: '/blog',
@@ -69,8 +68,8 @@ export default function Footer() {
           label: 'FAQ'
         },
         {
-          link: '/faq',
-          label: 'Help centre'
+          link: '/payments',
+          label: 'Payment Rails'
         },
         {
           link: '/pricing',
