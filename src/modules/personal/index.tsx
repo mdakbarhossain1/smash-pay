@@ -1,3 +1,4 @@
+import CountryCoverageHome from '../home/components/CountryCoverageHome';
 import CTASections from '../home/components/CTASections';
 import FAQSection from '../home/FAQSection';
 import PaymentOptions from './components/PaymentOptions';
@@ -16,6 +17,7 @@ const Personal = () => {
       <ThreeEasySteps />
       <PaymentOptions />
       <SecuritySection />
+      <CountryCoverageHome />
       <FAQSection />
       <CTASections />
     </>

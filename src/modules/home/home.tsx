@@ -47,9 +47,9 @@ const Home = () => {
       <CustomerStories />
       <HowToGetStarted steps={steps} title="It's simple to start using SmashPay" />
       <PromotionSection />
+      <CountryCoverageHome />
       <FAQSection />
       <CTASections />
-      <CountryCoverageHome />
     </>
   );
 };

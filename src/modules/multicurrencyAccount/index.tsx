@@ -1,3 +1,4 @@
+import CountryCoverageHome from '../home/components/CountryCoverageHome';
 import CTASections from '../home/components/CTASections';
 import HowToGetStarted from '../home/components/HowToGetStarted';
 import FAQSection from '../home/FAQSection';
@@ -33,6 +34,7 @@ const MultiCurrencyAccount = () => {
       <div className='bg-clr-14 w-full py-10'>
         <HowToGetStarted steps={steps} title='Register for a Multi-currency account is easy' />
       </div>
+      <CountryCoverageHome />
       <FAQSection />
       <CTASections />
     </>

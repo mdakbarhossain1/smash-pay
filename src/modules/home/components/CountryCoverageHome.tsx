@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 
@@ -146,14 +147,16 @@ const CountryCoverageHome = () => {
               </div>
             </div>
             <div className='relative mt-5 flex cursor-pointer items-start justify-start'>
-              <div className='flex items-center justify-center gap-2.5'>
-                <p className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
-                  See full list of coverage
-                </p>
-                <div className='relative h-[22px] w-[22px]'>
-                  <FiArrowRight className='h-[22px] w-[22px] text-white transition-transform group-hover:translate-x-1' />
+              <Link href={'/country-coverage'}>
+                <div className='flex items-center justify-center gap-2.5'>
+                  <p className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
+                    See full list of coverage
+                  </p>
+                  <div className='relative h-[22px] w-[22px]'>
+                    <FiArrowRight className='h-[22px] w-[22px] text-white transition-transform group-hover:translate-x-1' />
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </motion.div>
 

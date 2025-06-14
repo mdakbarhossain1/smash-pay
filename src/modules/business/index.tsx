@@ -1,3 +1,4 @@
+import CountryCoverageHome from '../home/components/CountryCoverageHome';
 import CTASections from '../home/components/CTASections';
 import CustomerStories from '../home/components/CustomerStories';
 import FAQSection from '../home/FAQSection';
@@ -16,6 +17,7 @@ const Business = () => {
       <IndustrySolutionsSection />
       <CustomerStories />
       <BankBeatingRates />
+      <CountryCoverageHome />
       <FAQSection />
       <CTASections />
     </>

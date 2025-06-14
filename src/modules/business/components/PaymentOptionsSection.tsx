@@ -2,59 +2,9 @@
 import ReusableInfoSection from '@/shared/components/ReusableInfoSection';
 
 const PaymentOptionsSection = () => {
-  const features = [
-    {
-      icon: '/home/check-icon2.svg',
-      text: 'No extra hardware needed.'
-    },
-    {
-      icon: '/home/check-icon2.svg',
-      text: 'Built in security.'
-    },
-    {
-      icon: '/home/check-icon2.svg',
-      text: 'Competitive pricing.'
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        when: 'beforeChildren'
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut'
-      }
-    }
-  };
-
-  const phoneVariants = {
-    hidden: { opacity: 0, x: 50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.8,
-        ease: 'easeOut'
-      }
-    }
-  };
-
   return (
     <>
-      <div className='bg-gradient-2 w-full pt-32 pb-32'>
+      <div className='bg-gradient-3 w-full pt-32 pb-32'>
         <ReusableInfoSection
           title='Let customers choose how they want to pay.'
           description='Tap to Pay on iPhone uses the built-in features of iPhone to help keep your business and customer data secure.'

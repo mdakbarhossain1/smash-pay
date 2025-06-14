@@ -1,6 +1,6 @@
 import PaymentModule from '@/modules/paymentModule';
 
-const Faq = () => {
+const Payment = () => {
   return (
     <>
       <PaymentModule />
@@ -8,4 +8,4 @@ const Faq = () => {
   );
 };
 
-export default Faq;
+export default Payment;
