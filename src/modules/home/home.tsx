@@ -1,4 +1,5 @@
 'use client';
+import CountryCoverageHome from './components/CountryCoverageHome';
 import CTASections from './components/CTASections';
 import CustomerStories from './components/CustomerStories';
 import Featured from './components/Featured';
@@ -48,6 +49,7 @@ const Home = () => {
       <PromotionSection />
       <FAQSection />
       <CTASections />
+      <CountryCoverageHome />
     </>
   );
 };
