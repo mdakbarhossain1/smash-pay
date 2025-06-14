@@ -8,67 +8,140 @@ const EuropeCountries = () => {
 
   const countryColumns = [
     {
-      zone: 'Western Europe',
+      zone: 'LATAM',
       countries: [
-        'Albania',
-        'Bosnia & Herzegovina',
-        'Czechia',
-        'France',
-        'Hungary',
-        'Latvia',
-        'Malta',
-        'Netherlands',
-        'Portugal',
-        'Slovakia',
-        'Switzerland'
+        {
+          country: 'Mexico',
+          flag: '/country-coverage/mexico-flag.png'
+        },
+        {
+          country: 'Brazil',
+          flag: '/country-coverage/brazil-flag.png'
+        },
+        {
+          country: 'Colombia',
+          flag: '/country-coverage/colombia-flag.png'
+        },
+        {
+          country: 'Ecuador',
+          flag: '/country-coverage/EC.png'
+        },
+        {
+          country: 'Peru',
+          flag: '/country-coverage/PE.png'
+        },
+        {
+          country: 'Costa Rica',
+          flag: '/country-coverage/costa-rica.png'
+        },
+        // {
+        //   country: 'Panama',
+        //   flag: '/country-coverage/PA.png'
+        // },
+        {
+          country: 'Guatemala',
+          flag: '/country-coverage/GT.png'
+        },
+        {
+          country: 'Argentina',
+          flag: '/country-coverage/argentina.png'
+        },
+        {
+          country: 'Chile',
+          flag: '/country-coverage/chile.png'
+        },
+        {
+          country: 'Switzerland',
+          flag: '/country-coverage/switzerland-flag.png'
+        }
       ]
     },
     {
-      zone: 'America',
+      zone: 'APAC',
       countries: [
-        'Andorra',
-        'Bulgaria',
-        'Denmark',
-        'Georgia',
-        'Iceland',
-        'Liechtenstein',
-        'Moldova',
-        'North Macedonia',
-        'Romania',
-        'Slovenia',
-        'Ukraine'
-      ]
-    },
-    {
-      zone: 'Asia',
-      countries: [
-        'Austria',
-        'Croatia',
-        'Estonia',
-        'Germany',
-        'Ireland',
-        'Lithuania',
-        'Monaco',
-        'Norway',
-        'San Marino',
-        'Spain',
-        'United Kingdom'
+        {
+          country: 'Indonesia',
+          flag: '/country-coverage/indonesia-flag.png'
+        },
+        {
+          country: 'Malaysia',
+          flag: '/country-coverage/malaysia.png'
+        },
+        {
+          country: 'Thailand',
+          flag: '/country-coverage/TH.png'
+        },
+        {
+          country: 'Philippines',
+          flag: '/country-coverage/PH.png'
+        },
+        {
+          country: 'Japan',
+          flag: '/country-coverage/Japan-flag.png'
+        },
+        {
+          country: 'China',
+          flag: '/country-coverage/china-flag.png'
+        },
+        {
+          country: 'South Korea',
+          flag: '/country-coverage/South-Korea-flag.png'
+        },
+        {
+          country: 'Vietnam',
+          flag: '/country-coverage/VN.png'
+        },
+        {
+          country: 'Australia',
+          flag: '/country-coverage/Australia-flag.png'
+        },
+        {
+          country: 'Australia',
+          flag: '/country-coverage/Hong-Kong-flag.png'
+        },
+        {
+          country: 'Ukraine',
+          flag: '/country-coverage/Ukraine-flag.png'
+        }
       ]
     },
     {
       zone: 'Africa',
       countries: [
-        'Belgium',
-        'Cyprus',
-        'Finland',
-        'Greece',
-        'Italy',
-        'Luxembourg',
-        'Montenegro',
-        'Poland',
-        'Serbia',
-        'Sweden',
-        'Vatican City'
+        {
+          country: 'Kenya',
+          flag: '/country-coverage/KE.png'
+        },
+        {
+          country: 'Nigeria',
+          flag: '/country-coverage/Nigeria-flag.png'
+        },
+        {
+          country: 'Tanzania',
+          flag: '/country-coverage/TZ.png'
+        }
+      ]
+    },
+    {
+      zone: 'Europe / UK',
+      countries: [
+        {
+          country: 'United Kingdom',
+          flag: '/country-coverage/United-Kingdom-flag.png'
+        }
+        // {
+        //   country: 'EUropian union',
+        //   flag: '/country-coverage/United-Kingdom-flag.png'
+        // },
+      ]
+    },
+    {
+      zone: 'India',
+      countries: [
+        {
+          country: 'India',
+          flag: '/country-coverage/india-flag.png'
+        }
       ]
     }
   ];
@@ -114,16 +187,22 @@ const EuropeCountries = () => {
                 <motion.div
                   key={idx}
                   className='flex items-center justify-center'
-                  onMouseEnter={() => setHoveredCountry(country)}
+                  onMouseEnter={() => setHoveredCountry(country.country)}
                   onMouseLeave={() => setHoveredCountry(null)}
                   variants={itemVariants}
                   whileHover='hover'
                 >
                   <div
-                    className={`md:text-md flex w-full items-center gap-4 rounded-xl border border-[#3C414C] bg-[#1D1F2E] px-5 py-4 text-sm text-white capitalize`}
+                    className={`md:text-md text-md flex w-full items-center gap-4 rounded-xl border border-[#3C414C] bg-[#1D1F2E] px-5 py-4 text-white capitalize`}
                   >
-                    <Image src='/ALL.png' height={6} width={6} alt='Flag' className='h-6 w-6 rounded-full' />
-                    {country}
+                    <Image
+                      src={country.flag}
+                      height={6}
+                      width={6}
+                      alt='Flag'
+                      className='h-6 w-6 rounded-full'
+                    />
+                    {country.country}
                   </div>
                 </motion.div>
               ))}
