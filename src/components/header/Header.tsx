@@ -114,11 +114,11 @@ const Header = () => {
           <div className='flex w-full max-w-7xl items-center justify-between px-4 md:px-8'>
             <div className='flex items-center gap-4 md:gap-16'>
               {/* Logo */}
-              <div className='relative h-8 w-[200px]'>
+              <div className='relative h-10 w-[200px]'>
                 <Link href={'/'} onClick={() => setMobileMenuOpen(false)}>
                   {' '}
                   <Image
-                    src='/home/smash-pay-logo-1-11.png'
+                    src='/home/smash-pay-logo.png'
                     alt='Smash Pay Logo'
                     layout='fill'
                     objectFit='cover'

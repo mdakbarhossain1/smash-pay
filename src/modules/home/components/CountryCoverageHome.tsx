@@ -59,7 +59,7 @@ const CountryCoverageHome = () => {
   const filteredCountries =
     selectedRegion === 'All region' ? countries : countries.filter((c) => c.region === selectedRegion);
 
-  const regionImage = `/home/${selectedRegion.toLowerCase().replace(' ', '-')}.svg`; // e.g., /maps/asia.png
+  const regionImage = `/maps/${selectedRegion.toLowerCase().replace(' ', '-')}.svg`; // e.g., /maps/asia.png
 
   return (
     <section className='w-full bg-gradient-to-b from-[#0c1118] to-[#1d1e2d] px-4 py-12 md:py-16 lg:py-20'>

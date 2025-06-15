@@ -80,8 +80,8 @@ export default function ConfettiInstallment() {
                     }}
                     className={`-md cursor-pointer rounded px-6 py-3 text-lg font-medium transition-all ${
                       selected === plan
-                        ? 'scale-105 bg-[#002c15] text-white'
-                        : 'bg-[#002c15] text-white hover:bg-[#002c15]'
+                        ? 'scale-105 bg-lime-400 text-white'
+                        : 'bg-lime-300 text-black hover:bg-lime-300'
                     }`}
                   >
                     {plan} mo.
