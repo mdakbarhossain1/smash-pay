@@ -116,12 +116,12 @@ const WeOffer = () => {
             initial='hidden'
             animate={personalControls}
             variants={cardVariants}
-            className='bg-gradient-2 relative z-50 flex flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] p-6 md:gap-12 md:p-12 lg:h-[628px] lg:w-[588px]'
+            className='bg-gradient-4 relative z-50 flex flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] p-6 md:gap-12 md:p-12 lg:h-[628px] lg:w-[588px]'
           >
             <div className='flex w-full flex-col items-center justify-start gap-6 md:gap-8'>
               <div className='flex w-full flex-col items-center justify-start gap-4'>
                 <motion.h3
-                  className='gradient-text text-center text-xl font-medium text-transparent md:text-2xl'
+                  className='gradient-text-2 text-center text-xl font-medium text-transparent md:text-2xl'
                   variants={itemVariants}
                 >
                   For Personal
@@ -206,12 +206,12 @@ const WeOffer = () => {
             initial='hidden'
             animate={businessControls}
             variants={cardVariants}
-            className='bg-gradient-2 relative z-50 flex flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] p-6 md:gap-12 md:p-12 lg:h-[628px] lg:w-[588px]'
+            className='bg-gradient-4 relative z-50 flex flex-col items-center justify-start gap-8 overflow-hidden rounded-[32px] p-6 md:gap-12 md:p-12 lg:h-[628px] lg:w-[588px]'
           >
             <div className='flex w-full flex-col items-center justify-start gap-6 md:gap-8'>
               <div className='flex w-full flex-col items-center justify-start gap-4'>
                 <motion.h3
-                  className='gradient-text text-center text-xl font-medium text-transparent md:text-2xl'
+                  className='gradient-text-2 text-center text-xl font-medium text-transparent md:text-2xl'
                   variants={itemVariants}
                 >
                   For Businesses

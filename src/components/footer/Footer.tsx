@@ -109,8 +109,8 @@ export default function Footer() {
                   <Image
                     src='/home/smash-pay-logo-1-11.png'
                     alt='SmashPay Logo'
-                    width={146}
-                    height={28}
+                    width={200}
+                    height={100}
                     className='aspect-[146/28] object-cover'
                   />
                 </div>
@@ -155,7 +155,7 @@ export default function Footer() {
                                 {link.label}
                               </Link>
                               {section.badge && linkIndex === 3 && (
-                                <span className='rounded-2xl border border-[#151820] bg-gradient-to-r from-[#1d1f2d] to-[#1d1f2e] px-2 py-0.5 text-xs font-medium text-white'>
+                                <span className='gradient-text-2 rounded-2xl border border-[#151820] px-2 py-0.5 text-xs font-medium text-white'>
                                   {section.badge}
                                 </span>
                               )}

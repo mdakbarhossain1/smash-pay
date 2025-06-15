@@ -48,7 +48,7 @@ export default function ConfettiSubscription() {
   return (
     <div className='grid max-w-7xl grid-cols-1 overflow-hidden rounded-xl border border-gray-300 md:grid-cols-2'>
       {/* Left Side */}
-      <div className='bg-clr-14 relative flex min-h-[300px] items-center justify-center'>
+      <div className='bg-gradient-4 relative flex min-h-[300px] items-center justify-center'>
         <canvas
           ref={canvasSubRef}
           className='pointer-events-none absolute top-0 left-0 h-full w-full'
@@ -87,10 +87,10 @@ export default function ConfettiSubscription() {
           </>
         ) : (
           <div className='z-10 text-center'>
-            <p className='mb-5 text-xl font-semibold text-white'>🎉 Success!</p>
+            <p className='gradient-text-2 mb-5 text-xl font-semibold text-white'>🎉 Success!</p>
             {selectedSubscription && (
               <p className='mt-2 text-sm text-gray-300'>
-                Plan selected: <strong>{selectedSubscription}</strong>
+                Plan selected: <strong className='gradient-text-2'>{selectedSubscription}</strong>
               </p>
             )}
             <div className='mt-4 text-center'>

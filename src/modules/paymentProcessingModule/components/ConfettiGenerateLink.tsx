@@ -42,7 +42,7 @@ export default function ConfettiGenerateLink() {
   return (
     <div className='grid max-w-7xl grid-cols-1 overflow-hidden rounded-xl border border-gray-300 md:grid-cols-2'>
       {/* Left Side */}
-      <div className='bg-clr-14 relative flex min-h-[300px] items-center justify-center'>
+      <div className='bg-gradient-4 relative flex min-h-[300px] items-center justify-center'>
         <canvas
           ref={canvasLinkRef}
           className='pointer-events-none absolute top-0 left-0 h-full w-full'
@@ -52,14 +52,14 @@ export default function ConfettiGenerateLink() {
         {!triggeredLink ? (
           <button
             onClick={handleClick}
-            className='z-10 cursor-pointer rounded-lg bg-white px-6 py-3 font-semibold shadow-md transition hover:bg-gray-100'
+            className='gradient-text-2 z-10 cursor-pointer rounded-lg bg-white px-6 py-3 font-semibold shadow-md transition hover:bg-gray-100'
           >
             Generate a payment link!
           </button>
         ) : (
           <div className='z-10 text-center'>
-            <p className='mb-5 text-xl font-semibold text-white'>🎉 Success!</p>
-            <button className='z-10 rounded-lg bg-white px-6 py-3 font-semibold shadow-md transition hover:bg-gray-100'>
+            <p className='gradient-text-2 mb-5 text-xl font-semibold text-white'>🎉 Success!</p>
+            <button className='gradient-text-2 z-10 rounded-lg bg-white px-6 py-3 font-semibold shadow-md transition hover:bg-gray-100'>
               Link Generated
             </button>
           </div>

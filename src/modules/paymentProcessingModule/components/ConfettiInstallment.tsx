@@ -58,7 +58,7 @@ export default function ConfettiInstallment() {
       </div>
 
       {/* Right Side */}
-      <div className='bg-clr-14 relative flex min-h-[300px] items-center justify-center'>
+      <div className='bg-gradient-4 relative flex min-h-[300px] items-center justify-center'>
         <canvas
           ref={canvasInstallRef}
           className='pointer-events-none absolute top-0 left-0 h-full w-full'
@@ -97,10 +97,10 @@ export default function ConfettiInstallment() {
           </>
         ) : (
           <div className='z-10 text-center'>
-            <p className='mb-5 text-xl font-semibold text-white'>🎉 Success!</p>
+            <p className='gradient-text-2 mb-5 text-xl font-semibold text-white'>🎉 Success!</p>
             {selected && (
               <p className='mt-2 text-sm text-gray-300'>
-                Plan selected: <strong>{selected} months</strong>
+                Plan selected: <strong className='gradient-text-2'>{selected} months</strong>
               </p>
             )}
             <div className='mt-4 text-center'>

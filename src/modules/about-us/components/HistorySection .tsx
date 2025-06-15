@@ -111,10 +111,10 @@ const HistorySection = () => {
               >
                 <button
                   onClick={() => setActiveYear(year)}
-                  className={`border-stroke-2 flex items-center justify-center rounded-[40px] border px-[18px] py-2.5 ${
+                  className={`border-stroke-2 flex cursor-pointer items-center justify-center rounded-[40px] border px-[18px] py-2.5 ${
                     activeYear === year
                       ? 'bg-gradient-to-r from-[#1D1F2D] to-[#1D1F2E] text-white'
-                      : 'text-gray-300'
+                      : 'gradient-text-2'
                   }`}
                 >
                   <span className='text-base leading-normal font-semibold tracking-[-0.25px]'>{year}</span>
