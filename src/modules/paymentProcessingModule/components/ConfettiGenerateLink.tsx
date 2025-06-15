@@ -16,7 +16,7 @@ export default function ConfettiGenerateLink() {
     if (!confettiRef.current) {
       confettiRef.current = confetti.create(canvasLinkRef.current, {
         resize: true,
-        useWorker: false // Disable the shared worker
+        useWorker: false
       });
     }
 

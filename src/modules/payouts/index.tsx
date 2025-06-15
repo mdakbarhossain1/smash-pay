@@ -1,4 +1,6 @@
 import TestimonialSection from '../careers/components/TestimonialSection';
+import CountryCoverageHome from '../home/components/CountryCoverageHome';
+import CTASections from '../home/components/CTASections';
 import FlexibleForBusiness from './components/FlexibleForBusiness';
 import KeyFeatures from './components/KeyFeatures';
 import LeadForm from './components/LeadForm';
@@ -16,6 +18,8 @@ const Payouts = () => {
       <FlexibleForBusiness />
       <TestimonialSection />
       <LeadForm />
+      <CountryCoverageHome />
+      <CTASections />
     </>
   );
 };

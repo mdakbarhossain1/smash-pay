@@ -12,9 +12,6 @@ const PromotionSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          // style={{
-          //   background: 'linear-gradient(135deg, rgba(63, 66, 77, 1) 0%, rgba(18, 20, 28, 1) 100%)'
-          // }}
         >
           {/* Text Content */}
           <div className='flex w-full flex-col items-start justify-center gap-10 lg:w-1/2'>

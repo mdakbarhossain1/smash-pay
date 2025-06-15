@@ -62,7 +62,7 @@ const OneIntegration = () => {
   return (
     <section
       ref={sectionRef}
-      className='bg-clr-14 relative w-full overflow-hidden py-16 md:py-24'
+      className='bg-gradient-4 relative w-full overflow-hidden py-16 md:py-24'
       aria-hidden='false'
     >
       {/* Fixed dotted background */}
@@ -83,7 +83,7 @@ const OneIntegration = () => {
           transition={{ duration: 0.4, delay: 0.2 }}
         >
           <motion.h2 className='mb-8 text-3xl font-bold text-gray-300 md:mb-12 md:text-4xl lg:text-5xl'>
-            One integration for <span className='text-white'>multiple</span> payout options
+            One integration for <span className='text-white'>multiple</span> <br /> payout options
           </motion.h2>
 
           <motion.ul

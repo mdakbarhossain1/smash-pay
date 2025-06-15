@@ -1,11 +1,5 @@
 import PaymentProcessingModule from '@/modules/paymentProcessingModule';
 
-const Payment = () => {
-  return (
-    <>
-      <PaymentProcessingModule />
-    </>
-  );
-};
-
-export default Payment;
+export default function Payment() {
+  return <PaymentProcessingModule />;
+}
