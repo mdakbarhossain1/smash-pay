@@ -8,7 +8,11 @@ import { FiChevronDown, FiChevronRight, FiMenu, FiX } from 'react-icons/fi';
 type MenuItem = {
   title: string;
   href?: string;
-  submenu?: MenuItem[];
+};
+
+type MenuGroup = {
+  groupTitle: string;
+  links: MenuItem[];
 };
 
 const Header = () => {
@@ -16,30 +20,58 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
-  const menuItems: MenuItem[] = [
+  const menuStructure: { title: string; href?: string; submenu?: MenuGroup[] }[] = [
     {
       title: 'Products',
       submenu: [
-        { title: 'Payments', href: '#' },
-        { title: 'Banking', href: '#' },
-        { title: 'Cards', href: '#' }
+        {
+          groupTitle: 'Products',
+          links: [
+            { title: 'Cards', href: '/card' },
+            { title: 'Personal', href: '/personal' },
+            { title: 'Business', href: '/business' },
+            { title: 'Multi-currency', href: '/multicurrency-account' }
+          ]
+        },
+        {
+          groupTitle: 'Payments',
+          links: [
+            { title: 'Payment process', href: '/payment-processing' },
+            { title: 'Payment Rails', href: '/payments' },
+            { title: 'Payouts', href: '/payouts' }
+          ]
+        }
       ]
     },
-    { title: 'Pricing', href: '#' },
+    {
+      title: 'Pricing',
+      href: '/pricing'
+    },
     {
       title: 'Company',
       submenu: [
-        { title: 'About Us', href: '#' },
-        { title: 'Careers', href: '#' },
-        { title: 'Press', href: '#' }
+        {
+          groupTitle: 'Company',
+          links: [
+            { title: 'About Us', href: '/about-us' },
+            { title: 'Career', href: '/careers' },
+            { title: 'Blog', href: '/blog' },
+            { title: 'Contact Us', href: '/contact-us' }
+          ]
+        }
       ]
     },
     {
       title: 'Resources',
       submenu: [
-        { title: 'Blog', href: '#' },
-        { title: 'Help Center', href: '#' },
-        { title: 'API Docs', href: '#' }
+        {
+          groupTitle: 'Resources',
+          links: [
+            { title: 'Terms and Policies', href: '/terms-policies' },
+            { title: 'FAQ', href: '/faq' },
+            { title: 'Coverages', href: '/country-coverage' }
+          ]
+        }
       ]
     }
   ];
@@ -80,11 +112,11 @@ const Header = () => {
           <div className='flex w-full max-w-7xl items-center justify-between px-4 md:px-8'>
             <div className='flex items-center gap-4 md:gap-16'>
               {/* Logo */}
-              <div className='relative h-7 w-[146px]'>
-                <Link href={'/'}>
+              <div className='relative h-8 w-[200px]'>
+                <Link href={'/'} onClick={() => setMobileMenuOpen(false)}>
                   {' '}
                   <Image
-                    src='/home/smash-pay-logo.png'
+                    src='/home/smash-pay-logo-1-11.png'
                     alt='Smash Pay Logo'
                     layout='fill'
                     objectFit='cover'
@@ -94,35 +126,43 @@ const Header = () => {
 
               {/* Desktop Menu */}
               {!isMobile && (
-                <div className='flex items-center gap-4 md:gap-10'>
-                  {menuItems.map((item) => (
-                    <div key={item.title} className='group relative flex cursor-pointer items-center'>
-                      <div className='flex items-center'>
-                        <span className='text-sm font-medium text-white transition-colors group-hover:text-gray-300 md:text-base'>
-                          {item.title}
-                        </span>
-                        {item.submenu && (
+                <nav className='flex items-center gap-10 text-sm font-medium'>
+                  {menuStructure.map((section) => (
+                    <div key={section.title} className='group relative'>
+                      <div className='flex cursor-pointer items-center gap-1'>
+                        <Link
+                          href={section.href ?? '#'}
+                          className='text-sm font-medium text-white transition-colors group-hover:text-gray-300 md:text-lg'
+                        >
+                          {section.title}
+                        </Link>
+                        {section.submenu && (
                           <FiChevronDown className='ml-1 text-white transition-colors group-hover:text-gray-300' />
                         )}
                       </div>
 
-                      {/* Desktop Submenu */}
-                      {item.submenu && (
-                        <div className='pointer-events-none absolute top-4 left-0 z-50 mt-2 w-48 rounded-md bg-[#161922] py-1 opacity-0 shadow-lg transition-opacity duration-200 group-hover:pointer-events-auto group-hover:opacity-100'>
-                          {item.submenu.map((subItem) => (
-                            <a
-                              key={subItem.title}
-                              href={subItem.href}
-                              className='block px-4 py-2 text-sm text-white hover:bg-[#0e131b]'
-                            >
-                              {subItem.title}
-                            </a>
+                      {/* Submenu */}
+                      {section.submenu && (
+                        <div className='absolute top-full left-0 z-50 hidden min-w-[300px] gap-8 rounded-md bg-[#161922] px-4 py-4 shadow-lg group-hover:flex'>
+                          {section.submenu.map((group) => (
+                            <div key={group.groupTitle} className='min-w-[120px]'>
+                              <p className='gradient-text mb-1 block py-2 text-lg font-bold text-white'>
+                                {group.groupTitle}
+                              </p>
+                              {group.links.map((link) => (
+                                <Link key={link.title} href={link.href || '#'}>
+                                  <p className='py-[8px] text-sm text-white hover:bg-[#0e131b]'>
+                                    {link.title}
+                                  </p>
+                                </Link>
+                              ))}
+                            </div>
                           ))}
                         </div>
                       )}
                     </div>
                   ))}
-                </div>
+                </nav>
               )}
             </div>
 
@@ -153,6 +193,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
+
         <AnimatePresence>
           {isMobile && mobileMenuOpen && (
             <motion.div
@@ -163,44 +204,57 @@ const Header = () => {
               className='w-full overflow-hidden bg-[#161922]'
             >
               <div className='px-4 py-4'>
-                {menuItems.map((item) => (
-                  <div key={item.title} className='mb-2'>
+                {menuStructure.map((section, index) => (
+                  <div key={index}>
                     <div
-                      className='flex cursor-pointer items-center justify-between px-2 py-2 text-white'
-                      onClick={() => (item.submenu ? toggleSubmenu(item.title) : null)}
+                      className='flex cursor-pointer items-center justify-between py-2'
+                      onClick={() => {
+                        toggleSubmenu(section.title);
+                        !section.submenu && setMobileMenuOpen(false);
+                      }}
                     >
-                      <a href={item.href} className={`font-medium ${!item.submenu ? 'block w-full' : ''}`}>
-                        {item.title}
-                      </a>
-                      {item.submenu && (
+                      <Link href={section.href ?? '#'} className='text-white'>
+                        {section.title}
+                      </Link>
+                      {section.submenu && (
                         <FiChevronRight
-                          className={`transition-transform ${openSubmenu === item.title ? 'rotate-90' : ''}`}
+                          className={`text-white transition-transform ${openSubmenu === section.title ? 'rotate-90' : ''}`}
                         />
                       )}
                     </div>
-
-                    {/* Mobile Submenu */}
-                    <AnimatePresence>
-                      {item.submenu && openSubmenu === item.title && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.2 }}
-                          className='pl-4'
-                        >
-                          {item.submenu.map((subItem) => (
-                            <a
-                              key={subItem.title}
-                              href={subItem.href}
-                              className='block px-2 py-2 text-gray-300 hover:text-white'
+                    {section.submenu && (
+                      <div className='mb-2'>
+                        <AnimatePresence>
+                          {openSubmenu === section.title && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: 'auto', opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.2 }}
+                              className='pb-2 pl-4'
                             >
-                              {subItem.title}
-                            </a>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                              {section.submenu &&
+                                section.submenu.map((group) => (
+                                  <div key={group.groupTitle} className='mb-4'>
+                                    <p className='mt-2 mb-1 text-xs text-gray-500'>{group.groupTitle}</p>
+                                    {group.links.map((link) => (
+                                      <Link
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        key={link.title}
+                                        href={link.href || '#'}
+                                      >
+                                        <p className='py-1 text-sm text-gray-300 hover:text-white'>
+                                          {link.title}
+                                        </p>
+                                      </Link>
+                                    ))}
+                                  </div>
+                                ))}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    )}
                   </div>
                 ))}
 

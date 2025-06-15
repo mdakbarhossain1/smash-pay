@@ -137,14 +137,16 @@ const BlogContainer = () => {
               {categories.map((category) => (
                 <motion.button
                   key={category}
-                  className={`border-stroke-2 flex items-center justify-center rounded-[40px] border px-[18px] py-2.5 whitespace-nowrap transition-colors ${
-                    activeCategory === category ? 'bg-clr-14 text-white' : 'text-gray-300 hover:bg-gray-800'
+                  className={`border-stroke-2 flex cursor-pointer items-center justify-center rounded-[40px] border px-[18px] py-2.5 whitespace-nowrap transition-colors ${
+                    activeCategory === category ? 'bg-clr-14 text-white' : 'hover:bg-gray-800'
                   }`}
                   onClick={() => setActiveCategory(category)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <span className='text-base font-semibold tracking-[-0.25px]'>{category}</span>
+                  <span className='gradient-text-2 text-base font-semibold tracking-[-0.25px]'>
+                    {category}
+                  </span>
                 </motion.button>
               ))}
             </div>

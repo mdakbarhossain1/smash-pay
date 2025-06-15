@@ -1,3 +1,4 @@
+'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -6,14 +7,14 @@ const PromotionSection = () => {
     <section className='bg-clr-14 relative flex w-full flex-col items-center justify-start gap-16 overflow-hidden px-4 pt-16 pb-16 md:px-8'>
       <div className='relative mx-auto flex w-full max-w-7xl flex-col items-start justify-start gap-8 px-4 md:px-8'>
         <motion.div
-          className='relative flex w-full flex-col items-center justify-between gap-8 overflow-hidden rounded-[32px] p-8 md:p-12 lg:flex-row'
+          className='bg-gradient-4 relative flex w-full flex-col items-center justify-between gap-8 overflow-hidden rounded-[32px] p-8 md:p-12 lg:flex-row'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          style={{
-            background: 'linear-gradient(135deg, rgba(63, 66, 77, 1) 0%, rgba(18, 20, 28, 1) 100%)'
-          }}
+          // style={{
+          //   background: 'linear-gradient(135deg, rgba(63, 66, 77, 1) 0%, rgba(18, 20, 28, 1) 100%)'
+          // }}
         >
           {/* Text Content */}
           <div className='flex w-full flex-col items-start justify-center gap-10 lg:w-1/2'>

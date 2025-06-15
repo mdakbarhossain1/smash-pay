@@ -57,7 +57,7 @@ const WhySmashPay = () => {
       initial='hidden'
       animate={inView ? 'visible' : 'hidden'}
       variants={containerVariants}
-      className='bg-gradient-2 relative w-full overflow-hidden py-16 md:py-32'
+      className='bg-gradient-4 relative w-full overflow-hidden py-16 md:py-32'
     >
       <div className='mx-auto flex max-w-7xl flex-col gap-12 px-4 md:gap-24 md:px-8'>
         {/* Header Section */}
@@ -122,7 +122,7 @@ const WhySmashPay = () => {
               </div>
 
               <div className='flex flex-col gap-3'>
-                <h3 className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-xl font-medium text-transparent md:text-2xl'>
+                <h3 className='gradient-text-2 text-xl font-medium text-transparent md:text-2xl'>
                   {feature.title}
                 </h3>
                 <p className='text-base text-gray-400 md:text-lg'>{feature.description}</p>

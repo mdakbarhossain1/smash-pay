@@ -126,7 +126,9 @@ export default function FAQSection() {
                   onClick={() => toggleFAQ(index)}
                 >
                   <div className='flex flex-1 flex-col gap-4'>
-                    <h3 className='text-xl font-medium tracking-tight text-white'>{faq.question}</h3>
+                    <h3 className='gradient-text-2 text-xl font-medium tracking-tight text-white'>
+                      {faq.question}
+                    </h3>
                     {faq.isOpen && faq.answer && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}

@@ -17,6 +17,10 @@
   --color-clr-14: #0a0d14;
   --hero: linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%);
   --card: linear-gradient(90deg, rgba(29, 31, 45, 1) 0%, rgba(29, 31, 46, 1) 100%);
+  --token-3ad3ba9a-ccc2-40b7-8c6f-fc587431b9c3: rgb(49, 53, 63);
+  --token-ad1f0f62-7edb-4a0e-83cc-532215fdd7d2: rgb(10, 13, 20);
+  --token-7d83949f-a967-48a3-8f07-15e8bd6e7d88: rgb(80, 248, 228);
+  --token-510ad5ce-f42f-46e3-bce6-8a3de8506198: rgb(191, 162, 246);
 }
 
 @layer components {
@@ -37,6 +41,13 @@
   .bg-gradient-3 {
     background: var(--hero, linear-gradient(180deg, #0c1118 0%, #1d1e2d 100%));
   }
+  .bg-gradient-4 {
+    background: linear-gradient(
+      315deg,
+      var(--token-3ad3ba9a-ccc2-40b7-8c6f-fc587431b9c3, #31353f) 0%,
+      var(--token-ad1f0f62-7edb-4a0e-83cc-532215fdd7d2, rgb(10, 13, 20)) 100%
+    );
+  }
 
   .button-gradient-bg {
     background: linear-gradient(180deg, #151820 0%, #010101 100%);
@@ -44,6 +55,16 @@
 
   .gradient-text {
     background: linear-gradient(180deg, #7b7d81 0%, #fff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gradient-text-2 {
+    background: linear-gradient(
+      90deg,
+      var(--token-7d83949f-a967-48a3-8f07-15e8bd6e7d88, rgb(80, 248, 228)) 0%,
+      var(--token-510ad5ce-f42f-46e3-bce6-8a3de8506198, rgb(191, 162, 246)) 100%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

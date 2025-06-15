@@ -39,7 +39,7 @@ const Hero = () => {
     }
   };
   return (
-    <div className='bg-gradient flex w-full flex-col items-center justify-start'>
+    <div className='bg-gradient-4 flex w-full flex-col items-center justify-start'>
       <motion.div
         className='flex w-full flex-col items-center gap-8 pt-12 md:gap-16 md:pt-24'
         initial='hidden'
@@ -64,18 +64,7 @@ const Hero = () => {
                   variants={itemVariants}
                 >
                   <div className='rounded-2xl bg-[#0e131b] px-2.5 py-0.5'>
-                    <span
-                      className='text-sm font-medium'
-                      style={{
-                        background:
-                          'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-                        backgroundClip: 'text',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent'
-                      }}
-                    >
-                      New
-                    </span>
+                    <span className='gradient-text-2 text-sm font-medium'>New</span>
                   </div>
                   <div className='flex items-center gap-1'>
                     <span

@@ -101,10 +101,8 @@ const CountryCoverageHome = () => {
                 key={region}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`flex items-center justify-center rounded-[44px] border border-[#3c414c] px-5 py-2.5 ${
-                  selectedRegion === region
-                    ? 'bg-gradient-to-b from-[#151820] to-[#010101] text-white'
-                    : 'text-gray-300'
+                className={`flex cursor-pointer items-center justify-center rounded-[44px] border border-[#3c414c] px-5 py-2.5 ${
+                  selectedRegion === region ? 'bg-gradient-4 text-white' : 'gradient-text-2'
                 }`}
                 onClick={() => setSelectedRegion(region)}
               >

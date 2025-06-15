@@ -19,7 +19,7 @@ const SmashPayCard = () => {
   ];
 
   return (
-    <section className='bg-gradient-2 relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch overflow-hidden px-4 pt-32 pb-16 md:px-8'>
+    <section className='bg-gradient-4 relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch overflow-hidden px-4 pt-32 pb-16 md:px-8'>
       <div className='flex w-full max-w-7xl flex-col items-center justify-start gap-12 lg:flex-row lg:gap-24'>
         {/* Image Section - Order changes on mobile */}
         <motion.div

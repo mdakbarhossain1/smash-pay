@@ -34,10 +34,6 @@ const EuropeCountries = () => {
           country: 'Costa Rica',
           flag: '/country-coverage/costa-rica.png'
         },
-        // {
-        //   country: 'Panama',
-        //   flag: '/country-coverage/PA.png'
-        // },
         {
           country: 'Guatemala',
           flag: '/country-coverage/GT.png'
@@ -129,10 +125,6 @@ const EuropeCountries = () => {
           country: 'United Kingdom',
           flag: '/country-coverage/United-Kingdom-flag.png'
         }
-        // {
-        //   country: 'EUropian union',
-        //   flag: '/country-coverage/United-Kingdom-flag.png'
-        // },
       ]
     },
     {
@@ -193,7 +185,7 @@ const EuropeCountries = () => {
                   whileHover='hover'
                 >
                   <div
-                    className={`md:text-md text-md flex w-full items-center gap-4 rounded-xl border border-[#3C414C] bg-[#1D1F2E] px-5 py-4 text-white capitalize`}
+                    className={`md:text-md text-md ] bg-gradient-4 flex w-full items-center gap-4 rounded-xl border border-[#3C414C] px-5 py-4 text-white capitalize`}
                   >
                     <Image
                       src={country.flag}

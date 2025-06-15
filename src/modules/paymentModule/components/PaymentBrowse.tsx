@@ -69,7 +69,7 @@ const PaymentBrowse = () => {
               onClick={() => {
                 navigate.push(`/payments/${topic.slug}`);
               }}
-              className='flex flex-col items-start justify-start gap-6 rounded-xl bg-gray-900/50 p-8 transition-all hover:bg-gray-900/70'
+              className='bg-gradient-4 flex flex-col items-start justify-start gap-6 rounded-xl p-8 transition-all hover:bg-gray-900/70'
             >
               <div className='relative h-12 w-12 shrink-0'>
                 <Image
@@ -81,7 +81,7 @@ const PaymentBrowse = () => {
                 />
               </div>
               <div className='flex flex-col items-start justify-start gap-3'>
-                <h3 className='text-left text-lg leading-relaxed font-medium tracking-tight text-white'>
+                <h3 className='gradient-text-2 text-left text-lg leading-relaxed font-medium tracking-tight text-white'>
                   {topic.title}
                 </h3>
                 <p className='text-left text-base leading-normal tracking-tight text-gray-300'>

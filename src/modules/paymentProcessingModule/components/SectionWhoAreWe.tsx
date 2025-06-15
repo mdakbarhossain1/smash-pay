@@ -113,16 +113,13 @@ const SectionWhoAreWe = () => {
             {paymentOptions.slice(0, 3).map((option) => (
               <motion.div
                 key={option.id}
-                className='relative flex h-auto w-full flex-col items-start justify-start gap-6 rounded-[32px] p-8 md:flex-row'
-                style={{
-                  background: 'linear-gradient(135deg, rgba(63, 66, 77, 1) 0%, rgba(18, 20, 28, 1) 100%)'
-                }}
+                className='bg-gradient-4 relative flex h-auto w-full flex-col items-start justify-start gap-6 rounded-[32px] p-8 md:flex-row'
                 variants={itemVariants}
                 whileHover='hover'
               >
                 {/* Content */}
                 <div className='flex flex-1 flex-col items-start justify-start gap-3'>
-                  <h3 className='self-stretch text-left text-2xl leading-tight font-medium tracking-[-1px] text-white'>
+                  <h3 className='gradient-text-2 self-stretch pb-1 text-left text-2xl leading-tight font-medium tracking-[1px] text-white'>
                     {option.title}
                   </h3>
                   <p className='self-stretch text-left text-lg leading-normal tracking-[-0.25px] text-gray-300'>
