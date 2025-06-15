@@ -3,26 +3,30 @@
 import confetti from 'canvas-confetti';
 import { RotateCcw } from 'lucide-react';
 import { useRef, useState } from 'react';
+
 const plans = [3, 6, 12];
 
 export default function ConfettiInstallment() {
   const [triggered, setTriggered] = useState(false);
   const canvasInstallRef = useRef<HTMLCanvasElement | null>(null);
+  const confettiRef = useRef<ReturnType<typeof confetti.create> | null>(null);
 
   const handleClick = () => {
     if (!canvasInstallRef.current) return;
 
-    const myConfetti = confetti.create(canvasInstallRef.current, {
-      resize: true,
-      useWorker: true
-    });
+    // Create a new confetti instance if it doesn't exist
+    if (!confettiRef.current) {
+      confettiRef.current = confetti.create(canvasInstallRef.current, {
+        resize: true,
+        useWorker: false // Disable the shared worker
+      });
+    }
 
-    myConfetti({
+    confettiRef.current({
       particleCount: 100,
       spread: 120,
       origin: { y: 0.6 }
     });
-
     setTriggered(true);
   };
 
@@ -30,6 +34,14 @@ export default function ConfettiInstallment() {
 
   const handleReset = () => {
     setTriggered(false);
+    setSelected(null);
+
+    if (canvasInstallRef.current) {
+      const ctx = canvasInstallRef.current.getContext('2d');
+      if (ctx) {
+        ctx.clearRect(0, 0, canvasInstallRef.current.width, canvasInstallRef.current.height);
+      }
+    }
   };
 
   return (
@@ -47,7 +59,12 @@ export default function ConfettiInstallment() {
 
       {/* Right Side */}
       <div className='bg-clr-14 relative flex min-h-[300px] items-center justify-center'>
-        <canvas ref={canvasInstallRef} className='pointer-events-none absolute top-0 left-0 h-full w-full' />
+        <canvas
+          ref={canvasInstallRef}
+          className='pointer-events-none absolute top-0 left-0 h-full w-full'
+          width={window.innerWidth}
+          height={window.innerHeight}
+        />
         {!triggered ? (
           <>
             <div className='flex flex-col items-center gap-4 p-6'>
@@ -63,8 +80,8 @@ export default function ConfettiInstallment() {
                     }}
                     className={`-md cursor-pointer rounded px-6 py-3 text-lg font-medium transition-all ${
                       selected === plan
-                        ? 'scale-105 bg-lime-400 text-black'
-                        : 'bg-lime-300 text-black hover:bg-lime-400'
+                        ? 'scale-105 bg-[#002c15] text-white'
+                        : 'bg-[#002c15] text-white hover:bg-[#002c15]'
                     }`}
                   >
                     {plan} mo.

@@ -3,21 +3,26 @@
 import confetti from 'canvas-confetti';
 import { RotateCcw } from 'lucide-react';
 import { useRef, useState } from 'react';
+
 const plans = ['Monthly', 'Yearly'];
 
-export default function ConfettieSubscription() {
+export default function ConfettiSubscription() {
   const [triggered, setTriggered] = useState(false);
   const canvasSubRef = useRef<HTMLCanvasElement | null>(null);
+  const confettiRef = useRef<ReturnType<typeof confetti.create> | null>(null);
 
   const handleClick = () => {
     if (!canvasSubRef.current) return;
 
-    const myConfetti = confetti.create(canvasSubRef.current, {
-      resize: true,
-      useWorker: true
-    });
+    // Create a new confetti instance if it doesn't exist
+    if (!confettiRef.current) {
+      confettiRef.current = confetti.create(canvasSubRef.current, {
+        resize: true,
+        useWorker: false // Disable the shared worker
+      });
+    }
 
-    myConfetti({
+    confettiRef.current({
       particleCount: 100,
       spread: 120,
       origin: { y: 0.6 }
@@ -30,13 +35,26 @@ export default function ConfettieSubscription() {
 
   const handleReset = () => {
     setTriggered(false);
+    setSubscriptionSelected(null);
+
+    if (canvasSubRef.current) {
+      const ctx = canvasSubRef.current.getContext('2d');
+      if (ctx) {
+        ctx.clearRect(0, 0, canvasSubRef.current.width, canvasSubRef.current.height);
+      }
+    }
   };
 
   return (
     <div className='grid max-w-7xl grid-cols-1 overflow-hidden rounded-xl border border-gray-300 md:grid-cols-2'>
       {/* Left Side */}
       <div className='bg-clr-14 relative flex min-h-[300px] items-center justify-center'>
-        <canvas ref={canvasSubRef} className='pointer-events-none absolute top-0 left-0 h-full w-full' />
+        <canvas
+          ref={canvasSubRef}
+          className='pointer-events-none absolute top-0 left-0 h-full w-full'
+          width={window.innerWidth}
+          height={window.innerHeight}
+        />
         {!triggered ? (
           <>
             <div className='flex flex-col items-center gap-4 p-6'>
@@ -52,8 +70,8 @@ export default function ConfettieSubscription() {
                     }}
                     className={`-md cursor-pointer rounded px-6 py-3 text-lg font-medium transition-all ${
                       selectedSubscription === plan
-                        ? 'scale-105 bg-lime-400 text-black'
-                        : 'bg-lime-300 text-black hover:bg-lime-400'
+                        ? 'scale-105 bg-[#002c15] text-white'
+                        : 'bg-[#002c15] text-white hover:bg-[#002c15]'
                     }`}
                   >
                     {plan}
@@ -72,7 +90,7 @@ export default function ConfettieSubscription() {
             <p className='mb-5 text-xl font-semibold text-white'>🎉 Success!</p>
             {selectedSubscription && (
               <p className='mt-2 text-sm text-gray-300'>
-                Plan selectedSubscription: <strong>{selectedSubscription} months</strong>
+                Plan selected: <strong>{selectedSubscription}</strong>
               </p>
             )}
             <div className='mt-4 text-center'>
