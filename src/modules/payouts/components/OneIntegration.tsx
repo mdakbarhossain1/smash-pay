@@ -60,7 +60,11 @@ const OneIntegration = () => {
   ];
 
   return (
-    <section ref={sectionRef} className='relative overflow-hidden py-16 md:py-24' aria-hidden='false'>
+    <section
+      ref={sectionRef}
+      className='bg-clr-14 relative w-full overflow-hidden py-16 md:py-24'
+      aria-hidden='false'
+    >
       {/* Fixed dotted background */}
       <div
         className='absolute inset-0'
@@ -76,10 +80,10 @@ const OneIntegration = () => {
           className='mx-auto max-w-4xl text-center'
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
         >
-          <motion.h2 className='mb-8 text-3xl font-bold md:mb-12 md:text-4xl lg:text-5xl'>
-            One integration for <span className='text-primary'>multiple</span> payout options
+          <motion.h2 className='mb-8 text-3xl font-bold text-gray-300 md:mb-12 md:text-4xl lg:text-5xl'>
+            One integration for <span className='text-white'>multiple</span> payout options
           </motion.h2>
 
           <motion.ul
@@ -108,7 +112,7 @@ const OneIntegration = () => {
               >
                 <div className='mb-4'>{item.icon}</div>
                 <div className='text-center'>
-                  <h3 className='mb-2 text-2xl font-bold md:text-3xl'>{item.title}</h3>
+                  <h3 className='mb-2 text-2xl font-bold text-white md:text-3xl'>{item.title}</h3>
                   <p className='text-gray-500'>{item.description}</p>
                 </div>
               </motion.li>

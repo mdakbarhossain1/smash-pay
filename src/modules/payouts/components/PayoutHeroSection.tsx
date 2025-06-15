@@ -173,7 +173,7 @@ const PayoutsHero = () => {
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <path d='M0 73.751L712.648 0L1400 21.5902V104H0L0 73.751Z' fill='white' />
+        <path d='M0 73.751L712.648 0L1400 21.5902V104H0L0 73.751Z' fill='bg-clr-14' />
       </svg>
     </section>
   );

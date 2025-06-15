@@ -88,7 +88,7 @@ const OneIntegrationSlider = () => {
           className='w-full lg:w-1/2'
         >
           <div className='mb-8'>
-            <div className='mb-2 text-xl font-semibold'>{paymentMethods[activeIndex]?.title}</div>
+            <div className='mb-2 text-xl font-semibold text-white'>{paymentMethods[activeIndex]?.title}</div>
             <p className='text-gray-600'>{paymentMethods[activeIndex]?.description}</p>
           </div>
 

@@ -1,4 +1,5 @@
 'use client';
+
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -11,12 +12,12 @@ type Feature = {
 type MobilePaySectionProps = {
   heading: string;
   subheading: string;
-  features: Feature[];
-  buttonText: string;
-  buttonIcon: string;
+  features?: Feature[];
+  buttonText?: string;
+  buttonIcon?: string;
   image: string;
   imageAlt: string;
-  imageLeft?: boolean; // If true, image comes before the text
+  imageLeft?: boolean;
 };
 
 const ReusableInfoCard = ({
@@ -46,24 +47,6 @@ const ReusableInfoCard = ({
     }
   };
 
-  const cardVariants = {
-    hidden: { x: -50, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 0.6 }
-    }
-  };
-
-  const imageVariants = {
-    hidden: { x: 50, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 0.6 }
-    }
-  };
-
   const TextSection = (
     <motion.div
       className='relative flex w-full flex-col items-start justify-start gap-10 lg:flex-1'
@@ -72,66 +55,57 @@ const ReusableInfoCard = ({
       viewport={{ once: true, margin: '-100px' }}
       variants={containerVariants}
     >
-      <motion.div
-        className='flex flex-col items-start justify-start gap-8 self-stretch'
-        variants={itemVariants}
-      >
-        <h2 className='gradient-text text-4xl leading-tight font-medium tracking-[-2px] text-transparent md:text-5xl lg:text-6xl'>
+      <motion.div className='flex flex-col items-start justify-start gap-6' variants={itemVariants}>
+        <h2 className='text-4xl leading-tight font-bold tracking-tight text-white md:text-5xl lg:text-6xl'>
           {heading}
         </h2>
-        <p className='text-lg leading-relaxed tracking-[-0.25px] text-gray-300'>{subheading}</p>
+        <p className='text-lg leading-relaxed text-gray-300'>{subheading}</p>
       </motion.div>
 
-      <motion.div className='flex flex-col gap-8 self-stretch' variants={itemVariants}>
-        {features.map((feature, index) => (
-          <motion.div
-            key={index}
-            className='flex flex-row items-start gap-6 rounded-3xl'
-            variants={cardVariants}
-          >
-            <div className='border-stroke-2 border-opacity-20 flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border'>
+      <motion.div className='flex flex-col gap-6' variants={itemVariants}>
+        {features?.map((feature, index) => (
+          <motion.div key={index} className='flex items-start gap-5' variants={itemVariants}>
+            <div className='flex h-12 w-12 items-center justify-center rounded-full border border-gray-600'>
               <Image src={feature.icon} alt={`${feature.title} icon`} width={24} height={24} />
             </div>
-            <div className='flex flex-1 flex-col gap-3'>
-              <h3 className='text-2xl leading-tight font-medium tracking-[-1px] text-white'>
-                {feature.title}
-              </h3>
-              <p className='text-lg leading-relaxed tracking-[-0.25px] text-gray-300'>
-                {feature.description}
-              </p>
+            <div className='flex flex-col'>
+              <h3 className='text-xl font-semibold text-white'>{feature.title}</h3>
+              <p className='text-gray-300'>{feature.description}</p>
             </div>
           </motion.div>
         ))}
       </motion.div>
 
-      <motion.div className='flex items-center gap-4' variants={itemVariants}>
-        <motion.button
-          className='border-opacity-20 border-stroke-2 flex items-center gap-2.5 rounded-full border bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-        >
-          <span className='text-lg font-semibold tracking-[-0.25px] text-white'>{buttonText}</span>
-          <Image src={buttonIcon} alt='button icon' width={22} height={22} />
-        </motion.button>
-      </motion.div>
+      {buttonText && (
+        <motion.div className='mt-4' variants={itemVariants}>
+          <motion.button
+            className='flex items-center gap-2 rounded-full border border-gray-700 bg-gradient-to-b from-[#151820] to-[#010101] px-6 py-3 text-white transition hover:opacity-90'
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <span className='text-base font-semibold'>{buttonText}</span>
+            {buttonIcon && <Image src={buttonIcon} alt='button icon' width={20} height={20} />}
+          </motion.button>
+        </motion.div>
+      )}
     </motion.div>
   );
 
   const ImageSection = (
     <motion.div
-      className='relative flex w-full flex-col items-center justify-start gap-12 lg:w-auto'
+      className='w-full max-w-lg lg:max-w-md'
       initial='hidden'
       whileInView='visible'
       viewport={{ once: true, margin: '-100px' }}
-      variants={imageVariants}
+      variants={itemVariants}
     >
-      <div className='relative h-auto w-full max-w-[640px] overflow-hidden rounded-3xl lg:h-[720px]'>
+      <div className='overflow-hidden rounded-3xl'>
         <Image
           src={image}
           alt={imageAlt}
           width={640}
           height={720}
-          className='h-full w-full object-cover'
+          className='h-auto w-full object-cover'
           priority
         />
       </div>
@@ -139,14 +113,16 @@ const ReusableInfoCard = ({
   );
 
   return (
-    <div
-      className={`relative mx-auto flex w-full max-w-7xl flex-col items-center justify-start gap-12 px-8 py-16 lg:flex-row lg:gap-24 ${
-        imageLeft ? 'lg:flex-row-reverse' : ''
-      }`}
-    >
-      {TextSection}
-      {ImageSection}
-    </div>
+    <section className='bg-clr-14 w-full px-6 py-16 text-white'>
+      <div
+        className={`mx-auto flex max-w-7xl flex-col-reverse items-center gap-12 lg:flex-row lg:gap-24 ${
+          imageLeft ? 'lg:flex-row-reverse' : ''
+        }`}
+      >
+        {TextSection}
+        {ImageSection}
+      </div>
+    </section>
   );
 };
 

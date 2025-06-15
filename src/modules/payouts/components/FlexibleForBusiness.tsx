@@ -116,7 +116,7 @@ const FlexibleForBusiness = () => {
             Flexible for <span className='text-gray'>any business</span>
           </motion.h2>
 
-          <motion.ul variants={container} className='mb-12 grid w-full grid-cols-2 gap-6 md:grid-cols-4'>
+          <motion.ul variants={container} className='mb-12 grid w-full grid-cols-1 gap-6 md:grid-cols-4'>
             {cards.map((card, index) => (
               <motion.li
                 key={index}
