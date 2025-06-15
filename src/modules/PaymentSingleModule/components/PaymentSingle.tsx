@@ -375,9 +375,6 @@ const PaymentSingle = ({ title }: PaymentSingleModuleProps) => {
             <motion.div
               key={option.id}
               className='bg-gradient-4 relative flex h-auto w-full flex-col items-start justify-start gap-6 rounded-[32px] p-12 md:h-56 md:flex-row'
-              // style={{
-              //   background: 'linear-gradient(135deg, rgba(63, 66, 77, 1) 0%, rgba(18, 20, 28, 1) 100%)'
-              // }}
               variants={itemVariants}
               whileHover='hover'
             >
