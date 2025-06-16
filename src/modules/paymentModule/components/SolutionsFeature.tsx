@@ -17,7 +17,7 @@ const SolutionsFeature = () => {
       id: 2,
       title: 'Peer to Peer',
       content:
-        'Electronic money transfers made from one person’s account to another through the Unlimit network.'
+        'Electronic money transfers made from one person’s account to another through the SMASHPAY network.'
     },
 
     {

@@ -17,7 +17,7 @@ const KeyBenifits = () => {
       id: 1,
       title: 'Improve acceptance rate and conversions',
       description:
-        'Unlimit provides a frictionless payment experience across the payment process. In part thanks to accepting all major card brands and local payment methods in 50+ currencies and 200+ locations.',
+        'SMASHPAY provides a frictionless payment experience across the payment process. In part thanks to accepting all major card brands and local payment methods in 50+ currencies and 200+ locations.',
       bgColor: 'bg-lime-900',
       image: '/paymentProcessing/methods.webp'
     },

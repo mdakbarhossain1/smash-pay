@@ -54,8 +54,8 @@ const LeadForm = () => {
     { value: 'Acquiring', label: 'Card Payment Processing' },
     { value: 'APM', label: 'Payment methods' },
     { value: 'IBAN account', label: 'Multi-currency accounts' },
-    { value: 'BaaS partner', label: 'Unlimit Banking as a Service (BaaS)' },
-    { value: 'Unlimit Crypto', label: 'Unlimit Crypto' }
+    { value: 'BaaS partner', label: 'SMASHPAY Banking as a Service (BaaS)' },
+    { value: 'SMASHPAY Crypto', label: 'SMASHPAY Crypto' }
   ];
 
   const transactionSizes = [
@@ -126,7 +126,7 @@ const LeadForm = () => {
       >
         <header className='mb-8'>
           <motion.h2 className='mb-8 text-center text-3xl font-bold md:mb-12 md:text-4xl lg:text-5xl'>
-            Cross-border payouts simplified with Unlimit
+            Cross-border payouts simplified with SMASHPAY
           </motion.h2>
         </header>
 
@@ -249,13 +249,13 @@ const LeadForm = () => {
                   onChange={handleCheckboxChange}
                 />
                 <span className='ml-3 text-sm'>
-                  Yes, I would like to receive marketing communications and advertisements regarding Unlimit
-                  products, services and events in accordance with Unlimit's Privacy Notices available at our{' '}
+                  Yes, I would like to receive marketing communications and advertisements regarding SMASHPAY
+                  products, services and events in accordance with SMASHPAY's Privacy Notices available at our{' '}
                   <a
                     className='text-blue-400 hover:underline'
                     title='Follow link'
                     target='_blank'
-                    href='https://www.unlimit.com/privacy-centre/'
+                    href='https://www.SMASHPAY.com/privacy-centre/'
                     rel='nofollow noopener'
                   >
                     Privacy Centre

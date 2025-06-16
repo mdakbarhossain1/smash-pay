@@ -136,7 +136,7 @@ const WhoWeAreFor = () => {
             <motion.div variants={item} className='mb-10'>
               <h2 className='mb-4 text-3xl font-bold md:text-4xl'>Who we're for?</h2>
               <p className='text-lg text-gray-400'>
-                Unlimit's real-time payout solution meets the needs of local and global businesses, enhancing
+                SMASHPAY's real-time payout solution meets the needs of local and global businesses, enhancing
                 customer experience at every level.
               </p>
             </motion.div>

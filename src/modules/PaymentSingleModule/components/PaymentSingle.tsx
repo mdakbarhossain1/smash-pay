@@ -64,7 +64,7 @@ const topics = [
         id: 3,
         title: 'Peer to Peer',
         description:
-          'Electronic money transfers made from one person’s account to another through the Unlimit network'
+          'Electronic money transfers made from one person’s account to another through the SMASHPAY network'
       },
       {
         id: 4,
@@ -81,10 +81,10 @@ const topics = [
   },
   {
     icon: '/contact-us/icons/guides.svg',
-    title: 'Along with our innovative platform, Unlimit also provides a full suite of added value services',
+    title: 'Along with our innovative platform, SMASHPAY also provides a full suite of added value services',
     slug: 'added-services',
     description:
-      'Along with our innovative platform, Unlimit also provides a full suite of added value services',
+      'Along with our innovative platform, SMASHPAY also provides a full suite of added value services',
     optionTitle: 'Added Services',
     options: [
       {
@@ -136,12 +136,12 @@ const topics = [
       {
         id: 4,
         title: 'Local acquiring options',
-        description: 'and improved conversion rates in countries where Unlimit has a local presence'
+        description: 'and improved conversion rates in countries where SMASHPAY has a local presence'
       },
       {
         id: 4,
         title: 'Local acquiring options',
-        description: 'and improved conversion rates in countries where Unlimit has a local presence'
+        description: 'and improved conversion rates in countries where SMASHPAY has a local presence'
       },
       {
         id: 5,
@@ -191,12 +191,12 @@ const topics = [
       {
         id: 4,
         title: 'Reporting and data delivery',
-        description: 'and improved conversion rates in countries where Unlimit has a local presence'
+        description: 'and improved conversion rates in countries where SMASHPAY has a local presence'
       },
       {
         id: 4,
         title: 'Card inventory management and fulfilment',
-        description: 'and improved conversion rates in countries where Unlimit has a local presence'
+        description: 'and improved conversion rates in countries where SMASHPAY has a local presence'
       },
       {
         id: 5,

@@ -32,7 +32,7 @@ const PaymentHeader = () => {
           {/* Search Input */}
           <motion.div variants={fadeIn('up', 'tween', 0.4, 1)} className='relative w-full max-w-2xl'>
             <p className='text-center text-lg text-gray-300'>
-              Unlimit Banking as a Service platform connects you to cross-border payment rails giving you the
+              SMASHPAY Banking as a Service platform connects you to cross-border payment rails giving you the
               power to create your bespoke programme
             </p>
           </motion.div>
