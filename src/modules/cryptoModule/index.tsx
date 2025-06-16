@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import CountryCoverageHome from '../home/components/CountryCoverageHome';
 import CTASections from '../home/components/CTASections';
 import PromotionSection from '../home/PromotionSection';
@@ -12,7 +13,6 @@ import QuickBuy from './components/QuickBuy';
 const CryptoModule = () => {
   return (
     <>
-      {/* <CryptoHeroSection /> */}
       <CryptoHero />
       <InteractiveMap />
       <CryptoBrowse />
@@ -40,9 +40,12 @@ const CryptoModule = () => {
                     <p className='text-lg leading-normal text-gray-300'>
                       Discover the easiest way to cash out your crypto with GateFi&apos;s Off-Ramp solution
                     </p>
-                    <button className='mt-3 w-fit cursor-pointer rounded-[40px] border border-[#3c414c] bg-lime-300 px-4 py-2.5 text-sm font-semibold text-black transition-colors hover:bg-[#2a2e38] md:text-base'>
+                    <Link
+                      href={'/offramp'}
+                      className='mt-3 w-fit cursor-pointer rounded-[40px] border border-[#3c414c] bg-lime-300 px-4 py-2.5 text-sm font-semibold text-black transition-colors hover:bg-[#2a2e38] hover:text-lime-300 md:text-base'
+                    >
                       Explore
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

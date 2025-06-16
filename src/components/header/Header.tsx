@@ -40,6 +40,15 @@ const Header = () => {
             { title: 'Payment Rails', href: '/payments' },
             { title: 'Payouts', href: '/payouts' }
           ]
+        },
+        {
+          groupTitle: 'Crypto',
+          links: [
+            { title: 'Crypto', href: '/crypto' },
+            { title: 'GamiFi', href: '/crypto/gamefi' },
+            { title: 'NFT', href: '/nft' },
+            { title: 'Off-Ramp', href: '/offramp' }
+          ]
         }
       ]
     },
@@ -91,8 +100,6 @@ const Header = () => {
   const toggleSubmenu = (title: string) => {
     setOpenSubmenu(openSubmenu === title ? null : title);
   };
-
-  console.log('isMobile', isMobile);
 
   return (
     <div
