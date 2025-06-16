@@ -25,7 +25,7 @@ const GameFiCard = () => {
           </p>
         </div>
         <Link
-          href='/gamefi/'
+          href='crypto/gamefi/'
           className='inline-block max-w-[120px] rounded-lg bg-blue-600 px-8 py-3 font-medium text-white transition-colors duration-300 hover:bg-blue-700'
         >
           Explore
