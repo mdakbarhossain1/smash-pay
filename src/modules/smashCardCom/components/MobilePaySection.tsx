@@ -4,7 +4,7 @@ import ReusableInfoCard from '@/shared/components/ReusableInfoCard';
 const MobilePaySection = () => {
   return (
     <div className='bg-clr-14 w-full py-16'>
-      <div className=''>
+      <div className='m-auto max-w-7xl px-2'>
         <ReusableInfoCard
           heading='Spend with Apple or Google Pay'
           subheading='Connect your card to tap and pay with your phone. No need to wait for your physical card to arrive.'
@@ -28,7 +28,7 @@ const MobilePaySection = () => {
           imageLeft={false}
         />
       </div>
-      <div className='pt-10'>
+      <div className='m-auto max-w-7xl px-2 pt-10'>
         <ReusableInfoCard
           heading='Take out up to $200 in cash with no hidden fees'
           subheading='You’ll quickly find that we make a great travel companion on all your adventures. Use your card to withdraw money anywhere in the world, with no hidden fees or bad exchange rates for spending abroad. Spend and enjoy your money internationally with total peace of mind.'
@@ -51,7 +51,7 @@ const MobilePaySection = () => {
           imageLeft={true}
         />
       </div>
-      <div className='pt-10'>
+      <div className='m-auto max-w-7xl px-2 pt-10'>
         <ReusableInfoCard
           heading='Stay in control of your card’s'
           subheading='It’s all in the app at your fingertips. From card freezing, to spending limits, turn them on or off with a tap.'
