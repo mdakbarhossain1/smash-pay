@@ -1,57 +1,22 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
 
 const GameFiCard = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    // Ensure video plays when component mounts
-    const playVideo = async () => {
-      try {
-        if (videoRef.current) {
-          await videoRef.current.play();
-        }
-      } catch (err) {
-        console.error('Video autoplay failed:', err);
-        // Fallback: Show poster image if video can't play
-        if (videoRef.current) {
-          videoRef.current.poster =
-            'https://www.crypto.unlimit.com/wp-content/themes/unl-crypto/assets/images/page-main/forward-thinking/gamefi-bg.jpeg';
-        }
-      }
-    };
-
-    playVideo();
-  }, []);
-
   return (
     <div className='relative flex h-96 items-start justify-center overflow-hidden rounded-lg py-5'>
-      {/* Video Background with fallback */}
-      <video
-        ref={videoRef}
-        className='absolute inset-0 z-0 h-full w-full object-cover'
-        autoPlay
-        playsInline
-        muted
-        loop
-        preload='auto'
-        poster='https://www.crypto.unlimit.com/wp-content/themes/unl-crypto/assets/images/page-main/forward-thinking/gamefi-bg.jpeg'
-      >
-        <source
-          src='https://www.crypto.unlimit.com/wp-content/themes/unl-crypto/assets/images/page-main/forward-thinking/gamefi-bg.mp4'
-          type='video/mp4'
-        />
-        {/* Fallback image if video doesn't load */}
-        <img
-          src='https://www.crypto.unlimit.com/wp-content/themes/unl-crypto/assets/images/page-main/forward-thinking/gamefi-bg.jpeg'
-          alt='GameFi background'
-          className='absolute inset-0 h-full w-full object-cover'
-        />
-      </video>
+      {/* Static Background Image */}
+      <Image
+        src='/crypto/fabio-unsplash.jpg'
+        alt='GameFi background'
+        fill
+        className='z-0 object-cover'
+        priority
+      />
+
       {/* Content */}
-      <div className='relative z-10 mx-auto flex h-full max-w-2xl flex-col justify-between px-6 text-start'>
-        <div className=''>
+      <div className='relative z-10 mx-auto flex h-full max-w-2xl flex-col justify-between bg-black/30 px-6 text-start backdrop-blur-sm'>
+        <div>
           <h3 className='gradient-text-2 mb-4 text-3xl font-bold text-lime-300 md:text-4xl lg:text-5xl'>
             GAMEFI
           </h3>

@@ -755,3 +755,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes glitter {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.animate-glitter {
+  animation: glitter 60s linear infinite;
+}
