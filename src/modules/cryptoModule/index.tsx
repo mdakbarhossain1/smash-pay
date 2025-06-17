@@ -1,21 +1,23 @@
 import Link from 'next/link';
-import CountryCoverageHome from '../home/components/CountryCoverageHome';
 import CTASections from '../home/components/CTASections';
-import PromotionSection from '../home/PromotionSection';
-import CryptoBrowse from './components/CryptoBrowse';
+import Featured from '../home/components/Featured';
 import CryptoHero from './components/CryptoHero';
+import DuoContentSection from './components/DuoContentSection';
 import ForwardThinkingCard from './components/ForwardThinkingCard';
 import GameFiCard from './components/GameFiCard';
-import InteractiveMap from './components/InteractiveMap';
 import NFTBlock from './components/NFTBlock';
 import QuickBuy from './components/QuickBuy';
+import SecuritySection from './components/SecuritySection';
+import SuccessNumbers from './components/SuccessNumbers';
 
 const CryptoModule = () => {
   return (
     <>
       <CryptoHero />
-      <InteractiveMap />
-      <CryptoBrowse />
+      <Featured />
+      <DuoContentSection />
+      <SuccessNumbers />
+      <SecuritySection />
       <QuickBuy />
       <section className='bg-clr-14 w-full py-20 sm:py-28 md:py-32'>
         <div className='m-auto max-w-7xl px-4'>
@@ -53,8 +55,7 @@ const CryptoModule = () => {
           </div>
         </div>
       </section>
-      <PromotionSection />
-      <CountryCoverageHome />
+
       <CTASections />
     </>
   );

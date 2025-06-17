@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const PersonalHeroSection = () => {
   return (
-    <section className='bg-gradient relative -z-10 flex w-full shrink-0 flex-col items-center justify-center gap-16 self-stretch pt-24 pb-32'>
+    <section className='bg-gradient relative flex w-full shrink-0 flex-col items-center justify-center gap-16 self-stretch pt-24 pb-32'>
       <div className='relative flex w-full max-w-7xl flex-col items-start justify-start gap-8 px-8 lg:flex-row'>
         <motion.div
           className='relative flex flex-1 flex-col items-start justify-start gap-10'
