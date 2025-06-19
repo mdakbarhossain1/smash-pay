@@ -79,7 +79,7 @@ const QuickBuy = () => {
       initial='hidden'
       whileInView='show'
       viewport={{ once: true, amount: 0.25 }}
-      className='bg-clr-14 flex shrink-0 flex-col items-center justify-start gap-16 self-stretch px-4 py-10 sm:px-6 lg:px-8'
+      className='bg-clr-14 flex shrink-0 flex-col items-center justify-start gap-16 self-stretch px-4 py-4 sm:px-6 lg:px-8'
     >
       <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-8'>
         <motion.div

@@ -58,7 +58,7 @@ const PricingSection = () => {
         {/* Title Section */}
         <div className='mb-12 flex flex-col items-center'>
           <div className='mb-6'>
-            <div className='rounded-lg border border-[rgba(191,162,246,0.2)] bg-[rgba(191,162,246,0.1)] p-2 backdrop-blur-md'>
+            <div className='rounded-lg border border-[rgba(191,162,246,0.2)] bg-[rgba(191,162,246,0.1)] p-2 text-sm backdrop-blur-md'>
               <p className='bg-gradient-to-r from-[#BFA2F6] to-[#50F8E4] bg-clip-text text-transparent'>
                 PRICING SECTION
               </p>
@@ -175,7 +175,10 @@ const PricingSection = () => {
               >
                 {degenPrice}
               </h2>
-              <p className='text-[#868C98]'>per user / {isMonthly ? 'month' : 'year'}</p>
+
+              <p className='text-sm font-semibold text-[#868C98]'>
+                per user / {isMonthly ? 'month' : 'year'}
+              </p>
               <div className='absolute top-0 right-0 h-full w-full overflow-hidden'>
                 {/* Decorative elements */}
                 <div className='absolute -top-20 -right-20 h-64 w-64 rounded-full bg-gradient-to-b from-[#50F8E4] to-[#BFA2F6] opacity-20 blur-[50px] filter'></div>
@@ -242,7 +245,7 @@ const PricingSection = () => {
             <div className='rounded-t-3xl bg-[#20232D] p-6 text-start'>
               <p className='font-bold text-white'>Enterprise</p>
               <h2 className='my-2 inline-block text-5xl font-semibold text-white'>{enterprisePrice}</h2>
-              <p className='text-[#868C98]'>let's discuss with sales team</p>
+              <p className='text-sm font-semibold text-[#868C98]'>let's discuss with sales team</p>
             </div>
             <div className='p-6'>
               <ul className='mb-8 space-y-3 text-lg font-semibold text-[#cdd0d5]'>

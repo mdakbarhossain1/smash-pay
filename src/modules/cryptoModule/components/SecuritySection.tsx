@@ -81,7 +81,7 @@ const SecuritySection = () => {
             </div>
 
             {/* Heading */}
-            <h2 className='mb-4 text-4xl font-bold text-white'>Decentralized Data Security</h2>
+            <h2 className='mb-4 text-5xl font-medium text-white'>Decentralized Data Security</h2>
 
             {/* Description */}
             <p className='mb-8 max-w-2xl text-lg text-gray-300'>
@@ -92,7 +92,7 @@ const SecuritySection = () => {
             {/* Button */}
             <a
               href='https://ckurt.lemonsqueezy.com/buy/8fa1f143-8036-49b3-bcb8-9a296ef37d87'
-              className='inline-block rounded-xl bg-teal-300 px-6 py-3 font-medium text-teal-900 transition-colors hover:bg-teal-200'
+              className='inline-block rounded-lg bg-teal-300 px-6 py-3 font-medium text-black shadow-md transition hover:shadow-lg'
               rel='noopener'
             >
               Get Started
@@ -256,7 +256,7 @@ const SecuritySection = () => {
         </div>
 
         {/* right */}
-        <div className='relative z-10 mx-auto max-w-6xl px-4 py-12'>
+        <div className='relative z-10 mx-auto max-w-7xl px-4 py-12'>
           <div className='mb-8 text-start'>
             {/* Badge */}
             <div className='mb-4 inline-block rounded-md border border-purple-200/20 bg-purple-100/10 px-3 py-1 text-sm backdrop-blur-[20px]'>
@@ -266,7 +266,7 @@ const SecuritySection = () => {
             </div>
 
             {/* Heading */}
-            <h2 className='mb-8 text-4xl font-bold text-white'>Smart Contract Automation</h2>
+            <h2 className='mb-8 text-5xl font-medium text-white'>Smart Contract Automation</h2>
 
             {/* Button */}
             <div className='flex w-full flex-col items-center justify-center gap-6 overflow-hidden'>

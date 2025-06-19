@@ -70,13 +70,13 @@ const CryptoBlogSection = () => {
           <div className='flex w-full flex-row items-start justify-between'>
             <div className='flex flex-col items-start'>
               <div className='mb-6'>
-                <div className='rounded-lg border border-[rgba(191,162,246,0.2)] bg-[rgba(191,162,246,0.1)] px-4 py-2 backdrop-blur-md'>
+                <div className='rounded-lg border border-[rgba(191,162,246,0.2)] bg-[rgba(191,162,246,0.1)] px-4 py-2 text-sm backdrop-blur-md'>
                   <p className='bg-gradient-to-r from-[#BFA2F6] to-[#50F8E4] bg-clip-text text-transparent'>
                     BLOG SECTION
                   </p>
                 </div>
               </div>
-              <h2 className='mb-4 text-center text-3xl font-bold text-white md:text-4xl'>
+              <h2 className='mb-2 text-center text-3xl font-medium text-white md:text-5xl'>
                 Read our fresh content
               </h2>
               <p className='max-w-2xl text-center text-lg text-gray-400'>
