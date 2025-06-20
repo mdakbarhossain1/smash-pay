@@ -76,7 +76,7 @@ export default function Footer() {
           label: 'Pricing'
         },
         {
-          link: '/terms-policies',
+          link: '/terms-and-conditions',
           label: 'Terms and privacy'
         }
       ]

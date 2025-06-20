@@ -67,6 +67,15 @@ const Header = () => {
             { title: 'Blog', href: '/blog' },
             { title: 'Contact Us', href: '/contact-us' }
           ]
+        },
+        {
+          groupTitle: 'Policies',
+          links: [
+            { title: 'Terms Policy', href: '/terms-and-conditions' },
+            { title: 'Privacy Policy', href: '/privacy-policy' },
+            { title: 'Cookies Policy', href: '/cookies-policy' },
+            { title: 'AML Compliance', href: '/aml-compliance' }
+          ]
         }
       ]
     },
@@ -76,7 +85,7 @@ const Header = () => {
         {
           groupTitle: 'Resources',
           links: [
-            { title: 'Terms and Policies', href: '/terms-policies' },
+            { title: 'Affiliate Program', href: '/affiliate-program-terms' },
             { title: 'FAQ', href: '/faq' },
             { title: 'Coverages', href: '/country-coverage' }
           ]

@@ -184,75 +184,14 @@ const SecuritySection = () => {
           className='relative flex h-[500px] w-full max-w-[600px] items-center gap-5 overflow-hidden rounded-lg'
           style={{ background: 'var(--token-1b1d229e-ea68-4af5-b23e-bb03c92b8dd1, #161922)' }}
         >
-          <motion.div className='flex items-center gap-4' variants={tickerVariants} animate='animate'>
-            {[...cryptoItems, ...cryptoItems, ...cryptoItems].map((item, index) => (
-              <div
-                key={`${item.id}-${index}`}
-                className='flex h-[230px] w-50 flex-shrink-0 gap-10 rounded-lg border border-gray-700/50 bg-gray-800/30 p-4 backdrop-blur-[20px]'
-                style={{
-                  background:
-                    'radial-gradient(99.99999701976785% 99.99999701976785% at 99.99999701976785% 0.0000029802321485639105%, var(--token-3ad3ba9a-ccc2-40b7-8c6f-fc587431b9c3, #31353f) 0%, var(--token-ad1f0f62-7edb-4a0e-83cc-532215fdd7d2, rgb(10, 13, 20)) 100%)'
-                }}
-              >
-                <div className='mb-2 flex flex-col items-start justify-between'>
-                  <p className='text-sm text-gray-400'>{item.username}</p>
-                  <div className='flex flex-col items-start gap-2'>
-                    <div className='flex items-center gap-1'>
-                      <div className='relative h-6 w-6'>
-                        <Image
-                          src={item.image}
-                          alt={item.symbol}
-                          fill
-                          className='rounded-full object-cover'
-                        />
-                      </div>
-                      <p className='text-md font-bold text-white'>{item.symbol}</p>
-                    </div>
-                    <h4 className='text-3xl font-semibold text-white'>{item.price}</h4>
-                  </div>
-                  <div className='flex flex-col items-start justify-between'>
-                    <div className='flex items-center gap-1'>
-                      {item.trend === 'up' ? (
-                        <div
-                          className='flex w-full items-center gap-1 rounded-sm'
-                          style={{ backgroundColor: 'rgba(0, 255, 25, 0.2)', padding: '5px 8px' }}
-                        >
-                          <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            viewBox='0 0 256 256'
-                            className='h-4 w-4 text-green-500'
-                          >
-                            <path
-                              fill='currentColor'
-                              d='M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z'
-                            />
-                          </svg>
-                          <span className='text-sm text-green-500'>UP</span>
-                        </div>
-                      ) : (
-                        <div
-                          className='flex w-full items-center gap-1 rounded-sm'
-                          style={{ backgroundColor: 'rgba(255, 0, 77, 0.2)', padding: '5px 8px' }}
-                        >
-                          <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            viewBox='0 0 256 256'
-                            className='h-4 w-4 text-red-500'
-                          >
-                            <path
-                              fill='currentColor'
-                              d='M240,128v64a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h44.69L136,107.31l-34.34,34.35a8,8,0,0,1-11.32,0l-72-72A8,8,0,0,1,29.66,58.34L96,124.69l34.34-34.35a8,8,0,0,1,11.32,0L224,172.69V128a8,8,0,0,1,16,0Z'
-                            />
-                          </svg>
-                          <span className='text-sm text-red-500'>DOWN</span>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </motion.div>
+          <Image
+            src='https://framerusercontent.com/images/EY7Wbft06m3xNjh3vuD9fRNDu0.png?scale-down-to=2048'
+            alt='Hero Image'
+            width={1200}
+            height={600}
+            className='h-auto w-full rounded-xl object-contain'
+            priority
+          />
         </div>
 
         {/* right */}

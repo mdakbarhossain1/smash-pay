@@ -79,14 +79,14 @@ const QuickBuy = () => {
       initial='hidden'
       whileInView='show'
       viewport={{ once: true, amount: 0.25 }}
-      className='bg-clr-14 flex shrink-0 flex-col items-center justify-start gap-16 self-stretch px-4 py-4 sm:px-6 lg:px-8'
+      className='bg-clr-14 flex shrink-0 flex-col items-center justify-start gap-16 self-stretch px-4 py-4 sm:px-6 md:py-24 lg:px-8'
     >
       <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-8'>
         <motion.div
           variants={fadeIn('up', 'tween', 0.2, 1)}
           className='flex w-full flex-col justify-start gap-4'
         >
-          <p className='gradient-text text-center text-base leading-relaxed font-bold tracking-tight md:text-5xl'>
+          <p className='gradient-text text-center text-3xl leading-relaxed font-bold tracking-tight md:text-7xl'>
             Quick{' '}
             <span className='gradient-text rounded-lg border border-[#3c414c] px-2 py-1 text-base font-bold text-white transition-colors hover:bg-[#2a2e38] md:text-xl'>
               Buy

@@ -9,7 +9,7 @@ const CryptoHero = () => {
       <div className='absolute -top-40 -left-40 h-96 w-96 rounded-full bg-green-300/10 blur-3xl' />
       <div className='absolute -right-40 -bottom-40 h-96 w-96 rounded-full bg-purple-400/10 blur-3xl' />
 
-      <div className='relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-start gap-16 lg:flex-row'>
+      <div className='relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-between gap-16 lg:flex-row'>
         {/* Left Content */}
         <div className='max-w-2xl space-y-6 text-center lg:text-left'>
           <p className='inline-block rounded border border-purple-300/20 bg-purple-300/10 px-3 py-1 text-sm font-semibold text-purple-300 backdrop-blur'>
@@ -18,12 +18,12 @@ const CryptoHero = () => {
             </span>
           </p>
 
-          <h1 className='text-4xl leading-tight font-bold text-white md:text-5xl'>
+          <h1 className='text-4xl leading-tight font-bold text-white md:text-7xl'>
             <span className='block bg-gradient-to-b from-white to-gray-800 bg-clip-text text-transparent'>
-              Promote your Web3 Startup
+              NEXT <br /> GENERATION
             </span>
             <span className='block bg-gradient-to-b from-white to-gray-800 bg-clip-text text-transparent'>
-              with Cryptox Framer Template
+              FIAT ON-RAMP
             </span>
           </h1>
 
@@ -42,18 +42,12 @@ const CryptoHero = () => {
         <div
           className='relative h-full w-full max-w-3xl'
           style={{
-            height: '600px'
+            height: '633px',
+            width: '430px'
           }}
         >
           <div className='absolute inset-0 -z-10 rounded-2xl bg-green-300/10 blur-2xl' />
-          {/* <Image
-            src='https://framerusercontent.com/images/EY7Wbft06m3xNjh3vuD9fRNDu0.png?scale-down-to=2048'
-            alt='Hero Image'
-            width={1200}
-            height={600}
-            className='h-auto w-full rounded-xl object-contain'
-            priority
-          /> */}
+
           <iframe
             src='https://buy.onramper.com?apiKey=pk_prod_01J94D4NB6SD2HHMPDTRJ1H8T9&mode=buy,sell,swap&defaultFiat=usd&defaultPaymentMethod=creditcard&sell_defaultFiat=usd&sell_defaultPaymentMethod=creditcard&themeName=dark&successRedirectUrl=https%3A%2F%2Fsmashpay.vercel.app&failureRedirectUrl=https%3A%2F%2Fsmashpay.vercel.app'
             title='SmashPay'
