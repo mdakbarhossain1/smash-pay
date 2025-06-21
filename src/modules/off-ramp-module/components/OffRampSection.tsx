@@ -49,11 +49,12 @@ const OffRampSection = () => {
               </p>
 
               <Image
-                src='/crypto/offramp.jpg'
-                alt='arrow'
-                width={650}
-                height={200}
-                className='mt-15 mb-5 rounded object-contain'
+                src='https://framerusercontent.com/images/EY7Wbft06m3xNjh3vuD9fRNDu0.png?scale-down-to=2048'
+                alt='Hero Image'
+                width={1200}
+                height={600}
+                className='my-10 h-auto w-full rounded-xl object-contain'
+                priority
               />
 
               <ul className='mt-15 max-w-xl space-y-5'>

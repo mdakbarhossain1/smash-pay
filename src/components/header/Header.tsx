@@ -67,6 +67,10 @@ const Header = () => {
             { title: 'Blog', href: '/blog' },
             { title: 'Contact Us', href: '/contact-us' }
           ]
+        },
+        {
+          groupTitle: 'Policies',
+          links: [{ title: 'terms-policies', href: '/terms-policies' }]
         }
       ]
     },
@@ -76,7 +80,6 @@ const Header = () => {
         {
           groupTitle: 'Resources',
           links: [
-            { title: 'Terms and Policies', href: '/terms-policies' },
             { title: 'FAQ', href: '/faq' },
             { title: 'Coverages', href: '/country-coverage' }
           ]

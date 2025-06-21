@@ -82,6 +82,9 @@ const EcosystemSlider = () => {
             'linear-gradient(135deg,var(--token-3ad3ba9a-ccc2-40b7-8c6f-fc587431b9c3, #31353f) 0%,var(--token-ad1f0f62-7edb-4a0e-83cc-532215fdd7d2, rgb(10, 13, 20)) 100%)'
         }}
       >
+        {/* Background Circles */}
+        <div className='absolute -top-40 -left-40 h-96 w-96 rounded-full bg-green-300/10 blur-3xl' />
+        <div className='absolute -right-40 -bottom-40 h-96 w-96 rounded-full bg-purple-400/10 blur-3xl' />
         {/* Content section */}
         <div className='relative z-10'>
           <div className='mb-6'>
@@ -90,12 +93,12 @@ const EcosystemSlider = () => {
                 ECOSYSTEM
               </span>
             </div>
-            <h2 className='mb-4 text-4xl font-bold text-white'>
+            <h2 className='mb-4 text-5xl font-medium text-white'>
               Interoperable <br />
               Ecosystem
             </h2>
-            <p className='max-w-2xl text-start text-lg text-gray-300'>
-              Our platform supports cross-chain interactions, ensuring seamless integration with other
+            <p className='text-medium max-w-2xl text-start text-lg text-gray-300'>
+              Our platform supports cross-chain interactions, ensuring <br /> seamless integration with other
               blockchain networks.
             </p>
           </div>

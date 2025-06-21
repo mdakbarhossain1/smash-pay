@@ -69,7 +69,8 @@ const NFTBlock = () => {
         {/* Button at bottom left */}
         <div className='mt-auto'>
           <Link
-            href='/nft/'
+            href='https://nft.smashpay.io/ethereum'
+            target='_blank'
             className='inline-block rounded-lg bg-purple-600 px-8 py-3 font-medium text-white transition-colors duration-300 hover:bg-purple-700'
           >
             Explore
