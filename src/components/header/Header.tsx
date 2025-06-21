@@ -70,12 +70,7 @@ const Header = () => {
         },
         {
           groupTitle: 'Policies',
-          links: [
-            { title: 'Terms Policy', href: '/terms-and-conditions' },
-            { title: 'Privacy Policy', href: '/privacy-policy' },
-            { title: 'Cookies Policy', href: '/cookies-policy' },
-            { title: 'AML Compliance', href: '/aml-compliance' }
-          ]
+          links: [{ title: 'terms-policies', href: '/terms-policies' }]
         }
       ]
     },
@@ -85,7 +80,6 @@ const Header = () => {
         {
           groupTitle: 'Resources',
           links: [
-            { title: 'Affiliate Program', href: '/affiliate-program-terms' },
             { title: 'FAQ', href: '/faq' },
             { title: 'Coverages', href: '/country-coverage' }
           ]

@@ -2,9 +2,7 @@ import './termsAndPolicy.css';
 
 const TermsAndPoliciesModule = () => {
   return (
-    <div className='cu-container'>
-      <h1 className='cu-title'>SmashTech Ventures Ltd (SmashPay) Terms of Service</h1>
-
+    <div className='cu-container bg-gradient-4'>
       {/* Section I: Introduction */}
       <div className='cu-items'>
         <h2 className='cu-subtitle'>I. Introduction</h2>

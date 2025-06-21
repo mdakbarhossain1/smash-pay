@@ -2,9 +2,7 @@ import './AffiliateProgramTerms.css';
 
 const AffiliateProgramTerms = () => {
   return (
-    <div className='cu-container'>
-      <h1 className='cu-title'>SmashPay Affiliate Program General Terms and Conditions</h1>
-
+    <div className='cu-container bg-gradient-4'>
       {/* Section I: General Rules */}
       <div className='cu-items'>
         <h2 className='cu-subtitle'>I. General Rules</h2>

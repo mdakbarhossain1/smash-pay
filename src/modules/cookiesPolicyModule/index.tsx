@@ -2,9 +2,8 @@ import './cookiesPolicy.css';
 
 const CookiesPolicy = () => {
   return (
-    <div className='cu-container'>
+    <div className='cu-container bg-gradient-4'>
       <h1 className='cu-title'>
-        Cookies Policy{' '}
         <p style={{ fontSize: '18px', marginTop: '5px' }}>
           Understanding how we use cookies on the SmashPay Platform
         </p>

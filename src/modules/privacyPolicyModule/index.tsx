@@ -1,10 +1,7 @@
 import './privacyPolicy.css';
 const PrivacyPolicyModule = () => {
   return (
-    <div className='cu-container'>
-      <h1 className='cu-title'>
-        Privacy Policy <p style={{ fontSize: '18px', marginTop: '5px' }}>SmashTech Ventures Ltd (SmashPay)</p>
-      </h1>
+    <div className='cu-container bg-gradient-4'>
       <div className='cu-items'>
         <h2 className='cu-subtitle'>I. INTRODUCTION</h2>
         <p className='cu-text'>

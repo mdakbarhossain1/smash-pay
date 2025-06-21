@@ -3,7 +3,7 @@ const AmlCompliance = () => {
   return (
     <div className='cu-container'>
       <h1 className='cu-title'>
-        Compliance AML{' '}
+        {' '}
         <p style={{ fontSize: '18px', marginTop: '5px' }}>Compliance AML/CTF and Due Diligence policies</p>
       </h1>
       <div className='cu-items'>
