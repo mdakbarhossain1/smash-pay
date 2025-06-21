@@ -7,7 +7,8 @@ const nextConfig: NextConfig = {
       'img.freepik.com',
       'image.freepik.com',
       'framerusercontent.com',
-      'images.unsplash.com'
+      'images.unsplash.com',
+      'source.unsplash.com'
     ]
   }
 };

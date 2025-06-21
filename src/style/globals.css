@@ -768,3 +768,37 @@
 .animate-glitter {
   animation: glitter 60s linear infinite;
 }
+
+/* ------------------------------------  */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 30s linear infinite;
+}
+
+.earth-globe {
+  position: relative;
+  box-shadow:
+    inset -10px -10px 40px #00000080,
+    inset 10px 10px 30px #ffffff80,
+    -5px -5px 20px #ffffff80;
+}
+
+.earth-globe::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: -5px -5px 20px #ffffff80 inset;
+  opacity: 0.3;
+}
