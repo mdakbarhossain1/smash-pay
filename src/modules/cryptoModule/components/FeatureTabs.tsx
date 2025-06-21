@@ -48,7 +48,7 @@ const FeatureTabs = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 rounded-xl px-4 py-2 transition-all duration-300 ${
+              className={`flex cursor-pointer items-center gap-2 rounded-xl px-4 py-2 transition-all duration-300 ${
                 activeTab === tab.id
                   ? 'bg-teal-300 font-semibold text-black'
                   : 'bg-white/10 text-gray-300 hover:bg-white/20'
