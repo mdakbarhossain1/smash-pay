@@ -3,8 +3,10 @@ import CTASections from '../home/components/CTASections';
 import Featured from '../home/components/Featured';
 import CryptoHero from './components/CryptoHero';
 import DuoContentSection from './components/DuoContentSection';
+import FeaturesSection from './components/FeaturesSection';
 import ForwardThinkingCard from './components/ForwardThinkingCard';
 import GameFiCard from './components/GameFiCard';
+import Grid3DCardLayout from './components/Grid3DCardLayout';
 import NFTBlock from './components/NFTBlock';
 import QuickBuy from './components/QuickBuy';
 import SecuritySection from './components/SecuritySection';
@@ -55,7 +57,8 @@ const CryptoModule = () => {
           </div>
         </div>
       </section>
-
+      <FeaturesSection />
+      <Grid3DCardLayout />
       <CTASections />
     </>
   );
