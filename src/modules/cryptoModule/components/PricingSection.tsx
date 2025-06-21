@@ -64,7 +64,7 @@ const PricingSection = () => {
               </p>
             </div>
           </div>
-          <h1 className='mb-4 text-center text-6xl font-semibold text-white'>
+          <h1 className='mb-4 text-center text-3xl font-semibold text-white md:text-6xl'>
             Comprehensive pricing overview
           </h1>
           <p className='max-w-3xl text-center text-lg text-gray-300'>

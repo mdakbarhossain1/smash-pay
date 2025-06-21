@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface CryptoItem {
   id: number;
@@ -81,7 +82,7 @@ const SecuritySection = () => {
             </div>
 
             {/* Heading */}
-            <h2 className='mb-4 text-5xl font-medium text-white'>Decentralized Data Security</h2>
+            <h2 className='mb-4 text-3xl font-medium text-white md:text-5xl'>Decentralized Data Security</h2>
 
             {/* Description */}
             <p className='mb-8 max-w-2xl text-lg text-gray-300'>
@@ -90,13 +91,13 @@ const SecuritySection = () => {
             </p>
 
             {/* Button */}
-            <a
+            <Link
               href='https://ckurt.lemonsqueezy.com/buy/8fa1f143-8036-49b3-bcb8-9a296ef37d87'
               className='inline-block rounded-lg bg-teal-300 px-6 py-3 font-medium text-black shadow-md transition hover:shadow-lg'
               rel='noopener'
             >
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -205,7 +206,7 @@ const SecuritySection = () => {
             </div>
 
             {/* Heading */}
-            <h2 className='mb-8 text-5xl font-medium text-white'>Smart Contract Automation</h2>
+            <h2 className='mb-8 text-3xl font-medium text-white md:text-5xl'>Smart Contract Automation</h2>
 
             {/* Button */}
             <div className='flex w-full flex-col items-center justify-center gap-6 overflow-hidden'>

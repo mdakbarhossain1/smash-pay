@@ -93,7 +93,7 @@ const EcosystemSlider = () => {
                 ECOSYSTEM
               </span>
             </div>
-            <h2 className='mb-4 text-5xl font-medium text-white'>
+            <h2 className='mb-4 text-3xl font-medium text-white md:text-5xl'>
               Interoperable <br />
               Ecosystem
             </h2>

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 // Animation helper
@@ -58,37 +59,38 @@ const PayoutsHero = () => {
             burdens.
           </motion.p>
 
-          <motion.a
-            href='#apply-form'
-            className='group hover:bg-opacity-90 inline-flex items-center rounded-full bg-white bg-gradient-to-b from-[#151820] to-[#010101] px-6 py-3 font-medium text-white transition'
-            {...fadeInUp(0.3)}
-            animate={isLoaded ? fadeInUp(0.3).animate : {}}
-          >
-            <span className='mr-2'>Get in touch</span>
-            <div className='relative h-5 w-5'>
-              <svg
-                className='absolute top-0 left-0 transition-transform duration-300 group-hover:translate-x-1'
-                xmlns='http://www.w3.org/2000/svg'
-                width='20'
-                height='20'
-                viewBox='0 0 24 24'
-                fill='none'
-              >
-                <path
-                  fillRule='evenodd'
-                  clipRule='evenodd'
-                  d='M16.2929 17.7071L6.29289 7.70712L7.70711 6.29291L17.7071 16.2929L16.2929 17.7071Z'
-                  fill='currentColor'
-                />
-                <path
-                  fillRule='evenodd'
-                  clipRule='evenodd'
-                  d='M14.5858 16L6.29289 7.70712L7.70711 6.29291L16 14.5858V8.00002C16 7.44773 16.4477 7.00001 17 7.00001C17.5523 7.00001 18 7.44773 18 8.00002V17C18 17.5523 17.5523 18 17 18H8C7.44771 18 7 17.5523 7 17C7 16.4477 7.44771 16 8 16H14.5858Z'
-                  fill='currentColor'
-                />
-              </svg>
-            </div>
-          </motion.a>
+          <Link href='#apply-form'>
+            <motion.div
+              className='group hover:bg-opacity-90 inline-flex items-center rounded-full bg-white bg-gradient-to-b from-[#151820] to-[#010101] px-6 py-3 font-medium text-white transition'
+              {...fadeInUp(0.3)}
+              animate={isLoaded ? fadeInUp(0.3).animate : {}}
+            >
+              <span className='mr-2'>Get in touch</span>
+              <div className='relative h-5 w-5'>
+                <svg
+                  className='absolute top-0 left-0 transition-transform duration-300 group-hover:translate-x-1'
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='20'
+                  height='20'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                >
+                  <path
+                    fillRule='evenodd'
+                    clipRule='evenodd'
+                    d='M16.2929 17.7071L6.29289 7.70712L7.70711 6.29291L17.7071 16.2929L16.2929 17.7071Z'
+                    fill='currentColor'
+                  />
+                  <path
+                    fillRule='evenodd'
+                    clipRule='evenodd'
+                    d='M14.5858 16L6.29289 7.70712L7.70711 6.29291L16 14.5858V8.00002C16 7.44773 16.4477 7.00001 17 7.00001C17.5523 7.00001 18 7.44773 18 8.00002V17C18 17.5523 17.5523 18 17 18H8C7.44771 18 7 17.5523 7 17C7 16.4477 7.44771 16 8 16H14.5858Z'
+                    fill='currentColor'
+                  />
+                </svg>
+              </div>
+            </motion.div>
+          </Link>
         </div>
 
         {/* Right Images */}

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import './cookiesPolicy.css';
 
 const CookiesPolicy = () => {
@@ -201,23 +202,23 @@ const CookiesPolicy = () => {
         <ul className='cu-list'>
           <li>
             <strong>For Firefox “Private Browsing” managing cookies settings:</strong>{' '}
-            <a href='https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop?redirectslug=enable-and-disable-cookies-website-preferences&redirectlocale=en-US'>
+            <Link href='https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop?redirectslug=enable-and-disable-cookies-website-preferences&redirectlocale=en-US'>
               Click here
-            </a>
+            </Link>
           </li>
           <li>
             <strong>For Chrome “Incognito” managing cookies settings:</strong>{' '}
-            <a href='https://support.google.com/chrome/answer/95647?hl=en'>Click here</a>
+            <Link href='https://support.google.com/chrome/answer/95647?hl=en'>Click here</Link>
           </li>
           <li>
             <strong>For Internet Explorer “InPrivate” managing cookies settings:</strong>{' '}
-            <a href='https://support.microsoft.com/en-us/windows/delete-and-manage-cookies-168dab11-0753-043d-7c16-ede5947fc64d'>
+            <Link href='https://support.microsoft.com/en-us/windows/delete-and-manage-cookies-168dab11-0753-043d-7c16-ede5947fc64d'>
               Click here
-            </a>
+            </Link>
           </li>
           <li>
             <strong>For Safari for Mac managing cookies settings:</strong>{' '}
-            <a href='https://support.apple.com/en-gb/guide/safari/sfri11471/mac'>Click here</a>
+            <Link href='https://support.apple.com/en-gb/guide/safari/sfri11471/mac'>Click here</Link>
           </li>
         </ul>
       </div>
@@ -260,7 +261,7 @@ const CookiesPolicy = () => {
           </li>
           <li>
             If you have questions or concerns regarding this Policy or the SmashPay privacy practices, please
-            contact us by email at <a href='mailto:support@smashpay.io'>support@smashpay.io</a>.
+            contact us by email at <Link href='mailto:support@smashpay.io'>support@smashpay.io</Link>.
           </li>
         </ol>
       </div>

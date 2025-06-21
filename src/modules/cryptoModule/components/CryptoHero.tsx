@@ -40,7 +40,7 @@ const CryptoHero = () => {
 
         {/* Hero Image */}
         <div
-          className='relative h-full w-full max-w-3xl'
+          className='relative h-full w-full max-w-3xl px-8 md:px-0'
           style={{
             height: '633px',
             width: '430px'

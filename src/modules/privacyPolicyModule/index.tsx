@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import './privacyPolicy.css';
 const PrivacyPolicyModule = () => {
   return (
@@ -256,7 +257,7 @@ const PrivacyPolicyModule = () => {
         </ul>
         <p className='cu-text'>
           Contact SmashPay’s Data Protection Officer (DPO): <br /> Email:{' '}
-          <a href='mailto:dpo@smashpay.io'> dpo@smashpay.io</a>.
+          <Link href='mailto:dpo@smashpay.io'> dpo@smashpay.io</Link>.
         </p>
       </div>
       <div className='cu-items'>
@@ -267,8 +268,8 @@ const PrivacyPolicyModule = () => {
           <li>✔ Any updates will be communicated via the SmashPay Platform or email.</li>
         </ul>
         <p className='cu-text'>
-          For questions or concerns, please contact us at <a href='mailto:dpo@smashpay.io'>dpo@smashpay.io</a>
-          .
+          For questions or concerns, please contact us at{' '}
+          <Link href='mailto:dpo@smashpay.io'>dpo@smashpay.io</Link>.
         </p>
       </div>
     </div>

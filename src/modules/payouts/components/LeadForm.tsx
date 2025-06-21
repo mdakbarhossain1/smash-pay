@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 interface FormData {
@@ -251,7 +252,7 @@ const LeadForm = () => {
                 <span className='ml-3 text-sm'>
                   Yes, I would like to receive marketing communications and advertisements regarding SMASHPAY
                   products, services and events in accordance with SMASHPAY's Privacy Notices available at our{' '}
-                  <a
+                  <Link
                     className='text-blue-400 hover:underline'
                     title='Follow link'
                     target='_blank'
@@ -259,7 +260,7 @@ const LeadForm = () => {
                     rel='nofollow noopener'
                   >
                     Privacy Centre
-                  </a>
+                  </Link>
                   . I can unsubscribe at any later time.
                 </span>
               </label>

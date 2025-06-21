@@ -95,6 +95,12 @@ export default function Footer() {
     { icon: '/home/youtube-10.svg', alt: 'YouTube' }
   ];
 
+  // const [date, setDate] = useState<number>();
+
+  // useEffect(() => {
+  //   setDate(new Date().getFullYear());
+  // }, []);
+
   return (
     <footer className='bg-clr-14 relative w-full overflow-hidden'>
       {/* Footer Content */}
@@ -104,17 +110,23 @@ export default function Footer() {
             {/* Footer Links */}
             <div className='flex flex-col gap-12 lg:flex-row lg:gap-16'>
               {/* Logo */}
-              <Link href='/'>
-                <div className='w-full lg:w-auto'>
-                  <Image
-                    src='/home/smash-pay-logo-1-11.png'
-                    alt='SmashPay Logo'
-                    width={200}
-                    height={100}
-                    className='aspect-[146/28] object-cover'
-                  />
-                </div>
-              </Link>
+              <div className='flex flex-col gap-1'>
+                <Link href='/'>
+                  <div className='w-full lg:w-auto'>
+                    <Image
+                      src='/home/smash-pay-logo-1-11.png'
+                      alt='SmashPay Logo'
+                      width={200}
+                      height={100}
+                      className='aspect-[146/28] object-cover'
+                    />
+                  </div>
+                </Link>
+                <p className='text-[14px] text-gray-300 md:pl-10'>
+                  SMASHTECH VENTURES LTD. <br /> DEPT 5529 126 EAST FERRY ROAD <br /> CANARY WHARF LONDON
+                  ENGLAND E14 9FP ENGLAND LONDON N22 8HH.
+                </p>
+              </div>
 
               {/* Links Grid */}
               <div className='grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4'>
@@ -186,7 +198,8 @@ export default function Footer() {
                 transition={{ duration: 0.5 }}
                 className='text-sm font-normal tracking-tight text-gray-300'
               >
-                Copyright © SmashPay {new Date().getFullYear()}.
+                Copyright © 2025 SmashTech Ventures Ltd. <br />
+                All Rights Reserved.
               </motion.div>
 
               {/* Social Links */}
@@ -197,13 +210,13 @@ export default function Footer() {
                 className='flex gap-6'
               >
                 {socialLinks.map((social, index) => (
-                  <a
+                  <Link
                     key={index}
                     href='#'
                     className='flex h-12 w-12 items-center justify-center rounded-full border border-[#3c414c] bg-gradient-to-b from-[#171a23] to-[#30343e] transition-opacity hover:opacity-90'
                   >
                     <Image src={social.icon} alt={social.alt} width={16} height={16} />
-                  </a>
+                  </Link>
                 ))}
               </motion.div>
 

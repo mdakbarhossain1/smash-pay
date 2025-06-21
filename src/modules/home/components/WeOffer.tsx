@@ -135,7 +135,7 @@ const WeOffer = () => {
                 </motion.p>
               </div>
               <Link href={'/personal'} passHref>
-                <motion.a variants={itemVariants}>
+                <motion.div variants={itemVariants}>
                   <button
                     className='flex cursor-pointer items-center gap-1.5 rounded-[52px] border border-[#3c414c] px-6 py-3'
                     style={{
@@ -150,7 +150,7 @@ const WeOffer = () => {
                       src='/home/arrow-right0.svg'
                     />
                   </button>
-                </motion.a>
+                </motion.div>
               </Link>
             </div>
 
@@ -225,7 +225,7 @@ const WeOffer = () => {
                 </motion.p>
               </div>
               <Link href={'/business'} passHref>
-                <motion.a variants={itemVariants}>
+                <motion.div variants={itemVariants}>
                   <button
                     className='flex cursor-pointer items-center gap-1.5 rounded-[52px] border border-[#3c414c] px-6 py-3'
                     style={{
@@ -240,7 +240,7 @@ const WeOffer = () => {
                       src='/home/arrow-right0.svg'
                     />
                   </button>
-                </motion.a>
+                </motion.div>
               </Link>
             </div>
 

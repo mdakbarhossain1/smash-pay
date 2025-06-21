@@ -1,5 +1,3 @@
-import CountryCoverageHome from '../home/components/CountryCoverageHome';
-import CTASections from '../home/components/CTASections';
 import NftCardSection from './components/NftCardSection';
 import NftHero from './components/NftHero';
 import NftTesti from './components/NftTesti';
@@ -12,8 +10,6 @@ const NftModule = () => {
       <NftCardSection />
       <TabSection />
       <NftTesti />
-      <CountryCoverageHome />
-      <CTASections />
     </>
   );
 };

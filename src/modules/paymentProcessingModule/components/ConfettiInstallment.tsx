@@ -2,7 +2,7 @@
 
 import confetti from 'canvas-confetti';
 import { RotateCcw } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const plans = [3, 6, 12];
 
@@ -11,6 +11,27 @@ export default function ConfettiInstallment() {
   const canvasInstallRef = useRef<HTMLCanvasElement | null>(null);
   const confettiRef = useRef<ReturnType<typeof confetti.create> | null>(null);
 
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    // Set initial dimensions
+    setDimensions({
+      width: window.innerWidth,
+      height: window.innerHeight
+    });
+
+    // Handle resize
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const handleClick = () => {
     if (!canvasInstallRef.current) return;
 
@@ -18,14 +39,15 @@ export default function ConfettiInstallment() {
     if (!confettiRef.current) {
       confettiRef.current = confetti.create(canvasInstallRef.current, {
         resize: true,
-        useWorker: false // Disable the shared worker
+        useWorker: false
       });
     }
 
     confettiRef.current({
       particleCount: 100,
       spread: 120,
-      origin: { y: 0.6 }
+      origin: { y: 0.6 },
+      disableForReducedMotion: true
     });
     setTriggered(true);
   };
@@ -62,8 +84,8 @@ export default function ConfettiInstallment() {
         <canvas
           ref={canvasInstallRef}
           className='pointer-events-none absolute top-0 left-0 h-full w-full'
-          width={window.innerWidth}
-          height={window.innerHeight}
+          width={dimensions.width}
+          height={dimensions.height}
         />
         {!triggered ? (
           <>

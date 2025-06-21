@@ -42,7 +42,7 @@ const SuccessNumbers: React.FC = () => {
       </p>
 
       {/* Stats */}
-      <div className='mx-auto mb-24 grid h-[200px] max-w-7xl grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4'>
+      <div className='mx-auto mb-10 grid max-w-7xl grid-cols-1 gap-2 sm:grid-cols-2 md:h-[200px] lg:grid-cols-4'>
         {stats.map((stat, idx) => (
           <div
             key={idx}

@@ -1,17 +1,15 @@
 'use client';
-import dynamic from 'next/dynamic';
 import CountryCoverageHome from '../home/components/CountryCoverageHome';
 import CTASections from '../home/components/CTASections';
 import FAQSection from '../home/FAQSection';
 import PromotionSection from '../home/PromotionSection';
+import ConfettieSubscription from './components/ConfettieSubscription';
+import ConfettiGenerateLink from './components/ConfettiGenerateLink';
+import ConfettiInstallment from './components/ConfettiInstallment';
 import KeyBenifits from './components/KeyBenifits';
 import PaymentOptions from './components/PaymentOptions';
 import ProcessingHero from './components/ProcessingHero';
 import SectionWhoAreWe from './components/SectionWhoAreWe';
-
-const ConfettieSubscription = dynamic(() => import('./components/ConfettieSubscription'), { ssr: false });
-const ConfettiInstallment = dynamic(() => import('./components/ConfettiInstallment'), { ssr: false });
-const ConfettiGenerateLink = dynamic(() => import('./components/ConfettiGenerateLink'), { ssr: false });
 
 const PaymentProcessingModule = () => {
   return (

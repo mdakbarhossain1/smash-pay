@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import './termsAndPolicy.css';
 
 const TermsAndPoliciesModule = () => {
@@ -1233,15 +1234,15 @@ TERMINATION OF THE SmashPay SERVICES. CLOSURE OF ACCOUNTS */}
           <li className='cu-text'>
             Any notice required or made under these Terms or any Exhibit from/by the Client to SmashPay shall
             only be made via e-mail in English to{' '}
-            <a href='mailto:support@SmashPay.com'> support@SmashPay.com</a>.
+            <Link href='mailto:support@SmashPay.com'> support@SmashPay.com</Link>.
           </li>
           <li className='cu-text'>
             Your feedback, questions, or complaints may be referred to SmashPay via e-mail in English to
-            <a href='mailto:support@SmashPay.com'> support@SmashPay.com</a> or through other communication
-            channels indicated by SmashPay from time to time on the SmashPay Platform. We will do our best to
-            respond as soon as possible. However, for more complicated issues, it may take SmashPay up to 30
-            (thirty) days to get back to you. We will not be responsible for any loss or damage suffered as a
-            result of our failure to or delay in responding within the above period.
+            <Link href='mailto:support@SmashPay.com'> support@SmashPay.com</Link> or through other
+            communication channels indicated by SmashPay from time to time on the SmashPay Platform. We will
+            do our best to respond as soon as possible. However, for more complicated issues, it may take
+            SmashPay up to 30 (thirty) days to get back to you. We will not be responsible for any loss or
+            damage suffered as a result of our failure to or delay in responding within the above period.
           </li>
           <li className='cu-text'>
             You shall be fully responsible for the security and authenticity of all instructions sent through

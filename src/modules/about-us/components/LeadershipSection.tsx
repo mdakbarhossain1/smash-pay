@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import { FaLinkedin } from 'react-icons/fa';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
@@ -153,9 +154,9 @@ const LeadershipSection = () => {
                       {leader.title}
                     </p>
                   </div>
-                  <a href={leader.linkedin} target='_blank' rel='noopener noreferrer'>
+                  <Link href={leader.linkedin} target='_blank' rel='noopener noreferrer'>
                     <FaLinkedin className='h-6 w-6 text-white transition-colors duration-200 hover:text-[#0077b5]' />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </motion.div>

@@ -84,7 +84,7 @@ const SmashPayCard = () => {
           </div>
 
           <Link href={'/card'} passHref>
-            <motion.a
+            <motion.div
               className='flex flex-row items-center justify-center gap-2.5 rounded-[64px] border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -93,7 +93,7 @@ const SmashPayCard = () => {
                 Learn More
               </span>
               <img className='relative h-5 w-5 shrink-0 overflow-visible' src='/home/arrow-right0.svg' />
-            </motion.a>
+            </motion.div>
           </Link>
         </motion.div>
       </div>

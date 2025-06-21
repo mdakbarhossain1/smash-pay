@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type CountryCardProps = {
   country: string;
@@ -20,12 +21,12 @@ const CountryCard = ({ country, flag, phone }: CountryCardProps) => {
           {country}
         </div>
       </div>
-      <a
+      <Link
         href={`tel:${phone.replace(/\s+/g, '')}`}
         className='self-stretch text-left text-lg tracking-tight text-gray-300 underline'
       >
         {phone}
-      </a>
+      </Link>
     </motion.div>
   );
 };

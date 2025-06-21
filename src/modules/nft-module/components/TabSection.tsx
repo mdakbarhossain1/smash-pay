@@ -6,22 +6,19 @@ import { useState } from 'react';
 
 const tabs = [
   {
+    id: 'featured',
+    title: 'FULL METAL RABBIT - KOSMO V2',
+    image: '/crypto/kosmo.png'
+  },
+  {
     id: 'classic',
-    title: 'Classic',
-    image: 'https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2232&auto=format&fit=crop',
-    bgGradient: 'from-purple-900/30 via-black to-blue-900/30'
+    title: 'TrailHeads',
+    image: '/crypto/35418159_about_media_347c2cbd-6970-48ad-848c-654d1c7fdfaa.avif'
   },
   {
-    id: 'space',
-    title: 'Space',
-    image: 'https://images.unsplash.com/photo-1454789548928-9efd52dc4031?q=80&w=2080&auto=format&fit=crop',
-    bgGradient: 'from-indigo-900/30 via-black to-violet-900/30'
-  },
-  {
-    id: 'sky',
-    title: 'Sky',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop',
-    bgGradient: 'from-cyan-900/30 via-black to-blue-900/30'
+    id: 'trending',
+    title: 'Cupang Ventures',
+    image: '/crypto/35323342_about_media_027e48df-c3c2-4edc-beaa-df3349e7660d.avif'
   }
 ];
 
@@ -29,18 +26,8 @@ const TabSection = () => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
   return (
-    <div className={`relative w-full overflow-hidden px-6 py-32`}>
+    <div className={`bg-gradient relative w-full overflow-hidden px-6 py-32`}>
       {/* Animated background gradient */}
-      <AnimatePresence mode='wait'>
-        <motion.div
-          key={selectedTab.id}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
-          className={`absolute inset-0 bg-gradient-to-b ${selectedTab.bgGradient} -z-10`}
-        />
-      </AnimatePresence>
 
       {/* Radial gradient overlay */}
       <div className='absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-black/80 to-black' />
@@ -48,29 +35,36 @@ const TabSection = () => {
       {/* Content container */}
       <div className='mx-auto flex max-w-6xl flex-col gap-8'>
         {/* Header */}
-        <div className='mb-6 text-center'>
-          <h2 className='gradient-text-2 mb-4 text-4xl font-bold text-transparent md:text-6xl'>
-            CUSTOMIZABLE NFT EXPERIENCE
+        <div className='flex flex-col items-center'>
+          <div className='mb-4 inline-block rounded-md border border-purple-300/20 bg-purple-300/10 px-4 py-1 text-sm backdrop-blur'>
+            <p className='bg-gradient-to-l from-purple-300 to-teal-300 bg-clip-text font-semibold tracking-wider text-transparent'>
+              Custom NFT Solution
+            </p>
+          </div>
+
+          {/* Heading */}
+          <h2 className='mb-2 text-center text-3xl font-semibold text-white md:text-5xl'>
+            Effortless Custom NFT Integration
           </h2>
-          <p className='mx-auto max-w-2xl text-lg text-gray-300'>
-            All the benefits of a white label integration without the hassle of building it! Create your
-            unique NFT collection with our customizable templates.
+          <p className='mx-auto mb-8 text-center text-lg font-medium text-gray-300'>
+            Unlock the power of a white-label NFT solution—no complex setup required. Easily launch{' '}
+            <br className='hidden md:block' /> your own branded NFT collection using our fully customizable
+            templates.
           </p>
         </div>
-
         {/* Horizontal Tabs */}
         <div className='flex justify-center gap-4 overflow-x-auto pb-2'>
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setSelectedTab(tab)}
-              className={`text-md flex-shrink-0 cursor-pointer rounded-lg px-6 py-2 font-medium whitespace-nowrap transition-all duration-300 ${
+              className={`text-md flex-shrink-0 cursor-pointer rounded-lg px-6 py-2 font-medium whitespace-nowrap capitalize transition-all duration-300 ${
                 selectedTab.id === tab.id
                   ? 'bg-gradient-to-r from-[#a4dd05] to-[#a4d5] text-white shadow-lg shadow-purple-500/30'
                   : 'bg-gradient-4 border border-gray-700 text-gray-300 backdrop-blur-sm'
               }`}
             >
-              {tab.title}
+              {tab.id}
             </button>
           ))}
         </div>
@@ -96,7 +90,7 @@ const TabSection = () => {
               />
               <div className='absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80' />
               <div className='absolute bottom-6 left-6'>
-                <h3 className='gradient-text-2 text-3xl font-bold'>{selectedTab.title} Collection</h3>
+                <h3 className='gradient-text-2 text-3xl font-bold'>{selectedTab.title} Collections</h3>
                 <p className='mt-2 text-gray-300'>Exclusive {selectedTab.title.toLowerCase()} themed NFTs</p>
               </div>
             </motion.div>

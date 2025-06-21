@@ -131,7 +131,7 @@ const Hero = () => {
               </motion.button>
 
               <Link href='/contact-us' passHref>
-                <motion.a
+                <motion.div
                   className='flex items-center gap-2.5 rounded-[64px] border border-[#3c414c] px-6 py-4 text-lg font-semibold text-white md:px-8'
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -142,7 +142,7 @@ const Hero = () => {
                     src='/home/arrow-right2.svg'
                     alt='Arrow right'
                   />
-                </motion.a>
+                </motion.div>
               </Link>
             </motion.div>
           </motion.div>

@@ -2,35 +2,54 @@
 
 import confetti from 'canvas-confetti';
 import { RotateCcw } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function ConfettiGenerateLink() {
   const [triggeredLink, setTriggeredLink] = useState(false);
   const canvasLinkRef = useRef<HTMLCanvasElement | null>(null);
   const confettiRef = useRef<ReturnType<typeof confetti.create> | null>(null);
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    // Set initial dimensions
+    setDimensions({
+      width: window.innerWidth,
+      height: window.innerHeight
+    });
+
+    // Handle resize
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleClick = () => {
     if (!canvasLinkRef.current) return;
 
-    // Create a new confetti instance if it doesn't exist
     if (!confettiRef.current) {
       confettiRef.current = confetti.create(canvasLinkRef.current, {
         resize: true,
-        useWorker: false
+        useWorker: true
       });
     }
 
     confettiRef.current({
       particleCount: 100,
       spread: 120,
-      origin: { y: 0.6 }
+      origin: { y: 0.6 },
+      disableForReducedMotion: true
     });
     setTriggeredLink(true);
   };
 
   const handleReset = () => {
     setTriggeredLink(false);
-
     if (canvasLinkRef.current) {
       const ctx = canvasLinkRef.current.getContext('2d');
       if (ctx) {
@@ -46,9 +65,10 @@ export default function ConfettiGenerateLink() {
         <canvas
           ref={canvasLinkRef}
           className='pointer-events-none absolute top-0 left-0 h-full w-full'
-          width={window.innerWidth}
-          height={window.innerHeight}
+          width={dimensions.width}
+          height={dimensions.height}
         />
+
         {!triggeredLink ? (
           <button
             onClick={handleClick}
@@ -69,7 +89,6 @@ export default function ConfettiGenerateLink() {
           <button
             onClick={handleReset}
             className='absolute right-4 bottom-4 z-10 cursor-pointer rounded-full bg-black/30 p-2 text-white hover:bg-black/50'
-            aria-label='Reset'
           >
             <RotateCcw className='h-5 w-5' />
           </button>

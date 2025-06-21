@@ -85,7 +85,7 @@ const CryptoBlogSection = () => {
             </div>
             <Link
               href='/blog'
-              className='mt-6 rounded-xl border border-[#525866] px-6 py-3 text-white transition-colors duration-300 hover:bg-black'
+              className='mt-6 hidden rounded-xl border border-[#525866] px-6 py-3 text-white transition-colors duration-300 hover:bg-black md:block'
             >
               See All
             </Link>

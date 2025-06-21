@@ -2,7 +2,7 @@
 
 import confetti from 'canvas-confetti';
 import { RotateCcw } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const plans = ['Monthly', 'Yearly'];
 
@@ -10,6 +10,27 @@ export default function ConfettiSubscription() {
   const [triggered, setTriggered] = useState(false);
   const canvasSubRef = useRef<HTMLCanvasElement | null>(null);
   const confettiRef = useRef<ReturnType<typeof confetti.create> | null>(null);
+
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    // Set initial dimensions
+    setDimensions({
+      width: window.innerWidth,
+      height: window.innerHeight
+    });
+
+    // Handle resize
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleClick = () => {
     if (!canvasSubRef.current) return;
@@ -25,7 +46,8 @@ export default function ConfettiSubscription() {
     confettiRef.current({
       particleCount: 100,
       spread: 120,
-      origin: { y: 0.6 }
+      origin: { y: 0.6 },
+      disableForReducedMotion: true
     });
 
     setTriggered(true);
@@ -52,8 +74,8 @@ export default function ConfettiSubscription() {
         <canvas
           ref={canvasSubRef}
           className='pointer-events-none absolute top-0 left-0 h-full w-full'
-          width={window.innerWidth}
-          height={window.innerHeight}
+          width={dimensions.width}
+          height={dimensions.height}
         />
         {!triggered ? (
           <>

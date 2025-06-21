@@ -88,9 +88,12 @@ const Header = () => {
     }
   ];
 
+  const toggleSubmenu = (title: string) => {
+    setOpenSubmenu(openSubmenu === title ? null : title);
+  };
+
   useEffect(() => {
     const handleResize = () => {
-      console.log('window.innerWidth < 768', window.innerWidth < 768);
       setIsMobile(window.innerWidth < 768);
       if (window.innerWidth >= 768) {
         setMobileMenuOpen(false);
@@ -100,10 +103,6 @@ const Header = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  const toggleSubmenu = (title: string) => {
-    setOpenSubmenu(openSubmenu === title ? null : title);
-  };
 
   return (
     <div

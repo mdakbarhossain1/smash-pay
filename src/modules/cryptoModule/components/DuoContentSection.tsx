@@ -43,7 +43,7 @@ const DuoContentSection = () => {
                 </span>
               </div>
 
-              <h2 className='mb-4 text-5xl font-semibold text-white'>Tokenized Assets</h2>
+              <h2 className='mb-4 text-3xl font-semibold text-white md:text-5xl'>Tokenized Assets</h2>
               <p className='text-semibold mb-6 text-lg text-gray-300'>
                 Convert real-world assets into digital tokens for easier trading and <br /> liquidity.
               </p>
@@ -134,7 +134,9 @@ const DuoContentSection = () => {
                 </span>
               </div>
 
-              <h2 className='mb-4 text-5xl font-semibold text-white'>Instant Global Transactions</h2>
+              <h2 className='mb-4 text-3xl font-semibold text-white md:text-5xl'>
+                Instant Global Transactions
+              </h2>
               <p className='text-semibold mb-6 text-lg text-gray-300'>
                 Experience seamless and rapid global transactions powered by blockchain technology.
               </p>
