@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import { useState, type JSX } from 'react';
+import { useEffect, useState, type JSX } from 'react';
 import { FiFileText, FiLayers, FiShield, FiZap } from 'react-icons/fi';
 
 type TabKey = 'storage' | 'contracts' | 'transactions' | 'tokenization';
@@ -23,10 +23,24 @@ const imageOrder: Record<TabKey, number[]> = {
 
 const FeatureTabs = () => {
   const [activeTab, setActiveTab] = useState<TabKey>('storage');
+
+  // Auto-rotate tabs every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTab((prevTab) => {
+        const currentIndex = tabs.findIndex((tab) => tab.id === prevTab);
+        const nextIndex = (currentIndex + 1) % tabs.length;
+        return tabs[nextIndex].id;
+      });
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const images = imageOrder[activeTab];
 
   return (
-    <section className=''>
+    <section>
       <div className='mx-auto max-w-6xl rounded-2xl p-6 text-white md:p-10'>
         {/* Tabs */}
         <div className='mb-8 flex flex-wrap justify-center gap-4'>
