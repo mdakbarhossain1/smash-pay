@@ -115,9 +115,9 @@ export default function Grid3DCardLayout() {
             className='mb-6 inline-block rounded-lg border border-[rgba(191,162,246,0.2)] bg-[rgba(191,162,246,0.1)] px-6 py-3 backdrop-blur-xl'
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.5, ease: 'easeInOut' }}
           >
-            <p className='bg-gradient-to-r from-[rgb(42,24,77)] to-[rgb(43,58,56)] bg-clip-text text-sm font-semibold tracking-wide text-transparent'>
+            <p className='bg-gradient-to-r from-[rgb(191,162,246)] to-[rgb(80,248,228)] bg-clip-text text-sm font-semibold tracking-wide text-transparent'>
               COMPONENT SHOWCASE
             </p>
           </motion.div>
@@ -162,11 +162,11 @@ export default function Grid3DCardLayout() {
         </div>
 
         {/* Section 2: Card 4, 5 */}
-        <div className='mt-10 grid grid-cols-5 grid-rows-2 gap-4'>
-          <CardWrapper className='col-span-2 row-span-1'>
+        <div className='mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5'>
+          <CardWrapper className='sm:col-span-1 md:col-span-2'>
             <TestimonialCard {...cardData[3]} />
           </CardWrapper>
-          <CardWrapper className='col-span-3 col-start-3 row-span-2 row-start-1'>
+          <CardWrapper className='sm:col-span-1 md:col-span-3'>
             <CTACard {...cardData[4]} />
           </CardWrapper>
         </div>
@@ -196,9 +196,16 @@ function StatsCard({ title, description, stats, gradient }: CardData) {
               <motion.div
                 key={index}
                 className={`relative h-[180px] w-[300px] rounded-2xl bg-gradient-to-br from-[#5b1ea8] via-[#4b185a] to-[#3b2d7c] p-4 text-white shadow-2xl transition-transform duration-300 hover:z-10 ${index !== 0 ? '-ml-16' : ''} /* Negative margin-left for overlap */`}
-                style={{ scale: 0.8 }}
+                style={{
+                  scale: 0.8,
+                  rotate: `380deg` // ← rotate all cards to the right
+                }}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
+                whileHover={{
+                  rotate: 375, // slight upward rotation on hover
+                  scale: 0.85 // optional: slightly enlarge on hover
+                }}
                 transition={{ delay: index * 0.1, duration: 0.4 }}
               >
                 {/* Top icons */}
@@ -286,47 +293,24 @@ function FeatureCard({ title, description, cta }: CardData) {
 }
 
 // 4. Testimonial Card Component
-function TestimonialCard({ title, description, cta }: CardData) {
+function TestimonialCard({ title, description }: CardData) {
   return (
     <CardContainer className='h-full w-full'>
-      <CardBody className='group/card relative h-full w-full overflow-hidden rounded-xl border border-black/[0.1] bg-gradient-to-br from-emerald-100 to-purple-100 shadow-lg transition-all duration-300 hover:shadow-xl dark:border-white/[0.2] dark:from-emerald-900/30 dark:to-purple-900/30 dark:hover:shadow-emerald-500/[0.1]'>
-        {/* Decorative Earth Globe */}
-        <div className='absolute -top-10 -right-10 h-40 w-40 opacity-40 mix-blend-overlay'>
-          <div className='animate-spin-slow relative h-full w-full'>
-            <div className="h-full w-full rounded-full bg-[url('https://raw.githubusercontent.com/d3/d3-geo-projection/master/img/earth-blue-marble.jpg')] bg-cover shadow-inner" />
-          </div>
-        </div>
-
+      <CardBody className='group/card bg-clr-14 relative h-full w-full overflow-hidden rounded-xl border border-white/[0.1] shadow-lg transition-all duration-300 hover:shadow-xl'>
         {/* Content */}
         <div className='relative z-10 flex h-full flex-col justify-between p-6'>
-          {/* User Info + Title */}
-          <CardItem translateZ={40} className='mb-4 flex items-center gap-4'>
-            <img
-              src='https://i.pravatar.cc/100?img=12'
-              alt='User Avatar'
-              className='h-12 w-12 rounded-full border-2 border-white shadow-md'
-            />
-            <div>
-              <h4 className='text-lg font-semibold text-neutral-900 dark:text-white'>
-                {title || 'User-Friendly Interface'}
-              </h4>
-              <p className='text-sm text-gray-600 dark:text-gray-300'>Happy User</p>
-            </div>
+          <CardItem translateZ={20} className='mb-4'>
+            <h2 className='text-3xl font-bold text-white'>{title}</h2>
           </CardItem>
-
           {/* Description */}
-          <CardItem translateZ={20} className='mb-4 text-neutral-700 dark:text-neutral-300'>
+          <CardItem translateZ={20} className='mb-4 text-white/80'>
             {description || 'Intuitive design for seamless navigation and usage.'}
           </CardItem>
 
-          {/* CTA Button */}
-          {cta && (
-            <CardItem translateZ={10}>
-              <button className='mt-2 rounded-full bg-black px-5 py-2 text-sm font-medium text-white transition hover:scale-105 dark:bg-white dark:text-black'>
-                {cta}
-              </button>
-            </CardItem>
-          )}
+          {/* Bottom Globe Image */}
+          <CardItem translateZ={10}>
+            <img src='/crypto/earth.gif' alt='Globe' className='mx-auto rounded-full object-cover' />
+          </CardItem>
         </div>
       </CardBody>
     </CardContainer>
