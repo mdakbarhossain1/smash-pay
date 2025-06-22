@@ -27,7 +27,7 @@ const FeaturesSection = () => {
 
         {/* Main Heading */}
         <motion.h2
-          className='mb-4 text-3xl font-bold text-white md:text-4xl'
+          className='mb-4 text-center text-3xl font-semibold text-white md:text-6xl'
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
@@ -37,7 +37,7 @@ const FeaturesSection = () => {
 
         {/* Paragraph */}
         <motion.p
-          className='max-w-2xl text-base text-gray-300 md:text-lg'
+          className='max-w-3xl text-center text-lg text-gray-300'
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
