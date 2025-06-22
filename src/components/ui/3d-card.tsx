@@ -25,7 +25,7 @@ export function CardContainer({
     const x = e.clientX - left;
     const y = e.clientY - top;
 
-    const rotateMax = 15;
+    const rotateMax = 5;
     const rotateYVal = (x / width - 0.5) * rotateMax * 2;
     const rotateXVal = (0.5 - y / height) * rotateMax * 2;
 

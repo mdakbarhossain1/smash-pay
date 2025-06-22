@@ -3,7 +3,6 @@
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 import { motion } from 'framer-motion';
 import React from 'react';
-import { FaCcMastercard } from 'react-icons/fa';
 
 type CardData = {
   id: number;
@@ -12,7 +11,7 @@ type CardData = {
   type: 'stats' | 'image' | 'feature' | 'testimonial' | 'cta';
   image?: string;
   cta?: string;
-  stats?: { value: string; label: string }[];
+  stats?: { image: string }[];
   author?: string;
   role?: string;
   gradient?: string;
@@ -25,9 +24,9 @@ const cardData: CardData[] = [
     description: 'Advanced security protocols to protect your data and transactions.',
     type: 'stats',
     stats: [
-      { value: '99.9%', label: 'Cryptox - Platinum' },
-      { value: '2.4s', label: 'Cryptox - Platinum' },
-      { value: '3/4', label: 'Cryptox - Platinum' }
+      { image: '/crypto/smash-pay-green.png' },
+      { image: '/crypto/smash-pay-purple.png' },
+      { image: '/crypto/smash-pay-red.png' }
     ],
     gradient: 'bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-500'
   },
@@ -191,47 +190,36 @@ function StatsCard({ title, description, stats, gradient }: CardData) {
               {description}
             </CardItem>
           </div>
-          <div className='flex items-center justify-center space-x-[-70px]'>
+
+          {/* Replacing custom cards with image cards */}
+          <div className='mb-[-20px] flex items-center justify-center space-x-[-70px]'>
             {stats?.map((stat, index) => (
               <motion.div
                 key={index}
-                className={`relative h-[180px] w-[300px] rounded-2xl bg-gradient-to-br from-[#5b1ea8] via-[#4b185a] to-[#3b2d7c] p-4 text-white shadow-2xl transition-transform duration-300 hover:z-10 ${index !== 0 ? '-ml-16' : ''} /* Negative margin-left for overlap */`}
-                style={{
-                  scale: 0.8,
-                  rotate: `380deg` // ← rotate all cards to the right
-                }}
+                className={`relative aspect-[5/3] w-full max-w-[260px] overflow-hidden rounded-2xl shadow-2xl sm:max-w-[300px] ${index !== 0 ? '-ml-8 sm:-ml-16' : ''}`}
                 initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                whileHover={{
-                  rotate: 375, // slight upward rotation on hover
-                  scale: 0.85 // optional: slightly enlarge on hover
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  rotate: 38,
+                  scale: 0.8
                 }}
-                transition={{ delay: index * 0.1, duration: 0.4 }}
+                whileHover={{
+                  y: -10,
+                  rotate: 43
+                  // scale: 0.85
+                }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 200,
+                  damping: 20
+                }}
               >
-                {/* Top icons */}
-                <div className='flex items-start justify-between'>
-                  <FaCcMastercard className='text-3xl' />
-                </div>
-
-                {/* Card Number */}
-                <div className='mt-6 text-base font-semibold tracking-widest'>1234 1234 1234 1234</div>
-
-                {/* Bottom Info */}
-                <div className='mt-4 flex justify-between text-xs'>
-                  <div className='flex flex-col'>
-                    <span className='text-[10px] text-white/60'>Cardholder</span>
-                    <span className='font-semibold'>CAGATAYHAN</span>
-                  </div>
-                  <div className='flex flex-col'>
-                    <span className='text-[10px] text-white/60'>Expiry</span>
-                    <span className='font-semibold'>18/81</span>
-                  </div>
-                </div>
-
-                {/* Label */}
-                <h6 className='absolute bottom-3 left-4 text-[10px] tracking-wide text-white/70 uppercase'>
-                  Cryptox - Basic
-                </h6>
+                <img
+                  src={stat.image}
+                  alt={`Card ${index + 1}`}
+                  className='h-full w-full rounded-2xl object-cover'
+                />
               </motion.div>
             ))}
           </div>
