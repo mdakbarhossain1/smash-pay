@@ -1,9 +1,9 @@
 'use client';
 
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
+import GlobeAnimation from '@/modules/multicurrencyAccount/components/GlobeAnimation';
 import { motion } from 'framer-motion';
 import React from 'react';
-import { FaCcMastercard } from 'react-icons/fa';
 
 type CardData = {
   id: number;
@@ -12,7 +12,7 @@ type CardData = {
   type: 'stats' | 'image' | 'feature' | 'testimonial' | 'cta';
   image?: string;
   cta?: string;
-  stats?: { value: string; label: string }[];
+  stats?: { image: string }[];
   author?: string;
   role?: string;
   gradient?: string;
@@ -25,9 +25,9 @@ const cardData: CardData[] = [
     description: 'Advanced security protocols to protect your data and transactions.',
     type: 'stats',
     stats: [
-      { value: '99.9%', label: 'Cryptox - Platinum' },
-      { value: '2.4s', label: 'Cryptox - Platinum' },
-      { value: '3/4', label: 'Cryptox - Platinum' }
+      { image: '/crypto/smash-pay-green.png' },
+      { image: '/crypto/smash-pay-purple.png' },
+      { image: '/crypto/smash-pay-red.png' }
     ],
     gradient: 'bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-500'
   },
@@ -123,7 +123,7 @@ export default function Grid3DCardLayout() {
           </motion.div>
 
           <motion.h2
-            className='mb-4 text-3xl font-bold text-white md:text-4xl'
+            className='mb-4 text-center text-3xl font-semibold text-white md:text-6xl'
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
@@ -132,7 +132,7 @@ export default function Grid3DCardLayout() {
           </motion.h2>
 
           <motion.p
-            className='max-w-2xl text-base text-gray-300 md:text-lg'
+            className='max-w-3xl text-center text-lg text-gray-300'
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
@@ -162,7 +162,7 @@ export default function Grid3DCardLayout() {
         </div>
 
         {/* Section 2: Card 4, 5 */}
-        <div className='mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5'>
+        <div className='mt-5 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-5'>
           <CardWrapper className='sm:col-span-1 md:col-span-2'>
             <TestimonialCard {...cardData[3]} />
           </CardWrapper>
@@ -180,7 +180,7 @@ function StatsCard({ title, description, stats, gradient }: CardData) {
   return (
     <CardContainer className='h-full w-full'>
       <CardBody
-        className={`group/card relative h-full w-full overflow-hidden rounded-2xl border border-white/[0.1] p-6 shadow-xl transition-all duration-300 hover:shadow-2xl dark:border-white/[0.2] ${gradient}`}
+        className={`group/card bg-gradient-4 relative h-full w-full overflow-hidden rounded-2xl border border-white/[0.1] p-6 shadow-xl transition-all duration-300 hover:shadow-2xl dark:border-white/[0.2]`}
       >
         <div className='flex h-full flex-col justify-between'>
           <div className='z-50'>
@@ -191,47 +191,35 @@ function StatsCard({ title, description, stats, gradient }: CardData) {
               {description}
             </CardItem>
           </div>
-          <div className='flex items-center justify-center space-x-[-70px]'>
+
+          {/* Replacing custom cards with image cards */}
+          <div className='mb-[-25px] flex items-center justify-center space-x-[-70px]'>
             {stats?.map((stat, index) => (
               <motion.div
                 key={index}
-                className={`relative h-[180px] w-[300px] rounded-2xl bg-gradient-to-br from-[#5b1ea8] via-[#4b185a] to-[#3b2d7c] p-4 text-white shadow-2xl transition-transform duration-300 hover:z-10 ${index !== 0 ? '-ml-16' : ''} /* Negative margin-left for overlap */`}
-                style={{
-                  scale: 0.8,
-                  rotate: `380deg` // ← rotate all cards to the right
-                }}
+                className={`relative aspect-[5/3] w-full max-w-[280px] overflow-hidden rounded-2xl shadow-2xl sm:max-w-[330px] ${index !== 0 ? '-ml-[100px] sm:-ml-[120px]' : ''}`}
                 initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                whileHover={{
-                  rotate: 375, // slight upward rotation on hover
-                  scale: 0.85 // optional: slightly enlarge on hover
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  rotate: 44,
+                  scale: 0.8
                 }}
-                transition={{ delay: index * 0.1, duration: 0.4 }}
+                whileHover={{
+                  y: -10,
+                  rotate: 48
+                }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 200,
+                  damping: 20
+                }}
               >
-                {/* Top icons */}
-                <div className='flex items-start justify-between'>
-                  <FaCcMastercard className='text-3xl' />
-                </div>
-
-                {/* Card Number */}
-                <div className='mt-6 text-base font-semibold tracking-widest'>1234 1234 1234 1234</div>
-
-                {/* Bottom Info */}
-                <div className='mt-4 flex justify-between text-xs'>
-                  <div className='flex flex-col'>
-                    <span className='text-[10px] text-white/60'>Cardholder</span>
-                    <span className='font-semibold'>CAGATAYHAN</span>
-                  </div>
-                  <div className='flex flex-col'>
-                    <span className='text-[10px] text-white/60'>Expiry</span>
-                    <span className='font-semibold'>18/81</span>
-                  </div>
-                </div>
-
-                {/* Label */}
-                <h6 className='absolute bottom-3 left-4 text-[10px] tracking-wide text-white/70 uppercase'>
-                  Cryptox - Basic
-                </h6>
+                <img
+                  src={stat.image}
+                  alt={`Card ${index + 1}`}
+                  className='h-full w-full rounded-2xl object-cover'
+                />
               </motion.div>
             ))}
           </div>
@@ -245,7 +233,7 @@ function StatsCard({ title, description, stats, gradient }: CardData) {
 function ImageCard({ title, description }: CardData) {
   return (
     <CardContainer className='h-full w-full'>
-      <CardBody className='group/card relative h-full w-full overflow-hidden rounded-xl border border-black/[0.1] text-white shadow-lg transition-all duration-300 hover:shadow-xl dark:border-white/[0.2] dark:hover:shadow-emerald-500/[0.1]'>
+      <CardBody className='group/card bg-gradient-4 relative h-full w-full overflow-hidden rounded-xl border border-black/[0.1] text-white shadow-lg transition-all duration-300 hover:shadow-xl dark:border-white/[0.2] dark:hover:shadow-emerald-500/[0.1]'>
         <CardItem
           translateZ={50}
           className='h-full w-full rounded-2xl border border-white/10 bg-white/5 shadow-inner backdrop-blur-lg transition-transform duration-300 group-hover/card:scale-[1.01]'
@@ -296,7 +284,7 @@ function FeatureCard({ title, description, cta }: CardData) {
 function TestimonialCard({ title, description }: CardData) {
   return (
     <CardContainer className='h-full w-full'>
-      <CardBody className='group/card bg-clr-14 relative h-full w-full overflow-hidden rounded-xl border border-white/[0.1] shadow-lg transition-all duration-300 hover:shadow-xl'>
+      <CardBody className='group/card bg-gradient-4 relative h-full w-full overflow-hidden rounded-xl border border-white/[0.1] shadow-lg transition-all duration-300 hover:shadow-xl'>
         {/* Content */}
         <div className='relative z-10 flex h-full flex-col justify-between p-6'>
           <CardItem translateZ={20} className='mb-4'>
@@ -308,8 +296,11 @@ function TestimonialCard({ title, description }: CardData) {
           </CardItem>
 
           {/* Bottom Globe Image */}
-          <CardItem translateZ={10}>
-            <img src='/crypto/earth.gif' alt='Globe' className='mx-auto rounded-full object-cover' />
+          <CardItem
+            translateZ={10}
+            className='mx-auto aspect-square w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px]'
+          >
+            <GlobeAnimation />
           </CardItem>
         </div>
       </CardBody>
@@ -321,23 +312,21 @@ function TestimonialCard({ title, description }: CardData) {
 function CTACard({ title, description, cta }: CardData) {
   return (
     <CardContainer className='h-full w-full'>
-      <CardBody className='group/card relative h-full w-full overflow-hidden rounded-xl bg-gradient-to-br from-gray-900 to-black shadow-xl'>
+      <CardBody className='group/card bg-gradient-4 h-full w-full overflow-hidden rounded-xl shadow-xl'>
         {/* Background elements */}
-        <div className='absolute inset-0 overflow-hidden opacity-20'>
-          <div className='absolute -top-20 -left-20 h-64 w-64 rounded-full bg-purple-500 mix-blend-soft-light'></div>
-          <div className='absolute -right-20 -bottom-20 h-64 w-64 rounded-full bg-cyan-500 mix-blend-soft-light'></div>
-        </div>
 
-        <div className='relative h-full flex-col p-8'>
-          {/* Title */}
-          <CardItem translateZ={20} className='mb-4'>
-            <h2 className='text-3xl font-bold text-white'>{title}</h2>
-          </CardItem>
+        <div className='flex h-full flex-col justify-between p-8'>
+          <div>
+            {/* Title */}
+            <CardItem translateZ={20} className='mb-4'>
+              <h2 className='text-3xl font-bold text-white'>{title}</h2>
+            </CardItem>
 
-          {/* Description */}
-          <CardItem translateZ={20} className='mb-12'>
-            <p className='text-lg text-gray-200'>{description}</p>
-          </CardItem>
+            {/* Description */}
+            <CardItem translateZ={20} className='mb-12'>
+              <p className='text-lg text-gray-200'>{description}</p>
+            </CardItem>
+          </div>
 
           {/* Animated Cards */}
           <div className='relative h-[220px] w-full overflow-hidden'>
