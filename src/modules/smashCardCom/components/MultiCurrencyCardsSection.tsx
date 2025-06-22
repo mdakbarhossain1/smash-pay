@@ -114,7 +114,7 @@ const MultiCurrencyCardsSection = () => {
 
         {/* Feature Cards Row */}
         <motion.div
-          className='flex w-full flex-col items-start justify-start gap-8 lg:flex-row'
+          className='flex w-full flex-col items-start justify-start gap-4 lg:flex-row'
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true, margin: '-100px' }}
@@ -199,7 +199,7 @@ const MultiCurrencyCardsSection = () => {
 
           {/* Global Spending Card */}
           <motion.div
-            className='relative h-[496px] w-full overflow-hidden rounded-[32px] p-8 md:p-12 lg:w-[592px]'
+            className='relative h-[496px] w-full overflow-hidden rounded-[32px] p-8 md:p-12 lg:w-[620px]'
             style={{
               background: 'linear-gradient(135deg, rgba(63, 66, 77, 1) 0%, rgba(18, 20, 28, 1) 100%)'
             }}

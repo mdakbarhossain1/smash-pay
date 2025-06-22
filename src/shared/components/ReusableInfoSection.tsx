@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 type Feature = {
@@ -97,12 +98,14 @@ const ReusableInfoSection: React.FC<Props> = ({
         ))}
       </motion.div>
 
-      <motion.div className='flex flex-row items-center gap-4' variants={itemVariants}>
-        <button className='flex flex-row items-center gap-2.5 rounded-[64px] border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'>
-          <span className='text-lg font-semibold tracking-[-0.25px] text-white'>{buttonText}</span>
-          <Image src={buttonIcon} alt='' width={22} height={22} className='object-contain' />
-        </button>
-      </motion.div>
+      <Link href={'/contact-us'}>
+        <motion.div className='flex flex-row items-center gap-4' variants={itemVariants}>
+          <button className='flex flex-row items-center gap-2.5 rounded-[64px] border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'>
+            <span className='text-lg font-semibold tracking-[-0.25px] text-white'>{buttonText}</span>
+            <Image src={buttonIcon} alt='' width={22} height={22} className='object-contain' />
+          </button>
+        </motion.div>
+      </Link>
     </motion.div>
   );
 

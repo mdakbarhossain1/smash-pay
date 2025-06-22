@@ -2,6 +2,7 @@
 import { fadeIn, staggerContainer } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 const CryptoBrowse = () => {
@@ -82,7 +83,7 @@ const CryptoBrowse = () => {
             whileHover='hover'
           >
             {/* Content */}
-            <div className='flex flex-1 flex-col items-center justify-start gap-3'>
+            <Link href={'/contact-us'} className='flex flex-1 flex-col items-center justify-start gap-3'>
               <h3 className='self-stretch text-center text-3xl leading-tight font-medium tracking-[1px] text-white'>
                 GET STARTED QUICKLY
               </h3>
@@ -92,7 +93,7 @@ const CryptoBrowse = () => {
               <button className='mt-3 cursor-pointer rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#2a2e38] md:text-base'>
                 Start Now
               </button>
-            </div>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

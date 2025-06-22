@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const MultiCurrency = () => {
   const features = ['One account, multiple currencies', 'Regulated & secure', 'Trade on your own terms'];
@@ -39,18 +40,20 @@ const MultiCurrency = () => {
               ))}
             </div>
           </div>
-          <motion.button
-            className='flex flex-row items-center justify-center gap-2.5 rounded-[64px] border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <span className='gradient-text text-lg font-semibold tracking-tight text-transparent'>
-              Learn More
-            </span>
-            <div className='relative h-[22px] w-[22px]'>
-              <img className='relative h-6 w-6 shrink-0 overflow-visible' src='/home/arrow-right0.svg' />
-            </div>
-          </motion.button>
+          <Link href={'/multicurrency-account'}>
+            <motion.button
+              className='flex cursor-pointer flex-row items-center justify-center gap-2.5 rounded-[64px] border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <span className='gradient-text text-lg font-semibold tracking-tight text-transparent'>
+                Learn More
+              </span>
+              <div className='relative h-[22px] w-[22px]'>
+                <img className='relative h-6 w-6 shrink-0 overflow-visible' src='/home/arrow-right0.svg' />
+              </div>
+            </motion.button>
+          </Link>
         </motion.div>
 
         <motion.div

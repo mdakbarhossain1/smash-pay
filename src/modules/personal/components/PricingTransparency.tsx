@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const PricingTransparency = () => {
   const features = [
@@ -77,19 +78,21 @@ const PricingTransparency = () => {
             </div>
           </div>
 
-          <motion.div
-            className='flex flex-row items-center justify-start gap-4'
-            variants={itemVariants}
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <button className='flex flex-row items-center justify-center gap-2.5 overflow-hidden rounded-[64px] border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4'>
-              <span className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
-                Get started
-              </span>
-              <Image src='/home/arrow-right0.svg' alt='Arrow right' width={22} height={22} />
-            </button>
-          </motion.div>
+          <Link href={'/contact-us'}>
+            <motion.div
+              className='flex flex-row items-center justify-start gap-4'
+              variants={itemVariants}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <button className='flex cursor-pointer flex-row items-center justify-center gap-2.5 overflow-hidden rounded-[64px] border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4'>
+                <span className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
+                  Get started
+                </span>
+                <Image src='/home/arrow-right0.svg' alt='Arrow right' width={22} height={22} />
+              </button>
+            </motion.div>
+          </Link>
         </motion.div>
 
         {/* Right Image Placeholder */}
@@ -251,19 +254,21 @@ const PricingTransparency = () => {
             </div>
           </div>
 
-          <motion.div
-            className='flex flex-row items-center justify-start gap-4'
-            variants={itemVariants}
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <button className='flex flex-row items-center justify-center gap-2.5 overflow-hidden rounded-[64px] border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4'>
-              <span className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
-                Get started
-              </span>
-              <Image src='/home/arrow-right0.svg' alt='Arrow right' width={22} height={22} />
-            </button>
-          </motion.div>
+          <Link href={'/contact-us'}>
+            <motion.div
+              className='flex flex-row items-center justify-start gap-4'
+              variants={itemVariants}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <button className='flex cursor-pointer flex-row items-center justify-center gap-2.5 overflow-hidden rounded-[64px] border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4'>
+                <span className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
+                  Get started
+                </span>
+                <Image src='/home/arrow-right0.svg' alt='Arrow right' width={22} height={22} />
+              </button>
+            </motion.div>
+          </Link>
         </motion.div>
       </motion.div>
     </section>

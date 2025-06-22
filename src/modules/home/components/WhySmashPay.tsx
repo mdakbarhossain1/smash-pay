@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 
 const WhySmashPay = () => {
@@ -87,20 +88,22 @@ const WhySmashPay = () => {
             Fast, flexible and secure international money transfers across the world.
           </motion.p>
 
-          <motion.button
-            className='mt-4 flex items-center gap-2.5 rounded-[64px] border border-[#3c414c] px-6 py-4 md:px-8'
-            style={{
-              background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
-            }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            variants={itemVariants}
-          >
-            <span className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-lg font-semibold text-transparent'>
-              Create account
-            </span>
-            <img className='relative h-5 w-5 shrink-0 overflow-visible' src='/home/arrow-right0.svg' />
-          </motion.button>
+          <Link href={'/contact-us'}>
+            <motion.button
+              className='mt-4 flex cursor-pointer items-center gap-2.5 rounded-[64px] border border-[#3c414c] px-6 py-4 md:px-8'
+              style={{
+                background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
+              }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              variants={itemVariants}
+            >
+              <span className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-lg font-semibold text-transparent'>
+                Create account
+              </span>
+              <img className='relative h-5 w-5 shrink-0 overflow-visible' src='/home/arrow-right0.svg' />
+            </motion.button>
+          </Link>
         </motion.div>
 
         {/* Features Grid */}

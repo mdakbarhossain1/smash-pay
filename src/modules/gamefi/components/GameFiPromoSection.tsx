@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const GameFiPromoSection = () => {
   const containerVariants = {
@@ -66,14 +67,16 @@ const GameFiPromoSection = () => {
           </motion.p>
 
           <motion.div variants={itemVariants}>
-            <button
-              className='rounded-full bg-gradient-to-r px-8 py-3 font-semibold text-white transition-opacity hover:opacity-90'
-              style={{
-                background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
-              }}
-            >
-              Get Started
-            </button>
+            <Link href={'/contact-us'}>
+              <button
+                className='cursor-pointer rounded-full bg-gradient-to-r px-8 py-3 font-semibold text-white transition-opacity hover:opacity-90'
+                style={{
+                  background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
+                }}
+              >
+                Get Started
+              </button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

@@ -157,7 +157,7 @@ const WeOffer = () => {
             {/* Images for Personal Card */}
             <motion.div className='relative mt-4 h-[210px] w-full md:h-[250px]' variants={imageVariants}>
               <div className='absolute inset-0 flex items-center justify-center'>
-                <div className='absolute -top-[100px] h-[560px] w-[280px] md:w-[360px]'>
+                <div className='absolute -top-[50px] h-[410px] w-[280px] md:w-[360px]'>
                   {/* Main phone image */}
                   <div className='absolute inset-0 z-50'>
                     <Image

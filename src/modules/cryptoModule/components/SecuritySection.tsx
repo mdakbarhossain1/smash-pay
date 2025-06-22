@@ -92,7 +92,7 @@ const SecuritySection = () => {
 
             {/* Button */}
             <Link
-              href='https://ckurt.lemonsqueezy.com/buy/8fa1f143-8036-49b3-bcb8-9a296ef37d87'
+              href='/contact-us'
               className='inline-block rounded-lg bg-teal-300 px-6 py-3 font-medium text-black shadow-md transition hover:shadow-lg'
               rel='noopener'
             >

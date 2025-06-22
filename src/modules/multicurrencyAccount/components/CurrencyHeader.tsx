@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import AppRatingsSection from './AppRatingsSection';
 
 const CurrencyHeader = () => {
@@ -102,32 +103,36 @@ const CurrencyHeader = () => {
               variants={itemVariants}
             >
               {/*  Account Button */}
-              <button className='flex flex-row items-center justify-center gap-2.5 rounded-full border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'>
-                <span className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
-                  Open account
-                </span>
-                <Image
-                  src='/home/arrow-right0.svg'
-                  alt=''
-                  width={22}
-                  height={22}
-                  className='object-contain'
-                />
-              </button>
+              <Link href={'/contact-us'}>
+                <button className='flex cursor-pointer flex-row items-center justify-center gap-2.5 rounded-full border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'>
+                  <span className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
+                    Open account
+                  </span>
+                  <Image
+                    src='/home/arrow-right0.svg'
+                    alt=''
+                    width={22}
+                    height={22}
+                    className='object-contain'
+                  />
+                </button>
+              </Link>
 
               {/* See Pricing Button */}
-              <button className='flex flex-row items-center justify-center gap-2.5 rounded-full border border-[#3c414c] px-8 py-4 transition-colors hover:bg-gray-800'>
-                <span className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
-                  See Pricing
-                </span>
-                <Image
-                  src='/home/arrow-right1.svg'
-                  alt=''
-                  width={22}
-                  height={22}
-                  className='object-contain'
-                />
-              </button>
+              <Link href={'/contact-us'}>
+                <button className='flex cursor-pointer flex-row items-center justify-center gap-2.5 rounded-full border border-[#3c414c] px-8 py-4 transition-colors hover:bg-gray-800'>
+                  <span className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
+                    See Pricing
+                  </span>
+                  <Image
+                    src='/home/arrow-right1.svg'
+                    alt=''
+                    width={22}
+                    height={22}
+                    className='object-contain'
+                  />
+                </button>
+              </Link>
             </motion.div>
           </motion.div>
         </motion.div>

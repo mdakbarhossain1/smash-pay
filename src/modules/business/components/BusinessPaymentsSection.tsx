@@ -98,41 +98,42 @@ const BusinessPaymentsSection = () => {
             className='flex flex-col items-center justify-center gap-6'
             variants={containerVariants}
           >
-            <motion.div
-              className='flex flex-row flex-wrap items-center justify-center gap-4'
-              variants={itemVariants}
-            >
-              {/* Create Account Button */}
-              <button className='flex flex-row items-center justify-center gap-2.5 rounded-full border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'>
-                <span className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
-                  Create account
-                </span>
-                <Image
-                  src='/home/arrow-right0.svg'
-                  alt=''
-                  width={22}
-                  height={22}
-                  className='object-contain'
-                />
-              </button>
-
-              {/* Contact Sales Button */}
-              <Link href='/contact-us' passHref>
-                <button className='flex cursor-pointer flex-row items-center justify-center gap-2.5 rounded-full border border-[#3c414c] px-8 py-4 transition-colors hover:bg-gray-800'>
-                  <span className='cursor-pointer text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
-                    Contact sales
+            <Link href={'/contact-us'}>
+              <motion.div
+                className='flex flex-row flex-wrap items-center justify-center gap-4'
+                variants={itemVariants}
+              >
+                {/* Create Account Button */}
+                <button className='flex cursor-pointer flex-row items-center justify-center gap-2.5 rounded-full border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'>
+                  <span className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
+                    Create account
                   </span>
                   <Image
-                    src='/home/arrow-right1.svg'
+                    src='/home/arrow-right0.svg'
                     alt=''
                     width={22}
                     height={22}
                     className='object-contain'
                   />
                 </button>
-              </Link>
-            </motion.div>
 
+                {/* Contact Sales Button */}
+                <Link href='/contact-us' passHref>
+                  <button className='flex cursor-pointer flex-row items-center justify-center gap-2.5 rounded-full border border-[#3c414c] px-8 py-4 transition-colors hover:bg-gray-800'>
+                    <span className='cursor-pointer text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
+                      Contact sales
+                    </span>
+                    <Image
+                      src='/home/arrow-right1.svg'
+                      alt=''
+                      width={22}
+                      height={22}
+                      className='object-contain'
+                    />
+                  </button>
+                </Link>
+              </motion.div>
+            </Link>
             <motion.p
               className='max-w-[672px] text-center text-base leading-6 tracking-[-0.25px] text-gray-300'
               variants={itemVariants}

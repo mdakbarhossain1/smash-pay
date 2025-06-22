@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type Feature = {
   icon: string;
@@ -78,14 +79,16 @@ const ReusableInfoCard = ({
 
       {buttonText && (
         <motion.div className='mt-4' variants={itemVariants}>
-          <motion.button
-            className='flex items-center gap-2 rounded-full border border-gray-700 bg-gradient-to-b from-[#151820] to-[#010101] px-6 py-3 text-white transition hover:opacity-90'
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <span className='text-base font-semibold'>{buttonText}</span>
-            {buttonIcon && <Image src={buttonIcon} alt='button icon' width={20} height={20} />}
-          </motion.button>
+          <Link href={'/contact-us'}>
+            <motion.button
+              className='flex cursor-pointer items-center gap-2 rounded-full border border-gray-700 bg-gradient-to-b from-[#151820] to-[#010101] px-6 py-3 text-white transition hover:opacity-90'
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <span className='text-base font-semibold'>{buttonText}</span>
+              {buttonIcon && <Image src={buttonIcon} alt='button icon' width={20} height={20} />}
+            </motion.button>
+          </Link>
         </motion.div>
       )}
     </motion.div>

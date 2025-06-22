@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 type Step = {
   id: number;
@@ -124,14 +125,16 @@ const HowToGetStarted = ({ steps, title }: HowToGetStartedProps) => {
           </div>
 
           {/* Get Started Button */}
-          <motion.button
-            className='flex flex-row items-center justify-center gap-2.5 rounded-[64px] border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <span className='text-lg font-semibold tracking-tight text-white'>Get started now</span>
-            <Image src='/home/arrow-right0.svg' alt='Arrow right' width={22} height={22} />
-          </motion.button>
+          <Link href='/contact-us'>
+            <motion.button
+              className='flex cursor-pointer flex-row items-center justify-center gap-2.5 rounded-[64px] border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <span className='text-lg font-semibold tracking-tight text-white'>Get started now</span>
+              <Image src='/home/arrow-right0.svg' alt='Arrow right' width={22} height={22} />
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
 

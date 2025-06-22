@@ -103,21 +103,23 @@ const SmashpayHeroSection = () => {
               variants={itemVariants}
             >
               {/*  Order your card Button */}
-              <button className='flex flex-row items-center justify-center gap-2.5 rounded-full border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'>
-                <span className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
-                  Order your card
-                </span>
-                <Image
-                  src='/home/arrow-right0.svg'
-                  alt=''
-                  width={22}
-                  height={22}
-                  className='object-contain'
-                />
-              </button>
+              <Link href='/contact-us'>
+                <button className='flex cursor-pointer flex-row items-center justify-center gap-2.5 rounded-full border border-[#3c414c] bg-gradient-to-b from-[#151820] to-[#010101] px-8 py-4 transition-opacity hover:opacity-90'>
+                  <span className='text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
+                    Order your card
+                  </span>
+                  <Image
+                    src='/home/arrow-right0.svg'
+                    alt=''
+                    width={22}
+                    height={22}
+                    className='object-contain'
+                  />
+                </button>
+              </Link>
 
               {/* Contact Sales Button */}
-              <Link href='/contact-sales'>
+              <Link href='/contact-us'>
                 <button className='flex cursor-pointer flex-row items-center justify-center gap-2.5 rounded-full border border-[#3c414c] px-8 py-4 transition-colors hover:bg-gray-800'>
                   <span className='cursor-pointer text-lg leading-tight font-semibold tracking-[-0.25px] text-white'>
                     Contact sales

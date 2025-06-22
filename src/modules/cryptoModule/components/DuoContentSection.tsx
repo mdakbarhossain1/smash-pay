@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const DuoContentSection = () => {
   return (
@@ -93,9 +94,11 @@ const DuoContentSection = () => {
                 </div>
               </div>
 
-              <button className='rounded-xl bg-teal-300 px-6 py-3 font-medium text-gray-900 transition-colors hover:bg-teal-200'>
-                Get Started
-              </button>
+              <Link href={'/contact-us'}>
+                <button className='rounded-xl bg-teal-300 px-6 py-3 font-medium text-gray-900 transition-colors hover:bg-teal-200'>
+                  Get Started
+                </button>
+              </Link>
             </div>
 
             {/* right */}
@@ -186,9 +189,11 @@ const DuoContentSection = () => {
                 </div>
               </div>
 
-              <button className='rounded-xl bg-teal-300 px-6 py-3 font-medium text-gray-900 transition-colors hover:bg-teal-200'>
-                Get Started
-              </button>
+              <Link href={'/contact-us'}>
+                <button className='cursor-pointer rounded-xl bg-teal-300 px-6 py-3 font-medium text-gray-900 transition-colors hover:bg-teal-200'>
+                  Get Started
+                </button>
+              </Link>
             </div>
           </div>
         </div>

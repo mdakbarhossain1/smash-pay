@@ -233,9 +233,9 @@ export default function Footer() {
                     <Image src='/home/chevron-down9.svg' alt='Dropdown' width={18} height={18} />
                   </div>
                 </div>
-                <button className='rounded-[48px] border border-[#161616] bg-[#161616] p-3.5'>
+                {/* <button className='rounded-[48px] border border-[#161616] bg-[#161616] p-3.5'>
                   <Image src='/home/chevron-up2.svg' alt='Scroll up' width={18} height={18} />
-                </button>
+                </button> */}
               </motion.div>
             </div>
           </div>
