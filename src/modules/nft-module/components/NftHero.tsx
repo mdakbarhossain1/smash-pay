@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import HeroSlider from './HeroSlider';
 
 const NftHero = () => {
@@ -26,6 +27,15 @@ const NftHero = () => {
               The SmashPay NFT Checkout is designed for brands, creators, and marketplaces that want to give
               their users easy access to NFTs
             </p>
+            <div className='mt-2 mr-auto text-start'>
+              <Link
+                href='https://nft.smashpay.io/ethereum'
+                target='_blank'
+                className='button-gradient-bg inline-block rounded-lg px-8 py-3 font-medium text-white transition-colors duration-300'
+              >
+                Explore
+              </Link>
+            </div>
           </div>
         </motion.div>
 

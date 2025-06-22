@@ -55,7 +55,7 @@ const Hero = () => {
             variants={itemVariants}
           >
             <motion.div className='flex w-full flex-col items-center gap-4 md:gap-6' variants={itemVariants}>
-              <Link href={'/card'}>
+              <Link href={'/multicurrency-account'}>
                 <motion.div
                   className='flex items-center gap-3 rounded-2xl border border-[#151820] px-2.5 py-1'
                   style={{

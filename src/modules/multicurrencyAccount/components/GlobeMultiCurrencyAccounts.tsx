@@ -1,6 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import BalanceCard from './BalanceCardProps';
+import GlobeAnimation from './GlobeAnimation';
 
 const GlobeMultiCurrencyAccounts = () => {
   const features = [
@@ -21,6 +23,28 @@ const GlobeMultiCurrencyAccounts = () => {
       title: 'Your funds are safe and secure',
       description:
         'Relax knowing that your money is secure and protected with end-to-end encryption and bank-level security.'
+    }
+  ];
+
+  const currencyData = [
+    {
+      currency: 'USD',
+      amount: '1,799.00',
+      accountNumber: '9600012345678901',
+      flagSrc: '/flags/united-states.svg'
+    },
+    {
+      currency: 'SEK',
+      amount: '10,280.00',
+      accountNumber: 'SE45500000000583',
+      flagSrc: '/flags/singapore.svg'
+    },
+    { currency: 'EUR', amount: '950.00', accountNumber: 'BE72123456789012', flagSrc: '/flags/germany.svg' },
+    {
+      currency: 'GBP',
+      amount: '1620.00',
+      accountNumber: 'GBKK400515123456',
+      flagSrc: '/flags/united-states.svg'
     }
   ];
 
@@ -97,7 +121,54 @@ const GlobeMultiCurrencyAccounts = () => {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5 }}
         >
-          <Image src={`/multicurrency/globe.svg`} alt='' width={640} height={710} />
+          <GlobeAnimation />
+
+          <div className='hidden md:block'>
+            <div className='absolute top-10 left-0'>
+              <BalanceCard
+                currency={'USD'}
+                amount={'1,799.00'}
+                accountNumber='9600012345678901'
+                flagSrc='/flags/united-states.svg'
+              />
+            </div>
+            <div className='absolute top-60 left-20'>
+              <BalanceCard
+                currency={'SEK'}
+                amount='10,280.00'
+                accountNumber='SE45500000000583'
+                flagSrc='/flags/singapore.svg'
+              />
+            </div>
+            <div className='absolute top-40 right-20'>
+              <BalanceCard
+                currency={'EUR'}
+                amount='950.00'
+                accountNumber='BE72123456789012'
+                flagSrc='/flags/germany.svg'
+              />
+            </div>
+            <div className='absolute right-30 bottom-30'>
+              <BalanceCard
+                currency={'GBP'}
+                amount='1620.00'
+                accountNumber='GBKK400515123456'
+                flagSrc='/flags/united-states.svg'
+              />
+            </div>
+          </div>
+          <div className='space-y-3 md:hidden'>
+            {currencyData.map((item, index) => (
+              <div key={index}>
+                <BalanceCard
+                  currency={item.currency}
+                  amount={item.amount}
+                  accountNumber={item.accountNumber}
+                  flagSrc={item.flagSrc}
+                />
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

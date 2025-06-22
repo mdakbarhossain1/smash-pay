@@ -1,8 +1,24 @@
 'use client';
+
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useEffect } from 'react';
+import ScrollAnimatedImage from './ScrollAnimatedImageProps';
 
 const OffRampSection = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      console.log('Scroll Position:', scrollTop);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <section className='bg-gradient-4 relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch overflow-hidden py-24'>
       <div className='relative flex w-full max-w-7xl shrink-0 flex-col items-start justify-start gap-8 px-8'>
@@ -48,16 +64,25 @@ const OffRampSection = () => {
                 Off-Ramp solution.
               </p>
 
-              <Image
-                src='https://framerusercontent.com/images/EY7Wbft06m3xNjh3vuD9fRNDu0.png?scale-down-to=2048'
-                alt='Hero Image'
-                width={1200}
-                height={600}
-                className='my-10 h-auto w-full rounded-xl object-contain'
-                priority
-              />
+              <div className='hidden md:block'>
+                <ScrollAnimatedImage
+                  scrollId='animated-dashboard'
+                  src='/crypto/Dashboard.png'
+                  alt='Hero Image'
+                />
+              </div>
 
-              <ul className='mt-15 max-w-xl space-y-5'>
+              <div className='relative mx-auto my-10 aspect-[16/9] w-full max-w-7xl overflow-hidden rounded-xl md:hidden md:h-[600px]'>
+                <Image
+                  src='/crypto/Dashboard.png'
+                  alt='Hero Image'
+                  fill
+                  className='rounded-xl object-cover'
+                  priority
+                />
+              </div>
+
+              <ul className='max-w-xl space-y-5'>
                 <li className='flex items-start gap-3 text-start text-base leading-normal text-gray-300 md:text-xl'>
                   <Image src='/crypto/right-arrow.svg' height={48} width={48} alt='arrow' />
                   <span>

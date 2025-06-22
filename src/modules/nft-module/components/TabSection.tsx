@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 const tabs = [
@@ -95,6 +96,15 @@ const TabSection = () => {
               </div>
             </motion.div>
           </AnimatePresence>
+        </div>
+        <div className='text-center'>
+          <Link
+            href='https://nft.smashpay.io/ethereum'
+            target='_blank'
+            className='button-gradient-bg inline-block rounded-lg px-8 py-3 font-medium text-white transition-colors duration-300'
+          >
+            Explore
+          </Link>
         </div>
       </div>
     </div>

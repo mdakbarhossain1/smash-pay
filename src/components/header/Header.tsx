@@ -70,7 +70,14 @@ const Header = () => {
         },
         {
           groupTitle: 'Policies',
-          links: [{ title: 'terms-policies', href: '/terms-policies' }]
+          links: [
+            // { title: 'terms-policies', href: '/terms-policies' },
+            { title: 'Terms & Policy', href: '/terms-policies?scrollTo=terms' },
+            { title: 'Privacy Policy', href: '/terms-policies?scrollTo=privacy' },
+            { title: 'Cookies Policy', href: '/terms-policies?scrollTo=cookies' },
+            { title: 'AML Compliance', href: '/terms-policies?scrollTo=aml' },
+            { title: 'Affiliate Terms', href: '/terms-policies?scrollTo=business' }
+          ]
         }
       ]
     },

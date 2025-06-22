@@ -1,9 +1,12 @@
 import TermsPolicyPage from '@/modules/terms-policy';
+import { Suspense } from 'react';
 
 const AboutUs = () => {
   return (
     <>
-      <TermsPolicyPage />
+      <Suspense fallback={<div>Loading...</div>}>
+        <TermsPolicyPage />
+      </Suspense>
     </>
   );
 };
