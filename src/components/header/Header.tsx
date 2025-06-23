@@ -45,7 +45,7 @@ const Header = () => {
           groupTitle: 'Crypto',
           links: [
             { title: 'Crypto', href: '/crypto' },
-            { title: 'GamiFi', href: '/crypto/gamefi' },
+            { title: 'GameFi', href: '/crypto/gamefi' },
             { title: 'NFT', href: '/nft' },
             { title: 'Off-Ramp', href: '/offramp' }
           ]
@@ -194,17 +194,21 @@ const Header = () => {
             {/* Desktop Auth Buttons */}
             {!isMobile && (
               <div className='flex items-center gap-2 md:gap-3'>
-                <button className='rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#2a2e38] md:text-base'>
-                  Log in
-                </button>
-                <button
-                  className='rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-sm font-semibold text-white md:text-base'
-                  style={{
-                    background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
-                  }}
-                >
-                  Register
-                </button>
+                <Link href={'/contact-us'}>
+                  <button className='cursor-pointer rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#2a2e38] md:text-base'>
+                    Log in
+                  </button>
+                </Link>
+                <Link href={'/contact-us'}>
+                  <button
+                    className='cursor-pointer rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-sm font-semibold text-white md:text-base'
+                    style={{
+                      background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
+                    }}
+                  >
+                    Register
+                  </button>
+                </Link>
               </div>
             )}
           </div>
@@ -277,17 +281,21 @@ const Header = () => {
                 ))}
 
                 <div className='mt-4 border-t border-[#3c414c] pt-4'>
-                  <button className='mb-2 w-full rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-base font-semibold text-white'>
-                    Log in
-                  </button>
-                  <button
-                    className='w-full rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-base font-semibold text-white'
-                    style={{
-                      background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
-                    }}
-                  >
-                    Register
-                  </button>
+                  <Link href={'/contact-us'}>
+                    <button className='mb-2 w-full cursor-pointer rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-base font-semibold text-white'>
+                      Log in
+                    </button>
+                  </Link>
+                  <Link href={'/contact-us'}>
+                    <button
+                      className='w-full cursor-pointer rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-base font-semibold text-white'
+                      style={{
+                        background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
+                      }}
+                    >
+                      Register
+                    </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>

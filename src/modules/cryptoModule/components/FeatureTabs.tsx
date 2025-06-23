@@ -41,21 +41,26 @@ const FeatureTabs = () => {
 
   return (
     <section>
-      <div className='mx-auto max-w-6xl rounded-2xl p-6 text-white md:p-10'>
+      <div className='mx-auto max-w-7xl rounded-2xl text-white'>
         {/* Tabs */}
-        <div className='mb-8 flex flex-wrap justify-center gap-4'>
+        <div
+          className='mx-auto mt-10 mb-8 flex max-w-[870px] flex-col justify-center gap-4 rounded-2xl py-3 md:flex-row'
+          style={{
+            backgroundColor: 'var(--token-0e4ec8d8-4630-423b-9664-60c09b619eeb, rgb(32, 35, 45))'
+          }}
+        >
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex cursor-pointer items-center gap-2 rounded-xl px-4 py-2 transition-all duration-300 ${
+              className={`flex cursor-pointer items-center gap-2 rounded-xl px-4 py-3 transition-all duration-300 ${
                 activeTab === tab.id
                   ? 'bg-teal-300 font-semibold text-black'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  : 'hover:text-bold hover:text-white'
               }`}
             >
               {tab.icon}
-              <span className='hidden sm:inline'>{tab.title}</span>
+              <span className='text-white'>{tab.title}</span>
             </button>
           ))}
         </div>
@@ -68,7 +73,10 @@ const FeatureTabs = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className='grid grid-cols-1 place-items-center gap-6 sm:grid-cols-2 lg:grid-cols-3'
+            className='bg-gradient-4 mx-auto grid w-sm grid-cols-1 place-items-center items-center justify-center gap-6 rounded-xl border px-4 pt-20 sm:grid-cols-2 md:w-7xl md:px-16 lg:grid-cols-3'
+            style={{
+              borderColor: 'var(--token-3ad3ba9a-ccc2-40b7-8c6f-fc587431b9c3, rgb(49, 53, 63))'
+            }}
           >
             {images.map((img, index) => (
               <Image
@@ -77,7 +85,7 @@ const FeatureTabs = () => {
                 alt={`Feature Image ${img}`}
                 width={450}
                 height={450}
-                className='w-full max-w-[450px] rounded-xl object-contain'
+                className='w-full max-w-[450px] rounded-tl-xl rounded-tr-xl object-contain'
               />
             ))}
           </motion.div>

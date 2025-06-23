@@ -1,4 +1,5 @@
 'use client';
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
@@ -27,17 +28,10 @@ const LeadForm = () => {
     description: '',
     subscribe: false
   });
+
   const [charCount, setCharCount] = useState(0);
-  const [isDropdownOpen, setIsDropdownOpen] = useState({
-    region: false,
-    product: false,
-    transaction_size: false
-  });
-  const dropdownRefs = {
-    region: useRef<HTMLDivElement>(null),
-    product: useRef<HTMLDivElement>(null),
-    transaction_size: useRef<HTMLDivElement>(null)
-  };
+  const [isDropdownOpen, setIsDropdownOpen] = useState({ region: false });
+  const dropdownRefs = { region: useRef<HTMLDivElement>(null) };
 
   const regions = [
     'Europe',
@@ -51,31 +45,10 @@ const LeadForm = () => {
     'Middle East'
   ];
 
-  const products = [
-    { value: 'Acquiring', label: 'Card Payment Processing' },
-    { value: 'APM', label: 'Payment methods' },
-    { value: 'IBAN account', label: 'Multi-currency accounts' },
-    { value: 'BaaS partner', label: 'SMASHPAY Banking as a Service (BaaS)' },
-    { value: 'SMASHPAY Crypto', label: 'SMASHPAY Crypto' }
-  ];
-
-  const transactionSizes = [
-    '<10,000/month',
-    '10,000 - 50,000/month',
-    '50,000 - 100,000/month',
-    '100,000 - 200,000/month',
-    '200,000 - 500,000/month',
-    '500,000 - 1 million/month',
-    '1 million+'
-  ];
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-
-    if (name === 'description') {
-      setCharCount(value.length);
-    }
+    if (name === 'description') setCharCount(value.length);
   };
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -83,38 +56,29 @@ const LeadForm = () => {
     setFormData((prev) => ({ ...prev, [name]: checked }));
   };
 
-  const handleSelectChange = (field: keyof typeof isDropdownOpen, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
-    setIsDropdownOpen((prev) => ({ ...prev, [field]: false }));
-  };
-
   const toggleDropdown = (field: keyof typeof isDropdownOpen) => {
-    setIsDropdownOpen((prev) => ({
-      ...prev,
-      [field]: !prev[field]
-    }));
+    setIsDropdownOpen((prev) => ({ ...prev, [field]: !prev[field] }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+  const handleSelectChange = (field: keyof FormData, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    setIsDropdownOpen((prev) => ({ ...prev, region: false }));
   };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      Object.entries(dropdownRefs).forEach(([key, ref]) => {
-        if (ref.current && !ref.current.contains(event.target as Node)) {
-          setIsDropdownOpen((prev) => ({ ...prev, [key]: false }));
-        }
-      });
+      if (dropdownRefs.region.current && !dropdownRefs.region.current.contains(event.target as Node)) {
+        setIsDropdownOpen({ region: false });
+      }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+  };
 
   return (
     <section className='bg-clr-14 w-full px-4 py-12 sm:px-6 lg:px-8'>
@@ -134,12 +98,11 @@ const LeadForm = () => {
         <div className='rounded-lg bg-white/5 shadow-sm backdrop-blur'>
           <form onSubmit={handleSubmit} className='space-y-6 p-6 text-white'>
             <div className='space-y-4'>
-              {/* Full Name */}
               <div className='form-input'>
                 <label className='block text-sm font-medium text-white'>
                   Full name
                   <input
-                    className='bg-clr-14 mt-1 block w-full rounded-md border border-gray-600 p-3 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm'
+                    className='bg-clr-14 mt-1 block w-full rounded-md border border-gray-600 p-3'
                     type='text'
                     name='last_name'
                     value={formData.last_name}
@@ -149,12 +112,11 @@ const LeadForm = () => {
                 </label>
               </div>
 
-              {/* Corporate Email */}
               <div className='form-input'>
                 <label className='block text-sm font-medium text-white'>
                   Corporate email
                   <input
-                    className='bg-clr-14 mt-1 block w-full rounded-md border border-gray-600 p-3 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm'
+                    className='bg-clr-14 mt-1 block w-full rounded-md border border-gray-600 p-3'
                     type='email'
                     name='corporate_email'
                     value={formData.corporate_email}
@@ -164,12 +126,11 @@ const LeadForm = () => {
                 </label>
               </div>
 
-              {/* Phone */}
               <div className='form-input'>
                 <label className='block text-sm font-medium text-white'>
                   Phone
                   <input
-                    className='bg-clr-14 mt-1 block w-full rounded-md border border-gray-600 p-3 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm'
+                    className='bg-clr-14 mt-1 block w-full rounded-md border border-gray-600 p-3'
                     type='tel'
                     name='phone'
                     value={formData.phone}
@@ -179,12 +140,11 @@ const LeadForm = () => {
                 </label>
               </div>
 
-              {/* Website */}
               <div className='form-input'>
                 <label className='block text-sm font-medium text-white'>
                   Company website
                   <input
-                    className='bg-clr-14 mt-1 block w-full rounded-md border border-gray-600 p-3 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm'
+                    className='bg-clr-14 mt-1 block w-full rounded-md border border-gray-600 p-3'
                     type='url'
                     name='website'
                     value={formData.website}
@@ -194,19 +154,17 @@ const LeadForm = () => {
                 </label>
               </div>
 
-              {/* Dropdowns & others stay as-is, but ensure their text colors are adapted */}
-              {/* Example for dropdown text color change */}
               <div className='form-select relative' ref={dropdownRefs.region}>
                 <button
                   type='button'
-                  className='bg-clr-14 mt-1 flex w-full items-center justify-between rounded-md border border-gray-600 p-3 text-left text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm'
+                  className='bg-clr-14 mt-1 flex w-full items-center justify-between rounded-md border border-gray-600 p-3 text-left text-white'
                   onClick={() => toggleDropdown('region')}
                 >
-                  <span className={`${formData.region ? 'text-white' : 'text-gray-400'}`}>
+                  <span className={formData.region ? 'text-white' : 'text-gray-400'}>
                     {formData.region || 'My company is registered in'}
                   </span>
                   <svg
-                    className={`h-5 w-5 text-white transition-transform ${isDropdownOpen.region ? 'rotate-180 transform' : ''}`}
+                    className={`h-5 w-5 text-white transition-transform ${isDropdownOpen.region ? 'rotate-180' : ''}`}
                     xmlns='http://www.w3.org/2000/svg'
                     viewBox='0 0 24 24'
                     fill='none'
@@ -219,15 +177,26 @@ const LeadForm = () => {
                     />
                   </svg>
                 </button>
-                {/* Dropdown list styling remains */}
+                {isDropdownOpen.region && (
+                  <ul className='bg-clr-14 absolute z-10 mt-1 w-full rounded-md border border-gray-600 shadow-lg'>
+                    {regions.map((region) => (
+                      <li
+                        key={region}
+                        onClick={() => handleSelectChange('region', region)}
+                        className='cursor-pointer px-4 py-2 text-sm text-gray-300 hover:bg-gray-700'
+                      >
+                        {region}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
 
-              {/* Message */}
               <div className='form-input'>
                 <label className='block text-sm font-medium text-white'>
                   Message
                   <textarea
-                    className='bg-clr-14 mt-1 block min-h-[50px] w-full rounded-md border border-gray-600 p-3 text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm'
+                    className='bg-clr-14 mt-1 block min-h-[50px] w-full rounded-md border border-gray-600 p-3 text-white'
                     name='description'
                     value={formData.description}
                     onChange={handleChange}
@@ -239,7 +208,6 @@ const LeadForm = () => {
               </div>
             </div>
 
-            {/* Checkbox */}
             <div className='space-y-6'>
               <label className='flex items-start text-white'>
                 <input
@@ -256,7 +224,7 @@ const LeadForm = () => {
                     className='text-blue-400 hover:underline'
                     title='Follow link'
                     target='_blank'
-                    href='https://www.SMASHPAY.com/privacy-centre/'
+                    href='/terms-policies'
                     rel='nofollow noopener'
                   >
                     Privacy Centre
@@ -265,7 +233,6 @@ const LeadForm = () => {
                 </span>
               </label>
 
-              {/* Submit Button */}
               <motion.button
                 type='submit'
                 className='flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-b from-[#151820] to-[#010101] px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none'

@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { FiArrowDown } from 'react-icons/fi';
 
 const CareerHeroSection = () => {
@@ -11,7 +12,7 @@ const CareerHeroSection = () => {
         backgroundSize: 'center',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        backgroundColor: '#0c1118' // fallback blend
+        backgroundColor: '#0c1118'
       }}
     >
       {/* Content */}
@@ -57,15 +58,17 @@ const CareerHeroSection = () => {
           whileTap={{ scale: 0.95 }}
           className='flex flex-col items-center'
         >
-          <button
-            className='flex items-center gap-2.5 rounded-full border border-gray-700 px-8 py-4'
-            style={{
-              background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
-            }}
-          >
-            <span className='font-sans text-lg font-semibold text-white'>See opportunities</span>
-            <FiArrowDown className='text-xl text-white' />
-          </button>
+          <Link href={'#Opportunity-section'}>
+            <button
+              className='flex cursor-pointer items-center gap-2.5 rounded-full border border-gray-700 px-8 py-4'
+              style={{
+                background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
+              }}
+            >
+              <span className='font-sans text-lg font-semibold text-white'>See opportunities</span>
+              <FiArrowDown className='text-xl text-white' />
+            </button>
+          </Link>
         </motion.div>
       </motion.div>
     </section>

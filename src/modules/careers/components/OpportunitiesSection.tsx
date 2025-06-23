@@ -92,7 +92,10 @@ const OpportunitiesSection = () => {
   );
 
   return (
-    <div className='bg-bg bg-clr-14 relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch px-4 pt-32 pb-32 md:px-8 lg:px-16'>
+    <div
+      className='bg-bg bg-clr-14 relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch px-4 pt-32 pb-32 md:px-8 lg:px-16'
+      id='Opportunity-section'
+    >
       <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-3'>
         <div className='flex w-full flex-col items-center justify-start gap-16'>
           <div className='flex w-full flex-col items-center justify-start gap-8 lg:flex-row lg:items-center lg:gap-16'>

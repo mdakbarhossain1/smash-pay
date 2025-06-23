@@ -1,9 +1,27 @@
 'use client';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
+
+const languages = ['English', 'Japan'];
 
 export default function Footer() {
+  const [selectedLanguage, setSelectedLanguage] = useState('English');
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   const footerLinks = [
     {
       title: 'Products',
@@ -94,12 +112,6 @@ export default function Footer() {
     { icon: '/home/instagram-10.svg', alt: 'Instagram' },
     { icon: '/home/youtube-10.svg', alt: 'YouTube' }
   ];
-
-  // const [date, setDate] = useState<number>();
-
-  // useEffect(() => {
-  //   setDate(new Date().getFullYear());
-  // }, []);
 
   return (
     <footer className='bg-clr-14 relative w-full overflow-hidden'>
@@ -225,17 +237,53 @@ export default function Footer() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className='flex h-12 items-center gap-6'
+                className='relative flex h-12 items-center gap-6'
+                ref={dropdownRef}
               >
-                <div className='rounded-[48px] border border-[#161616] px-[25px] py-3'>
+                <div
+                  onClick={() => setIsOpen(!isOpen)}
+                  className='cursor-pointer rounded-[48px] border border-[#161616] px-[25px] py-3'
+                >
                   <div className='flex w-[153px] items-center justify-between'>
-                    <span className='text-md font-semibold tracking-tight text-gray-300'>English</span>
-                    <Image src='/home/chevron-down9.svg' alt='Dropdown' width={18} height={18} />
+                    <span className='text-md font-semibold tracking-tight text-gray-300'>
+                      {selectedLanguage}
+                    </span>
+                    <Image
+                      src='/home/chevron-down9.svg'
+                      alt='Dropdown'
+                      width={18}
+                      height={18}
+                      className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                    />
                   </div>
                 </div>
-                {/* <button className='rounded-[48px] border border-[#161616] bg-[#161616] p-3.5'>
-                  <Image src='/home/chevron-up2.svg' alt='Scroll up' width={18} height={18} />
-                </button> */}
+
+                <AnimatePresence>
+                  {isOpen && (
+                    <motion.ul
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className='absolute top-[60px] z-50 w-[200px] rounded-xl border border-[#161616] bg-[#0F0F0F] p-2 shadow-lg'
+                    >
+                      {languages.map((lang) => (
+                        <li
+                          key={lang}
+                          onClick={() => {
+                            setSelectedLanguage(lang);
+                            setIsOpen(false);
+                          }}
+                          className={`cursor-pointer rounded-lg px-4 py-2 text-sm text-white hover:bg-[#1c1c1c] ${
+                            lang === selectedLanguage ? 'bg-[#1c1c1c]' : ''
+                          }`}
+                        >
+                          {lang}
+                        </li>
+                      ))}
+                    </motion.ul>
+                  )}
+                </AnimatePresence>
               </motion.div>
             </div>
           </div>
