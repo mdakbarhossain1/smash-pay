@@ -60,7 +60,7 @@ const FeatureTabs = () => {
               }`}
             >
               {tab.icon}
-              <span className='text-white'>{tab.title}</span>
+              <span>{tab.title}</span>
             </button>
           ))}
         </div>
