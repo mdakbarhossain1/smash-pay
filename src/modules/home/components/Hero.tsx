@@ -187,6 +187,8 @@ const Hero = () => {
                     layout='fill'
                     objectFit='contain'
                     className='scale-110 transform'
+                    unoptimized
+                    quality={100}
                   />
                 </div>
               </div>
@@ -197,6 +199,8 @@ const Hero = () => {
                     alt='Mobile App Preview'
                     layout='fill'
                     objectFit='contain'
+                    unoptimized
+                    quality={100}
                   />
                 </div>
               </div>

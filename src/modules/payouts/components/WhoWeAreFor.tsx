@@ -34,8 +34,8 @@ const WhoWeAreFor = () => {
       description:
         'Ensure timely vendor or supplier payments and scale globally by issuing payouts in different currencies and countries',
       icon: <FiShoppingCart className='text-white' size={24} />,
-      imageMobile: '/payouts/gamming-who-we-are.jpg',
-      imageDesktop: '/payouts/gamming-who-we-are.jpg',
+      imageMobile: '/payouts/ecomerce-retail.jpeg',
+      imageDesktop: '/payouts/ecomerce-retail.jpeg',
       alt: 'ecommerce'
     },
     {
@@ -43,8 +43,8 @@ const WhoWeAreFor = () => {
       title: 'Gaming',
       description: 'Enhance the gamer experience by sending instant payouts for rewards and winnings',
       icon: <FiDivideCircle className='text-white' size={24} />,
-      imageMobile: '/payouts/whowearephone.jpg',
-      imageDesktop: '/payouts/whowearephone.jpg',
+      imageMobile: '/payouts/gaming.jpeg',
+      imageDesktop: '/payouts/gaming.jpeg',
       alt: 'gaming'
     },
     {
@@ -53,8 +53,8 @@ const WhoWeAreFor = () => {
       description:
         'Improve operational efficiency and driver satisfaction by sending instant payouts to drivers',
       icon: <FiTruck className='text-white' size={24} />,
-      imageMobile: '/payouts/gamming-who-we-are.jpg',
-      imageDesktop: '/payouts/gamming-who-we-are.jpg',
+      imageMobile: '/payouts/Transport.jpeg',
+      imageDesktop: '/payouts/Transport.jpeg',
       alt: 'passenger transport'
     },
     {
@@ -62,8 +62,8 @@ const WhoWeAreFor = () => {
       title: 'Media and Entertainment',
       description: 'Provide timely compensation for creators and partners in new countries and regions',
       icon: <FiFilm className='text-white' size={24} />,
-      imageMobile: '/payouts/whowearephone.jpg',
-      imageDesktop: '/payouts/whowearephone.jpg',
+      imageMobile: '/payouts/Entertainment.mp4',
+      imageDesktop: '/payouts/Entertainment.mp4',
       alt: 'media entertainment'
     },
     {
@@ -72,8 +72,8 @@ const WhoWeAreFor = () => {
       description:
         'Simplify payments to sellers and partners, ensuring quick, efficient, and multi-currency payouts across regions',
       icon: <FiShoppingBag className='text-white' size={24} />,
-      imageMobile: '/payouts/gamming-who-we-are.jpg',
-      imageDesktop: '/payouts/gamming-who-we-are.jpg',
+      imageMobile: '/payouts/marketplace.jpeg',
+      imageDesktop: '/payouts/marketplace.jpeg',
       alt: 'marketplaces'
     },
     {
@@ -81,8 +81,8 @@ const WhoWeAreFor = () => {
       title: 'Travel',
       description: 'Improve efficiency with instant cross-border payouts to service providers and partners',
       icon: <FiGlobe className='text-white' size={24} />,
-      imageMobile: '/payouts/whowearephone.jpg',
-      imageDesktop: '/payouts/whowearephone.jpg',
+      imageMobile: '/payouts/travel.jpeg',
+      imageDesktop: '/payouts/travel.jpeg',
       alt: 'travel'
     },
     {
@@ -90,8 +90,8 @@ const WhoWeAreFor = () => {
       title: 'SaaS',
       description: 'Simplify global operations with scheduled payouts and managing cross-border payments',
       icon: <FiGrid className='text-white' size={24} />,
-      imageMobile: '/payouts/whowearephone.jpg',
-      imageDesktop: '/payouts/whowearephone.jpg',
+      imageMobile: '/payouts/saas.jpeg',
+      imageDesktop: '/payouts/saas.jpeg',
       alt: 'saas'
     }
   ];
@@ -163,21 +163,35 @@ const WhoWeAreFor = () => {
             </motion.ul>
           </div>
 
-          {/* Right Column (Image) */}
           <div className='mt-8 w-full lg:mt-0 lg:w-1/2'>
             <motion.div
               variants={item}
-              className='relative h-[300px] w-full overflow-hidden rounded-xl shadow-lg sm:h-[400px] lg:h-[500px]'
+              className='relative h-[300px] w-full overflow-hidden rounded-xl shadow-lg sm:h-[400px] lg:h-[600px]'
             >
-              <Image
-                src={businesses.find((b) => b.id === activeBusiness)?.imageDesktop || ''}
-                alt={businesses.find((b) => b.id === activeBusiness)?.alt || 'business image'}
-                fill
-                className='object-cover transition-opacity duration-500 ease-in-out'
-                priority
-              />
+              {businesses.find((b) => b.id === activeBusiness)?.imageDesktop.endsWith('.jpeg') ? (
+                <Image
+                  src={businesses.find((b) => b.id === activeBusiness)?.imageDesktop || ''}
+                  alt={businesses.find((b) => b.id === activeBusiness)?.alt || 'business image'}
+                  fill
+                  className='object-cover transition-opacity duration-500 ease-in-out'
+                  priority
+                />
+              ) : (
+                <video
+                  src={businesses.find((b) => b.id === activeBusiness)?.imageDesktop}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  height={600}
+                  width={600}
+                  className='h-full w-full object-cover'
+                />
+              )}
             </motion.div>
           </div>
+
+          {/* Right Column (Image) */}
         </motion.div>
       </div>
     </section>

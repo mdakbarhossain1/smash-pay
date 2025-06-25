@@ -58,7 +58,15 @@ const SmashPayApp = () => {
           viewport={{ once: true }}
         >
           <div className='flex h-full w-full items-center justify-center text-gray-400'>
-            <img src='/home/Smashpay-Content.png' alt='' />
+            <Image
+              src={`/home/Smashpay-Content.png`}
+              alt='content'
+              width={600}
+              height={600}
+              unoptimized
+              quality={100}
+            />
+            {/* <img src='/home/Smashpay-Content.png' alt='' /> */}
           </div>
         </motion.div>
       </div>

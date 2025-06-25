@@ -11,27 +11,27 @@ export default function OfficesSection() {
   const offices = useMemo(() => {
     const data = [
       {
-        name: 'Yogyakarta',
+        name: 'Montana',
         address: 'Jend. Sudirman Street, Jetis, Yogyakarta 55233',
-        image: '/about-us/yogyakartaJend.png',
+        image: '/about-us/Montana.jpeg',
         styles: 'left-[120px] top-14 h-[323px]'
       },
       {
-        name: 'Berlin',
+        name: 'Hong Kong',
         address: 'Level 8, Rosa-Luxemburg-Straße 71, Berlin 80094',
-        image: '/about-us/berlin.png',
+        image: '/about-us/Hong-Kong.jpeg',
         styles: 'left-[120px] top-[419px] h-[260px]'
       },
       {
-        name: 'San Francisco',
+        name: 'Vietnam',
         address: '123 Street, 7th Floor,\nSan Francisco, CA 94105',
-        image: '/about-us/san-francisco.png',
+        image: '/about-us/Vietnam.jpeg',
         styles: 'top-0 right-0 h-[322px]'
       },
       {
         name: 'London',
         address: 'The Warehouse 123-456\nOld St, London, EC1V 9NR UK',
-        image: '/about-us/london.png',
+        image: '/about-us/London.jpeg',
         styles: 'top-[340px] right-0 h-[348px]'
       }
     ];

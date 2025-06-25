@@ -1,5 +1,6 @@
 'use client';
 import ReusableInfoCard from '@/shared/components/ReusableInfoCard';
+import TakeoutCompo from './TakeoutCompo';
 
 const MobilePaySection = () => {
   return (
@@ -29,27 +30,7 @@ const MobilePaySection = () => {
         />
       </div>
       <div className='m-auto max-w-7xl px-2 pt-10'>
-        <ReusableInfoCard
-          heading='Take out up to $200 in cash with no hidden fees'
-          subheading='You’ll quickly find that we make a great travel companion on all your adventures. Use your card to withdraw money anywhere in the world, with no hidden fees or bad exchange rates for spending abroad. Spend and enjoy your money internationally with total peace of mind.'
-          features={[
-            {
-              icon: '/smashpay/bank-note-03-10.svg',
-              title: 'No minimum balance',
-              description: 'You can use SmashPay card everywhere without minimum balance.'
-            },
-            {
-              icon: '/smashpay/globe-020.svg',
-              title: 'Globally Accepted',
-              description: 'SmashPay cards takes the hassle-free of using ATMs abroad.'
-            }
-          ]}
-          buttonText='Get started'
-          buttonIcon='/home/arrow-right2.svg'
-          image='/smashpay/image1.png'
-          imageAlt='Mobile payment illustration'
-          imageLeft={true}
-        />
+        <TakeoutCompo />
       </div>
       <div className='m-auto max-w-7xl px-2 pt-10'>
         <ReusableInfoCard

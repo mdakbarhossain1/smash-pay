@@ -38,7 +38,6 @@ const Home = () => {
   return (
     <>
       <Hero />
-
       <Featured />
       <WeOffer />
       <WhySmashPay />

@@ -13,7 +13,7 @@ const AboutUsSection = () => {
         className='relative flex shrink-0 flex-col items-center justify-start gap-16 self-stretch pt-24'
       >
         <div className='relative flex w-full max-w-7xl flex-col items-center justify-start gap-8 px-8'>
-          <div className='relative flex w-full max-w-[800px] flex-col items-center justify-start gap-10'>
+          <div className='relative flex w-full max-w-5xl flex-col items-center justify-start gap-10'>
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -56,12 +56,15 @@ const AboutUsSection = () => {
                     letterSpacing: '-2.5px'
                   }}
                 >
-                  We've moving money globally since 2019
+                  Bridging the Fiat and Crypto Global Economies
                 </h1>
               </div>
-              <p className='w-full max-w-[672px] text-center text-xl leading-normal font-normal tracking-[-0.5px] text-gray-300'>
-                Since launched in 2019, SmashPay was growth from an idea that there had to be a better, fair
-                way to move money around the world.
+              <p className='w-full max-w-6xl text-center text-xl leading-normal font-normal tracking-[-0.5px] text-gray-300'>
+                At SmashPay, we are bridging the fiat and crypto global economies by delivering a unified
+                wallet and payment infrastructure that empowers users, merchants, and platforms to transact
+                freely across both worlds. Whether it’s everyday fiat payments, cross-border crypto transfers,
+                or decentralized lending—SmashPay connects traditional finance with Web3 innovation to unlock
+                a new era of borderless financial freedom.
               </p>
             </motion.div>
           </div>

@@ -23,7 +23,7 @@ const SmashPayCard = () => {
       <div className='flex w-full max-w-7xl flex-col items-center justify-start gap-12 lg:flex-row lg:gap-24'>
         {/* Image Section - Order changes on mobile */}
         <motion.div
-          className='order-2 flex w-full flex-col items-center justify-start gap-12 lg:order-1 lg:w-1/2'
+          className='bg-gradient-2 order-2 flex w-full flex-col items-center justify-start gap-12 rounded-xl p-8 lg:order-1 lg:w-1/2'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -31,13 +31,12 @@ const SmashPayCard = () => {
         >
           <div className='relative aspect-[580/576] h-auto w-full max-w-[640px]'>
             <Image
-              src='/home/card2.png'
+              src='/crypto/smash-pay-green.png'
               alt='SmashPay Card'
               fill
-              className='object-cover'
+              className='object-contain'
               style={{
                 boxShadow: '0px 24px 48px -12px rgba(16, 24, 40, 0.18)'
-                // transform: 'translate(-50%, -50%)'
               }}
             />
           </div>

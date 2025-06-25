@@ -15,7 +15,7 @@ const PaymentOptions = () => {
             { icon: '/home/check-icon2.svg', text: 'Competitive pricing.' }
           ]}
           buttonText='Get started'
-          imageSrc='/paymentProcessing/one-platform-video-optimized.mp4'
+          imageSrc='/paymentProcessing/one-platform.mp4'
           imageBackgroundColor=''
           imageSide='right'
         />
@@ -29,7 +29,7 @@ const PaymentOptions = () => {
               { icon: '/home/check-icon2.svg', text: 'Centralise your reporting.' }
             ]}
             buttonText='Get started'
-            imageSrc='/paymentProcessing/we-take-care-video-optimized.mp4'
+            imageSrc='/paymentProcessing/take-care.mp4'
             imageBackgroundColor=''
             imageSide='left'
           />
