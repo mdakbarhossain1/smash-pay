@@ -1,7 +1,8 @@
 'use client';
-import { motion, useAnimation } from 'framer-motion';
+import { useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import LogosSection from './LogosSection';
 
 const FeaturedSection = () => {
   const controls = useAnimation();
@@ -49,27 +50,8 @@ const FeaturedSection = () => {
     >
       <div className='relative flex w-full max-w-7xl flex-col items-start justify-start gap-8 px-8'>
         <div className='relative flex w-full flex-col items-center justify-start gap-8 md:flex-row md:gap-[120px]'>
-          <div className='text-md text-center font-medium whitespace-nowrap text-white md:text-left'>
-            As featured on:
-          </div>
-
-          <div className='relative w-full overflow-hidden'>
-            <motion.div
-              className='flex items-center justify-start'
-              animate={controls}
-              style={{ width: 'fit-content' }}
-            >
-              {duplicatedLogos.map((logo) => (
-                <div key={`${logo.id}-${Math.random()}`} className='mx-4 min-w-[100px] flex-shrink-0'>
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className='h-5 object-contain'
-                    style={{ width: logo.id === 3 ? '140px' : logo.id === 4 ? '78px' : 'auto' }}
-                  />
-                </div>
-              ))}
-            </motion.div>
+          <div className='w-full'>
+            <LogosSection />
           </div>
         </div>
       </div>
