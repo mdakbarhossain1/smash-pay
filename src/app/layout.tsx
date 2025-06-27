@@ -3,6 +3,7 @@ import { Manrope } from 'next/font/google';
 
 import Provider from '@/client-provider/provider';
 
+import CookieConsent from '@/shared/components/CookieConsent';
 import '../style/globals.css';
 
 const manropeSans = Manrope({
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         className={`${manropeSans.className} bg-bg relative flex flex-col items-center justify-start gap-0 antialiased`}
       >
         <Provider>{children}</Provider>
+        <CookieConsent />
       </body>
     </html>
   );

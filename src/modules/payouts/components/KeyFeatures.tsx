@@ -53,7 +53,7 @@ const KeyFeatures = () => {
           <ReusableInfoCard
             heading='Global and local reach'
             subheading='Scale payouts in APAC, LATAM, Africa, Europe, and India through a single API integration.'
-            image='/smashpay/smash.svg'
+            image='/payouts/second-card-image.png'
             imageAlt='Mobile payment illustration'
             imageLeft={true}
           />

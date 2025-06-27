@@ -63,17 +63,21 @@ const Header = () => {
         {
           groupTitle: 'Products',
           links: [
-            { title: 'Card', href: '/card', icon: <FiCreditCard className='mr-2' /> },
+            { title: 'SmashPay Card', href: '/card', icon: <FiCreditCard className='mr-2' /> },
             { title: 'Personal', href: '/personal', icon: <FiUser className='mr-2' /> },
             { title: 'Business', href: '/business', icon: <FiBriefcase className='mr-2' /> },
-            { title: 'Multi-currency', href: '/multicurrency-account', icon: <FiGlobe className='mr-2' /> }
+            {
+              title: 'Multi Currency Account',
+              href: '/multicurrency-account',
+              icon: <FiGlobe className='mr-2' />
+            }
           ]
         },
         {
           groupTitle: 'Payments',
           links: [
             {
-              title: 'Payment process',
+              title: 'Payment Processing',
               href: '/payment-processing',
               icon: <FiDollarSign className='mr-2' />
             },
@@ -147,7 +151,7 @@ const Header = () => {
           groupTitle: 'Resources',
           links: [
             { title: 'FAQ', href: '/faq', icon: <FiHelpCircle className='mr-2' /> },
-            { title: 'Coverages', href: '/country-coverage', icon: <FiMap className='mr-2' /> }
+            { title: 'Country Coverages', href: '/country-coverage', icon: <FiMap className='mr-2' /> }
           ]
         }
       ]
