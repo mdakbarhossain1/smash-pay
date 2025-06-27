@@ -2,52 +2,92 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { FiChevronDown, FiChevronRight, FiMenu, FiX } from 'react-icons/fi';
+import { ReactNode, useState } from 'react';
 
+import {
+  FiAward,
+  // FiBitcoin,
+  FiBook,
+  FiBriefcase,
+  FiCheckCircle,
+  FiChevronRight,
+  // FiCookie,
+  FiCreditCard,
+  FiDollarSign,
+  FiDownload,
+  FiFileText,
+  FiGlobe,
+  FiHelpCircle,
+  FiImage,
+  FiInfo,
+  FiLogOut,
+  FiMail,
+  FiMap,
+  FiMenu,
+  FiSend,
+  FiShield,
+  FiUser,
+  FiUsers,
+  FiX
+} from 'react-icons/fi';
+import MegaMenu from './MegaMenu';
+
+// Type for individual menu link
+type MenuLink = {
+  title: string;
+  href: string;
+  icon?: ReactNode;
+};
+// Type for a group of links in submenu
+type MenuGroup = {
+  groupTitle: string;
+  links: MenuLink[];
+};
+// Type for main menu items
 type MenuItem = {
   title: string;
   href?: string;
+  submenu?: MenuGroup[];
 };
-
-type MenuGroup = {
-  groupTitle: string;
-  links: MenuItem[];
-};
+// The complete menu structure type
+type MenuStructure = MenuItem[];
 
 const Header = () => {
-  const [isMobile, setIsMobile] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
-  const menuStructure: { title: string; href?: string; submenu?: MenuGroup[] }[] = [
+  const menuStructure: MenuStructure = [
     {
       title: 'Products',
       submenu: [
         {
           groupTitle: 'Products',
           links: [
-            { title: 'Cards', href: '/card' },
-            { title: 'Personal', href: '/personal' },
-            { title: 'Business', href: '/business' },
-            { title: 'Multi-currency', href: '/multicurrency-account' }
+            { title: 'Card', href: '/card', icon: <FiCreditCard className='mr-2' /> },
+            { title: 'Personal', href: '/personal', icon: <FiUser className='mr-2' /> },
+            { title: 'Business', href: '/business', icon: <FiBriefcase className='mr-2' /> },
+            { title: 'Multi-currency', href: '/multicurrency-account', icon: <FiGlobe className='mr-2' /> }
           ]
         },
         {
           groupTitle: 'Payments',
           links: [
-            { title: 'Payment process', href: '/payment-processing' },
-            { title: 'Payment Rails', href: '/payments' },
-            { title: 'Payouts', href: '/payouts' }
+            {
+              title: 'Payment process',
+              href: '/payment-processing',
+              icon: <FiDollarSign className='mr-2' />
+            },
+            { title: 'Payment Rails', href: '/payments', icon: <FiSend className='mr-2' /> },
+            { title: 'Payouts', href: '/payouts', icon: <FiDownload className='mr-2' /> }
           ]
         },
         {
           groupTitle: 'Crypto',
           links: [
-            { title: 'Crypto', href: '/crypto' },
-            { title: 'GameFi', href: '/crypto/gamefi' },
-            { title: 'NFT', href: '/nft' },
-            { title: 'Off-Ramp', href: '/offramp' }
+            { title: 'Crypto', href: '/crypto', icon: <FiAward className='mr-2' /> },
+            { title: 'GameFi', href: '/crypto/gamefi', icon: <FiAward className='mr-2' /> },
+            { title: 'NFT', href: '/nft', icon: <FiImage className='mr-2' /> },
+            { title: 'Off-Ramp', href: '/offramp', icon: <FiLogOut className='mr-2' /> }
           ]
         }
       ]
@@ -62,21 +102,40 @@ const Header = () => {
         {
           groupTitle: 'Company',
           links: [
-            { title: 'About Us', href: '/about-us' },
-            { title: 'Career', href: '/careers' },
-            { title: 'Blog', href: '/blog' },
-            { title: 'Contact Us', href: '/contact-us' }
+            { title: 'About Us', href: '/about-us', icon: <FiInfo className='mr-2' /> },
+            { title: 'Career', href: '/careers', icon: <FiUsers className='mr-2' /> },
+            { title: 'Blog', href: '/blog', icon: <FiBook className='mr-2' /> },
+            { title: 'Contact Us', href: '/contact-us', icon: <FiMail className='mr-2' /> }
           ]
         },
         {
           groupTitle: 'Policies',
           links: [
-            // { title: 'terms-policies', href: '/terms-policies' },
-            { title: 'Terms & Policy', href: '/terms-policies?scrollTo=terms' },
-            { title: 'Privacy Policy', href: '/terms-policies?scrollTo=privacy' },
-            { title: 'Cookies Policy', href: '/terms-policies?scrollTo=cookies' },
-            { title: 'AML Compliance', href: '/terms-policies?scrollTo=aml' },
-            { title: 'Affiliate Terms', href: '/terms-policies?scrollTo=business' }
+            {
+              title: 'Terms & Policy',
+              href: '/terms-policies?scrollTo=terms',
+              icon: <FiFileText className='mr-2' />
+            },
+            {
+              title: 'Privacy Policy',
+              href: '/terms-policies?scrollTo=privacy',
+              icon: <FiShield className='mr-2' />
+            },
+            {
+              title: 'Cookies Policy',
+              href: '/terms-policies?scrollTo=cookies',
+              icon: <FiShield className='mr-2' />
+            },
+            {
+              title: 'AML Compliance',
+              href: '/terms-policies?scrollTo=aml',
+              icon: <FiCheckCircle className='mr-2' />
+            },
+            {
+              title: 'Affiliate Terms',
+              href: '/terms-policies?scrollTo=business',
+              icon: <FiBriefcase className='mr-2' />
+            }
           ]
         }
       ]
@@ -87,33 +146,20 @@ const Header = () => {
         {
           groupTitle: 'Resources',
           links: [
-            { title: 'FAQ', href: '/faq' },
-            { title: 'Coverages', href: '/country-coverage' }
+            { title: 'FAQ', href: '/faq', icon: <FiHelpCircle className='mr-2' /> },
+            { title: 'Coverages', href: '/country-coverage', icon: <FiMap className='mr-2' /> }
           ]
         }
       ]
     }
   ];
-
   const toggleSubmenu = (title: string) => {
     setOpenSubmenu(openSubmenu === title ? null : title);
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-      if (window.innerWidth >= 768) {
-        setMobileMenuOpen(false);
-      }
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
     <div
-      className='z-50 flex w-full flex-col items-center justify-start'
+      className='sticky top-0 z-[9999999999999] flex w-full flex-col items-center justify-start'
       style={{
         background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
       }}
@@ -143,81 +189,39 @@ const Header = () => {
               </div>
 
               {/* Desktop Menu */}
-              {!isMobile && (
-                <nav className='flex items-center gap-10 text-sm font-medium'>
-                  {menuStructure.map((section) => (
-                    <div key={section.title} className='group relative'>
-                      <div className='flex cursor-pointer items-center gap-1'>
-                        <Link
-                          href={section.href ?? '#'}
-                          className='text-sm font-medium text-white transition-colors group-hover:text-gray-300 md:text-lg'
-                        >
-                          {section.title}
-                        </Link>
-                        {section.submenu && (
-                          <FiChevronDown className='ml-1 text-white transition-colors group-hover:text-gray-300' />
-                        )}
-                      </div>
-
-                      {/* Submenu */}
-                      {section.submenu && (
-                        <div className='absolute top-full left-0 z-50 hidden min-w-[300px] gap-8 rounded-md bg-[#161922] px-4 py-4 shadow-lg group-hover:flex'>
-                          {section.submenu.map((group) => (
-                            <div key={group.groupTitle} className='min-w-[120px]'>
-                              <p className='gradient-text mb-1 block py-2 text-lg font-bold text-white'>
-                                {group.groupTitle}
-                              </p>
-                              {group.links.map((link) => (
-                                <Link key={link.title} href={link.href || '#'}>
-                                  <p className='py-[8px] text-sm text-white hover:bg-[#0e131b]'>
-                                    {link.title}
-                                  </p>
-                                </Link>
-                              ))}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </nav>
-              )}
+              <MegaMenu menuStructure={menuStructure} />
             </div>
 
             {/* Mobile Menu Button */}
-            {isMobile && (
-              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className='p-2 text-white'>
-                {mobileMenuOpen ? <FiX className='h-6 w-6' /> : <FiMenu className='h-6 w-6' />}
-              </button>
-            )}
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className='p-2 text-white md:hidden'>
+              {mobileMenuOpen ? <FiX className='h-6 w-6' /> : <FiMenu className='h-6 w-6' />}
+            </button>
 
             {/* Desktop Auth Buttons */}
-            {!isMobile && (
-              <div className='flex items-center gap-2 md:gap-3'>
-                <Link href={'/contact-us'}>
-                  <button className='cursor-pointer rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#2a2e38] md:text-base'>
-                    Log in
-                  </button>
-                </Link>
-                <Link href={'/contact-us'}>
-                  <button
-                    className='cursor-pointer rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-sm font-semibold text-white md:text-base'
-                    style={{
-                      background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
-                    }}
-                  >
-                    Register
-                  </button>
-                </Link>
-              </div>
-            )}
+            <div className='hidden items-center gap-2 md:flex md:gap-3'>
+              <Link href={'/contact-us'}>
+                <button className='cursor-pointer rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#2a2e38] md:text-base'>
+                  Log in
+                </button>
+              </Link>
+              <Link href={'/contact-us'}>
+                <button
+                  className='cursor-pointer rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-sm font-semibold text-white md:text-base'
+                  style={{
+                    background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
+                  }}
+                >
+                  Register
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
 
         {/* Mobile Menu */}
 
         <AnimatePresence>
-          {isMobile && mobileMenuOpen && (
+          {mobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
@@ -265,7 +269,8 @@ const Header = () => {
                                         key={link.title}
                                         href={link.href || '#'}
                                       >
-                                        <p className='py-1 text-sm text-gray-300 hover:text-white'>
+                                        <p className='flex items-center gap-1 py-1 text-sm text-gray-300 hover:text-white'>
+                                          {link.icon}
                                           {link.title}
                                         </p>
                                       </Link>

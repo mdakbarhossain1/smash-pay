@@ -110,6 +110,8 @@ const ReusableInfoCard = ({
           height={720}
           className='h-auto w-full object-cover'
           priority
+          quality={100}
+          unoptimized
         />
       </div>
     </motion.div>

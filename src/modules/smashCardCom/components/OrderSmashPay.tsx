@@ -147,12 +147,7 @@ const OrderSmashPay = () => {
               key={method.id}
               className='flex items-center justify-center rounded-xl bg-white p-6 shadow-lg'
             >
-              <img
-                src={method.image}
-                alt={method.alt}
-                className='h-full w-full object-contain'
-                style={{ transform: 'rotate(-90deg)' }}
-              />
+              <img src={method.image} alt={method.alt} className='h-full w-full object-contain' />
             </SwiperSlide>
           ))}
         </Swiper>

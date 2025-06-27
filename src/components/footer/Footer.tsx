@@ -40,12 +40,10 @@ export default function Footer() {
         },
         {
           link: '/card',
-          label: 'SmashPay card'
+          label: 'Card'
         },
-        {
-          link: '/country-coverage',
-          label: 'Country coverage'
-        }
+        { label: 'Payment Rails', link: '/payments' },
+        { label: 'Crypto', link: '/crypto' }
       ]
     },
     {
@@ -56,20 +54,21 @@ export default function Footer() {
           label: 'About us'
         },
         {
-          link: '/about-us',
-          label: 'Customer stories'
-        },
-        {
           link: '/blog',
           label: 'Press'
+        },
+        {
+          link: '/contact-us',
+          label: 'Contact us'
         },
         {
           link: '/careers',
           label: 'Careers'
         },
+
         {
-          link: '/contact-us',
-          label: 'Contact us'
+          link: '/terms-policies',
+          label: 'Terms and privacy'
         }
       ],
       badge: "We're hiring"
@@ -78,24 +77,16 @@ export default function Footer() {
       title: 'Resources',
       links: [
         {
-          link: '/blog',
-          label: 'Blog'
-        },
-        {
           link: '/faq',
           label: 'FAQ'
-        },
-        {
-          link: '/payments',
-          label: 'Payment Rails'
         },
         {
           link: '/pricing',
           label: 'Pricing'
         },
         {
-          link: '/terms-policies',
-          label: 'Terms and privacy'
+          link: '/country-coverage',
+          label: 'Country coverage'
         }
       ]
     },
