@@ -1,5 +1,4 @@
 'use client';
-import { gradientTextStyle } from '@/lib/utils';
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -92,11 +91,11 @@ const WeOffer = () => {
           className='flex w-full max-w-[900px] flex-col items-center justify-start gap-4 md:gap-5'
         >
           <motion.h2
-            className='gradient-text text-center text-3xl font-medium text-transparent md:text-5xl lg:text-6xl'
+            className='text-center text-3xl font-medium text-white md:text-5xl lg:text-6xl'
             variants={itemVariants}
-            style={gradientTextStyle}
+            // style={gradientTextStyle}
           >
-            We offer fast and secure money transfers
+            We offer fast and secure money <span className='text-[#c3f53c]'>transfers</span>
           </motion.h2>
         </motion.div>
       </motion.div>

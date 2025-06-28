@@ -114,16 +114,7 @@ const OfficeLocations = () => {
                   }}
                 ></div>
               </div>
-              <h2
-                className='w-full text-center text-5xl leading-tight font-medium tracking-[-2px] md:text-6xl'
-                style={{
-                  background:
-                    'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-                  backgroundClip: 'text',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent'
-                }}
-              >
+              <h2 className='gradient-text w-full text-center text-5xl leading-tight font-medium tracking-[-2px] md:text-6xl'>
                 Where we're located
               </h2>
             </div>

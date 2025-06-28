@@ -149,7 +149,7 @@ const TermsAndPolicies = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-4xl font-medium text-transparent md:text-5xl'
+                  className='text-4xl font-medium text-transparent text-white md:text-5xl'
                 >
                   {sections[activeSection as keyof typeof sections].title}
                 </motion.h1>

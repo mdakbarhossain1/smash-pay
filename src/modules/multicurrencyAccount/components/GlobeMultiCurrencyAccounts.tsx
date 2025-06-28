@@ -83,7 +83,7 @@ const GlobeMultiCurrencyAccounts = () => {
             className='relative flex w-full flex-col items-start justify-start gap-6'
             variants={itemVariants}
           >
-            <h2 className='w-full bg-[linear-gradient(180deg,_rgba(123,_125,_129,_1)_0%,_rgba(255,_255,_255,_1)_100%)] bg-clip-text text-left text-4xl leading-tight font-medium tracking-tight text-transparent md:text-5xl lg:text-6xl'>
+            <h2 className='gradient-text w-full text-left text-4xl leading-tight font-medium tracking-tight text-transparent md:text-5xl lg:text-6xl'>
               Multi-currency accounts with local bank details
             </h2>
           </motion.div>

@@ -24,8 +24,9 @@ const PaymentHeader = () => {
           className='flex w-full flex-col items-center justify-start gap-8'
         >
           <div className='flex w-full flex-col items-center justify-start gap-6'>
-            <h2 className='gradient-text text-center text-5xl leading-tight font-medium tracking-tight text-transparent sm:text-6xl md:text-7xl'>
-              Choose how your customers make and receive payments through our global banking network
+            <h2 className='text-center text-5xl leading-tight font-medium tracking-tight text-white sm:text-6xl md:text-7xl'>
+              Choose how your customers make and receive payments through our global{' '}
+              <span className='text-[#c3f53c]'>banking network</span>
             </h2>
           </div>
 

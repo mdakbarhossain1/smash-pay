@@ -133,7 +133,7 @@ const PricingSection = () => {
                 </li>
               </ul>
               <Link
-                href='https://ckurt.lemonsqueezy.com/buy/8fa1f143-8036-49b3-bcb8-9a296ef37d87'
+                href='/contact-us'
                 className='mb-4 block w-full rounded-xl border border-[#525866] bg-[#20232D] px-6 py-3 text-center text-white'
               >
                 Start 30 Days Free Trial
@@ -228,7 +228,7 @@ const PricingSection = () => {
                 </li>
               </ul>
               <Link
-                href='https://ckurt.lemonsqueezy.com/buy/8fa1f143-8036-49b3-bcb8-9a296ef37d87'
+                href='/contact-us'
                 className='mb-4 block w-full rounded-xl bg-[#6FFFE9] px-6 py-3 text-center text-[#003233]'
               >
                 Start 30 Days Free Trial
@@ -291,7 +291,7 @@ const PricingSection = () => {
                 </li>
               </ul>
               <Link
-                href='https://ckurt.lemonsqueezy.com/buy/8fa1f143-8036-49b3-bcb8-9a296ef37d87'
+                href='/contact-us'
                 className='mb-4 block w-full rounded-xl border border-[#525866] bg-[#20232D] px-6 py-3 text-center text-white'
               >
                 Chat With Us

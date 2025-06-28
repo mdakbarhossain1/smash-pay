@@ -39,16 +39,12 @@ const CareerHeroSection = () => {
 
           {/* Main heading */}
           <h1
-            className='text-4xl leading-tight font-bold md:text-5xl lg:text-6xl xl:text-7xl'
+            className='text-4xl leading-tight font-bold text-white md:text-5xl lg:text-6xl xl:text-7xl'
             style={{
-              background: 'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-              backgroundClip: 'text',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
               letterSpacing: '-0.025em'
             }}
           >
-            Transform the Future of Payment
+            Transform the Future of <span className='text-[#c3f53c]'>Payment</span>
           </h1>
         </div>
 

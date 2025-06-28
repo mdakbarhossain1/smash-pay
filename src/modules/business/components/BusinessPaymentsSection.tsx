@@ -76,10 +76,10 @@ const BusinessPaymentsSection = () => {
 
               {/* Main title */}
               <motion.h2
-                className='gradient-text text-center text-4xl leading-tight font-medium tracking-[-2.5px] text-transparent md:text-5xl lg:text-6xl'
+                className='text-center text-4xl leading-tight font-medium tracking-[-2.5px] text-white md:text-5xl lg:text-6xl'
                 variants={itemVariants}
               >
-                Global business <br /> payments.
+                Global business <br /> <span className='text-[#c3f53c]'>payments</span>.
               </motion.h2>
             </motion.div>
 

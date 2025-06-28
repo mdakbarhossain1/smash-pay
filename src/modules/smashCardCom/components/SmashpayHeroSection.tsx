@@ -28,12 +28,40 @@ const SmashpayHeroSection = () => {
 
   return (
     <section
-      className='relative flex w-full flex-col items-center justify-start gap-16 pt-24 pb-32'
+      className='relative flex h-screen w-full flex-col items-center justify-start gap-16 pt-24 pb-32'
       style={{
         background: 'linear-gradient(180deg, rgba(12, 17, 24, 1) 0%, rgba(29, 30, 45, 1) 100%)'
       }}
     >
-      <div className='mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 px-8'>
+      <div
+        className='background-video-7 w-background-video w-background-video-atom z-0'
+        style={{
+          backgroundImage: 'linear-gradient(#0000001a, #0000001a)',
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          inset: '0%',
+          overflow: 'hidden',
+          color: 'white'
+        }}
+      >
+        <video
+          id='47c23398-074c-135b-5101-f78a30d97f84-video'
+          autoPlay
+          loop
+          muted
+          playsInline
+          className='h-full w-full md:h-auto'
+          style={{
+            backgroundImage: "url('/home/videos/Promo-transcode.jpg')"
+          }}
+        >
+          <source src='/home/videos/Promo-transcode.mp4' />
+          <source src='/home/videos/Promo-transcode.webm' />
+        </video>
+      </div>
+
+      <div className='relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 px-8'>
         <motion.div
           className='flex w-full max-w-[800px] flex-col items-center justify-center gap-10'
           initial='hidden'

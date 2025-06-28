@@ -2,6 +2,7 @@
 import { fadeIn, staggerContainer } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 const QuickBuy = () => {
@@ -86,11 +87,13 @@ const QuickBuy = () => {
           variants={fadeIn('up', 'tween', 0.2, 1)}
           className='flex w-full flex-col justify-start gap-4'
         >
-          <p className='gradient-text text-center text-3xl leading-relaxed font-bold tracking-tight md:text-7xl'>
+          <p className='text-center text-3xl leading-relaxed font-bold tracking-tight text-white md:text-7xl'>
             Quick{' '}
-            <span className='gradient-text rounded-lg border border-[#3c414c] px-2 py-1 text-base font-bold text-white transition-colors hover:bg-[#2a2e38] md:text-xl'>
-              Buy
-            </span>
+            <Link href={'/crypto'}>
+              <span className='rounded-lg border border-[#3c414c] px-2 py-1 text-base font-bold text-[#c3f53c] transition-colors hover:bg-[#2a2e38] md:text-xl'>
+                Buy
+              </span>
+            </Link>
           </p>
         </motion.div>
 

@@ -54,11 +54,17 @@
   }
 
   .gradient-text {
-    background: linear-gradient(180deg, #7b7d81 0%, #fff 100%);
+    background: linear-gradient(180deg, #fff 0%, #fff 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  /* .gradient-text {
+    background: linear-gradient(180deg, #7b7d81 0%, #fff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  } */
   .gradient-text-2 {
     background: linear-gradient(
       90deg,

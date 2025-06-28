@@ -124,7 +124,7 @@ const BlogContainer = () => {
         <div className='flex w-full flex-col items-start justify-start gap-12'>
           <div className='flex w-full flex-col items-start justify-start gap-8'>
             <motion.h2
-              className='bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-left text-5xl leading-tight font-medium tracking-[-2px] text-transparent md:text-6xl'
+              className='gradient-text text-left text-5xl leading-tight font-medium tracking-[-2px] text-transparent md:text-6xl'
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}

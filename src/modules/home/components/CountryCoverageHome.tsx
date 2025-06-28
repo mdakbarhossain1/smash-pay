@@ -81,9 +81,10 @@ const CountryCoverageHome = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className='w-full bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-[32px] leading-[1.1] font-medium tracking-[-1px] text-transparent md:text-[48px] md:leading-[1.1] md:tracking-[-1.5px] lg:text-[58px] lg:leading-[1.1] lg:tracking-[-2px]'
+            className='w-full text-[32px] leading-[1.1] font-medium tracking-[-1px] text-white md:text-[48px] md:leading-[1.1] md:tracking-[-1.5px] lg:text-[58px] lg:leading-[1.1] lg:tracking-[-2px]'
           >
-            Send money to 150+ <br className='hidden sm:block' /> countries with SmashPay
+            Send money to 150+ <br className='hidden sm:block' /> countries with
+            <span className='text-[#c3f53c]'> SmashPay</span>
           </motion.h2>
         </div>
 

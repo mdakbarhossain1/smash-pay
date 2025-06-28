@@ -88,10 +88,10 @@ const Hero = () => {
               </Link>
 
               <motion.h1
-                className='gradient-text text-center text-3xl font-medium md:text-5xl lg:text-6xl'
+                className='text-center text-3xl font-medium text-white md:text-5xl lg:text-6xl'
                 variants={itemVariants}
               >
-                Cross-border payment made easy.
+                Cross-border payment <span className='text-[#c3f53c]'>made easy</span>.
               </motion.h1>
 
               <motion.p

@@ -45,7 +45,7 @@ const CultureSection = () => {
 
               {/* Main Title */}
               <h2 className='w-full text-center text-3xl leading-tight font-medium text-white sm:text-4xl md:text-5xl lg:text-6xl'>
-                What it's like to work at SmashPay
+                What it's like to work at <span className='text-[#c3f53c]'>SmashPay</span>
               </h2>
             </div>
 

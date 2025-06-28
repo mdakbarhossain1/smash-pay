@@ -23,12 +23,8 @@ const OurStorySection = () => {
             className='flex flex-col gap-8'
           >
             <h2
-              className='text-4xl leading-tight font-medium md:text-5xl lg:text-6xl'
+              className='gradient-text text-4xl leading-tight font-medium md:text-5xl lg:text-6xl'
               style={{
-                background: 'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
                 letterSpacing: '-2px'
               }}
             >

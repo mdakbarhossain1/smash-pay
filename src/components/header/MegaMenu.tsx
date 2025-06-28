@@ -51,7 +51,7 @@ const MegaMenu = ({ menuStructure }: MegaMenuProps) => {
                     <div className='grid grid-cols-3 gap-8'>
                       {section.submenu.map((group) => (
                         <div key={group.groupTitle} className='min-w-[200px]'>
-                          <p className='gradient-text mb-3 block pl-2 text-lg font-bold text-white'>
+                          <p className='mb-3 block pl-2 text-lg font-bold text-gray-300'>
                             {group.groupTitle}
                           </p>
                           <div className='space-y-2'>
@@ -59,9 +59,9 @@ const MegaMenu = ({ menuStructure }: MegaMenuProps) => {
                               <Link
                                 key={link.title}
                                 href={link.href || '#'}
-                                className='flex items-center rounded px-3 py-2 text-sm text-white transition-colors hover:bg-[#0e131b]'
+                                className='flex items-center rounded px-3 py-2 text-lg text-white transition-colors hover:bg-[#0e131b]'
                               >
-                                {link.icon}
+                                <span className='text-[#c3f53c]'>{link.icon}</span>
                                 {link.title}
                               </Link>
                             ))}

@@ -56,8 +56,8 @@ const SmashPayCard = () => {
                 <h3 className='w-[150px] text-lg font-medium tracking-tight text-white'>SmashPay card</h3>
                 <div className='border-gradient h-0 w-full border-t-[3px] border-r-0 border-b-0 border-l-0 border-solid' />
               </div>
-              <h2 className='gradient-text w-full text-4xl leading-tight font-medium tracking-tighter text-transparent md:text-5xl lg:text-6xl'>
-                The Ultimate Card Experience <br /> Across Borders
+              <h2 className='w-full text-4xl leading-tight font-medium tracking-tighter text-white md:text-5xl lg:text-6xl'>
+                The Ultimate Card Experience <br /> <span className='text-[#c3f53c]'>Across Borders</span>
               </h2>
             </div>
             <p className='text-lg leading-relaxed tracking-tight text-gray-300'>

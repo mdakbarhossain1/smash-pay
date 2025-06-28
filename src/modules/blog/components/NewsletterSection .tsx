@@ -30,8 +30,8 @@ const NewsletterSection = () => {
                   <Image src={'/blog/message-icon.png'} alt='message icon' width={56} height={56} />
                 </div>
               </div>
-              <h2 className='bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-4xl leading-tight font-medium tracking-[-2px] text-transparent md:text-5xl lg:text-6xl'>
-                Subscribe to our newsletter
+              <h2 className='text-4xl leading-tight font-medium tracking-[-2px] text-white md:text-5xl lg:text-6xl'>
+                Subscribe to our <span className='text-[#c3f53c]'>newsletter</span>
               </h2>
             </div>
             <p className='text-lg leading-relaxed tracking-[-0.25px] text-gray-300 md:text-xl'>

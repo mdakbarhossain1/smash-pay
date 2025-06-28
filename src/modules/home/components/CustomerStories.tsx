@@ -59,13 +59,13 @@ const CustomerStories = () => {
             </div>
 
             <motion.h2
-              className='gradient-text text-4xl leading-tight font-medium tracking-tighter text-transparent md:text-5xl lg:text-6xl'
+              className='text-4xl leading-tight font-medium tracking-tighter text-white md:text-5xl lg:text-6xl'
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              Customer success is <br /> our success
+              Customer success is <br /> <span className='text-[#c3f53c]'>our success</span>
             </motion.h2>
           </div>
 

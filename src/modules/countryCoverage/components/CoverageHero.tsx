@@ -45,8 +45,9 @@ const CoverageHero = () => {
                   ></div>
                 </div>
               </div>
-              <h1 className='gradient-text relative self-stretch text-left text-4xl leading-tight font-bold tracking-[-2.5px] text-transparent sm:text-5xl md:text-6xl lg:text-7xl'>
-                Check out all the <br /> countries we cover.
+              <h1 className='relative self-stretch text-left text-4xl leading-tight font-bold tracking-[-2.5px] text-white sm:text-5xl md:text-6xl lg:text-7xl'>
+                Check out all the <br className='hidden md:block' /> countries{' '}
+                <span className='text-[#c3f53c]'>we cover</span>.
               </h1>
             </div>
             <p className='relative self-stretch text-left text-xl leading-7 font-normal tracking-[-0.5px] text-white/80'>

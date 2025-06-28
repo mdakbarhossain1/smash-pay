@@ -68,7 +68,7 @@ const CustomerStories = () => {
           viewport={{ once: true }}
           className='w-full'
         >
-          <h2 className='bg-gradient-to-b from-[#7B7D81] to-white bg-clip-text text-left text-4xl leading-tight font-medium tracking-[-2px] text-transparent md:text-5xl lg:text-6xl'>
+          <h2 className='gradient-text text-left text-4xl leading-tight font-medium tracking-[-2px] text-transparent md:text-5xl lg:text-6xl'>
             Customer stories
           </h2>
         </motion.div>

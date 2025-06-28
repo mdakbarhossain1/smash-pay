@@ -22,8 +22,9 @@ const MultiCurrency = () => {
                 <h3 className='text-lg font-medium tracking-tight text-white'>Multi-currency account </h3>
                 <div className='border-gradient h-0 w-full border-t-[3px] border-r-0 border-b-0 border-l-0 border-solid' />
               </div>
-              <h2 className='gradient-text text-4xl leading-tight font-medium tracking-tight text-transparent md:text-6xl'>
-                One account for <br /> 35+ currencies around the world
+              <h2 className='text-4xl leading-tight font-medium tracking-tight text-white md:text-6xl'>
+                One account for <br className='hidden md:block' /> 35+ currencies{' '}
+                <span className='text-[#c3f53c]'>around the world</span>
               </h2>
             </div>
             <p className='text-lg leading-relaxed tracking-tight text-gray-300'>

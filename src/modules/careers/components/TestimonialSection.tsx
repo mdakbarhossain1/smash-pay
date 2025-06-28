@@ -19,12 +19,8 @@ const TestimonialSection = () => {
         >
           <div className='relative flex w-full shrink-0 flex-col items-center justify-start gap-8 lg:w-[864px]'>
             <motion.h2
-              className='relative self-stretch text-center text-4xl leading-tight font-medium md:text-5xl lg:text-6xl'
+              className='gradient-text relative self-stretch text-center text-4xl leading-tight font-semibold md:text-5xl lg:text-6xl'
               style={{
-                background: 'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
                 letterSpacing: '-1.75px'
               }}
             >

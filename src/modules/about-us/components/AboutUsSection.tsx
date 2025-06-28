@@ -46,17 +46,17 @@ const AboutUsSection = () => {
                   </div>
                 </div>
                 <h1
-                  className='relative self-stretch text-center text-5xl leading-tight font-medium md:text-7xl'
+                  className='relative self-stretch text-center text-5xl leading-tight font-medium text-white md:text-7xl'
                   style={{
-                    background:
-                      'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-                    backgroundClip: 'text',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
+                    // background:
+                    //   'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
+                    // backgroundClip: 'text',
+                    // WebkitBackgroundClip: 'text',
+                    // WebkitTextFillColor: 'transparent',
                     letterSpacing: '-2.5px'
                   }}
                 >
-                  Bridging the Fiat and Crypto Global Economies
+                  Bridging the Fiat and Crypto <br /> <span className='text-[#c3f53c]'>Global Economies</span>
                 </h1>
               </div>
               <p className='w-full max-w-6xl text-center text-xl leading-normal font-normal tracking-[-0.5px] text-gray-300'>

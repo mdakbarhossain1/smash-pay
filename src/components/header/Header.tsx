@@ -150,7 +150,14 @@ const Header = () => {
         {
           groupTitle: 'Resources',
           links: [
-            { title: 'FAQ', href: '/faq', icon: <FiHelpCircle className='mr-2' /> },
+            { title: 'FAQ', href: '/faq', icon: <FiHelpCircle className='mr-2' /> }
+            // { title: 'Country Coverages', href: '/country-coverage', icon: <FiMap className='mr-2' /> }
+          ]
+        },
+        {
+          groupTitle: '-',
+          links: [
+            // { title: 'FAQ', href: '/faq', icon: <FiHelpCircle className='mr-2' /> },
             { title: 'Country Coverages', href: '/country-coverage', icon: <FiMap className='mr-2' /> }
           ]
         }
@@ -176,11 +183,11 @@ const Header = () => {
             'linear-gradient(90deg, rgba(158, 168, 171, 1) 0%, rgba(129, 112, 168, 1) 48.527792096138%, rgba(79, 173, 162, 1) 100%) 1'
         }}
       >
-        <div className='flex h-[82px] w-full items-center justify-center'>
+        <div className='flex h-[86px] w-full items-center justify-center'>
           <div className='flex w-full max-w-7xl items-center justify-between px-4 md:px-8'>
             <div className='flex items-center gap-4 md:gap-16'>
               {/* Logo */}
-              <div className='relative h-10 w-[200px]'>
+              <div className='relative h-10 w-[200px] md:h-24 md:w-[400px]'>
                 <Link href={'/'} onClick={() => setMobileMenuOpen(false)}>
                   {' '}
                   <Image
@@ -203,12 +210,12 @@ const Header = () => {
 
             {/* Desktop Auth Buttons */}
             <div className='hidden items-center gap-2 md:flex md:gap-3'>
-              <Link href={'/contact-us'}>
+              <Link href={'/login'}>
                 <button className='cursor-pointer rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#2a2e38] md:text-base'>
                   Log in
                 </button>
               </Link>
-              <Link href={'/contact-us'}>
+              <Link href={'/register'}>
                 <button
                   className='cursor-pointer rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-sm font-semibold text-white md:text-base'
                   style={{
@@ -273,8 +280,8 @@ const Header = () => {
                                         key={link.title}
                                         href={link.href || '#'}
                                       >
-                                        <p className='flex items-center gap-1 py-1 text-sm text-gray-300 hover:text-white'>
-                                          {link.icon}
+                                        <p className='text-md flex items-center gap-1 py-1 text-gray-300 hover:text-white'>
+                                          <span className='text-[#c3f53c]'> {link.icon}</span>
                                           {link.title}
                                         </p>
                                       </Link>
@@ -290,12 +297,12 @@ const Header = () => {
                 ))}
 
                 <div className='mt-4 border-t border-[#3c414c] pt-4'>
-                  <Link href={'/contact-us'}>
+                  <Link href={'/login'}>
                     <button className='mb-2 w-full cursor-pointer rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-base font-semibold text-white'>
                       Log in
                     </button>
                   </Link>
-                  <Link href={'/contact-us'}>
+                  <Link href={'/register'}>
                     <button
                       className='w-full cursor-pointer rounded-[40px] border border-[#3c414c] px-4 py-2.5 text-base font-semibold text-white'
                       style={{

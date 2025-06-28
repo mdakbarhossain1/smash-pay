@@ -88,8 +88,8 @@ export default function OfficesSection() {
         <div className='flex flex-1 flex-col justify-center gap-10'>
           <div className='flex flex-col gap-6'>
             <div className='w-max border-t-4 border-white pt-2 text-lg font-medium text-white'>Careers</div>
-            <h2 className='bg-gradient-to-b from-gray-400 to-white bg-clip-text text-4xl leading-tight font-bold text-transparent md:text-5xl'>
-              Explore roles at SmashPay’s offices around the world
+            <h2 className='text-4xl leading-tight font-bold text-white md:text-5xl'>
+              Explore roles at SmashPay’s offices <span className='text-[#c3f53c]'>around the world</span>
             </h2>
             <p className='text-lg text-gray-300'>
               We're making journey all over the world, as a remote company with employees in multiple
