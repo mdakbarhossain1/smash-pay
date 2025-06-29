@@ -146,8 +146,6 @@ const BlogContainer = () => {
       .then((data) => setItems(data));
   }, []);
 
-  console.log('items', items);
-
   const itemsPerPage = 9;
   const [currentPage, setCurrentPage] = useState(1);
 
