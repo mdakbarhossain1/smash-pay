@@ -104,31 +104,33 @@ const Hero = () => {
             </motion.div>
 
             <motion.div className='flex flex-col items-center gap-4 sm:flex-row' variants={itemVariants}>
-              <motion.button
-                className='flex items-center gap-2.5 rounded-[64px] border border-[#3c414c] px-6 py-4 md:px-8'
-                style={{
-                  background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
-                }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span
-                  className='text-lg font-semibold'
+              <Link href={'/register'}>
+                <motion.div
+                  className='flex items-center gap-2.5 rounded-[64px] border border-[#3c414c] px-6 py-4 md:px-8'
                   style={{
-                    background:
-                      'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
-                    backgroundClip: 'text',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent'
+                    background: 'linear-gradient(180deg, rgba(21, 24, 32, 1) 0%, rgba(1, 1, 1, 1) 100%)'
                   }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  Create account
-                </span>
-                <img
-                  className='relative h-[22px] w-[22px] shrink-0 overflow-visible'
-                  src='/home/arrow-right2.svg'
-                />
-              </motion.button>
+                  <span
+                    className='text-lg font-semibold'
+                    style={{
+                      background:
+                        'linear-gradient(180deg, rgba(123, 125, 129, 1) 0%, rgba(255, 255, 255, 1) 100%)',
+                      backgroundClip: 'text',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent'
+                    }}
+                  >
+                    Create account
+                  </span>
+                  <img
+                    className='relative h-[22px] w-[22px] shrink-0 overflow-visible'
+                    src='/home/arrow-right2.svg'
+                  />
+                </motion.div>
+              </Link>
 
               <Link href='/contact-us' passHref>
                 <motion.div

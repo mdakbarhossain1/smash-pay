@@ -252,7 +252,7 @@ const OneIntegrationSlider = () => {
         >
           <div className='mb-8'>
             <div className='mb-2 text-xl font-semibold text-white'>{paymentMethods[activeIndex]?.title}</div>
-            <p className='text-gray-600'>{paymentMethods[activeIndex]?.description}</p>
+            <p className='text-white'>{paymentMethods[activeIndex]?.description}</p>
           </div>
 
           {/* Pagination Dots */}

@@ -1,7 +1,9 @@
 'use client';
+import { formatIsoDateToReadable } from '@/shared/utils/dateFormatter';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useState } from 'react';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 type BlogPost = {
   id: number;
@@ -15,10 +17,30 @@ type BlogPost = {
   isCompany?: boolean;
 };
 
+type RssFeedItem = {
+  title: string;
+  link: string;
+  guid: string;
+  pubDate: string;
+  isoDate: string;
+  creator: string;
+  'dc:creator': string;
+  content: string;
+  contentSnippet: string;
+  categories: string[];
+  enclosure: {
+    url: string;
+    length: string;
+    type: string;
+  };
+};
+
 const BlogContainer = () => {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [items, setItems] = useState<RssFeedItem[]>([]);
 
-  const categories = ['All', 'News', 'Personal Finance', 'Business', 'Product', 'People', 'Travel'];
+  const categories = ['All'];
+  // const categories = ['All', 'News', 'Personal Finance', 'Business', 'Product', 'People', 'Travel'];
 
   const blogPosts: BlogPost[] = [
     {
@@ -115,8 +137,28 @@ const BlogContainer = () => {
     }
   ];
 
-  const filteredPosts =
-    activeCategory === 'All' ? blogPosts : blogPosts.filter((post) => post.category === activeCategory);
+  // const filteredPosts =
+  //   activeCategory === 'All' ? blogPosts : blogPosts.filter((post) => post.category === activeCategory);
+
+  useEffect(() => {
+    fetch('/api/rss')
+      .then((res) => res.json())
+      .then((data) => setItems(data));
+  }, []);
+
+  console.log('items', items);
+
+  const itemsPerPage = 9;
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const paginatedItems = items.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+  const goToPage = (page: number) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
 
   return (
     <section className='flex w-full flex-col items-center justify-start gap-16 bg-gradient-to-r from-[#1D1F2D] to-[#1D1F2E] py-32'>
@@ -133,7 +175,7 @@ const BlogContainer = () => {
               The Latest
             </motion.h2>
 
-            <div className='flex w-full flex-row items-center justify-start gap-3 overflow-x-auto pb-2'>
+            {/* <div className='flex w-full flex-row items-center justify-start gap-3 overflow-x-auto pb-2'>
               {categories.map((category) => (
                 <motion.button
                   key={category}
@@ -149,58 +191,70 @@ const BlogContainer = () => {
                   </span>
                 </motion.button>
               ))}
-            </div>
+            </div> */}
           </div>
 
           <div className='flex w-full flex-col items-start justify-start gap-12'>
             {/* Blog posts grid */}
             <div className='grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
-              {filteredPosts.map((post, index) => (
-                <motion.article
-                  key={post.id}
-                  className='flex flex-col gap-6'
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true, margin: '-100px' }}
-                >
-                  <div className='relative h-60 w-full overflow-hidden rounded-2xl'>
-                    <Image src={post.image} alt={post.title} fill className='object-cover' />
-                  </div>
+              {paginatedItems.length > 0 &&
+                paginatedItems.map((post, index) => (
+                  <Link href={post.guid} key={index} target='_blank'>
+                    <motion.article
+                      className='flex flex-col gap-6'
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true, margin: '-100px' }}
+                    >
+                      <div className='relative h-60 w-full overflow-hidden rounded-2xl'>
+                        <Image src={post.enclosure.url} alt={post.title} fill className='object-cover' />
+                      </div>
 
-                  <div className='flex flex-col gap-6'>
-                    <div className='flex flex-col gap-5'>
-                      <div className='bg-bg border-stroke-2 inline-flex w-max items-center justify-start gap-2 rounded-2xl border p-1 pr-2'>
-                        <span className='bg-clr-14 rounded-2xl px-2 py-0.5 text-xs font-medium tracking-[-0.15px] text-white'>
-                          {post.category}
-                        </span>
-                        <span className='text-xs font-medium tracking-[-0.15px] text-white'>
-                          {post.readTime}
-                        </span>
-                      </div>
-                      <h3 className='line-clamp-2 text-xl leading-snug font-medium tracking-[-1px] text-white md:text-2xl'>
-                        {post.title}
-                      </h3>
-                    </div>
+                      <div className='flex flex-col gap-6'>
+                        <div className='flex flex-col gap-5'>
+                          {/* <div className='flex items-center gap-3'>
+                          {post.categories &&
+                            post.categories?.length > 0 &&
+                            post.categories.slice(0, 3).map((item, idx) => (
+                              <div
+                                key={idx}
+                                className='bg-bg border-stroke-2 inline-flex items-center justify-start gap-2 rounded-2xl border p-1'
+                              >
+                                <span className='rounded-2xl px-3 py-0.5 text-xs font-medium tracking-[-0.15px] text-white'>
+                                  {item}
+                                </span>
+                              </div>
+                            ))}
+                        </div> */}
 
-                    <div className='flex items-center gap-4'>
-                      <div className='relative h-12 w-12 overflow-hidden rounded-full'>
-                        {post.isCompany ? (
-                          <Image src={post.avatar} alt={post.author} fill className='object-center' />
-                        ) : (
-                          <Image src={post.avatar} alt={post.author} fill className='object-cover' />
-                        )}
+                          <h3 className='line-clamp-2 text-xl leading-snug font-medium tracking-[-1px] text-white md:text-2xl'>
+                            {post.title}
+                          </h3>
+                        </div>
+
+                        <div className='flex items-center gap-4'>
+                          <div className='relative h-10 w-10 overflow-hidden rounded-full'>
+                            <Image
+                              src={'/blog/avatars-icon.svg'}
+                              alt={post.creator}
+                              fill
+                              className='object-cover'
+                            />
+                          </div>
+                          <div className='flex flex-col gap-0.5'>
+                            <span className='text-base font-semibold tracking-[-0.25px] text-white'>
+                              {post.creator}
+                            </span>
+                            <span className='text-sm tracking-[-0.25px] text-gray-300'>
+                              {formatIsoDateToReadable(post.isoDate)}
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                      <div className='flex flex-col gap-0.5'>
-                        <span className='text-base font-semibold tracking-[-0.25px] text-white'>
-                          {post.author}
-                        </span>
-                        <span className='text-sm tracking-[-0.25px] text-gray-300'>{post.date}</span>
-                      </div>
-                    </div>
-                  </div>
-                </motion.article>
-              ))}
+                    </motion.article>
+                  </Link>
+                ))}
             </div>
 
             {/* Pagination */}
@@ -211,60 +265,42 @@ const BlogContainer = () => {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <button className='flex items-center gap-1.5 text-base font-semibold tracking-[-0.25px] text-gray-300 transition-colors hover:text-white'>
-                <svg
-                  width='18'
-                  height='18'
-                  viewBox='0 0 18 18'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    d='M10.5 13.5L6 9L10.5 4.5'
-                    stroke='currentColor'
-                    strokeWidth='1.5'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                  />
+              {/* Previous Button */}
+              <button
+                onClick={() => goToPage(currentPage - 1)}
+                disabled={currentPage === 1}
+                className='border-stroke-2 flex cursor-pointer items-center justify-center gap-1.5 rounded-[44px] border bg-gradient-to-b from-[#151820] to-[#010101] px-5 py-2.5 text-base font-semibold tracking-[-0.25px] text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50'
+              >
+                <svg width='18' height='18' viewBox='0 0 18 18' fill='none'>
+                  <path d='M10.5 13.5L6 9L10.5 4.5' stroke='currentColor' strokeWidth='1.5' />
                 </svg>
                 Previous
               </button>
 
+              {/* Page Numbers */}
               <div className='flex items-center gap-1'>
-                {[1, 2, 3, 4].map((page) => (
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                   <button
                     key={page}
-                    className={`flex h-12 w-12 items-center justify-center rounded-full text-lg ${
-                      page === 1 ? 'bg-bg text-white' : 'text-white hover:bg-gray-800'
+                    onClick={() => goToPage(page)}
+                    className={`flex h-12 w-12 cursor-pointer items-center justify-center rounded-full text-lg ${
+                      page === currentPage ? 'bg-bg text-white' : 'text-white hover:bg-gray-800'
                     }`}
                   >
                     {page}
                   </button>
                 ))}
-                <button className='flex h-12 w-12 items-center justify-center rounded-full text-lg text-white hover:bg-gray-800'>
-                  ...
-                </button>
-                <button className='flex h-12 w-12 items-center justify-center rounded-full text-lg text-white hover:bg-gray-800'>
-                  10
-                </button>
               </div>
 
-              <button className='border-stroke-2 flex items-center justify-center gap-1.5 rounded-[44px] border bg-gradient-to-b from-[#151820] to-[#010101] px-5 py-2.5 text-base font-semibold tracking-[-0.25px] text-white transition-opacity hover:opacity-90'>
+              {/* Next Button */}
+              <button
+                onClick={() => goToPage(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className='border-stroke-2 flex cursor-pointer items-center justify-center gap-1.5 rounded-[44px] border bg-gradient-to-b from-[#151820] to-[#010101] px-5 py-2.5 text-base font-semibold tracking-[-0.25px] text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50'
+              >
                 Next
-                <svg
-                  width='18'
-                  height='18'
-                  viewBox='0 0 18 18'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    d='M7.5 13.5L12 9L7.5 4.5'
-                    stroke='currentColor'
-                    strokeWidth='1.5'
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                  />
+                <svg width='18' height='18' viewBox='0 0 18 18' fill='none'>
+                  <path d='M7.5 13.5L12 9L7.5 4.5' stroke='currentColor' strokeWidth='1.5' />
                 </svg>
               </button>
             </motion.div>

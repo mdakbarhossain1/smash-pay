@@ -21,11 +21,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang='en'>
       <head>
-        {/* Viewport meta tag MUST be in a <head> (not <Head>) for Next.js to optimize it */}
         <meta
           name='viewport'
           content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'
         />
+        <link rel='icon' href='/favicon.png' type='image/x-icon' />
       </head>
       <body
         className={`${manropeSans.className} bg-bg relative flex flex-col items-center justify-start gap-0 antialiased`}

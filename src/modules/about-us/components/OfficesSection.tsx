@@ -70,7 +70,7 @@ export default function OfficesSection() {
               >
                 {office.name}
               </div>
-              <div
+              {/* <div
                 className='absolute left-5 w-[200px] text-sm text-white'
                 style={{
                   bottom: '20px',
@@ -79,7 +79,7 @@ export default function OfficesSection() {
                 }}
               >
                 {office.address}
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </div>

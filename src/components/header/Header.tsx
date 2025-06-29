@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode, useState } from 'react';
+import { TbPhotoBitcoin } from 'react-icons/tb';
 
 import {
   FiAward,
@@ -88,7 +89,7 @@ const Header = () => {
         {
           groupTitle: 'Crypto',
           links: [
-            { title: 'Crypto', href: '/crypto', icon: <FiAward className='mr-2' /> },
+            { title: 'Crypto', href: '/crypto', icon: <TbPhotoBitcoin className='mr-2' /> },
             { title: 'GameFi', href: '/crypto/gamefi', icon: <FiAward className='mr-2' /> },
             { title: 'NFT', href: '/nft', icon: <FiImage className='mr-2' /> },
             { title: 'Off-Ramp', href: '/offramp', icon: <FiLogOut className='mr-2' /> }

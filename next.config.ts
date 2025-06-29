@@ -8,7 +8,8 @@ const nextConfig: NextConfig = {
       'image.freepik.com',
       'framerusercontent.com',
       'images.unsplash.com',
-      'source.unsplash.com'
+      'source.unsplash.com',
+      'images.cointelegraph.com'
     ]
   }
 };
