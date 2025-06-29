@@ -196,22 +196,24 @@ const BlogContainer = () => {
             {/* Blog posts grid */}
             <div className='grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
               {paginatedItems.length > 0 &&
-                paginatedItems.map((post, index) => (
-                  <Link href={post.guid} key={index} target='_blank'>
-                    <motion.article
-                      className='flex flex-col gap-6'
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true, margin: '-100px' }}
-                    >
-                      <div className='relative h-60 w-full overflow-hidden rounded-2xl'>
-                        <Image src={post.enclosure.url} alt={post.title} fill className='object-cover' />
-                      </div>
+                paginatedItems.map((post, index) => {
+                  const path = new URL(post.guid).pathname;
+                  return (
+                    <Link href={`/blog${path}`} key={index}>
+                      <motion.article
+                        className='flex flex-col gap-6'
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true, margin: '-100px' }}
+                      >
+                        <div className='relative h-60 w-full overflow-hidden rounded-2xl'>
+                          <Image src={post.enclosure.url} alt={post.title} fill className='object-cover' />
+                        </div>
 
-                      <div className='flex flex-col gap-6'>
-                        <div className='flex flex-col gap-5'>
-                          {/* <div className='flex items-center gap-3'>
+                        <div className='flex flex-col gap-6'>
+                          <div className='flex flex-col gap-5'>
+                            {/* <div className='flex items-center gap-3'>
                           {post.categories &&
                             post.categories?.length > 0 &&
                             post.categories.slice(0, 3).map((item, idx) => (
@@ -226,33 +228,34 @@ const BlogContainer = () => {
                             ))}
                         </div> */}
 
-                          <h3 className='line-clamp-2 text-xl leading-snug font-medium tracking-[-1px] text-white md:text-2xl'>
-                            {post.title}
-                          </h3>
-                        </div>
+                            <h3 className='line-clamp-2 text-xl leading-snug font-medium tracking-[-1px] text-white md:text-2xl'>
+                              {post.title}
+                            </h3>
+                          </div>
 
-                        <div className='flex items-center gap-4'>
-                          <div className='relative h-10 w-10 overflow-hidden rounded-full'>
-                            <Image
-                              src={'/blog/avatars-icon.svg'}
-                              alt={post.creator}
-                              fill
-                              className='object-cover'
-                            />
-                          </div>
-                          <div className='flex flex-col gap-0.5'>
-                            <span className='text-base font-semibold tracking-[-0.25px] text-white'>
-                              {post.creator}
-                            </span>
-                            <span className='text-sm tracking-[-0.25px] text-gray-300'>
-                              {formatIsoDateToReadable(post.isoDate)}
-                            </span>
+                          <div className='flex items-center gap-4'>
+                            <div className='relative h-10 w-10 overflow-hidden rounded-full'>
+                              <Image
+                                src={'/blog/avatars-icon.svg'}
+                                alt={post.creator}
+                                fill
+                                className='object-cover'
+                              />
+                            </div>
+                            <div className='flex flex-col gap-0.5'>
+                              <span className='text-base font-semibold tracking-[-0.25px] text-white'>
+                                {post.creator}
+                              </span>
+                              <span className='text-sm tracking-[-0.25px] text-gray-300'>
+                                {formatIsoDateToReadable(post.isoDate)}
+                              </span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </motion.article>
-                  </Link>
-                ))}
+                      </motion.article>
+                    </Link>
+                  );
+                })}
             </div>
 
             {/* Pagination */}
