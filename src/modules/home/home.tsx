@@ -1,7 +1,6 @@
 'use client';
 import CountryCoverageHome from './components/CountryCoverageHome';
 import CTASections from './components/CTASections';
-import CustomerStories from './components/CustomerStories';
 import Featured from './components/Featured';
 import Hero from './components/Hero';
 import HowToGetStarted from './components/HowToGetStarted';
@@ -44,7 +43,7 @@ const Home = () => {
       <MultiCurrency />
       <SmashPayCard />
       <SmashPayApp />
-      <CustomerStories />
+      {/* <CustomerStories /> */}
       <HowToGetStarted steps={steps} title="It's simple to start using SmashPay" />
       <PromotionSection />
       <CountryCoverageHome />

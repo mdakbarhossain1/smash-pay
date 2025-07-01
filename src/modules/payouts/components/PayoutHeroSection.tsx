@@ -59,7 +59,7 @@ const PayoutsHero = () => {
             burdens.
           </motion.p>
 
-          <Link href='#apply-form'>
+          <Link href='/contact-us'>
             <motion.div
               className='group hover:bg-opacity-90 inline-flex items-center rounded-full bg-white bg-gradient-to-b from-[#151820] to-[#010101] px-6 py-3 font-medium text-white transition'
               {...fadeInUp(0.3)}
