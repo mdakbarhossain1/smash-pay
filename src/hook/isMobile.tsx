@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 const useIsMobile = (breakpoint: number = 768): boolean => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
+  // Initialize state based on the current window width
 
   useEffect(() => {
     const handleResize = () => {
