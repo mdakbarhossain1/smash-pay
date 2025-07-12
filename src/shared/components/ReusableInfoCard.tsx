@@ -48,6 +48,9 @@ const ReusableInfoCard = ({
     }
   };
 
+
+  // text Section 
+  // text area section
   const TextSection = (
     <motion.div
       className='relative flex w-full flex-col items-start justify-start gap-10 lg:flex-1'
