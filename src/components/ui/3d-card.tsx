@@ -71,7 +71,7 @@ export function CardBody({ children, className = '' }: { children: React.ReactNo
     </motion.div>
   );
 }
-
+// child item that can float with card 
 // Child item that can float with `translateZ`
 export function CardItem({
   children,
